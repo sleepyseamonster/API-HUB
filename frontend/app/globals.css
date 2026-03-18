@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --app-bg: #121212;
+  --panel: #1a1a1a;
+  --accent: #25a9bf;
+  --text: #ededed;
+  --muted: #8f8f8f;
+  --border: #2b2b2b;
+}
+
+@theme inline {
+  --color-app-bg: var(--app-bg);
+  --color-panel: var(--panel);
+  --color-accent: var(--accent);
+  --color-accent-strong: #35c1d8;
+  --color-app-text: var(--text);
+  --color-app-muted: var(--muted);
+  --color-app-border: var(--border);
+  --font-sans: var(--font-ibm-plex-sans);
+  --font-mono: var(--font-jetbrains-mono);
+  --shadow-panel: 0 0 0 1px rgba(255, 255, 255, 0.02), 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: radial-gradient(circle at 10% -20%, rgba(37, 169, 191, 0.08), transparent 35%),
+    radial-gradient(circle at 100% 0%, rgba(237, 237, 237, 0.05), transparent 30%),
+    var(--app-bg);
+  color: var(--text);
+  font-family: var(--font-sans), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 100;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--app-bg);
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.skip-link:focus-visible {
+  left: 8px;
+}
+
+@keyframes enterFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes panelRise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-enter {
+  animation: enterFade 280ms ease-out;
+}
+
+.animate-panel {
+  animation: panelRise 220ms ease-out;
+}
+
+main {
+  animation: enterFade 280ms ease-out;
+}
