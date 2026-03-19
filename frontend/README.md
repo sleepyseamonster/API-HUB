@@ -11,7 +11,7 @@ UI-first foundation for the API HUB developer portal.
 
 ## Architecture
 - `app/(public)` public docs-first pages (`/`, `/quickstart`, `/apis`, `/apis/[slug]`)
-- `app/(console)/dashboard` console pages (`/dashboard`, `/dashboard/keys`, `/dashboard/logs`, `/dashboard/billing`)
+- `app/(console)/dashboard` console pages (`/dashboard`, `/dashboard/studio`, `/dashboard/keys`, `/dashboard/logs`, `/dashboard/billing`)
 - `entities` domain-level data (endpoint registry + search helpers)
 - `features` user-facing capabilities (catalog explorer, playground, keys, logs)
 - `widgets` composite layout/navigation sections
@@ -29,6 +29,23 @@ npm run test:e2e
 npm run build
 ```
 
+## Environment
+The `Dashboard Studio` flow uses live Airtable + n8n server-side integrations. Create `frontend/.env.local` with:
+
+```bash
+AIRTABLE_PAT=your_airtable_pat
+AIRTABLE_BASE_ID=appyBbduX3VSjsWGF
+AIRTABLE_WORKFLOW_TABLE_ID=tbl2kgaQXi9G16ijU
+AIRTABLE_REFINER_AGENT_RECORD_ID=rec5dYNZMCRfEgUAO
+N8N_GENERATE_WEBHOOK_URL=https://sleepyseamonster.app.n8n.cloud/webhook/2ca77f7d-033f-4e3e-b253-6a28b0996473
+```
+
+Notes:
+- The app appends `recordId` and `action=Generate` to `N8N_GENERATE_WEBHOOK_URL`; do not include those query params in the env var.
+- Restart the Next dev server after creating or changing `.env.local`.
+- The Studio route creates a new Airtable `Workflow` record, links the refiner agent, then triggers the existing n8n workflow unchanged.
+
 ## Notes
-- Backend wiring is intentionally deferred; this pass uses a typed mock provider.
+- Most of the portal is still mock-backed through the provider boundary.
+- `Dashboard Studio` is the first live server-integrated path and depends on the env vars above.
 - Theme is locked to the four-color palette in `shared/lib/theme.ts`.

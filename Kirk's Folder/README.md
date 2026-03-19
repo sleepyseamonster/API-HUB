@@ -9,7 +9,9 @@ This is Kirk's private mini knowledge base inside the API HUB workspace.
 
 ## Access Boundary
 - Assistant rule: do not read, index, search, or use files in this folder unless Kirk explicitly asks for work in this folder.
-- Exception: `transfer-bay/` is the shared handoff space and is in default scope when Kirk asks to process handoff items.
+- Exceptions:
+  - `transfer-bay/` is the shared handoff space and is in default scope when Kirk asks to process handoff items.
+  - `automation-bay/` is the local runtime surface for private file-triggered automations and may be used when Kirk asks to work on those automations.
 - All other folders (`notes/`, `ideas/`, `decisions/`, `scratch/`) remain out of default assistant scope.
 
 ## Suggested Structure
@@ -18,6 +20,7 @@ This is Kirk's private mini knowledge base inside the API HUB workspace.
 - `decisions/` finalized decisions and rationale
 - `scratch/` temporary drafts
 - `transfer-bay/` shared handoff zone for assistant-ready items
+- `automation-bay/` local hot-folder runtime for private automations
 
 ## Optional Working Pattern
 If you want assistant help on private content, point to the exact file/path and task.

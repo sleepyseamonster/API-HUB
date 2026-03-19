@@ -1,14 +1,25 @@
 # API Specification (V1 Draft)
 
-This file is the readable API contract for the current V1 catalog.
+Status: Draft
+Owner: API contract
+Last updated: 2026-03-17
+Depends on: `frontend/entities/endpoints/model/endpoint-registry.ts`, `docs/specs/ERROR_MODEL.md`, `docs/specs/CREDITS_PRICING_MODEL.md`
+Source of truth: The endpoint registry is current code truth. This file is the readable contract mirror.
 
-Canonical source in code:
-- `frontend/entities/endpoints/model/endpoint-registry.ts`
+This file is the readable API contract for the current V1 catalog.
 
 If this document and the registry drift, treat the registry as ground truth and update this file immediately.
 
-## Response Shape Convention
-All endpoint examples follow a consistent envelope:
+## Endpoint Lifecycle States
+- `simulated`: visible in the portal and backed by mock provider behavior only.
+- `live`: backed by the real gateway and runtime systems.
+- `deprecated`: still callable but scheduled for removal.
+
+Current repo state:
+- All catalog endpoints are `simulated`.
+
+## Public Response Envelope
+All live endpoint responses should follow:
 
 ```json
 {
@@ -18,6 +29,8 @@ All endpoint examples follow a consistent envelope:
 }
 ```
 
+Public errors add an `error` object as defined in `docs/specs/ERROR_MODEL.md`.
+
 ## Authentication and Credits
 Current repo status:
 - Auth and billing are represented as product concepts in the frontend.
@@ -25,15 +38,19 @@ Current repo status:
 
 Planned runtime behavior:
 - Requests require an API key.
-- Each endpoint consumes credits per successful call.
+- Each endpoint consumes credits per successful call only.
 
 ## Resource Library Endpoints
 
 ### 1) Get Transcript
+- Status: `simulated`
 - Method: `GET`
 - Path: `/v1/transcripts/{id}`
+- Mode: `sync`
 - Credits per call: `1`
-- Job: Returns transcript markdown/JSON for a session id.
+- Job: Returns transcript markdown or JSON for a session id.
+- Required inputs: `id`
+- Optional inputs: `format`
 
 Request example:
 
@@ -44,7 +61,7 @@ Request example:
 }
 ```
 
-Response example:
+Success response example:
 
 ```json
 {
@@ -59,10 +76,14 @@ Response example:
 ```
 
 ### 2) Get Curriculum Week
+- Status: `simulated`
 - Method: `GET`
 - Path: `/v1/curriculum/week-{id}`
+- Mode: `sync`
 - Credits per call: `1`
 - Job: Returns week syllabus and resources.
+- Required inputs: `id`
+- Optional inputs: none
 
 Request example:
 
@@ -72,7 +93,7 @@ Request example:
 }
 ```
 
-Response example:
+Success response example:
 
 ```json
 {
@@ -87,10 +108,14 @@ Response example:
 ```
 
 ### 3) Knowledge Base Search
+- Status: `simulated`
 - Method: `GET`
 - Path: `/v1/knowledge-base/search`
+- Mode: `sync`
 - Credits per call: `2`
 - Job: Returns semantic search results from proprietary docs.
+- Required inputs: `query`
+- Optional inputs: `limit`
 
 Request example:
 
@@ -101,7 +126,7 @@ Request example:
 }
 ```
 
-Response example:
+Success response example:
 
 ```json
 {
@@ -122,10 +147,14 @@ Response example:
 ## Automation Engine Endpoints
 
 ### 4) Scrape Website
+- Status: `simulated`
 - Method: `POST`
 - Path: `/v1/tools/scrape-website`
+- Mode: `sync`
 - Credits per call: `3`
-- Job: Extracts normalized markdown/JSON from one URL.
+- Job: Extracts normalized markdown or JSON from one URL.
+- Required inputs: `url`
+- Optional inputs: `output`
 
 Request example:
 
@@ -136,7 +165,7 @@ Request example:
 }
 ```
 
-Response example:
+Success response example:
 
 ```json
 {
@@ -151,10 +180,14 @@ Response example:
 ```
 
 ### 5) Analyze Document
+- Status: `simulated`
 - Method: `POST`
 - Path: `/v1/tools/analyze-doc`
+- Mode: `sync`
 - Credits per call: `4`
-- Job: Extracts structured entities from uploaded docs/images.
+- Job: Extracts structured entities from uploaded docs or images.
+- Required inputs: `file_url`, `extraction_profile`
+- Optional inputs: none
 
 Request example:
 
@@ -165,7 +198,7 @@ Request example:
 }
 ```
 
-Response example:
+Success response example:
 
 ```json
 {
@@ -180,10 +213,14 @@ Response example:
 ```
 
 ### 6) Lead Enrichment
+- Status: `simulated`
 - Method: `POST`
 - Path: `/v1/tools/lead-enrichment`
+- Mode: `sync`
 - Credits per call: `5`
 - Job: Enriches an email into profile and company metadata.
+- Required inputs: `email`
+- Optional inputs: none
 
 Request example:
 
@@ -193,7 +230,7 @@ Request example:
 }
 ```
 
-Response example:
+Success response example:
 
 ```json
 {
@@ -207,8 +244,12 @@ Response example:
 }
 ```
 
-## Validation and Error Model (Current)
-In mock mode, failed runs return:
+## Validation and Error Model
+Mock mode currently returns a UI simulation wrapper that includes `statusCode` and a nested `body`.
+
+Live API behavior should instead follow the public error contract in `docs/specs/ERROR_MODEL.md`.
+
+Current mock failure example:
 
 ```json
 {
@@ -222,5 +263,3 @@ In mock mode, failed runs return:
   }
 }
 ```
-
-The exact production error taxonomy is still pending backend implementation.

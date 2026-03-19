@@ -6,6 +6,7 @@ import { cn } from "@/shared/lib/cn";
 
 const links = [
   { href: "/dashboard", label: "Overview" },
+  { href: "/dashboard/studio", label: "Studio" },
   { href: "/dashboard/keys", label: "API Keys" },
   { href: "/dashboard/logs", label: "Logs" },
   { href: "/dashboard/billing", label: "Billing" },
@@ -16,7 +17,7 @@ export function DashboardNav() {
 
   return (
     <nav aria-label="Dashboard navigation" className="rounded-lg border border-app-border bg-panel p-2">
-      <ul className="grid gap-1 sm:grid-cols-4">
+      <ul className="grid gap-1 sm:grid-cols-5">
         {links.map((link) => {
           const active = pathname === link.href;
           return (

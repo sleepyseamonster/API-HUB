@@ -10,6 +10,13 @@ export type KeyEnvironment = "sandbox" | "production";
 
 export type RequestState = "success" | "error" | "running" | "idle";
 
+export type StudioGenerationStatus =
+  | "queued"
+  | "refining"
+  | "generating"
+  | "complete"
+  | "error";
+
 export interface PlaygroundExample {
   name: string;
   summary: string;
@@ -90,4 +97,17 @@ export interface PlaygroundRunResult {
 export interface EndpointFilter {
   query?: string;
   category?: EndpointCategory | "all";
+}
+
+export interface StudioGenerationSubmission {
+  recordId: string;
+  status: "queued";
+}
+
+export interface StudioGenerationRecord {
+  recordId: string;
+  prompt: string;
+  refinedPrompt: string | null;
+  imageUrl: string | null;
+  status: StudioGenerationStatus;
 }

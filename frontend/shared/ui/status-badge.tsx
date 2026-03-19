@@ -8,7 +8,13 @@ const stateStyles: Record<RequestState, string> = {
   idle: "border-app-border bg-transparent text-app-muted",
 };
 
-export function StatusBadge({ status }: { status: RequestState }) {
+export function StatusBadge({
+  status,
+  label,
+}: {
+  status: RequestState;
+  label?: string;
+}) {
   return (
     <span
       data-testid="status-badge"
@@ -17,7 +23,7 @@ export function StatusBadge({ status }: { status: RequestState }) {
         stateStyles[status],
       )}
     >
-      {status}
+      {label ?? status}
     </span>
   );
 }

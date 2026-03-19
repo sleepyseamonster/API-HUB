@@ -7,6 +7,8 @@ import type {
   EndpointFilter,
   PlaygroundMode,
   PlaygroundRunResult,
+  StudioGenerationRecord,
+  StudioGenerationSubmission,
   UsageLogRow,
   UsageSummary,
 } from "@/shared/types/portal";
@@ -97,6 +99,25 @@ const billingPacks: BillingPack[] = [
   { id: "scale", name: "Scale", credits: 15000, priceUsd: 499 },
 ];
 
+async function fetchStudio<T>(input: RequestInfo | URL, init?: RequestInit): Promise<T> {
+  const response = await fetch(input, {
+    ...init,
+    headers: {
+      "Content-Type": "application/json",
+      ...(init?.headers ?? {}),
+    },
+    cache: "no-store",
+  });
+
+  const body = (await response.json().catch(() => null)) as { error?: string } | null;
+
+  if (!response.ok) {
+    throw new Error(body?.error ?? "Studio request failed");
+  }
+
+  return body as T;
+}
+
 function delay(ms: number): Promise<void> {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
@@ -185,6 +206,17 @@ export function createMockPortalDataProvider(): PortalDataProvider {
           },
         },
       } satisfies PlaygroundRunResult;
+    },
+
+    async submitStudioPrompt(input) {
+      return fetchStudio<StudioGenerationSubmission>("/api/studio/generations", {
+        method: "POST",
+        body: JSON.stringify(input),
+      });
+    },
+
+    async getStudioGeneration(recordId) {
+      return fetchStudio<StudioGenerationRecord>(`/api/studio/generations/${recordId}`);
     },
 
     async getUsageSummary() {

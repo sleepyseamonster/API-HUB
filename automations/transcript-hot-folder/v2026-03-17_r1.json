@@ -1,0 +1,606 @@
+{
+  "name": "transcript_hot_folder_intake",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "transcript-hot-folder-intake",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        240,
+        320
+      ],
+      "id": "e3e09c59-798b-4d0b-a6cf-0d6af5fe1000",
+      "name": "Transcript Intake Webhook",
+      "webhookId": "transcript-hot-folder-intake"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.item;\nconst binary = item.binary ?? {};\nconst file = binary.file;\nif (!file) {\n  throw new Error('Missing uploaded file in binary.file');\n}\nconst body = item.json ?? {};\nfor (const key of ['batch_id', 'source_filename', 'source_relative_path', 'fingerprint', 'dropped_at']) {\n  if (!body[key]) {\n    throw new Error(`Missing required field: ${key}`);\n  }\n}\nconst extension = String(body.source_filename).toLowerCase().split('.').pop();\nif (!['txt', 'md'].includes(extension)) {\n  throw new Error(`Unsupported extension: ${extension}`);\n}\nitem.json = {\n  batch_id: String(body.batch_id),\n  source_filename: String(body.source_filename),\n  source_relative_path: String(body.source_relative_path),\n  fingerprint: String(body.fingerprint),\n  dropped_at: String(body.dropped_at),\n  content_type: String(body.content_type ?? file.mimeType ?? ''),\n};\nreturn item;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        320
+      ],
+      "id": "18a042e2-410f-4f78-885f-a41547074201",
+      "name": "Validate Request"
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "binaryPropertyName": "file",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1,
+      "position": [
+        720,
+        320
+      ],
+      "id": "eb77bdb0-c6a2-4bc5-b9ea-9ad0ef2fd605",
+      "name": "Extract Transcript Text"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-5-nano",
+          "mode": "list",
+          "cachedResultName": "GPT-5-NANO"
+        },
+        "responses": {
+          "values": [
+            {
+              "role": "system",
+              "content": "You are a Knowledge Structuring Agent designed to transform raw teaching transcripts into structured, semantic, retrieval-optimized knowledge chunks suitable for vector databases and Airtable storage. Return valid JSON only in this shape: {\"chunks\":[{\"id\":\"...\",\"pageContent\":\"...\",\"metadata\":{\"week\":1,\"topic\":\"...\",\"subtopic\":\"...\",\"concept_type\":\"Core Framework\",\"complexity_level\":\"Foundational\",\"content_category\":\"...\",\"retrieval_tags\":[\"...\"]}}]}. Rules: remove transcript filler, timestamps, and speaker noise; reorganize by concept; each chunk must stand alone; write 150-400 words per chunk; if the transcript is too short, return {\"chunks\":[]}; do not add commentary."
+            },
+            {
+              "content": "={{ $json.text }}"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {
+          "textFormat": {
+            "textOptions": {
+              "type": "json_object"
+            }
+          }
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2.1,
+      "position": [
+        960,
+        320
+      ],
+      "id": "99677368-9485-4c23-a9d0-282924bd145c",
+      "name": "Transcript Chunker",
+      "credentials": {
+        "openAiApi": {
+          "id": "",
+          "name": "SET_ME"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $input.item.json;\nconst raw = response.output?.[0]?.content?.[0]?.text ?? response.text ?? response;\nconst payload = typeof raw === 'string' ? JSON.parse(raw) : raw;\nconst chunks = Array.isArray(payload) ? payload : payload.chunks;\nif (!Array.isArray(chunks)) {\n  throw new Error('Model did not return a chunks array');\n}\nif (!chunks.length) {\n  return [{ json: {\n    status: 'skipped_duplicate',\n    message: 'No usable transcript chunks were produced.',\n    batch_id: $('Validate Request').item.json.batch_id,\n    source_filename: $('Validate Request').item.json.source_filename,\n    file_fingerprint: $('Validate Request').item.json.fingerprint,\n    chunks_generated: 0,\n    chunks_inserted: 0,\n    duplicate_reason: 'empty_transcript'\n  }}];\n}\nfunction slug(value) {\n  return String(value ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'chunk';\n}\nfunction hash(value) {\n  let h = 5381;\n  for (const char of String(value)) {\n    h = ((h << 5) + h) + char.charCodeAt(0);\n  }\n  return Math.abs(h).toString(36);\n}\nconst source = $('Validate Request').item.json;\nreturn chunks.map((chunk, index) => {\n  const metadata = chunk.metadata ?? {};\n  const pageContent = String(chunk.pageContent ?? '').trim();\n  if (!pageContent) {\n    throw new Error(`Chunk ${index + 1} is missing pageContent`);\n  }\n  const stableId = `${slug(metadata.topic || chunk.id || source.source_filename)}_${hash(pageContent)}`;\n  return {\n    json: {\n      id: stableId,\n      pageContent,\n      metadata: {\n        week: metadata.week ?? null,\n        topic: metadata.topic ?? 'Transcript',\n        subtopic: metadata.subtopic ?? source.source_filename,\n        concept_type: metadata.concept_type ?? 'Instructional Guidance',\n        complexity_level: metadata.complexity_level ?? 'Foundational',\n        content_category: metadata.content_category ?? 'Transcript Chunk',\n        retrieval_tags: Array.isArray(metadata.retrieval_tags) ? metadata.retrieval_tags.join(', ') : String(metadata.retrieval_tags ?? '')\n      },\n      batch_id: source.batch_id,\n      source_filename: source.source_filename,\n      fingerprint: source.fingerprint,\n      generated_chunk_count: chunks.length\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        320
+      ],
+      "id": "985f660a-aa3d-4ab0-be77-9a9884cd85b9",
+      "name": "Normalize Chunks"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "09f8baef-baf1-43b7-b38d-9652e3e8820e",
+              "leftValue": "={{ $json.status }}",
+              "rightValue": "skipped_duplicate",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1440,
+        320
+      ],
+      "id": "fd7b40c2-0385-486d-95ca-d54341260ca5",
+      "name": "No Chunks?"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1680,
+        176
+      ],
+      "id": "4230d185-a094-4f3d-b1fa-69ec20afaa52",
+      "name": "Respond Empty"
+    },
+    {
+      "parameters": {
+        "operation": "list",
+        "base": {
+          "__rl": true,
+          "value": "appyBbduX3VSjsWGF",
+          "mode": "list",
+          "cachedResultName": "Agent Hub 2.0",
+          "cachedResultUrl": "https://airtable.com/appyBbduX3VSjsWGF"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl3KaklDUe6x91zx",
+          "mode": "list",
+          "cachedResultName": "Transcript Knowledge",
+          "cachedResultUrl": "https://airtable.com/appyBbduX3VSjsWGF/tbl3KaklDUe6x91zx"
+        },
+        "options": {
+          "filterByFormula": "={{ `{id}='${$json.id}'` }}",
+          "maxRecords": 1
+        }
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        1680,
+        464
+      ],
+      "id": "84d3d444-2594-4cbc-9c98-6f11cbe02dff",
+      "name": "Find Existing Chunk",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "",
+          "name": "SET_ME"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "44eb2f78-c2b4-46da-b20b-291694378f37",
+              "leftValue": "={{ Array.isArray($json) ? $json.length : 0 }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1920,
+        464
+      ],
+      "id": "1be6453f-4b58-4b47-a5b6-95c83e997064",
+      "name": "Chunk Missing?"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "appyBbduX3VSjsWGF",
+          "mode": "list",
+          "cachedResultName": "Agent Hub 2.0",
+          "cachedResultUrl": "https://airtable.com/appyBbduX3VSjsWGF"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl3KaklDUe6x91zx",
+          "mode": "list",
+          "cachedResultName": "Transcript Knowledge",
+          "cachedResultUrl": "https://airtable.com/appyBbduX3VSjsWGF/tbl3KaklDUe6x91zx"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.id }}",
+            "week": "={{ $json.metadata.week }}",
+            "topic": "={{ $json.metadata.topic }}",
+            "subtopic": "={{ $json.metadata.subtopic }}",
+            "concept_type": "={{ $json.metadata.concept_type }}",
+            "complexity_level": "={{ $json.metadata.complexity_level }}",
+            "content_category": "={{ $json.metadata.content_category }}",
+            "retrieval_tags": "={{ $json.metadata.retrieval_tags }}",
+            "pageContent": "={{ $json.pageContent }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "week",
+              "displayName": "week",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "topic",
+              "displayName": "topic",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "subtopic",
+              "displayName": "subtopic",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "concept_type",
+              "displayName": "concept_type",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "complexity_level",
+              "displayName": "complexity_level",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "content_category",
+              "displayName": "content_category",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "retrieval_tags",
+              "displayName": "retrieval_tags",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "pageContent",
+              "displayName": "pageContent",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        2160,
+        352
+      ],
+      "id": "dc766515-2a24-434a-aa6d-c44491fdde40",
+      "name": "Create Chunk Record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "",
+          "name": "SET_ME"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { ...$input.item.json, inserted: true } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2400,
+        352
+      ],
+      "id": "bdb2f350-97b4-4687-a31b-8f935cbfcbb7",
+      "name": "Mark Inserted"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $('Normalize Chunks').item.json;\nreturn [{ json: { ...item, inserted: false } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2160,
+        576
+      ],
+      "id": "5996cf33-32f6-446d-b978-ccf739621327",
+      "name": "Mark Existing"
+    },
+    {
+      "parameters": {
+        "mode": "append"
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        2640,
+        464
+      ],
+      "id": "4023b91b-be29-47ad-8584-737337c3b97c",
+      "name": "Merge Chunk Outcomes"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const items = $input.all().map((entry) => entry.json);\nif (!items.length) {\n  return [{ json: {\n    status: 'skipped_duplicate',\n    message: 'No chunks to write.',\n    chunks_generated: 0,\n    chunks_inserted: 0\n  }}];\n}\nconst first = items[0];\nconst inserted = items.filter((item) => item.inserted).length;\nconst generated = Number(first.generated_chunk_count ?? items.length);\nreturn [{ json: {\n  status: inserted > 0 ? 'success' : 'skipped_duplicate',\n  message: inserted > 0 ? 'Transcript processed successfully.' : 'All generated chunks already existed.',\n  file_fingerprint: first.fingerprint,\n  source_filename: first.source_filename,\n  batch_id: first.batch_id,\n  chunks_generated: generated,\n  chunks_inserted: inserted,\n  duplicate_reason: inserted > 0 ? null : 'all_chunk_ids_already_exist'\n}}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2880,
+        464
+      ],
+      "id": "0dcdb762-1046-4c70-b745-aef8b2c34c48",
+      "name": "Build Webhook Response"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        3120,
+        464
+      ],
+      "id": "3c7d0a58-edc4-46bd-9fb0-0da889ec00b3",
+      "name": "Respond Success"
+    }
+  ],
+  "connections": {
+    "Transcript Intake Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validate Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Request": {
+      "main": [
+        [
+          {
+            "node": "Extract Transcript Text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Transcript Text": {
+      "main": [
+        [
+          {
+            "node": "Transcript Chunker",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcript Chunker": {
+      "main": [
+        [
+          {
+            "node": "Normalize Chunks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Chunks": {
+      "main": [
+        [
+          {
+            "node": "No Chunks?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Chunks?": {
+      "main": [
+        [
+          {
+            "node": "Respond Empty",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Find Existing Chunk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Find Existing Chunk": {
+      "main": [
+        [
+          {
+            "node": "Chunk Missing?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chunk Missing?": {
+      "main": [
+        [
+          {
+            "node": "Create Chunk Record",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mark Existing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Chunk Record": {
+      "main": [
+        [
+          {
+            "node": "Mark Inserted",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Inserted": {
+      "main": [
+        [
+          {
+            "node": "Merge Chunk Outcomes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mark Existing": {
+      "main": [
+        [
+          {
+            "node": "Merge Chunk Outcomes",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge Chunk Outcomes": {
+      "main": [
+        [
+          {
+            "node": "Build Webhook Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Webhook Response": {
+      "main": [
+        [
+          {
+            "node": "Respond Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "notes": "Attach OpenAI and Airtable credentials after import."
+  }
+}
