@@ -2,7 +2,7 @@
 
 Status: Active
 Owner: API HUB core docs
-Last updated: 2026-03-23
+Last updated: 2026-03-24
 Depends on: `README.md`, `ROADMAP.md`, `frontend/entities/endpoints/model/endpoint-registry.ts`
 Source of truth: This file defines where canonical project docs live.
 
@@ -40,9 +40,10 @@ This folder is the planning and operating handbook for API HUB.
 - `specs/LAUNCH_RUNBOOK.md`: Cutover and rollback procedure.
 
 ## Current Implementation Snapshot
-As of March 17, 2026:
+As of March 24, 2026:
 - Frontend developer portal exists and is functional with typed mock data.
-- Backend gateway, database schema, and n8n workflow artifacts are not implemented in this repo yet.
+- Backend gateway and database schema are still not implemented.
+- A transcript hot-folder n8n workflow artifact is implemented in `automations/transcript-hot-folder/`.
 - All current API behavior in the portal is simulated through the provider boundary.
 
 ## Documentation Rules

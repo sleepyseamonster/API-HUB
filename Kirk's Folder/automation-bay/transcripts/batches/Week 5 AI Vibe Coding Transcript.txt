@@ -1,0 +1,259 @@
+﻿00:05 Alright, alright, Rick, how's it going? Hello, Kirk, how you doing? Good, man. Excellent, excellent. That's from my backlight on to get this.
+00:19 Yeah. Alright, let's do it. So we we are, this is week five, five coding crazy times going by. There's RJ cool.
+00:32 Right. So let's dive into it last week. We were talking about GitHub stuff. Basically, can we do some github stuff.
+00:45 I'm going to share my screen. Okay, so again, using Visual Studio code. I've been vibe code in all day. Working on my app still.
+00:57 Just doing all my projects as well. And moving back and forth between github. So let's just refresh, jump back into github.
+01:12 There's Rix, let's see, all right. Jump back into GitHub, and so we'll take a look at my app I'm building right now.
+01:39 It's called ShortPulse. Got all my files in here for the entire project, right? Everything stored nice and neat. We've got all the documents in here.
+01:52 Awesome. Okay, so what this looks like is I've been pushing my code. Okay, back and forth from Bolt, GitHub, VS Code, GitHub, back to Bolt.
+02:06 I've been doing many long sessions working on this app, and so I've been committing all of my code or saving all of my code into GitHub.
+02:17 Okay, but I have several different branches in here.
+02:29 Right? So we're talking about branches a little bit. We can split off branches basically creating separate folders, saving your code.
+02:37 If we want to think about GitHub repo in the most base sense, it's like a folder, but but it's a folder that has version controls.
+02:45 We can make sure everything is staying organized. We're not breaking anything for merging code into other code that all of that matches up and merges just fine.
+02:55 So I've got a couple branches in here and I've been working on this one right here. I called it working branch, hey, commit me stupid because I always forget to save my code.
+03:06 Something goes wrong and got to fix it all and it's all busted. So we want to be quote unquote committing our code into GitHub that's essentially like saving it if you want to think about it like that.
+03:21 So I have this branch called working branch. Hey commit me stupid. That means all of the code I've been working on and committing has been And being saved to this branch, but my main branch is still unaffected.
+03:40 Okay, two weeks ago, I haven't touched it. It's still unaffected. So what this means is you can be running an app, working on that app in a different branch.
+03:52 Then when you're ready to update your app for all your customers and all your clients and whatever, or your internal tools, you can commit that branch or save that branch to your main app, right?
+04:06 Just think about it very simply. I'm making a backup folder here. I'm working in the backup folder. Okay, my backup folder is nice and neat and tidy and ready to go.
+04:16 I can then save my backup folder as my main folder as the base way to think about it. So using GitHub definitely recommend it, even if you're working in bolts and all these tools where it's very easy to set up your code base and works directly in the app, I still recommend using GitHub to save all your
+04:37 code, right, keeping things stored, learning GitHub, that is, it's definitely going to be an incredible tool to work with. Even if you're using prompts to app interfaces like reflet and bolt.
+04:51 So, we won't go too much more into GitHub, we'll, you know, we'll be using it a ton as we go.
+05:00 Well, this is my, this is my quote unquote folder structure for my branches in GitHub. This cracks me up. I'm laughing myself every time I see that.
+05:11 So, where that shows up in Visual Studio Code. As I'm coding, I can see my branch down here. It's probably very small in the screen share.
+05:22 Okay, so this will show that I have a number of changes ready to commit, and this is my reminder. All right, commit me.
+05:28 I got to save those changes. Just be aware of that. So that's kind of refresher from last week. Touching on GitHub stuff.
+05:41 Let's. Slide over. or all right. So let's jump back into our bolt app we made, thought flow. Okay, so this one is hosted on that free bolt domain.
+06:28 Gotta wake up my database here. This is a super based thing, right? So this is what we're actually gonna be talking about today.
+06:34 a part of learning the backend systems. This will tie right into automation stuff we learn. Part of learning the backend systems is learning some kind of database system or security system or all of these backend systems you're going to have to be using whether you're vibe coding or creating automations
+06:55 . So in automation, we're using air table essentially as our data pass through, as our data storage, calling it a data hub or whatever.
+07:05 Similar idea here, we need some kind of storage system. Well, in Bolt, Bolt natively uses Superbase. And so we can actually create a Superbase project and link it directly into Bolt and actually have that Superbase project we can get into and manipulate and edit it outside of Bolt so we can actually 
+07:30 work with VS Code in our back end system. All right, that's a lot of words. I'll show you how that goes as soon as my database wakes up here.
+07:40 So this is the problem or the one of the drawbacks or limitations I'll say with using Bolt. I have the paid plan with Bolt, the minimum paid plan with Bolt.
+07:53 I'm paying $25 per month, but I only have access to a basic super base back end inside of Bolt.
+08:04 Okay, my Bolt database, if I'm not using it, as you can see, it has to be spun up again. Right?
+08:11 So these hosting companies, Amazon, OpenAI, all these companies that are hosting services will spin up some server space that that you can store on, don't have to memorize this, this is just the inner workings, as this is loading up, I'll tell you how this works.
+08:31 When you get a database or any kind of storage system, these services have to spin up that allotment of storage and that takes up their compute and takes up all of their processing power.
+08:47 And so if you're not running your system, they're gonna shut down your database because it's not being used and then it has to spin back up again when you come back into it.
+08:56 So this is one of the drawbacks of using one of these services and calling to a back end or having some kind of back end in your app.
+09:05 In this case, in this app we built, we have a login system. Okay, Bolt built us a user authentication system.
+09:17 That means it's going to store user credentials. That means where it stores those user credentials are in a database. And if we have a database, we have to spin up that space.
+09:31 So I actually don't know how long this can take. There we go. It's like getting worried. Cool. So we got our database spun back up again in bolts just looking at the interface.
+09:41 We have the preview, the code, and the quote-unquote back end. And so So this is our Bolt database. We're storing recordings, we're storing tasks, we're storing ideas, and we're storing user credentials.
+10:00 Looks like we got Rick and Christian to create an account on here, too. That's awesome. What was that like, Rick?
+10:13 That was pretty funny. So, in bolts back in, there's a lot of bees and backs and bolts and bolts and all these words get so confusing over the course of my day saying all these weird AI words.
+10:30 In bolts back end, we're going to be using super base. Okay, let's jump over to super base and see what super base actually looks like.
+10:42 Now, you can use some other kind of database, Microsoft, Amazon, Google. It's all the same stuff, essentially. But SuperBase is a really easy tool comparatively when we're talking about high-level storage.
+10:58 And the only reason we need to talk about high-level storage as a beginner is because if you You don't learn it the right way, and right away, it only hurts you.
+11:11 It's much, much better to just start using a high capacity, expandable enterprise-level storage system sooner, because you're going to be able to think more creatively about your builds.
+11:23 You won't be limited to what you can do early on, and so you'll naturally develop more creative outlook on how you can build automations, how you can build vibe-coded stuff, if you just jump into a high-level storage system.
+11:40 So there's many storage systems, you know, database, servers, all this stuff, but SuperBase is so easy comparatively and you can start it up for free and you get two free projects with SuperBase.
+11:55 After that, you have to start paying for the projects and projects can be anything like this thought flow could just be a project or a project could be a management system for your whole team, you know, whatever you want.
+12:09 So you get two free projects. So what is a database? Well, we've been working with air table in automation. So I'll just pull it up for visual reference.
+12:22 We don't have to dive into air table to intensely. But, basically, we have a table with a grid row, a grid with rows in a view, right, and we can see our data inside of this grid.
+12:38 That's basically what Superbase does for us as well. So I have let's jump into my short pulse project as my actual back end for this app.
+13:00 And I'm obviously testing the limitations of the models here. We're talking about that in automation, I think, or Advanced AI.
+13:15 What are the limitations of the models, Rex, same kind of thing, seed dream, all of these models. What are their actual limitations?
+13:22 And so, as I'm building my app, that's exactly what I'm doing. He's testing out the guard rails and constraints that these models have for the way that you prompt them.
+13:33 But anyway. This is my app. This is my actual backend running this app. And so we can see we have different tables in here.
+13:47 It's a lot less user friendly than air table. But I have a bunch of different tables showing whatever amounts of data, right.
+13:56 I don't really have anything in here. But we can see the saved creator's list is showing the saved. Where's this?
+14:06 The saved creators list in my actual app, right? So obviously just looking at the data the same way it's just a tabular view of your data.
+14:14 So when we say database, that is very, very complex in vibe coding and what a database actually is, but super base makes it very easy to visualize that database.
+14:29 AirTable makes it very easy to visualize that database. It's a weird concept to think about, how do you work with something you can't see?
+14:38 Well, anything you're coding, you can't necessarily see it. And if you're not a coder, you can't even read the code that you're making, right?
+14:46 So to have something visual that's going to represent the data you're working with is by far the better approach. and that's what SuperBase does.
+14:57 SuperBase is built on Postgres. Postgres, don't ask me about it too much. Database science is a whole nother field, but SuperBase is built on Postgres.
+15:09 It's super expandable, you know, I want to say near unlimited storage. If you can believe that, very near unlimited storage, if you can imagine that concept.
+15:22 So So SuperBase as a tool and what these database tools do is make it visual, that's a weird concept to think about something not being visual if you're a new developer, right?
+15:40 But if you're working with code and you're a long time developer, you don't actually see some of the stuff you're making in the code, right?
+15:51 So, SuperBase, another tool to learn, but it's extremely easy to work with comparatively. And so that's why I work with it.
+16:00 Another excellent database tool we're going to get into in Automation, more in Automation. I'll just show you this right now to show you the contrast here.
+16:13 I've got to log in. So this is Panko. Same thing, it's going to show your tabular information in a much more visualized way.
+16:34 I don't think I have any data tables set up running my app with this yet. Probably going to go in here.
+16:40 But again, these tools, the main takeaway is these tools help you more than anything visualize your data back end. And if you're running into building situations, working with chat GPT, this is a flaw.
+16:57 Okay, working with chat GPT, building out systems, chat GPT is going to suggest the non-visual methods of building, the coded methods of building.
+17:13 If you're saying, all right, I need to set up storage for my app, and this, this, and that, these are the constraints or whatever, most likely without knowing how to talk to chat GPT about databases and storage and these back-end systems, it's going to take you down the non-visual path, using tools that
+17:33 are straight-up postgres, which is all installed in the terminal and you have to run it on a server and all of these things, that is way too complicated.
+17:43 And if you don't know what you're asking for chat, that is where chat is most likely going to lead you.
+17:48 So again, thinking about this stuff early as a beginner, knowing about these tools and being able to build that into your creative workflow is going to make things way, way easier.
+18:00 All right, so how do we actually get stuff into our database and how new project.
+18:15 I'm in SuperBase. I'm going to create a new project. Create my password. Let's name this project. This will be thought flow.
+18:26 This is our app. Right, a password, let's just say, first security layers not letting me pass, and that's another reason immediately, right away, super base and all these database tools are going to have incredible built-in security.
+18:59 In fact, Superbase, as a product, has a front-end authentication system built-in. It's a database, and it's an authentication system. If you're building an app or an automation that needs a login, Superbase does it automatically.
+19:17 You don't even have to build it. Let me see if it'll accept a crazy password. Cool. Cool. So since I'm on a particular plan, this is going to cost me $10 to spin up, but that's okay.
+19:41 I'm going to repurpose this as a new thing. Like I said, you can start two free projects before you have to pay.
+19:57 And now, again, same thing. This is a super based project. So it has to spin up again, just like we had to do that in bolt as bolt was restarting.
+20:07 So while that's spinning back up, just so we can get the setup here, I'm going to jump back into VS Code.
+20:15 And we can prepare our thought flow app. And doing so much vibe coding, I take screenshots of stuff that I want to change and send it off to the agent.
+21:00 And so my desktop is just a mess with screenshots right now. So it's taking me a while to find all my stuff.
+21:21 Great, here we are. Cool. So I'm going to talk to Claude and I'll say, you know, just really casual again.
+21:37 You can get really specific with the agents here, but I'll just say. I have this app in Boltz, and I'm passing it between Boltz, GitHub, and Visual Studio code.
+21:50 I have the Bolt database set up in Bolt, and I'm trying to get my super base database set up and get it working here in VS Code.
+22:00 What should I do? Okay, pretty simple. Now, better than Asking Clawed, this is going to be a question for chat GPT, but if you're working inside of your repo, I'm just going to switch the model to the cheapest one since we're not doing any big brain stuff.
+22:18 I'm just asking questions. I'll use the cheapest model. Since this is going to be specific to this project, I just want the context of the code, right?
+22:30 I don't know what I'm doing with SuperBase, hypothetically going through this scenario. I don't know what I'm doing with SuperBase.
+22:36 I just want my question to have all of that context, all of the code behind it so that my question gets answered properly.
+22:44 So again, this easily could be a question for ChatGbT. You can copy and paste all your code into ChatGbT, but rather than that, just ask this question on the cheapest model.
+22:55 How do we start this up? Great. Superbase, without losing both data, have you already created a superbase project? Yes, we have.
+23:09 Great, the superbase project and we need to get the URL and a non-key. Well, you can easily say something like, I don't understand.
+23:19 Let's just go to, okay. This is how easy the stuff is getting. It's incredible to figure this stuff out. Plugin into AI.
+23:28 You can do anything. All right, so we need our super base URL and our super base a non-key. Great. Let's jump into super base.
+23:38 Further questions, obviously, if you don't know what that is, you can say, where can I find that? You can ask chat GPT how to get this stuff.
+23:44 We can jump into super base. So it looks like our database is spun up. That's great. The main navigation over here.
+23:58 Okay, the main things you're going to have to know is basically just getting into the project settings. Everything else, the agent, the agent in Visual Studio Code, or even in Bolt, is going to know how to do all this stuff.
+24:20 Okay, it's all code base, the SQL editor, this is just coding that sets up your database. Don't have to know any of it.
+24:28 All we need to know about a tool like SuperBase, or in this case, you know, just talking about SuperBase, we need to know everything about the project settings because that is where we're going to tune up our environment variables, getting access to everything, API keys, all that stuff.
+24:45 Okay, so project settings and in project settings, just like any other tool, we have our API, where we can find our API keys.
+24:59 Come into that and we need our, what does Claude say? We need our service role and our Anon key. Well, this is where it gets a little bit confusing because SuperBase deprecated that stuff And we have new keys.
+25:14 So that's just another conversation with chat GPT. If you're running into problems like that, this key doesn't work. What's the right key.
+25:22 But essentially in super base, we need our publishable key. This is just how any kind of software, including automations and it end.
+25:32 This is how we can connect to super base. This is a public key. So it's not your actual API key.
+25:39 So I'll copy that. Coming here, and it says, Cloud says, create an environment local file in the project folder. Well, I'll say, can you create that?
+26:01 Cool. This is why Zach knows, I don't think Zach's in the call, but Zach knows I beef with Cloud all the time because I just want to say, just do it.
+26:13 Cloud, yes, create it. Create the dot ENV. It's really good and making suggestions and knowing what to do, but okay, it's arguing with me.
+26:31 It needs those things first. So we need the project URL and we need the a non-key, which now SuperBase is calling our public key.
+26:38 All right, so I'll say, here's my public key, there it is, paste it, and I'll say here is my project.
+26:53 Jump into super base and we can find our project, project settings, general, this is the project ID, we actually need our project URL so I can come into data API.
+27:08 It will ask you for your project ID. Again, just getting to know the project settings. This is the only menu you really need to know in SuperBase.
+27:18 So data API, we have API keys and data API. There's my URL. Copy that. Come back into Visual Studio Code, paste that, and let's see if Cloud will.
+27:55 See, this is my beef with Claude, it's hilarious. Is anyone started favoring a language model for coding yet? Codex or Claude or Gemini?
+28:15 I'm trying to save all my open AI codex credits so I can work in my app So that I don't get any pushback from Codex.
+28:25 It's hilarious. Great, done. Stop the dev server. It's not running. Start it again, run it up again. So that's what we talked about last time when we're doing terminal stuff.
+28:37 OK, the difference between working in Bolt. Bolt is just going to run it. That's why we use tools like Bolt.
+28:46 OK, it's just going to run the app. So if we come into the preview, it's just running. We don't have to spin up a local host or anything like that.
+28:54 It's just running. Well, if we want to run it in VS code, we have to run it from the terminal.
+29:00 Just like Bolt is actually running it from the terminal. Okay, so we need to get into our terminal. We can either open that up on the computer in on a Mac, it's literally called Terminal.
+29:30 Okay, this is my actual Mac Terminal or we can open up the Terminal in Visual Studio Code. You can click this little navigation button that'll drop down the bottom row here and that will pop in these options and we can set up the Terminal.
+29:48 Okay, so last time, I think we installed NPM or inside of our app, I can just say NPM install. This is a command you'll have to remember, but Cloud, Codex, they'll know all of these commands.
+30:08 You can just say, walk me step-by-step, all of that context engineering stuff, following the five prompt pattern in the clarity tool hub.
+30:17 How do I install NPM? All of that stuff, very easy to do. it's just going to get suggested right here and you can follow that.
+30:27 So mpm install. For the most part you won't have to know any other commands other than mpm install and mpm run dev.
+30:39 So I can just copy this command right here. There's the only two commands you'll really have to know unless you are running specialized stuff then it'll just be another or unique use case or unique situation for your use case.
+30:56 Great, so now we're running the local host, we're running the app. Now I can copy this URL, come into a new browser, paste that URL into a new browser window, and there it is, we have our app running locally on our computer from Visual Studio Code.
+31:26 Now we're completely outside of bolt. Okay, so that last step that we didn't make it to last time, we got the error trying to run this app locally, it's because we didn't have super base.
+31:39 Everything was still contained inside of bolt. I needed to create that super base project, so now everything's outside of bolt.
+31:46 I have my own super base back end and I can run the app locally on my computer. So the MPM run dev that is just running a local server essentially your local computer is running this website if you want to think about it like that.
+32:06 Your local computer is running this website and it's being run via your terminal. Cool, so I can sign into my account here.
+32:16 here let's see. I forgot my password for my own app. Let's create a new account because I totally forgot it.
+32:31 Okay, great. This is actually an error. It's not letting me sign up, I think. No, it's working. Again, having that error pop up in there, like we talked about before, that is incredible that we're getting that invalid login error.
+32:58 Bolt just knew we're going to need that transparency. We're going to need that error logging and created that entire UI, UX system without us even asking for it.
+33:08 That is incredible. Cool. It looks like this is bug. Not letting me sign in. So that's our first job, right?
+33:23 This is what's great about going back and forth between Bolt and VS Code. You're going to immediately find bugs that you can solve right away without having to, you know, do much testing.
+33:34 There is a phase when you're producing things of testing. Does this work on Chrome, you know, if you're building apps?
+33:42 Does this work on Chrome? Does this work on Safari? Does this work on chat GPT Atlas? Does this, you know, accounting for the browsers, accounting for screen sizes, as people's screen sizes, right?
+33:55 All of these factors have to get tested if you're trying to create an app, obviously, that's the main issue. All this testing has to get done, but simply coming over from Bolt or Replit into GitHub, popping that into Visual Studio Code and just trying to run it, it's immediately gonna come up with stuff
+34:15 because it's just not working the same way as it is Bolt. So let's go into VS Code. It's a cool, I'm trying to log in to my app, I'm getting an error and I can't sign up with a new account and I cannot log in, I'm getting an invalid login credential error.
+34:40 You are a senior software engineer, trace the code and solve this error. Great. So this brings us directly to our first, our first exciting potential here.
+35:03 Great. Trace the code looks correct. The issue is in super-based configuration, not the code, SuperBase has email confirmation, just save a little bit.
+35:14 Okay, so that's just saying, SuperBase sent a confirmation email and I haven't checked it yet or something like that, right?
+35:23 That's a great and easy error, simple and easy error to solve. So let's go into SuperBase to exactly what it says right there.
+35:33 Pretty straightforward stuff getting through this. So it said, I read through it really quickly, but this is a very common thing.
+35:41 It says go into your authentication. I told you you're not going to have to learn anything about these tables here.
+35:47 It's going to walk you through exactly what you need to do in any of these other settings. So it said go into authentication.
+35:54 Check your users. and by default the sign-in is set to e-mail something like that.
+36:07 Let me go double-check. Email authentication, what did it say? So, SuperBase dashboard. Confirm e-mail is enabled. So, let's go toggle that off.
+36:24 Confirm email is enabled. Let's toggle that off and save changes. Easing. Cool, I'll try and log in with my same account now.
+36:43 Okay, same error, and we'll try and sign up with a new account. Basically, these troubleshooting steps, knowing how to go through this first stage in any internal tool or app or service you're trying to vibe code, just getting it to work for the first time is so gratifying and going through the super-based
+37:03 step is frustrating. It's working in bulk, I'll just go back to bulk, right? This is 100% part of the process.
+37:13 us. Here we go. Great. Made it in just like that. Cool. So now we're ready for rock and roll and we're ready to develop now.
+37:41 We're in VS code. We're in the app. We're running it. This is great. So this leads us to our first excellent opportunity inside of the code.
+37:51 Okay, so we hit that first hurdle, super base authentication, getting errors, that was the first hurdle. Anytime you're running into something that's going to reoccur, you know, errors that are going to reoccur, authentication stuff, anything that's going to be customer facing, we should have a very 
+38:12 robust system to log that, manage that, you know, notify you or systems in place inside of your coding project to make sure that that entire, you know, any customer facing stuff, any authentication, or any errors is getting handled correctly, right?
+38:33 Obviously, that is the first thing we need to do. Especially if we're going to be facing customers, everything data has to be handled correctly and it cannot fail.
+38:43 So this gives us the opportunity to right away make an agent work for us inside of the project. We can have a bunch of different agents, a troubleshooting agent, a logging agent, something that's just going to run every time and make sure our code is being built correctly from the beginning.
+39:04 This goes back to what I was talking about, the planning phase, setting up your agents and prompting everything out from the beginning, following everything step-by-step from the beginning so we can come up with our agent here.
+39:20 Concerning this error, can we come up with some kind of agent inside of our project to help manage error logging and authentication for our customers?
+39:37 Simple question. Great, so we're in plan mode. You get the idea. Building robust systems from the start is entirely too easy in vibe coding, okay?
+40:06 You don't have to vibe build. If you plan it out, you can build great systems, planned out systems, structured systems, and robust systems from the start.
+40:16 Now there's a fine line with over optimization at the beginning. This is just a whole nother concept here in this field over optimization from the beginning.
+40:32 You can entirely tell your agent to do entirely too much and polish off all the code. And now you have this beautiful section of code.
+40:42 and then down the line, you're like, oh, well, I need to add this and I need to add this and I need to add this.
+40:47 Well, that's just, you know, adding patches to your beautiful thing and you're going to have to go back and fix all that, right?
+40:54 So just leaving the creative space creative, getting something working first, getting an MVP, getting a prototype working, making sure everything is structured, but it doesn't have to be super optimized, super polished from the beginning.
+41:08 However, building robust systems with your agents that allow you to work faster and more efficiently is the goal at the beginning, right?
+41:19 Not necessarily perfect code, but great systems that are just going to help you work better. So I'll just say yes, do this, Claude.
+41:32 Great. So I'm going to pull up while this is cooking. I'll say, yes, trying to pull up my notion project.
+42:26 Okay. So this is what we did early on when we did the hard stuff before we did the easy stuff, the hard stuff before we got into bolt.
+42:37 Okay. So going through these phases, right? When we did that quote-unquote hard stuff first, we prompted in for safety building the agents.
+42:50 That's what I'm doing right now. You know, whatever we did on that first day, I think I have the actual template.
+43:00 So I think I can bring that up as well. Let's see, oh, it might be okay. So this is basically our phase zero template.
+43:19 The mandatory files, we need our agents file, we need our project file, adding in the constraints, the architecture, the tasks, okay, all of this stuff right away is essentially what I can be building right now.
+43:33 Starting off with the agent files, as cloud to build me a agent for troubleshooting, so I can come up with all of the agent files.
+43:43 I can fill in my project card here. I'm building an app called Thought Flow. This is what it's all about.
+43:50 Do the whole chat GPT flow. Again, this document, I have this up for you guys. This is the total AI mastery notion document that I'm creating.
+44:01 It's up in the learning tabs inside of the courses. You have access to this. You can see this at any time we're going to be building out phase one as we go along.
+44:14 So we're for my thoughtful project, we're right now here on phase zero. Okay, so whoops. Moving ahead in the phase map, looking at phase one, okay, currently building out government governance and intent, building out the agents, those five mandatory files.
+44:35 That's essentially my first step we're are doing that or Claude is doing that right now. Phase one B, this is where we can immediately start thinking about design.
+44:46 What does this app need to look like? Bolt has already created an incredible UI. We can start iterating upon that.
+44:53 Bolt has already created an awesome UX with all the error logging, the color palettes, read for errors, all of that stuff.
+45:03 Bolt just did. Super incredible, right? Right, if you're going through it in VS Code or you're building stuff on your own outside of Bolt, you know, whatever you have to be aware of, you know, the dot process, how do we structure this stuff?
+45:18 Bolt's already way ahead of it, right? So UI UX, right, let's take a look. Basically I just want to test everything, do all the buttons click, does everything make sense?
+45:34 I can choose my microphone. I think that's what we worked on last time. This is great. I'll allow my microphone.
+45:44 Check check, this is a recording, testing that flow. Cool, so there's our first error. So our UI, our UX is working.
+45:55 Everything is clickable. We've got incredible error logging. Now it's just an iterative process. You just start building. This is the fun part.
+46:03 You don't have to have any structure. You can just start talking to your agent. You can talk to Claude, talk to Codex.
+46:12 Let's see what we got. I'll see. No. Claude likes to do so many extra things or not at all. It's funny.
+46:26 I've said incredible inside joke I have with the entire AI community that nobody knows about, just kidding. Cloud is great, but for me, as a creator, I think I touched on this at some point.
+46:39 The three main models, Codex, Cloud Code, and Gemini. What I'm discovering, and I've been doing extensive testing, especially lately for just for the current updates and stuff, what I find is that Codex is incredible for creators, the creative mind, right?
+47:01 All of these creators like me, creative people, artists, musicians, can now code, we think differently than a engineer, right? And so the way that I think, and the way that I approach tasks and ideas, codex just works naturally for me that way.
+47:22 Talking to my engineer friends and talking, you know, just being in the AI industry and in my circles, uh, Claude is really good for more engineer-minded people, just the way that you think, the way that you approach problems, procedurally or analytically or whatever Claude does much better thinking 
+47:41 in that way. And so I clash with Claude so much, I make it a, I make it a joke and I make it apparent just because it's funny in the AI communities.
+47:50 But I clash with Claude so much, my artist brain and Claude that do not mix. And then Gemini definitely, you know, Google's definitely trying to push for this encompassing environment, this ecosystem, all the stuff they're doing, I think they just made a huge deal with Apple trying to, you know, monopolize
+48:11 the mobile market for AI services. If you're working in Gemini, it's going to work extremely well developing Google stuff. Okay, say it like that.
+48:23 It works for anything, right? You can code anything, but essentially if you're going to be running your apps on Google, instead of super base, it makes sense to use Gemini and Antigravity to do that kind of work.
+48:37 If you plan on running on Google stuff, use Google stuff and it's just going to work better. And that's kind of where Google shines in this comparison aspect.
+48:48 Okay. So I work with Codex when I'm building my app just because it gets me and it works better, Cloud, I make fun of it, but it's not bad.
+49:01 Cloud is not bad. Anytime I make fun of Cloud, it's just an entirely inside joke with the AI community. So don't mind me.
+49:12 Cloud likes to also add these different frameworks and packages. I mentioned this. This is very common. All of this stuff will get added and, you know, whatever cloud or codex is necessary as part of how this build up will go.
+49:29 But cloud likes to suggest a lot of things that I just don't know about enough, you know, log rocket error tracking.
+49:37 That sounds great. I should probably use log rocket error tracking, but it's going to sign me up for a free tier.
+49:43 I don't necessarily want to do that. So I said no, right? You have to be on top of cloud because it's going to suggest these other tools all the time.
+49:52 Codex doesn't necessarily suggest any paid tools. It just works the problems out. If it can't solve the problems, it can't solve the problems.
+50:01 That's why engineers like cloud because it's like, all right, well, we can't do this. Let's go install something that can.
+50:09 Duh, that makes sense. My artist brain just doesn't work that way. Just like make it work. And if it doesn't work, it doesn't work.
+50:15 That's great. So anyway, that's my breakdown rant on the models again. So basically, we're trying to clause trying to install this error tracking thing.
+50:26 I said no. We can move on to, I'll just say, let's just come back to our document. Phase zero and in fact I'll just copy this entire phase zero.
+50:48 Again you guys have access to all these documents. We'll be building out phase one in future days future weeks and the rest of the phases as well.
+50:58 So I'll just copy this whole phase zero document. I'm gonna switch the model to a higher thinking model. We'll use the highest thinking model because I'm just gonna load up all this information and I want Cloud to make the good decisions.
+51:14 I'm going to give it creative power. I'm going to give it some authority here. So I need to give it some big brain.
+51:21 Cool. So I'll say dash dash. You are my senior software engineer. Read this document. Don't treat this document as a source of truth.
+51:30 I want you to gain enough value from this document to make your own creative decisions to flesh out the structure of this project.
+51:38 Plan out your tasks. Organize your tasks come up with several methods on how to complete these tasks. After you have completed the tasks, audit your work, then send me a report on everything you've done.
+51:54 That is pretty big brain stuff. I don't think you can tell an entry-level employee all of this and have it be completed.
+52:03 So we need a big brain cloud. Great. So you guys get the idea. A lot of this, right? Building stuff out, moving it into VS Code, moving it back and forth to Bolt.
+52:22 If you're going with that approach, which I definitely recommend, starting your projects in Bolt or Replet and then and moving them, just that experience alone is gonna teach you so much vibe coding and troubleshooting.
+52:35 Troubleshooting, massive. If you can troubleshoot, you can build anything. So just moving stuff is gonna be your first step. Go on through the document, through the phases.
+52:45 Well, I'll be building out, you know, live with you guys, the phase one stuff and that is how do we create a, you know, this is gonna build our necessary agents.
+52:54 Well, how do we create our UI and UX specialists inside of the project that will follow the color palettes and make the prefab buttons work and all of that stuff in phase one and phase two.
+53:10 So all that stuff is coming up, but you guys get the idea here. Very, very easy. Just chatting with your agents and figuring this stuff out.
+53:18 Any questions that arise any one offs. You just ask your agent in a VS code or in bolt. You just ask that question with all of the context from your project.
+53:29 Or if it's a question, you don't need code context. You just ask Chatsubt. Hey, I'm building this app. This is my problem.
+53:39 We're working on, you know, same stuff. We've been working on building out that those habits it's an approaching AI as your thought partner, as your business partner, as your creative partner, rather than just asking questions.
+53:53 Cool, so this is gonna keep running, right? I can go lay in my hammock and build apps while I'm taking a nap.
+54:01 It's pretty cool. So I'll open it up to questions now. There's another info dump. This is how it's gonna keep going.
+54:09 But if anybody has any specific questions, we can discuss that now. Cool, so side note too, you know, working with other environments.
+54:39 We're talking about VS Code. This is an IDE. This is a coding environment, but there are other environments. I mentioned Unity and Unreal Engine.
+54:51 So I recently, I was building machine learning environments in the Unity, and I recently have been trying to tackle setting up Unreal Engine.
+55:00 And this is just some perspective for you guys. Okay, I've been an artist and a designer my whole life. I've been trying to code me and RJ have been trying so many projects over the years and we've been, you know, to our level of achievement very successful in our projects.
+55:16 We just never completed anything to the market, right? So in all of my years and all of my experience and all of my expertise, I never thought I would be able to code.
+55:30 And specifically in these environments, something like unity and unreal engine, unreal engine. If you know what that is, you know, if you don't know, it's just, it's something that was so far out of my realm of thinking of something I'd ever be able to work with.
+55:45 And so I've been afraid of it for so long. And I finally started setting it up. I could never do this without AI.
+55:53 Like the potential you have to literally achieve your dream, you know, chase these things that have seemed so far out of reach are now within reach just because you can plug into AI, ask these questions, build stuff that helps you learn.
+56:09 And on top of that, build stuff that just does it for you. We were having this discussion in the office hours.
+56:17 You know, in the future, no one is going to actually have to learn anything. And that's a scary thought, especially as skilled people.
+56:27 That's a very scary thought. I've spent my entire life learning skills and that's scary to me that somebody else is going to do what I do instantly without having to learn it.
+56:37 My value is immediately zero. Everything I've ever done in my life is worth zero. You know, that's the fear that people latch onto.
+56:46 But in my opinion, you know, if you're a skilled person, these tools just why not enhance your skills, right? So we're talking this morning, in the future, no one is going to have to learn anything.
+56:59 And that just seems so dystopian and so sad. But think about it like this. We never have to do calculations on pencil and paper anymore.
+57:13 We don't have to do math by hand. We have calculators and we have cell phones. We have infinite knowledge of the entire known universe in our pockets and we're doing one plus one on those things.
+57:25 We don't have to do basic math because we have these tools. If you can extrapolate that thinking we're not going to have to learn tools and we're not going to have to learn procedures and we're not going to have to learn these specialized things because AI is just going to do it and we're just going 
+57:44 to ask the AI to do it. That is such a crazy mind blowing thought. So again, everything is circling back around all of these skills that we're learning, vibe coding and automation is circling back around to advanced AI.
+57:58 How do we talk to the AI? How do we get good at prompt engineering? And if you can do that, you can easily build whatever you want.
+58:09 Cool. So Claude's still working. Looks like we got a couple more steps. anyone any last questions we can call it super early tonight I love building this stuff it's so addicting I could buy code all night cool guys yeah as always we can you know jump into office hours any specific things that come up
+58:46 if you're if you're having trouble getting started you know all this information and now you're just like, wow, I waited too long.
+58:53 And what Kirk said, now I don't know I'm lost and now I don't know what to do. Just hop into the office hours and we can start, right?
+59:00 Whatever you want to start on, we can do that. It doesn't have to be the topics we're talking about. It can be whatever you need to get started.
+59:08 So I'm in the office hours next week. And I will see you guys, hope you have a good weekend. I'll see you next week.
+59:20 Appreciate you all, coding is hard. Yeah, Maria says coding is hard. You are welcome. Appreciate you guys. Enjoy your evening.

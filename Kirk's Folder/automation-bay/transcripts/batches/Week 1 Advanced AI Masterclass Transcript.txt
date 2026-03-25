@@ -1,0 +1,485 @@
+﻿0:00:06 Cool, we got everyone coming in, so we made it. It's been a long time coming for us, and just a few days for you guys, I think, jumping in here, everything's happening so quickly and we are excited to begin the courses, so welcome, welcome, this is Advanced AI, how we feeling?
+0:00:28 So I'm gonna go ahead, I'm gonna do something weird here, wait, doesn't even know about this yet. But I'm going to start off by opening up for some questions.
+0:00:37 Okay. I want to get the idea that we're here. This is a master class. So I'm going to be presenting information.
+0:00:44 Right. I'm going to be showing everything you guys need to know in an instructor style format. But I also want to, you know, emphasize that this is also going to be a sort of iterative process in a mastermind setting.
+0:00:56 We're all learning from each other. We're all growing together. So So I want to hear a little bit from you guys first.
+0:01:02 So right away, we can open up the mics if anyone has any outstanding questions about anything. Concerns? Are we afraid of AI?
+0:01:11 Are we worried it's going to take over? Let me know your thoughts before we get started. We'll jump right in.
+0:01:21 What's up, man? This is Rex. How's it going, Rex? It's going well. So, I just wanted to do, um, uh, uh, touch base on what I mentioned on the the Degan call about like certain information on prompting that you know other prompts kind of safeguard with like, you know, I don't know whether it be like political
+0:01:50 or social norms or whatever. So, yeah, I wanted to just dive a little deeper on that with a question like, would it be more like beneficial to script a GPT and then kind of prompted that way or use existing ones.
+0:02:13 I mean, Grock kind of works. But, you know, like for trying to dig a little deeper and you know, get like instructions on how to build applications and stuff like that without like.
+0:02:32 Yeah. Yeah. Now, this is, this is a great, so this is a great bring up right away. You know, we're talking about, so Rex brought up a question for everyone on this call, Rex brought up a question about, you know, guardrails and specific use cases for LLMs.
+0:02:48 And so we're going to be, you know, ultimately in this course as advanced AI students, we're going to be learning prompting, prompt engineering, context engineering, how do we actually talk to the AI and how do we talk to the AI in a way that gets us results.
+0:03:04 And so ultimately, Rex, this question, this is a very nuanced thing, you know, basically anything we do on the internet is going to have guardrails.
+0:03:14 So we're going to have to be, you know, use specific tools or specific systems. So ultimately, this is a tool question and you should shoot me a DM on the community page because that's something that's, you know, as a teaching point, that's not really anything I could teach you here.
+0:03:32 Let's teach everyone that kind of stuff, but shooting a message, you know, we can work on that those specific tool cases because ultimately, I'm here for each and every one of you talking about those kinds of specifics.
+0:03:44 You know, you can join the office hours. We had a cool hangout session this morning for the office hours. That was super fun.
+0:03:50 So that question, specifically, guard rails on a specific tool. Shoot me a DM for that. Okay, cool. Thank you. Great.
+0:04:02 Any other questions kicking this off. Cool. We still got some people jumping in. So So I might have some more questions later, but I'll, I had to like, you know, figure out what the question will be, but probably not, not in that regard, maybe for like another AI idea.
+0:04:38 Of course. So that being said, I'm going to be teaching the material and then we'll open up for questions again on the lesson, right?
+0:04:44 So later in the session, we'll open up again for questions. Right now, I just want to simply, we're here. We're starting off.
+0:04:51 This is it. This is the kickoff. What are we even doing? What is AI? Does anyone have any concerns? Is anyone afraid of what we're about to be doing?
+0:04:59 Are there, you know, morality issues? We're struggling with, you know, what are your thoughts here before we start? Anyone else have anything they want to bring up here?
+0:05:10 Yeah, for me, there is like a little bit of a morality in terms of We talked this morning a little bit and I'm really interested in, you know, like like, automating, like, eliminating, like, tacit, just someone has to do what is just really, like, mindless work.
+0:05:28 But of course, there's always the morality aspect behind it. If you're able to do that, you're kind of like replacing, you know, people who are having to do that.
+0:05:38 And, but at the same time, it's like, it's dumb work, I don't want to go more, but it's like, yeah, that's an interesting question.
+0:05:50 That's not an AI question. That's a, what kind of business owner are you questioned, right? So in terms of morality, you know, that stuff, it's, these are real issues and these are great bring-ups.
+0:06:00 This is why I want to start off with questions because as we're learning this stuff, this is going to eat away at the back of your mind.
+0:06:07 It's like, okay, I'm literally trying to replace my entire staff right now. Oh my gosh, that's kind of a shitty thing to do.
+0:06:14 will in business and reality, we got to think about numbers and costs and we got to think about that stuff and ultimately what we're doing here is implementing AI in such a way.
+0:06:25 It's going to benefit our personal lives. It's going to benefit our business. We're going to make more money. So those are all, you know, those types of questions should I fire somebody and replace them with AI.
+0:06:34 That's not technically an AI question. So I can't help you with that. But great bring up great bring up. These are the kind of things that we are going to discuss.
+0:06:43 you know, certain security issues, safety issues, morality issues, philosophical issues because this is such emergent technology that either you are completely in the dark with what we're even doing here or you have a good idea of what you want to happen and you've heard so many stories about AI changing
+0:07:05 the world and doing all this stuff and now you actually have unrealistic expectations for what we're actually going to be doing just because AI is so nebulous and it can do everything, right?
+0:07:15 And so ultimately, I still, you know, I want to learn about you guys what you got going on. I want to work with each of you inside of the community and figure out how I can help you all specifically.
+0:07:26 My one true skill in life is teaching and teaching in a way that I can, you know, work on specific implementations for each and every individual.
+0:07:38 That's my one true skill in life, and that's what I want to do here for these sessions. Again, this is going to be master class style sessions, but I also want this to be a master-mind kind of group environment.
+0:07:49 We can all contribute. We're all here to learn from each other. I'm teaching you AI stuff, but I'm not the master of everything.
+0:07:57 If using AI has taught me anything, it said, I know even less than I thought I did before I started.
+0:08:04 So, we're all here to learn from each other. So, let's just dive into it. That was great. Starting off with some interaction with you guys.
+0:08:13 Like I said, I want to know some more. So feel free. You can type in the chat here. You can shoot me a DM in the community.
+0:08:21 I can answer questions throughout my day as I'm working on stuff and just get involved with you guys. So yeah, yeah.
+0:08:32 So I have actually have a little bit interested in security. I'm assuming you're not going to get into that detail to this course correct.
+0:08:39 So we can talk about security and we can talk about specific security things. Ultimately, if it's an issue, so security falls into each lane respectively, AI, security and automation, security encoding.
+0:08:56 And so ultimately, we are going to cover security has a topic in each thing. In AI, we also touch on privacy issues.
+0:09:06 So as you move for a focus on like, oh, as AI stealing our identity, are there privacy to see issues kind of security or is this more of like implementation just as a general?
+0:09:20 What are you more interested in? From an implementation standpoint, well, so I run an IT department and I want to make sure that our company's protected.
+0:09:32 We put some tools in place, but we don't want to be restrictive, but we also want to consider, you know, we need to make sure that our network is safe.
+0:09:44 So yeah, that's a that's a and our data. That's a huge topic. That's also emergent. That's on the forefront of AI technology is AI security.
+0:09:54 Not only AI security techniques, but how security from AI. How do we protect ourselves from it as well? So cool.
+0:10:07 Well, just one comment here, the class that you, when you pull the, when you load it into outlook and for whatever reason, this class gets loaded on Tuesday for some reason, just so you, you know, I don't know if that's, I don't know if anybody else has had any issues with it, but it's more, it's more
+0:10:23 of a comment. I got it. Let's get bring up. I got into the link. Yeah. But the other one. Yeah.
+0:10:31 So it's a fun Tuesday. Gotcha. Gotcha. Yeah. Anyone. So again, we're this is the first time we've done this course.
+0:10:38 You know, I've been mastering AI since it come out. But we've never done this in this format. So any tech issues like that, you guys are our founders.
+0:10:45 You have the potential to shape this entire masterclass. The more active you are in the community, the more you, you know, point out stuff like that that helps us out.
+0:10:55 the more you bring up topics that we can talk about, the more this course will sort of merge into what you guys specifically want to talk about.
+0:11:05 So as our founding members, you know, that's my one true skill is being able to adapt the material to anyone.
+0:11:12 And if we are moving in a certain direction because you guys are interested, that's where we can evolve the conversation.
+0:11:20 Great. So let's jump into a couple things here. So we're going to start off AI, advanced AI. This is an advanced AI course.
+0:11:30 And so we're coming in here. I'm hoping that everyone has a basic understanding of what AI is. But of course, that's why we're here.
+0:11:39 We're here to learn even if you've never used AI before. You're welcome to be a part of this advanced AI course.
+0:11:46 But that being said, I'm going to share my screen and pop over to the community. Now, we all jumped into this community, whether you're on school or some other form of community's space.
+0:11:59 You may know, you may find your way around pretty easily in this community, but if not, this is our Builder Circle community.
+0:12:08 This is the main page. We have our home feed up here. This is kind of all of the groups you belong to.
+0:12:14 All of the channels you belong to will appear on the home screen up here so you can always just come into the community, click the home screen and see what the updates are.
+0:12:23 If I need to contact anyone or communicate or make announcements just without going through my entire team, I can just post stuff up here.
+0:12:32 You know, I'm working at the speed of thought too. So I'm just posting stuff and saying, hey, have you guys thought about this?
+0:12:37 I'm going to post stuff up in the community all the time. So that's going to be a good source for you to check out and get in there and dive into some things that I'm posting and that the team is posting in here.
+0:12:47 Obviously, you can chat with each other, see what's going on, and start networking. This is a mastermind kind of setting.
+0:12:55 We can all learn from each other, ask each other questions. So up in the community here, if you come up to learning, okay, we're going to be filling out this classroom with more stuff is going to evolve with content that we are recording now.
+0:13:10 It's going to evolve with more techniques. It's going to evolve with new concepts and tech and tools that are coming out in the AI industry, right?
+0:13:19 So all of this is going to be filled out and flushed out. But what I want to point you to is the Foundations course.
+0:13:24 This course is just the basics. Talk into chat GPT. How do we start prompting? How do we start developing and understanding what prompting is?
+0:13:35 Right now, if you've done anything on chat GPT, all you're really doing is typing in there. What is prompt engineering?
+0:13:41 I'm just typing regular sentences into the computer. Why do people keep talking about prompt engineering? So, going through this fundamentals course, that's your first step.
+0:13:51 That'll get you up to speed with anything we can do in this mastermind, in this masterclass for the advanced AI.
+0:14:01 And then just navigating, see what you have access to, navigating the space, having fun with it, playing around. I won't dive into too much about the community space, but there's lots of stuff up here, definitely checking the events.
+0:14:10 and see what we have going on. So, fundamentals course. That is going to be the beginning of everything, talking to AI, talking to ChatGPT.
+0:14:21 How do we talk to the AI? And so, ultimately, I go through explaining how to use ChatGPT specifically. ChatGPT specifically over any other LLMs, over Grok, over Google, Gemini, over Anthropic Cloud, over perplexity, over all of these tools, ChatGPT.
+0:14:42 There's major reasons to this. The first major reason is, I like it. Okay, what we're gonna find is, ultimately, there are too many tools.
+0:14:55 And where people usually fail is not in what they're building or not what they're trying to do is that they go down this AI rabbit hole, you start learning AI tools and you realize oh my gosh I can learn this and I can learn this and there's this over here that does this thing and we start to develop
+0:15:12 shiny object syndrome. Shiny object syndrome is the killer of everything. I'm going to tell you this story today because poor guy I just I have to tell this I had somebody reach out to me today in my other business in my other community I teach AI automation vibe coding same thing we're doing over here
+0:15:33 but I just have another business going on. So one of my clients reaches out to me today and he says, Kirk, I've to shut everything down.
+0:15:42 I'm closing everything. I'm losing so much money. I'm shutting everything down. And I can no longer continue to build with AI.
+0:15:48 Thank you so much for your teachings, but it was a failure. And I was like, what's going on, man? What's what's happening?
+0:15:57 And ultimately it came down to he didn't listen to me. He got shiny object syndrome. He started building in this tool, this tool, this tool, started building these really complex things.
+0:16:07 He had ultimate power. AI just gave him ultimate power to do anything he could possibly imagine. And he did it.
+0:16:13 And I forgot where the money was coming in from and what his business was. So there are so many tools to use.
+0:16:23 Part of this course is learning why to use what tools. And that's why I'm going to focus on chat GPT.
+0:16:29 The chat GPT is the better of the LLMs to teach on, just because it's so lean, you know, a lot of LLMs started designing their interfaces, GROC designed their sleek and modern interface after chat GPT.
+0:16:44 It just kind of became the standard, right? But because it became the standard, it also became the standard for all of the backend stuff.
+0:16:50 If you want to build integrations with LLMs, you want to build embeddings models for vector databases, you want to build, you know, all of these integrations, building chat bots, building AI agents, open AI, chat GPT has these systems in place.
+0:17:09 So if you start using one tool, this one tool is the tool that's going to take you all the way through anything you want to build instead of just the talk into the computer interface.
+0:17:19 Grok is cool, perplexity is cool, but they can't do anything other than talk into the computer, right? And so ChatGBT, I'm going to focus only on ChatGBT and bring in other tools, other LLMs where they have specific use cases.
+0:17:34 One of those specific use cases is going to be opening up notebook LM. So I'm going to put this link in the chat here again.
+0:17:49 this is for, come on. This is for this little tool hub I built with vibe coding and don't focus too much on this tool hub.
+0:18:18 We're going to be, I'm going to try to integrate some of the stuff into the community. It's just, like I said, I had an idea for the tool hub.
+0:18:26 I built it immediately. And the team didn't even know that I built it. It was just like, all this stuff is coming at the speed that I'm thinking about it.
+0:18:34 And I can have these things in place for clients immediately. That is the real power of using AI. Despite learning how to build automation, coding all this stuff, being able to think and iterate immediately, you know, building what you're iterating upon immediately is the magical power.
+0:18:50 So I put this link in the chat. If you guys want to, I suggest you do fill out the AI intake form.
+0:18:57 This is going to pump out a mini lesson. Ultimately, it's going to score you and do all these cool things and send it to your email, but it's going to pump out a mini lesson for tomorrow.
+0:19:06 All right, so something we can dive into immediately for tomorrow when you fill out that AI intake form. But also, click on the link in the chat, and then we can come into notebook LM.
+0:19:21 You guys chat GPT right here notebook LM chat GPT if you don't have the subscription you can use it for free notebook LM don't need to subscribe you can use it for free in fact I will tell you not to subscribe to notebook LM there's an upgraded version we're going to talk about the cost of all these 
+0:19:38 tools and trying to play with and practice with all these tools starts to get a little costly so again I'll cut straight through all of that and tell you what you need chat GPT notebook LM I'm for free jumping into notebook LM.
+0:19:50 This is gonna be your tool for this entire total mastery course, okay? This is your study tool. This is, you know, it's literally a notebook.
+0:20:00 This is where you're gonna be putting all the notes from these courses into here because this is an AI creative space for learning.
+0:20:07 That's what this is for. So opening up, I'd created an example notebook to show you guys. So I thought about this, it's like, man, And I have a couple of extra hours of time today.
+0:20:20 I'm going to learn about the blockchain. I just had this idea. Sitting there after the office hours call today, I was like, you know what, I want to learn about the blockchain.
+0:20:30 And so my mastery of AI allowed me to come up with all of this research in about 10 minutes, all of these documents.
+0:20:39 I was able to come up with in minutes. and this is all, you know, cited sources, all of these things, I'll even show you one here.
+0:20:50 All of these documents in, you guys are going to see everything on my computer, by the way, I have no privacy.
+0:21:02 So all of these documents about the blockchain, attack insertion points, I have no idea what any of this means, and I was able to come up with many, many research papers.
+0:21:14 In fact, I think I have, yeah, I don't know, so much information. Here's a glossary of all these terms. So ultimately, my Master of AI allowed me to come up with all this information, not come up with it, but find it all in minutes instead of googling and searching and going on forums and trying to find
+0:21:32 documents, I was able to extract all of this information in minutes. Extracting all of these papers and essays and you know finding sources and sites and you know websites.
+0:21:47 There's a couple websites in here. Eight best blockchain books to read in 2025. All of these sources, comprehensive studies, case studies, PDFs all into my notebook and now what notebook LM is for you is your own personal.
+0:22:09 You can think of it Rex you were talking about GPT's if you know anything about chat GPT notebook LM is going to be your personal GPT for learning clarity AI information right you're gonna load all of the transcripts from these calls into your notebook LM you're gonna load in all the material that I'm
+0:22:29 handing out to you into your notebook, LM, and ultimately you can have a conversation with any of the data in your notebook, all of the transcripts, all the data I'm giving you, you can just start having conversations with it in the chat down here, right?
+0:22:45 So you can ask for the detailed questions to my information, essentially. Now, if we just get rid of this extra stuff so you can kind of read this a little bit.
+0:22:58 This interface kind of now looks like chat GBT, right? It's very simple. You're just going to be having chats with notebook LM, but the only sources that are available, you can see my 15 sources down here.
+0:23:10 The only information you're going to get back is related exactly to the information you're putting in here. The transcripts from these calls, all the, you know, PDFs, I'm going to hand out or whatever, I don't even know what I'm going to hand out.
+0:23:23 So everything is going go in here, and then you can build your own teaching material from it. Not only can you ask questions, but you can build your own teaching material.
+0:23:33 So I generated these items earlier. Again, this took me 10 minutes to find this information. It took me about 30 minutes to put everything in here and generate all of the learning information.
+0:23:46 So all of these buttons will generate something from the sources. All right, so I've made myself a blockchain quiz. Here's a question from sources.
+0:23:58 I have no idea. I haven't started learning yet, but you can see how valuable this would be as a study guide.
+0:24:04 Ultimately, creating these types of things will let you learn throughout the day, will let you learn when you're outside of the classroom.
+0:24:13 Okay, Okay, however you learn best, that's the important thing. If you like listening, all right, you can produce an audio explanation.
+0:24:23 This is actually a podcast that gets generated based on your sources. And you can just listen to the podcast while you're driving to work about this course.
+0:24:32 What we're learning, honing this stuff in. Here's a slideshow that was created for me about the blockchain so I can run through this slideshow.
+0:24:41 So I mean, this is really incredible resources that just get instantly created for you with exactly the information you want to study.
+0:24:55 Okay, I won't harp on this too much more, but I think this is a cool and blockchain flash cards. I was looking at these earlier, little flash cards, right?
+0:25:04 However you learn best, this is going to be your study guide. So ultimately I, I have ADHD and I cannot read.
+0:25:14 So all of this stuff, all of these studies, all of these research papers, I have a really hard time digesting.
+0:25:22 And that's really my superpower in learning is all of these documents I can ingest and digest in whatever format fits me and makes, you know, makes sense to me listening to it or this is a really cool and this is a mind map of all of the data.
+0:25:39 So this, again, it's all automatically generated, going through all of the source material. So all right, blockchain, let's look at structure and scaling.
+0:25:49 I can ask this question to the documents. Back in the mind map, we can explore this go down I don't know smart contracts run in virtual machine I can ask that question to the documents and it's going to come up with all that information for me so again don't want to harp on this anymore you guys get 
+0:26:08 the idea here notebook LM is your first is your first AI tool if you have not jumped on it notebook LM is going to be how we study this material okay so let's talk about digesting this stuff.
+0:26:26 Again, I have a hard time reading. Even this is hard for me to read. So what I did here was I created a report with this button and it pumped out this report right here.
+0:26:36 The definitive beginner's guide to study blockchain technology, whatever. I can't read this. I could. I should. But I can't. So I'm going to click this button, copy it.
+0:26:46 I'm going to come into chat GPT. And I'm going to say paste it right just paste it right there my little trick here is I'm I just add dashes whenever I paste in context we're going to get really heavy into context engineering and what that means.
+0:27:03 But essentially the more context you feed the machine the better the results are going to be. If you've ever felt that AI doesn't produce your results that you're looking for, you hands down.
+0:27:16 It's your fault. You did not give it enough context. Okay. We talk about hallucinations. We talk about slippage. Slippage is a term that just permeates across every industry.
+0:27:25 It seems we talk about hallucinations slippage and all of these things that happen in the responses. Well, the only reason that's happening is because the AI doesn't have context.
+0:27:34 It doesn't have all the resources it could to provide you that answer. And so we'll dive into context engineering, but in this case, the context is that entire document.
+0:27:47 Now, to produce the results that I'm looking for, I'll say, give me the TLDR. Ultimately, if I just typed into chat, give me the TLDR, there's no context.
+0:28:00 It's not going to give me anything, obviously. So this is the very basis of context engineering. We need to feed the machine, the context, and then we can prompt exactly what we want to get the results that we're looking for.
+0:28:13 Context engineering is talking to the machine to get the exact results you're looking for. In this case, it's the TLDR.
+0:28:19 Now, if you've been using AI, you've been using LLMs. You're like, well, duh, that's pretty basic. Here it is, TLDR.
+0:28:29 blockchain solves coordination, without trust, this is still too much to read. I can give me the T, I can go ask you, give me the TLDR of this and we can go down that rabbit hole.
+0:28:38 But essentially the key thing I want to emphasize here is context. And if you've used LLMs before, if you've used Changi PT, if you use GROC, like, well, duh, you got to type stuff in there to get stuff back, right?
+0:28:52 That makes sense. But where a lot A lot of people fail, ultimately, is extrapolating that concept out to larger projects.
+0:28:59 Maybe you're building an AI agent, we're talking about automation, we're building an AI agent. The AI agent has this beautiful prompt and it's supposed to perform this task, and every 10 or 20 jobs, it fails.
+0:29:14 Well, that cannot happen, you know, business that absolutely cannot happen. Where can we fill in the context to make sure that agent doesn't fail?
+0:29:23 and it could be one small line as simple as giving me the TLDR or it could be an entire database of information that that agent needs as context.
+0:29:35 So we'll dive into more of agentic workflows and building agents in the automation masterclass. That is really what that is all for.
+0:29:44 How do we automate using agents and workflow chains. Cool. I'm going to switch tabs over here. By the way, I was googling some of you.
+0:30:03 Do we have Rick in the in the classroom? Rick, are you in here? I don't want to say. I don't want to put your name to it.
+0:30:17 Rick Kachala Kalanji. The one and only. I'm here. Hey, how's it going? Yeah. So, let me ask you, what do you do?
+0:30:27 I am a trader. Trader. Yeah, I see your part. What is this? So how do you foresee your implementation of AI that I'm just going to call you out right now?
+0:30:49 I've been doing a whole bunch of calls for the last year and a half coaching calls. we are caught. And all of the stuff that we discuss with the, with the different members is recorded, captured on an AI using Fathom, okay.
+0:31:09 Now, what I was looking for was a way to extract that information and aggregate it and try to find out what the, how can I say, like almost like an average pain point is, as an example, but what is the most commonly complained about a thing that newcomers, you know, want to know about, what about those
+0:31:35 who've been creating for the last three years, what about the last four years, you know, this is something that I can kind of quantify the data, so sorry, first measure it and then quantify it and then let it give us some kind of insight because I'm busy developing, I want to develop a course tailored
+0:31:56 to this. Now I've done a lot of the stuff manually and it's painful. That's what I kind of every night.
+0:32:11 Yeah, amazing. Yeah. So you actually just tied into my next topic beautifully. That was an accident. So data analysis. Okay, we're talking about magic powers with AI and data analysis.
+0:32:26 I had ChanchoPT read that document for me and that's data analysis, right? I can read this document, get the TLDR, get this information out, but what Rick use case ultimately will become involves automation, but we're talking about analyzing the data and automating that.
+0:32:48 First, we need to analyze the data. Well, this is a huge, huge task for any human to do. Whatever data you have to look at and analyze and take in and categorize and sort and whatever whatever you need to do, AI can do that instantly.
+0:33:05 So data analysis is another, I'm gonna show you guys. Actually, I'll do this in a silly way, so we don't, I don't wanna incriminate myself too fast in this course.
+0:33:20 So I'm gonna pull up, this is a silly use case, but you guys can get the idea here. All right, so this is my YouTube channel, this is one of my videos and I have videos with wild comments and I can analyze all my comments, paste that stuff in there, but ultimately something that I do now, this is just
+0:33:49 a weird silly specific use case, but I can just come in here and copy everything on here just all this nonsense and all this noise come into chat GPT.
+0:34:09 Paste all that noise and say List the videos, typing this by hand, because I want to demonstrate another tool later on.
+0:34:25 It's driving me crazy. List the videos with the most views. Okay, so I have no idea what kind of user in here, who these people are, what all these videos are, but these are my video recommendations that I'm getting.
+0:34:40 And I've kind of tailored my YouTube channel to give me, well, here's some video game information. That's awesome. D&D. That's awesome.
+0:34:48 It's kind of give me the beat on automation, AI, I've been playing some video games recently, so I've got some video games in YouTube.
+0:34:56 But this is a simple silly use case where I can immediately analyze data without ever even looking at the source.
+0:35:04 Okay. I know this is a silly use case. But data analyzation, if you can build in silly use cases where you're starting to use LLMs to do this kind of stuff, okay.
+0:35:18 This is going to have the most profound effect on your workflow. Hands down. Ultimately, when you think I need to join a course to get a result and do blank, you're thinking about the big picture and that's why I'm here is to help you out with that big picture.
+0:35:36 But sometimes the big picture isn't, I'm going to build this thing, make something that's going to change my business and then go implement that into my business.
+0:35:45 Sometimes the most profound effect you will see in your business and in your personal life is little silly things like this, using AI for smaller things, benign things and meaningless less things.
+0:35:59 Implementing that, you know, just that habit of starting to use the AI, that is going to have the most profound effect on what you do in anything that you build.
+0:36:12 Because if you can start thinking with AI first, you're going to have a much easier time thinking AI first in a major system build, or a major project, or, you know, we want to reach out to clients will let me have this iteration process than the analyzed data and have this process with AI before I ever
+0:36:31 speak to my clients, you're going to build that into your life and into your habits and that's going to make things a lot better.
+0:36:37 So that's kind of the philosophy stuff that we're going to get into a lot more is how do we look at life differently, not because AI changes my life.
+0:36:49 But how can I change my life to adopt AI? And so that's that's the kind of thing that scares a lot of people as well.
+0:36:56 Is AI really taking over is AI going to become so invaluable that we can't live without it. And that's the real end of the world.
+0:37:05 You know, there's a lot of philosophy discussions on all of that stuff. So I'm going to call out somebody else here.
+0:37:11 I got Rob. I see Rob on there. What you got going on, Rob? What are you here looking for? Rob Gooth I got a mouth full of food because I'm just stuffed with work.
+0:37:23 I switched over and saw you. I saw you take it by right away. Give me about five minutes. I'd be happy to chat with you about what I got two different things I'm very interested in.
+0:37:34 Awesome. Yeah. I also see Danielle. Danielle. Look at that background. I love that background. green marketing, so if you guys like psychological thrillers, go get my book.
+0:37:49 All right, so the question is, what am I not going to be using this for, right? So writing and creating book covers, so I think that is what I do, but if I can write one newsletter and have an automation, break it down into four blog posts, and then have that broken down into social media, and then have
+0:38:06 that broken down into Pinterest pins. And I'm doing one thing, and then having the output of 50 or 60 things, like saving hundreds of hours, a quarter on things.
+0:38:15 That's my main goal. And then just learning too. I mean, I've been teaching myself how to do all of this.
+0:38:22 So I never even thought about doing the dashes or anything like that to, you know, say here's what I'm aimed for today is I pretty much just jam it all in there and still work it out.
+0:38:30 So I think we're finding the skills because AI's not going anywhere. So I don't want to be left to hind and I want to free up time to write and do the things Because I like doing and not the tedious things that I don't enjoy doing.
+0:38:43 Exactly. And that, incidentally, ties right into the next little philosophy pieces. The real goal here is to save time, okay?
+0:38:55 I talked about building systems, building things. That's going to be the game changer, ultimately, the game changer, implementing little things like this, uh, into your life, saves time.
+0:39:07 And if you can save time, that's the leverage that we're all looking for. Either having time for other more important things in your business, letting AI handle mundane things, like, um, content, repurposing, writing a blog post that gets turned into social media posts that gets turned into this, that
+0:39:25 gets turned into that all automatically. And then automated so that it's happening without you even touching it that saves a ton of time so you can focus on your actual business and not that the boring stuff.
+0:39:37 So time is our number one gain here in this course getting back time. It's not ultimately making something. It's giving you the skill set to innovate those things on your own and take back your time.
+0:39:52 I got into AI, essentially my little philosophy, my own personal motto is it goes along the lines with some of the other philosophies in my AI circles now that I'm just seeing all these other people that we started at the same time.
+0:40:06 We sort of co-created these ideas together and we're all relatively doing the same thing. the idea is that I want AI to take over the world.
+0:40:20 And if I had AI take over the world, AI could do everything for me. And I can go back to being myself.
+0:40:26 I was an artist. I played music. If I could go back and make art because I want to and not because I have to make money doing it, I would do that a thousand times over.
+0:40:37 I can't wait until AI takes over the world. So that's my little morality philosophy there. So Danielle, you want to automate, you want to content creation, content, repurposing an automation, and it sounds like a very, I'll say easy goal, very doable, very straightforward, and we can make that happen
+0:40:58 for sure. So, so glad to have you here. Let's see, we got Danielle is one of my long-term friends. by the way, she's a best-selling author on Amazon.
+0:41:09 Obviously, go check it out. Super cool. Hey, Kurt, we're ready. All right, let's do it. Yep. Anyway, so there's two things.
+0:41:20 The one for, you know, Wade and I have the same last name. He's my younger brother. You were waiting for that, right, for the jackals there.
+0:41:32 Yeah, I'm the old man. And anyway, so there's two things that I'm currently doing, or one that I'm currently doing in the other piece of it, I'm really interested in, I do consulting work.
+0:41:44 I'm currently working with people that build ADUs, auxiliary dwelling units in the back yards of existing homes, and I'm consulting them.
+0:41:54 And so I used Groc to build out a business plan And build out job descriptions and all kinds of stuff because they're very hands on very analog a bunch of younger people.
+0:42:09 I'm working with a bunch of 30 and 40 somethings. So they're very technology savvy in some areas, but they're working so hard that no one is actually working on the business.
+0:42:21 business. They're so busy working in the business. And so I've been brought in to help consult. I have a construction background as well as an investor background.
+0:42:31 And so I'm helping them with construction. But so using it in that business, I'm going to look and see how I can do that.
+0:42:40 The other thing that I did is I consulted with a company that did window treatments for Costco. So these people that are in these kiosk inside and want to come give you a free quote for window treatments and shutters and whatever.
+0:42:55 They've got 17 Costco stores up in the Bay Southern Central California and they do everything analog.
+0:43:06 So literally they get a lead and it gets dropped into a spreadsheet and then somebody makes a phone call and tries to schedule this person into an appointment in their whole business, which is very heavy on ad-bin side of things right now and to schedule appointments with the client and then the client
+0:43:28 buys what are we going to you know they go into their project management everything is hands on they do an absolutely horrible job at customer service and keep it in contact and people knowing what's going on and literally they're their bicycle and being able to produce is about 90 days long.
+0:43:49 And we're collecting money in the first two weeks of that. So you can imagine that people start getting annoyed and start getting frustrated because they're not being communicated well with.
+0:43:59 So the goal is, is to figure out a way to work with a software called Senta, which Costco uses internally to be able to capture leads and do stuff and then how it gets moved over into some other software.
+0:44:15 This particular company was using can't think of the name of it right off the top of my head now. I was trying to give them go into go high level, but I never did that.
+0:44:26 But anyway, so I'm looking at opportunities to create an app in a way to be able to work with these kind of analog processes and to see how we can and use AI to text, set the appointments, use AI to reach out to them, you know, do a call complete overhaul.
+0:44:47 All that kind of stuff. Yeah, it sounds like a complete overhaul. So once you to DM me as well, you know, anyone with really nuanced things, DM me, bring it up in the community, right?
+0:45:00 We can talk about specifics like that. So, you know, Rob has a lot of, it sounds like a lot of nuanced situations going on.
+0:45:07 we need to use AI to help reform, it sounds like an arcade system, and then automate that system. That's a lot of stuff.
+0:45:16 And then potentially build software, internal software that we can use to revolutionize that. So again, that's a great bring up here.
+0:45:25 We're going to be learning all of these things throughout the total AI mastery. This course alone, we can focus on very specific AI enhancements and, you know, context engineering, AI enhancements, meaning context engineering, how are we going to talk to the AI in the first place to plan out those systems
+0:45:45 , how we're going to talk to AI in the first place to map out all of the prompts and all the automations and everything that we need to do, but all these plans, we can use context engineering to formulate very precise strategic plans, financial plans, you know, all of these documents that need to be 
+0:46:02 created or studied or analyzed or passed off via context engineering. So that bring up is a very common concern. Well, what about hallucination?
+0:46:14 Is the AI actually performing? Is this the best document that could possibly be written? If it's written by AI, do I need to hand it to somebody to be reviewed?
+0:46:24 These types of questions get, you're going to ask me a bunch of times, no matter how many I tell you, how many times I tell you throughout the course, So you're going to ask me if someone's going to ask me, you know, is this actually reliable?
+0:46:35 Can we actually use AI? And the answer is without a doubt, 100% already at this time in 2026, yes, we can use it on a production level, on a scalability, on an enterprise level, we can use the output of AI on an enterprise level.
+0:46:54 Now, there's a lot to learn there, obviously, everything we need specific guardrails, we security, we brought up security earlier, all of these things have to be put in place.
+0:47:06 So the professionalism isn't producing the thing anymore, AI can do that, is making sure we're providing the exact context, the professional context, the guardrails, the systems, the safety, whatever, into the system so that it produces those professional outputs.
+0:47:25 Okay, so context engineering, let's just jump straight into it with this example in the in the tool hub guys you have a five prompt pattern linked to my five prompt pattern.
+0:47:38 This is a framework I developed for mastering context engineering. Okay, it is a formula of context engineering to master context engineering literally anything you want.
+0:47:52 I think the example I have in here, if you open it up, you can check it out, you can copy and paste it, you can use it however you want.
+0:47:58 But I think the example I have in here is a daily routine for focus and productivity. So I want to create a daily routine for focus and productivity, or I want to learn to play guitar, or I want to master context engineering.
+0:48:14 You can use this framework work right here as a context engineer to build out literally whatever you want and brainstorm from there.
+0:48:22 Again, it's going to take practice. What is good context? What is bad context? These are nuanced questions that start coming in as a context engineer.
+0:48:31 So I want to pose this question to you right now to everyone. You can just put a thing in the chat or speak up.
+0:48:39 Do any of you, regard yourself at this point, can you confidently call yourself a master context engineer. And if the answer is yes, great, we can move on.
+0:48:51 You made it skip next. You're done, congratulations, you graduate. If the answer is no, then that is our main goal here.
+0:48:59 Regardless of what we want to build, regardless of what we want to produce, in this AI master course, we have to become master context engineers.
+0:49:10 And that will be the one scale that translates into the systems, into the automation, into the coding and vibe coding and building software, all of that has to be built on good context.
+0:49:24 So Maurice is not at all. Yeah. So that's that's okay. Right. We don't have to know prompt engineering. We don't have to know context engineering.
+0:49:32 That is what this course is for. And ultimately, I'm going to harp on that so many times and repeat myself so many times, context engineering, context engineering.
+0:49:40 I've even found myself asking my girlfriend. She's telling me something. I'm like, I need more context. Tell me the story, but with more context.
+0:49:50 So it's just a life change. It's a mentality shift. This is the new life skill. I think I brought up in the webinar or in the call this morning.
+0:50:04 I can't remember. I brought up the idea of cell phones. This new piece of technology cell phones. nobody really taught us how to use cell phones.
+0:50:12 It just became this thing we have to use in life. And that's what AI is. It's now this thing we have to use in life, but it's far more complex than just picking up a thing and talking into it.
+0:50:23 Now we have to type into it and talk to it. So a couple things about talking to the AI and saving time and productivity.
+0:50:33 Okay, I brought up this tool in the call this morning. I don't want to harp on this tool list too much, but this is my entire stack.
+0:50:42 There's a couple more tools I use professionally, but this is my entire tool stack. Okay, we're going to be cutting through the noise of all the tools and what you actually need to be using.
+0:50:51 And I'm not going to talk about any of those tools specifically unless people have specific use cases, but I will tell everyone right now notebook LM, that's your first tool.
+0:51:02 We're going to be using that alongside inside chat GPT or GROC or any LLM. Notebook LLM is your first tool and Whisper Flow is your second tool.
+0:51:11 Okay, this tool alone has increased my productivity 10 times or even a hundred times. This tool will transcribe your voice into text.
+0:51:23 So instead of spending your entire day, now we're learning context engineering, we're typing into the AI to build that's a lot of time that we can be saving.
+0:51:34 How do we save time with AI? Well, we use an AI tool that we can just speak into the computer and it's going to type everything for us.
+0:51:42 If I don't teach you anything else, it's how to leverage our time. We're going to be taking back our time.
+0:51:48 And this is one tool, if you know, that's greater than any other by far. So I don't want to harp on the tools too much.
+0:51:56 These are my affiliate links. If you want to click on these links, they'll throw me a couple. pennies or something like that, but I'm not going to promote these tools.
+0:52:03 I just want to make sure that you understand that this list is to represent the fact that we don't have to use hundreds of tools.
+0:52:12 You know, if you've already dove into the AI rabbit hole and started looking up tools in this tool for that, all of that is way too much and you're going to run into shiny object syndrome and crash out like my poor guy this morning.
+0:52:27 Don't do that. Okay, don't focus on tools, focus on notebook LM chat GPT and if you want to pick up whisper flow as a productivity tool, I have to talk about it because that has enhanced me personally as a developer, as a professional.
+0:52:44 That is one tool that that you can't live without in the AI era. Cool, so I think I wanna slowly transition more into a conversational tone.
+0:52:56 I think I've harbbed on context engineering of what we're gonna be doing, but I wanna turn it over into more specific things and what we can do today, can do tomorrow with AI.
+0:53:09 So I wanna open it up again for more questions, topics if anyone wants to speak out and bring anything up, we can talk on specifics.
+0:53:19 Right. Hey, Kirk, can you, before we get into those, would you mind pulling up a quick, like Google Doc and show them the output of whisper flow?
+0:53:29 Just sure. Yeah. Well, I'll do it in chat GPT. See, we're already thinking. Quick demo. Exactly. Yeah. Now, that's a good point because, you know, ultimately, everything that I'm talking about today is just nebulous and mysterious until you see it in action.
+0:53:47 And, you know, a lot of the stuff is going to be nebulous and mysterious until you do it yourself. So whisper flow.
+0:53:56 I'll say something like, write me a prompt to talk about whisper flow. And I'm on the wrong window.
+0:54:25 Let me pull it up here. So what it does is any text box you can type into. It will actually transcribe your voice into that text box.
+0:54:34 So it becomes an AI tool for literally everything you have. You want to write emails. Well, Now you have an AI tool inside of your email.
+0:54:40 It's just, it's incredible. Brett me a prompt to help me talk about whispers flow. Okay, it'll pop up in here.
+0:54:53 And we can begin iterating. Now, what I'm doing here is called metaprompting. This is one of our context engineering techniques.
+0:55:01 We're going to get into when we really dive into the technical stuff. So it's telling me what I am in prompting me about how to teach whisper flow.
+0:55:13 Okay, I can talk into whisper flow again and say, add any details, expand upon this and add this into the canvas.
+0:55:23 Make sure you are writing in ADHD friendly format in the canvas. Now, I've got a document explaining how I can explain Whisper Flow.
+0:55:42 And if I'm not doing a great job at it, I can just read this and then teach you guys this tool.
+0:55:54 By the way, using the Canvas, I'll just point this out right now if we haven't used the canvas and chat GPT, this is an iterative space for creating documents.
+0:56:02 This will, you can co-create documents in the canvas with chat GPT. So I'm actually writing this document with chat, and I can type in here and manually type into the document and continue to write this document.
+0:56:16 I'll say. Great question. Yeah, go ahead. Regarding whisper flow, so is the biggest strength that it can be used outside of ChatGDP because I think like they have it almost like building now, like the text to, oh, voice to text used to be not that good.
+0:56:35 I think it's much better. So is that the biggest advantage or? Exactly. It's for anything. You can even text with it.
+0:56:42 You know, I can send text messages. If I open up messenger, I can send text messages with it. So, it's actually built on, again, why I use OpenAI, why I use ChatGPT.
+0:56:53 Whisperflow app, they built their backend with OpenAI technology. So, it's basically what ChatGPT has built in. This other company went and they built a transcription app with the same technology.
+0:57:06 And yes, you can use that in any app, any software, anywhere you have a text box on screen. You can use your voice.
+0:57:15 Again, that's, I just add to that real quick. I adopted Whisperflow probably, I would say about about a month ago.
+0:57:25 I started using it on Kirk's recommendation. I use it in my emails. I use it in my text messages because I log in the for my companies to talk with all my employees.
+0:57:45 So I mean, when you start thinking of all the text fields that you interact with, particularly if you work from home and work in tech in any capacity, like you're constantly typing.
+0:57:57 And so when you start adding up all that typing time, it gets pretty crazy. And there have been other dictation apps out there.
+0:58:06 But the cool thing with Whisperflow is that it'll take, like even if you ramble a little bit or it's not like perfectly like you don't have to say the punctuation or anything.
+0:58:17 It just automatically formats the sentence and to where it's at it's like always that I would say like a 95%.
+0:58:24 Sometimes I'll go in and switch a couple of things around if it's like a professional email or something but for a quick communication you hit two keys on your keyboard say what you want to say, boom.
+0:58:35 And you move on. So it's a massive, massive time saver. Yeah. Those of you guys that are hard or don't do very good at spelling, and you kind of get held up on that stuff, then this is, you'll fly because it just spills everything perfectly.
+0:58:50 It's done. Yeah, I mean, like I said, I don't want to sell you on too many tools, but if there's one to harp on, this is it.
+0:59:01 This is the tool that right now, today, we'll save you 10x your output 10x your time today. And it goes back to what I was saying about.
+0:59:13 It's not the big major thing that we can build with AI. It's adopting little practices into our daily life that's really going to have the most profound shift in our understanding of AI, what I can teach you and ultimately what you can build.
+0:59:28 So this is one tool that I'm just like, I got to tell people about this one, you know, this is it.
+0:59:36 So I wanna open it up again to specifics. If anybody has any specific, still if you wanna talk about concerns or practical things we can get into that stuff right now.
+1:00:03 Let's see, our day of my shadow, I'm gonna call you out. No mic cameras, there's moon around the office, baby's crying.
+1:00:15 So RJ is another good friend of mine, we've been friends for a long time since high school and we've essentially evolved together in our lives.
+1:00:28 We've taken on kind of the same aspect of life together I guess is the only way to say that. So we've come across the same problems in life.
+1:00:41 We've come across the same pitfalls and hurdles and experiences. And so, you know, I'm really happy I get to teach somebody like RJ, all of this stuff, AI implementation.
+1:00:54 And I know, so he's busy around the house, but I know RJ is working on developing his own skills. He's a software engineer developing on working in his own skills and understanding with AI because he has been one of my friends that has just succeeded in life, got the good job, got the good wife, you 
+1:01:13 know, everything's got beautifully. I just, I look up to him so much. But ultimately, this is one of those cases.
+1:01:19 And I don't want to call you too much, RJ, but this is one of those cases where he's done everything right in life.
+1:01:25 And AI is coming for him not to scare you on camera right now. But AI is coming for him. And so this is one of those situations, if you fall into that category where there's true fear of replacement, you know, you're already here, so that fear right now since you're here can be eliminated.
+1:01:48 There's no what ifs anymore because this is what we're going to achieve is being relevant, being up to date, being up to speed, and learning everything you need to learn.
+1:01:56 I think what it comes down to is we have 12 weeks for this course. We have 12 weeks for each course.
+1:02:04 We have 36 weeks. That's one day per week for each. That means we have roughly 36 hours of learning, 36 hours to become a master of this stuff, total AI mastery, 36 hours to pick up all the skills you need.
+1:02:23 And so that may sound like, wow, that's not a lot of time. This is going to be fun. Or that may sound like, wow, that's not a lot of time.
+1:02:31 How are we going to learn all that stuff? And the answer to both of those concerns is AI. Hey, guys, can sell both of those?
+1:02:39 We can get our time back. We can learn a lot more. You guys, I'm going to give you the tools inside the community to, you know, the more time you put in on your own, obviously, the more you're going to learn and get out of the course.
+1:02:49 But we are going to have enough time in these weeks to master the stuff and get up to speed. So let's see if we got Maria.
+1:03:03 Yeah. I was going to say Kirk, if you're going to call more people, that's fine. Good. I was going to say, could you spend a couple of minutes on painting a picture of what the next, I would say, like 12 to 36 months look like as AI starts kind of rolling out and scaling up in companies and like real
+1:03:31 world effects. because I think the people I talk to I don't think a lot of people really get it. They don't get the real world impact that this is going to have and kind of the scary consequences for not not learning this.
+1:03:50 Like kind of like you know give everyone I guess a healthy scare and an accurate understanding of what what this ends up working like.
+1:04:01 No, that's a great bring up. That's the subject I bring up on day two because learning that we have the power first and then understanding the scary is a real you know it's a real achievement to know that none of that is concerned anymore but I think that's a good point to good bring up ultimately it's
+1:04:20 this isn't going anywhere you know companies are spending billions of dollars investing in AI. As I put in the in the webinar, the competitive edge now that, you know, the smallest unit of competition is a single person.
+1:04:35 That's not just a whimsical thing to say. That's not just like, oh, you can do anything with AI. It means that you as an individual have the power to compete on a global scale with large companies.
+1:04:47 The scary part, as Wade mentions is that these companies are going to do everything in their power to make sure that doesn't happen.
+1:04:57 All right. That's the real scary issue. And companies are spending billions and billions of dollars investing in AI to get that competitive edge over us, the normal people, I guess, to get that competitive edge over us.
+1:05:11 And so in the near future, you're going to fall into one of two categories, those that adopt AI and those that don't, those that don't adopt AI in their business are going to start seeing the effects of that this year.
+1:05:25 I was saying next year, but it's 2026. We're going to start seeing the effects of that this year. And so to compete with these companies that are actively trying to saturate the world with their AI tools and their AI implementations and tell you what to buy as they always do, we need to stay competitive
+1:05:50 . Ultimately, in the market, we need to stay competitive. Any business that wants to be competitive in the market is going to have to adopt AI.
+1:05:56 Now, that's just matter of fact stuff. I can bring up all the numbers and how much money is being spent.
+1:06:02 I had all that prepared out, but for other lessons. But the truth is, the philosophical element of this is that every person is being exposed to some form of propaganda about AI.
+1:06:24 We see it everywhere as in everything, AI, this, AI, that. So we all know that it has to happen. and it's actively becoming, you know, these companies and these systems are actively trying to prevent you from diving into AI, right?
+1:06:40 This is a weird conspiratorial rabbit hole of a sun. They're actively trying to prevent you from diving into AI. And the reason is, is because of that competitive edge.
+1:06:50 If every single person, whether a solopreneur, a solo entrepreneur, an individual or a team of people inside of a business had the power to compete on a global market than what does that mean for these companies.
+1:07:09 And so on the good side, on the good note of that, the less scary side of things, companies are also spending billions of dollars into making these tools better and making these tools safe and accessible.
+1:07:22 And the security issues that were prevalent And even four years ago when this stuff was coming out have been completely eradicated.
+1:07:30 So putting your information online and all of these things are going to be non-issues. There's going to be no such thing as identities being stolen anymore.
+1:07:42 All of these things are good things as well. The real fact of the matter again is the competitive edge. if you're not adopting AI, you're going to get luck behind if we can talk about that until someone finally believes it.
+1:07:58 But, you know, until that point, we're going to learn what we need to. Does that answer that? Roughly wait. I'll get more into that kind of the real market stuff.
+1:08:11 Yeah. I didn't mean to jump forward on your other lesson either. So, No, no, no. This, like I said, I'm going to be, you know, today day one, we're set it For all of the courses tomorrow and Wednesday, we're going to set the foundation, we're going to set the tone.
+1:08:25 You guys that are here, I want to make this special to you. This isn't me talking at you, right? And so ultimately today it was about giving you the understanding of what we're going to be doing.
+1:08:38 You know, next week we're going to be doing it, very specific things we're going to be doing. But tomorrow same thing, understanding automation and what it is and what we're going to be doing with it, Wednesday, understanding what is coding, you know, vibe coding or AI coding and what we're going to 
+1:08:51 be doing with it. So again, if anyone has any specific bring-ups, we can tackle right now. Feel free. Otherwise, I can jump into a couple more things.
+1:09:19 We're about Christian. What do you got? Let's see you. Okay. Sorry, it is. Greetings just with the little man, but just gratitude for everyone to co-create this experience super stoked about the success that people are going to have coming out of here.
+1:10:08 Personally, just extra amps after finishing the foundations course late last night at around midnight. I couldn't sleep all night because I was just so juiced up for what we're going to learn.
+1:10:22 And I found myself watching a bunch of your videos that I hadn't seen. That was way over my head. but I just felt like the color palette starting to be filled in for the artistry that's available in, you know, a field of unlimited creative potential, right?
+1:10:45 From just an artistic perspective alone, let alone the business applications, you know, it's incredible. So I'm just really positively stoked up.
+1:10:57 I'm having a hard time sleeping because I just want to learn and absorb as much as I possibly can. So thank you for your time and expertise.
+1:11:07 Thank you for putting in the time to get to where you're at, you know, that's massive and you're great to listen to.
+1:11:14 I appreciate your voice intonation. Yeah, however that happens, like I've looked at a lot of different courses by a different, you know, quote unquote experts, but I haven't ever wanted to really contribute myself and my energy to any of them.
+1:11:34 And so I'm so stoked that it's happening with you and your colleagues. So I just, you know, want to say thank you and grateful.
+1:11:42 I'm super amped on a lot of different things, but especially the automation and creativity potential. Yeah. Christian, you always amp me up too, so I appreciate you.
+1:11:55 That's what's up. Appreciate you, dude. So again, like, I mean, that's, thank you for all that. You know, I have spent countless hours of my time learning this stuff to be able to relate it in a way that makes sense.
+1:12:11 And that's why today it was more just kind of open-ended. I wanted to get your feed, you know, wanted to get your input, see who has any questions and concerns and tell you what we're going to be doing because it's ultimately that mindset shift that is going to be the thing.
+1:12:27 You know, Nico, we were talking about theory this morning, we want real hands-on results. That's what everybody, that's what I want to.
+1:12:35 But to get those results, sometimes understanding the little bits and pieces first, like, you know, where we can fill in the gaps, I'm going to show you real world examples, real world changes, real world things that I've built.
+1:12:49 I'll show you everything that I've built. I have no problem showing my entire systems for everything, all my automations, my YouTube automations, all my back and stuff, my databases.
+1:12:58 You're going to see all that stuff because I don't care, I can just make it again. You know, all of these cool things that I have done, just to Christian's point, like we used to work together, he knows how much I put into, to, to having the skill, having the mindset and the ability to teach to the individual
+1:13:19 . But I, I can take that, you know, take everyone's input and turn it into something that's really valuable to you.
+1:13:26 So I, again, I don't want this to be me talking at you. I know this is a master class, but I will absorb everything that all of you say into the community, into these sessions.
+1:13:38 And so again, today was more just about absorbing from you guys as well, Christian, I'm absorbing everything from you guys as well so that I can output, I can have that context from you and I can output your results that you're looking for, right?
+1:13:54 So I can take a couple more questions that I want to leave you with one demo of my skills just to get you amped up for tomorrow and what we can be doing.
+1:14:05 So any other questions? Yeah, quite question, Kurt. So I remember you mentioning in the notebook LLM that's pretty much like the prompting environment for clarity.
+1:14:20 So I had a question like the tool, what was it again, whisper flow? Whisper flow, yeah. Yeah, that's really cool.
+1:14:30 So in terms of like prompting in notebook LLM, is it able to interpret audio or images to come out with just like an analyzation?
+1:14:46 Yeah, that's actually a great bring up. So notebook LM, this is this is from Google. notebook LM is going to be our or it's just a study guide, right?
+1:14:56 Everything you pump in here, you can then and receive back in any output you want to learn. So I'm gonna have you guys put in the transcripts from these calls, I'm gonna have you guys put in some PDFs for learning just like all these PDFs I have in here about this blockchain stuff.
+1:15:13 I'm gonna have you input all of the learning resources into notebook LM, then you can study from that. To answer your question, do that in chat GPT, all right?
+1:15:24 Input everything if you want to explore and you want to, you know, find out if you want to just discover and create, go into chat GPT.
+1:15:35 That's what that is for. Notebook LM is for study and learning. Chat GPT is for exploration and creativity. Ah, got you.
+1:15:43 Okay. So notebook would be good for like theorizing and like just finding data that's on the internet in terms of like what it is.
+1:15:54 Think about it. Go ahead. Yeah. Think about it like an actual notebook. You're just taking notes and in this case, your notes are collections of documents and collections of things all in one place.
+1:16:08 Cool. It's like a AI Wikipedia type. Yeah. You can even put some Wikipedia websites in here as your sources and ask those, ask whatever questions you want to those Wikipedia pages, so that's pretty good.
+1:16:22 Hey, so Kurt, just so unclear, we'll be using this as a depository of work that we do on chat GPT.
+1:16:34 You can do that as well. Any notes you want to take, right? If you're outputting anything on chat GPT and you want to save that, instead of using a project folder, we'll get into project folders and GPTs and chat GPT.
+1:16:48 But if you want to save that information, just throw it in your notebook LM. And the number one reason immediately, you know, to give you some quantitative value is notebook LM can store 50 sources where chat GPT can store 25.
+1:17:04 So that's the only reason, you know, that's the main reason, using notebook LM and then to visualize all your data and just study from chat GPT can't do that.
+1:17:13 Okay, so one of the questions I have, you had made a recommendation of Whisper Flow. And so Whisper Flow is a paid app, I guess, correct?
+1:17:25 Yeah. Paid for how many of the paid apps do we need to plan on getting inside your hub?
+1:17:37 Good question. So this is going to be a topic of conversation. It always comes up. When we're doing things with AI, we're going to have to be paying for AI tools.
+1:17:47 And AI tools are going to get very, very expensive, very quickly. I think I was spending, you know, over a thousand dollars a month on my tools.
+1:17:56 And that's a lot of money. So I want to cut through all that. I'm going to give you the tools that you need.
+1:18:02 And ultimately, I get a lot of arguments in my other businesses and my other clients saying, well, there's a tool that can do that, but it can do it for free.
+1:18:10 So why are you making us use this one? Only the tools that I am suggesting, I'm not going to, I'm not going to say we have to use this tool for this course unless it's free, like notebook LM.
+1:18:23 Okay, I'm never going to do that. All these tools you can decide to use on your own. And I'll show you what tools you need.
+1:18:31 If you want to do automation, you're going to have to buy NADN. I'm not going to force you to buy NADN.
+1:18:37 I'm not going to say you need NADN for this course, but if you want to build automations, you're going to need NADN, right?
+1:18:43 Nope of LM is one that I'm saying, yes, we are using it for this course, but it's free. Whisperflow tools like that that increase productivity.
+1:18:51 Whisperflow is the only one I'm really going to say, yeah, we need this one. And that is that is a paid one.
+1:18:57 Well, like Wade, it said, and for my, you know, and I think he was referencing a person that can't spell very well.
+1:19:05 I can spell my name right most of the time. But I can count. So, but getting the whisper flow, I think would be a good idea for me, because I'm a very slow typer.
+1:19:19 Yeah, that's the productivity factor. I mean this this single most valuable tool on that list to use right now easily handstand.
+1:19:28 Okay, thank you for that input. You're welcome. Cool, we got about 10 minutes. I can do a little demo for you guys if no one has anything else.
+1:19:53 Okay. Rock and roll. So let's see what we can do here. I did not plan this out. So you're going to see this live.
+1:20:00 this is the power of building at the speed of thought. So I'm going to, can you guys see this, can you guys see this?
+1:20:09 Hold on, let's see here. Can you see my desktop right here? Okay, cool. All right. So we're going to learn all this stuff in the other courses.
+1:20:36 Don't worry about knowing what I'm even doing, but I just want to show you something to dream about, I guess.
+1:20:43 I don't know. Ultimately, in the AIA Advanced AI course, this is all about context engineering. So we don't have to know anything about coding, but I'm going to bring up this tool.
+1:20:56 This is Visual Studio Code. This is just a common interface for coding. And what I have in visual studio code is I have some open AI tools.
+1:21:15 I create a folder on my desktop just now called demo. You saw me do that. Here it is. And now I can talk to my computer here and say I got too many screens and too many buttons up too many tabs up already.
+1:21:44 I need you to write me an outline in this folder. This outline is going to discuss all of of my topics I need for tomorrow.
+1:21:53 Tomorrow I'm teaching AI automation, so bring up anything relevant to AI automation, including tool usage like NADN. Think slowly, plan out your tasks, be thorough in your design and create this document.
+1:22:12 Now, the magic show here is this is an agent, okay? But I'm using context engineering to talk to this agent.
+1:22:21 Now, this agent is going to work. I can work on other tasks. I can do whatever I want. I can bring up a new agent until that agent to start working.
+1:22:30 But this agent is going to work autonomously. That's just how this agent is built. We'll get into how to build agents.
+1:22:38 But this OpenAI agent is now just working for me. And the only way the only thing I had to do was give it a and a very simple prompt, hey help me design this document for tomorrow.
+1:22:51 I can go take a nap, I can go do my other work, I can focus on what really matters instead of drafting this document that I need.
+1:23:00 And so this is a very simple one, that document is already finished and what's incredible about that is that this document is in this folder on my computer ready to be used.
+1:23:11 So it's not out there in space. This is local. This is working on my computer. I can have this stuff work inside of my environments doing things for me, moving things around of my computer and building stuff in real time.
+1:23:27 So that was just a small little short little demo I wanted to give you guys with what we can potentially start focusing on is how we can use prompt engineering, context engineering, to talk to pre-built agents, other tools that are out there, open AI, whatever, to start working for us.
+1:23:45 Okay. Again, Nico, we'll get into some real-world examples, some real use cases today was about getting to know you guys and just having a discussion on what we're going to be doing and getting that mindset shift into adopting AI into little things everywhere and starting to focus on context engineering
+1:24:07 . So I think that about wraps up the material I have for you guys we have we got six minutes Anybody else have anything?
+1:24:18 I was in a mention something Kirk just about just about the program in general If you guys I know a lot of you guys are your brains are turning about them with the possibilities So I know like that's Something that happens for me.
+1:24:35 I'm very much have shiny objects in drum, but thankfully that's gotten me into some good places too, so I'm grateful for that.
+1:24:44 But what I would suggest, just put it out there. In the next week, this is first Advanced AI, we're going to do the next class in this series on Monday of next week for the 12 weeks.
+1:25:01 Maybe think of one thing that you think would really help In your workflows for your business or if you work somewhere whatever think of one tool or one thing That you would like to work on throughout this process.
+1:25:18 So like maybe you are working you know at You know working on on your computer and moving files around doing stuff like that Maybe you want to learn something like what Kirk has here Or maybe you just want to build maybe a more simple agent inside chat GPT I use the chat GPT agents because they're very
+1:25:37 easy and quick to spit out which you guys I'm sure we're going to cover that later, but I guess here's a better way to put it.
+1:25:45 Think of a problem that is repetitive that you always have to work on in whatever you're doing. And maybe you could pick that to solve during the next 12 weeks and so that you have a take away at least one from this process.
+1:26:05 And then also that being said, you guys, this is where you're going to learn during these classes. This is where we serve up the material.
+1:26:15 But we also have office hours, which are Mondays, Tuesdays and Wednesdays, between 10 a.m. and 12 p.m. of extended time.
+1:26:23 So that's where you can take that project that you're working on, take it to office hours. And then we just troubleshoot and we work on it and we talk about it.
+1:26:30 It's not like a structured format. Yeah. So anyway, I just want to put that out there because you don't need to just sit here and just absorb information.
+1:26:38 Think of a real world use case, something, something, and actually try to get it done. Get it, get it to your workflows by the end of 12 weeks because that's going to be the best way to really absorb this information and learn it.
+1:26:53 So I just want to throw that out there and make sure you guys understand the resources versus that are available to you with that.
+1:26:59 Yeah, that's it. That's a good bring up to because, you know, I'm coming from a consulting position where people are always coming with their ideas and their plans to me.
+1:27:11 So that's a good bring up way to mention here in this classroom space is that even if you're not coming with a specific business implementation or goal in mind, we can develop those goals along the way.
+1:27:21 You can come up with something and we can actually build it, right? we can make that happen. So thanks for bringing that up.
+1:27:28 That's a good, a good bring up. We have a couple of people with their hands up. Oh, I can't see, I can't see the hands.
+1:27:38 Let's see. Rick and Danielle. Yeah. Go ahead, Rick. So my question is more, I think I mean, we're, we're talking about shiny objects in room.
+1:27:52 You should see me. A couple of that for the idiot. Yeah, turbo. So and it's more out of interest. Okay, I know we talked a lot.
+1:28:04 You spoke a lot about chat GPT but my mind kind of goes back a few weeks when I read some reports from Mark Benioff from Salesforce talking about how we tried Gemini and he's never going back and next person talks about Gemini and that's the chat GPT killer and stuff like that.
+1:28:23 Just your opinion, your thoughts. Why chat GPT and not Gemini, or has Gemini got anything because like, there's me scratching my thinking, maybe I should switch my subscription from chat GPT.
+1:28:38 Yeah, no, don't do that, don't do that. So that right there, that question in itself is the definition of shiny objects syndrome.
+1:28:50 So don't do that. This is a this is a great question and it's a topic we're going to be we're going to be harping on a lot as which is the best and which is the best right now which is the best in two weeks.
+1:29:05 What should I be using and ultimately if you have a subscription right now use that you're going to be learning specific techniques for specific tools and we don't need to be hopping around.
+1:29:17 We'll touch on this more. I want to answer that question in more detail, but I'll tell you right now, don't switch.
+1:29:23 Should we DM in the community? We'll bring that up as a discussion. That can be a part of first discussion in the community because that is a great topic.
+1:29:32 Okay, all right. Okay, cool. And Danielle. Well, first I have a comment. So just as being curious, I just put into chat how to I could better use chat to make my business going Yes, specific thing forward and I have generally that's curious.
+1:29:51 So that was interesting There is some good ideas on the The question is though as much as I'd like to make those live classes realistically I'm not really sure if it's going on 3 30 a.m.
+1:30:01 My time right now. I know But I could come into the office hours and do that if I've questioned but would you suggest doing all three?
+1:30:10 at one time, all three of the clock courses at one time, or do it spaced out. Yeah, good question. So I have to do it in my schedule if it's not that 2.30 in the morning.
+1:30:21 I know. Sure. I'm impressed you made it today. Yeah, that's great. Great question. So I think it's a question of your capability.
+1:30:31 Are you capable of multitasking and going through three courses? ultimately the three courses are going to feed directly into one another and benefit one another.
+1:30:41 So you could take AI this 12 weeks just one day a week. You could take automation the next cohort one day a week and so on.
+1:30:50 But then you know what are you forgetting? What are you missing? What do you have to remember? It's up to your capability.
+1:30:55 If you want to take all three, I highly suggest going through three days every week just because everything is going to work on and feed off of one another so you know topics we may talk about on Monday are going to come up on tomorrow when we're talking about context engineering a specific prompt for
+1:31:16 an agent we need in an automation you know what I mean so you know my question was kind of similar along those same lines are if you take all three how How much work outside of the course is there?
+1:31:33 It's not 36 hours. That's just 36 hours last time, right? Exactly. 36 hours of lesson time. So how you use that, you know, we only, we could look at it one of two ways.
+1:31:45 Like I said, we only have 36 weeks or, you know, 36 hours. or, wow, we have 36, you know what I mean?
+1:31:53 So, however much you want to work, again, we'll talk about context engineering, however much context you want to feed into your learning sessions, however much you want to take in, you're going to maximize your results.
+1:32:09 If you don't add in more context, meaning you're not working, you know, picking up little projects, going into the community here and there and whatever, it's gonna take you longer because the results aren't going to happen as fast, but it's not necessary to do that amount of work all at once.
+1:32:27 You can take a break, you're going to absorb this stuff, and it's all very methodical, but it's up to your capability.
+1:32:36 Hey, Kurt, I got my strategy. I can be here on Monday. I already got appointment for Tuesday and then there's Wednesday how much value is there if you can't get here and I know there's some but to watch the recordings somewhere along the way during the week just so that you don't miss out on the content
+1:33:00 of it when it's you know when you can. So we're discussing what to do in regards to that. Obviously we want to keep the recordings available in case you miss the sessions, you never have to worry about missing a session.
+1:33:13 Ultimately, you can join the live again. The next cohort, you know, if it came down to that. But I think the value in the live sessions are going to be the open format.
+1:33:26 I want to work with all of you individually to build real world solutions. You know, today again, today I was about opening everything up.
+1:33:35 The mindset shift, but I want to make it a point to work with all of you inside of the community on these calls.
+1:33:42 That's what these calls are for is to get everyone who is dedicated and available to where they want to be.
+1:33:50 Now the recordings are going to be available. We haven't decided how we're going to distribute all that stuff, but ultimately the transcripts.
+1:33:58 Here's what AI does for recordings. AI essentially makes recordings useless because, yeah, you can spend the time watching the recording and absorb all the information.
+1:34:08 But if you have the transcript from the recording, well, now that's the key thing with AI. You load in the recording transcript, and now you have a piece of data in your notebook, LM, and you can have conversations.
+1:34:22 You can ask that transcript. This is a weird concept to imagine, but you can now ask that transcript questions about the material and that's really what is more valuable than the actual recordings.
+1:34:36 So come into the lives so we can work focus on specific things and then you will be we will make the transcripts available and the recordings available when you can you know when you can watch the recordings whatever you want.
+1:34:49 So then it really helps to have if you can't make one of those having the transcripts of it be able to work with it inside your notebook.
+1:34:57 But as long as you have kind of digested it in some manner, then maybe the open office would be the place where you could come and work on it as well.
+1:35:08 So office hours are going to be coming in with specific questions. Maybe you hit a roadblock in your automation. You keep getting an error.
+1:35:15 You come into the office hours. We solve the error. that's that's what those hours are for. So everything you learn in our live master class sessions, take this transcript, put it all together, start building, but if you have any issues come to the office hours.
+1:35:33 Okay, thank you. I was gonna make one mention to for those of you guys that are interested, we don't have it done yet because we actually have to get the course done, but you guys will have the option to take a exam at the end of these courses.
+1:35:53 And it'll be, you know, just probably a multiple choice format. And providing that you kind of like went through and you digested the information, you could answer those exam questions that we are going to be able to issue you clarity AI certifications.
+1:36:11 So I don't know like that's, we're brand new so it's just getting started, but it is something there's not a whole lot of like legit certifications because this is all brand new stuff.
+1:36:21 So we are hoping that as we build out this program, we, you know, really make it more and more robust that that certification eventually will mean a lot that you win through this program.
+1:36:31 And obviously like if you are competing in the workforce or whatever, how many other people are in your office that have a high certification of any type.
+1:36:41 So, probably none. And so, we're trying to show that, yes, this person did put in the time they did understand how to become a master context engineer.
+1:36:52 And then you could print that out and, you know, have that to show off and forget the time that you did this.
+1:36:58 And it's something that other people haven't spent the time to get. So, yeah, that is a part of this program.
+1:37:04 And we'll talk about that once we get closer to the end of the classes. So I can get those questions and put them in chat GPT, huh?
+1:37:12 Well Use your notebook. Yeah, yeah, maybe an open book and a game the system It will prove your mastery of AI if you use AI to answer the questions that's right.
+1:37:25 That's I mean, you know, and that's where I'm thinking is like now We're gonna actually structure that because we know we want to make sure that you guys get the concepts But in reality, that's what we're talking about here.
+1:37:33 Yeah, is while other people are trying to learn stuff manually this is what our superpower is, we should be able to go through and use AI to 10XR productivity overnight and be able to, you know, I was thinking when Kirk was talking earlier, that you could think of AI as an augmented, like, another brain
+1:37:55 that you get used to collaborating with. I remember I would use ChatGVG maybe like once a week when it first came out as a novelty thing, and I'm like, let's see what it's going to say.
+1:38:05 Now, I run almost all of my ideas, my business ideas, all my stuff. I'm like, before I make a decision, I'm just going to throw a quick prompt in.
+1:38:15 And it gives me just a quick brainstorm and it gives me like two or three other branches that I wasn't even considering the off of that idea.
+1:38:23 So it becomes kind of this extension of your thought process that makes you really instantly the smartest person in the room.
+1:38:33 If you take what you already know, what you've already mastered, and add that knowledge to this enhanced brainstorm tool, essentially, I mean, you're, you know, you can become unstoppable.
+1:38:47 So, as a note, I know we've gone about 10 minutes over, so I think we have to call it right there, but that is, that is a great final endpoint.
+1:38:54 We're achieving superpowers here and the goal is to ultimately use it to leverage, take back your time. So we won't take any more of your time.
+1:39:04 Really appreciate you joining us on this adventure and really investing in yourselves. So we appreciate you being here. All right, guys.
+1:39:13 Nice to meet everybody. We'll see you next time. Great. And those of you, you can join the work hours, the office hours tomorrow morning.
+1:39:22 and I will see you tomorrow evening for the automation course thank you all right thank you so much great feel free to DM me in the group anybody I'll DM you just teach me everything I need to know you have the best teaching voice oh amazing that's the feedback I need right yeah you're doing great all
+1:39:46 right thank you guys I'm excited for this have a wonderful evening yeah thank you Daniel. All right. See you guys.
+1:39:52 See ya. Yeah.

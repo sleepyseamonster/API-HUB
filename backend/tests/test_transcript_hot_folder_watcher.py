@@ -11,12 +11,15 @@ from backend.tools.transcript_hot_folder_watcher import (
     Config,
     compute_fingerprint,
     ensure_directories,
+    doctor,
     process_batch_once,
 )
 
 
 class _WebhookHandler(BaseHTTPRequestHandler):
     response_code = 200
+    response_code_sequence: list[int] = []
+    request_count = 0
     response_payload = {
         "status": "success",
         "message": "Transcript processed",
@@ -28,7 +31,14 @@ class _WebhookHandler(BaseHTTPRequestHandler):
     def do_POST(self) -> None:  # noqa: N802
         content_length = int(self.headers.get("Content-Length", "0"))
         self.server.last_request_body = self.rfile.read(content_length)
-        self.send_response(self.response_code)
+        cls = self.__class__
+        if cls.response_code_sequence:
+            index = min(cls.request_count, len(cls.response_code_sequence) - 1)
+            response_code = cls.response_code_sequence[index]
+        else:
+            response_code = cls.response_code
+        cls.request_count += 1
+        self.send_response(response_code)
         self.send_header("Content-Type", "application/json")
         self.end_headers()
         self.wfile.write(json.dumps(self.response_payload).encode("utf-8"))
@@ -125,6 +135,8 @@ class TranscriptHotFolderWatcherTests(TestCase):
                 thread.join()
                 server.server_close()
                 _WebhookHandler.response_code = 200
+                _WebhookHandler.response_code_sequence = []
+                _WebhookHandler.request_count = 0
                 _WebhookHandler.response_payload = {
                     "status": "success",
                     "message": "Transcript processed",
@@ -132,6 +144,64 @@ class TranscriptHotFolderWatcherTests(TestCase):
                     "chunks_inserted": 2,
                     "airtable_record_ids": ["recA", "recB"],
                 }
+
+    def test_process_batch_once_retries_transient_webhook_failures(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            _WebhookHandler.response_code_sequence = [503, 200]
+            _WebhookHandler.request_count = 0
+            server, thread, base_url = self._start_server()
+            try:
+                root = Path(tmp_dir) / "transcripts"
+                config = Config(
+                    root=root,
+                    webhook_url=f"{base_url}/webhook/transcript-hot-folder-intake",
+                    auth_header=None,
+                    auth_token=None,
+                    scan_interval=0.01,
+                    stable_seconds=0,
+                    request_timeout=5,
+                    retry_attempts=2,
+                    retry_delay_seconds=0,
+                )
+                ensure_directories(config)
+                batch_dir = config.batches_dir / "week-03"
+                batch_dir.mkdir(parents=True)
+                (batch_dir / "lesson.txt").write_text("Hello world\n", encoding="utf-8")
+
+                summary = process_batch_once(config, batch_dir)
+
+                self.assertEqual(summary["successful_files"], 1)
+                self.assertEqual(_WebhookHandler.request_count, 2)
+                done_batch = next(config.done_dir.iterdir())
+                self.assertTrue((done_batch / "lesson.txt").exists())
+            finally:
+                server.shutdown()
+                thread.join()
+                server.server_close()
+                _WebhookHandler.response_code_sequence = []
+                _WebhookHandler.request_count = 0
+
+    def test_doctor_reports_sanitized_config(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir) / "transcripts"
+            config = Config(
+                root=root,
+                webhook_url="https://example.com/webhook/transcript-hot-folder-intake?token=secret",
+                auth_header="X-Internal-Webhook-Secret",
+                auth_token="super-secret",
+                scan_interval=5,
+                stable_seconds=4,
+                request_timeout=120,
+            )
+            report = doctor(config)
+
+            self.assertEqual(report["status"], "ok")
+            self.assertEqual(report["webhook_url"], "https://example.com/webhook/transcript-hot-folder-intake")
+            self.assertTrue(report["auth_header_set"])
+            self.assertTrue(report["auth_token_set"])
+            self.assertTrue(root.exists())
+            self.assertTrue((root / "batches").exists())
+            self.assertTrue((root / "results").exists())
 
     def _start_server(self) -> tuple[HTTPServer, threading.Thread, str]:
         server = HTTPServer(("127.0.0.1", 0), _WebhookHandler)

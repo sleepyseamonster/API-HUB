@@ -14,6 +14,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from urllib.parse import urlsplit, urlunsplit
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
@@ -52,6 +53,8 @@ class Config:
     scan_interval: float
     stable_seconds: float
     request_timeout: float
+    retry_attempts: int = 2
+    retry_delay_seconds: float = 2.0
 
     @property
     def batches_dir(self) -> Path:
@@ -128,6 +131,11 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def sanitize_url(value: str) -> str:
+    parts = urlsplit(value)
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
+
+
 def guess_content_type(path: Path) -> str:
     explicit = SUPPORTED_EXTENSIONS.get(path.suffix.lower())
     if explicit:
@@ -175,6 +183,10 @@ def build_multipart_request(
     return bytes(body), f"multipart/form-data; boundary={boundary}"
 
 
+def is_retryable_status(status_code: int) -> bool:
+    return status_code in {408, 425, 429, 500, 502, 503, 504}
+
+
 def send_to_webhook(
     config: Config,
     file_path: Path,
@@ -206,17 +218,30 @@ def send_to_webhook(
         headers=headers,
         method="POST",
     )
-    try:
-        with urllib.request.urlopen(request, timeout=config.request_timeout) as response:
-            payload = response.read().decode("utf-8")
-            return json.loads(payload) if payload else {}
-    except urllib.error.HTTPError as exc:
-        error_body = exc.read().decode("utf-8", errors="replace")
-        raise RuntimeError(
-            f"Webhook returned HTTP {exc.code}: {error_body or exc.reason}"
-        ) from exc
-    except urllib.error.URLError as exc:
-        raise RuntimeError(f"Webhook request failed: {exc.reason}") from exc
+    last_error: Exception | None = None
+    for attempt in range(config.retry_attempts + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=config.request_timeout) as response:
+                payload = response.read().decode("utf-8")
+                return json.loads(payload) if payload else {}
+        except urllib.error.HTTPError as exc:
+            error_body = exc.read().decode("utf-8", errors="replace")
+            last_error = RuntimeError(
+                f"Webhook returned HTTP {exc.code}: {error_body or exc.reason}"
+            )
+            if attempt < config.retry_attempts and is_retryable_status(exc.code):
+                time.sleep(config.retry_delay_seconds * (attempt + 1))
+                continue
+            raise last_error from exc
+        except urllib.error.URLError as exc:
+            last_error = RuntimeError(f"Webhook request failed: {exc.reason}")
+            if attempt < config.retry_attempts:
+                time.sleep(config.retry_delay_seconds * (attempt + 1))
+                continue
+            raise last_error from exc
+    if last_error is not None:
+        raise last_error
+    raise RuntimeError("Webhook request failed without a recorded error.")
 
 
 def discover_batch_dirs(batches_dir: Path) -> list[Path]:
@@ -316,6 +341,8 @@ def process_supported_file(
                 "chunks_inserted": int(response.get("chunks_inserted", 0) or 0),
             }
         )
+        if response.get("workflow_version"):
+            result["workflow_version"] = response["workflow_version"]
         if "duplicate_reason" in response:
             result["duplicate_reason"] = response["duplicate_reason"]
         if "airtable_record_ids" in response:
@@ -420,6 +447,10 @@ def process_batch_once(config: Config, batch_dir: Path) -> dict[str, Any]:
         "source_batch_folder": batch_dir.name,
         "started_at": results[0]["started_at"] if results else utc_now_iso(),
         "finished_at": utc_now_iso(),
+        "workflow_version": next(
+            (item.get("workflow_version") for item in results if item.get("workflow_version")),
+            None,
+        ),
         "processed_files": len([item for item in results if item["status"] != "unsupported_file"]),
         "successful_files": len(
             [item for item in results if item["status"] in {"success", "skipped_duplicate"}]
@@ -462,24 +493,61 @@ def build_config(args: argparse.Namespace) -> Config:
         auth_token=args.auth_token or os.environ.get("N8N_TRANSCRIPT_WEBHOOK_AUTH_TOKEN"),
         scan_interval=float(
             args.scan_interval
-            or os.environ.get("TRANSCRIPT_HOT_FOLDER_SCAN_INTERVAL", "5")
+            if args.scan_interval is not None
+            else os.environ.get("TRANSCRIPT_HOT_FOLDER_SCAN_INTERVAL", "5")
         ),
         stable_seconds=float(
             args.stable_seconds
-            or os.environ.get("TRANSCRIPT_HOT_FOLDER_STABLE_SECONDS", "4")
+            if args.stable_seconds is not None
+            else os.environ.get("TRANSCRIPT_HOT_FOLDER_STABLE_SECONDS", "4")
         ),
         request_timeout=float(
             args.request_timeout
-            or os.environ.get("TRANSCRIPT_HOT_FOLDER_REQUEST_TIMEOUT", "120")
+            if args.request_timeout is not None
+            else os.environ.get("TRANSCRIPT_HOT_FOLDER_REQUEST_TIMEOUT", "120")
+        ),
+        retry_attempts=int(
+            args.retry_attempts
+            if args.retry_attempts is not None
+            else os.environ.get("TRANSCRIPT_HOT_FOLDER_RETRY_ATTEMPTS", "2")
+        ),
+        retry_delay_seconds=float(
+            args.retry_delay_seconds
+            if args.retry_delay_seconds is not None
+            else os.environ.get("TRANSCRIPT_HOT_FOLDER_RETRY_DELAY_SECONDS", "2")
         ),
     )
+
+
+def doctor(config: Config) -> dict[str, Any]:
+    ensure_directories(config)
+    report = {
+        "root": str(config.root),
+        "batches_dir": str(config.batches_dir),
+        "processing_dir": str(config.processing_dir),
+        "done_dir": str(config.done_dir),
+        "failed_dir": str(config.failed_dir),
+        "results_dir": str(config.results_dir),
+        "webhook_url": sanitize_url(config.webhook_url),
+        "auth_header_set": bool(config.auth_header),
+        "auth_token_set": bool(config.auth_token),
+        "scan_interval_seconds": config.scan_interval,
+        "stable_seconds": config.stable_seconds,
+        "request_timeout_seconds": config.request_timeout,
+        "retry_attempts": config.retry_attempts,
+        "retry_delay_seconds": config.retry_delay_seconds,
+        "supported_extensions": sorted(SUPPORTED_EXTENSIONS),
+        "status": "ok",
+    }
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return report
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "command",
-        choices=("watch", "scan-once"),
+        choices=("watch", "scan-once", "doctor"),
         help="Run continuously or process the current batch folders once.",
     )
     parser.add_argument("--root", help="Override the transcript hot-folder root.")
@@ -496,6 +564,16 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--request-timeout",
         type=float,
         help="Webhook request timeout in seconds.",
+    )
+    parser.add_argument(
+        "--retry-attempts",
+        type=int,
+        help="How many times to retry transient webhook failures.",
+    )
+    parser.add_argument(
+        "--retry-delay-seconds",
+        type=float,
+        help="Base delay between webhook retry attempts.",
     )
     return parser.parse_args(argv)
 
@@ -525,6 +603,9 @@ def watch(config: Config) -> int:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     config = build_config(args)
+    if args.command == "doctor":
+        doctor(config)
+        return 0
     if args.command == "scan-once":
         scan_once(config)
         return 0

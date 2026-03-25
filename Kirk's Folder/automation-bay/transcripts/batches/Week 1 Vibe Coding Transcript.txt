@@ -1,0 +1,416 @@
+﻿0:00:06 Right, welcome in, everybody. Greetings, greetings, hello. Greetings, Rick, is that you, yeah? So, one in only. So, yeah, man. So, day one, vibe coding, we're gonna get started with this.
+0:00:24 Um, we're gonna jump right into some interesting topics right away. But while I get my screen share set up here, let me open this up again.
+0:00:38 I think everybody looks like so far. Everybody has been on all the other calls. We invited everybody here to join Total AI Mastery as a launch program, but in the future we will be offering each pillar program individually if that is around that someone wants to take.
+0:00:56 Ideally, total AI mastery is the goal. All three pillars is the ultimate goal. And that is the, you know, what we aim for.
+0:01:04 But most of the lessons in the future, you know, all of you guys are all in, which is great. Most of the lessons in the future for future cohorts might just be individual to the particular pillar, right?
+0:01:16 There's not going to be much cross talk. You know, hey, we did this on Monday on Wednesday lesson and kind of thing.
+0:01:24 But for everyone here, we can talk about what we did earlier in the week. So same thing, I won't get into, you know, diving into some of the stuff we talked about before, but I just want to open it up for questions, any concerns, any questions, any specific things that you want to tackle before we get
+0:01:39 into the material, anything to bring up right away. We can open up the mics and you guys can start off with your questions.
+0:01:48 Let me open up the chat here, too. If you don't have a mic, you don't have a camera, we could type in the chat.
+0:01:53 Feel free. No questions, concerns. We got one coming in from RJ. Everyone's chat is disabled. Yeah, so I'm not the zoom master here.
+0:02:03 I don't know how to handle that stuff. Let me turn it on or Wade can turn it on. Thanks, RJ, you're my biggest help throughout this whole thing.
+0:02:13 RJ, it's my longtime friend. We've been friends since we were kids at high school, So, thank you. Appreciate that. No questions or anything right now.
+0:02:26 Just super stoked to learn what you know about the vibe coding space and build some really cool stuff. Rock and roll.
+0:02:33 Yeah. So, I mean, it's probably, I think, Zach is the person that just spoke up. Zach is a really talented AI coder.
+0:02:43 we're designing an app together, we're working this stuff out and building cool stuff together. So, you know, potential for everyone in this group is to just immediately learning the material, have the skill to start building stuff.
+0:02:57 It's crazy, so let's get into it. So I think most importantly here is, we need to talk about what vibe coding actually is.
+0:03:06 AI coding, what actually is that? This is not a software engineering course. I'm not going to be teaching you coding languages.
+0:03:14 I'm not going to be teaching you, you're not going to be able to go get a job at a software company after this course unless you have the very specific qualifications that a software engineer needs or a coding specialist needs to get that position.
+0:03:31 So I want to make that clear. We're using AI. This is an AI course. I'm not going to turn you into engineers.
+0:03:38 I'm going to turn you into AI masters. And as an AI master, you can act as a senior software engineer, okay?
+0:03:47 That is a goal that everyone should shoot for. I've had my code evaluated, I've been coding, you know, like I said me in Zachary coding apps, I've had my code evaluated and analyzed.
+0:03:58 And the code that I'm producing that I cannot read is at a level of a senior software engineer, okay? Two not read it.
+0:04:12 Those two things don't mix. All right, so we have to be very careful on what that means. You can develop high-level code.
+0:04:21 You must use that very appropriately. If you try to use that in a production-level system saying, I am a senior software engineer and you're using AI code, you can get into very, very dangerous spots.
+0:04:36 And so that's my first bring-up here is Vibe coding? Okay, so Vibe coding is not a real thing. We talked about this this morning.
+0:04:46 It was a casual term used to talk about a behavioral method of coding. You know, when you're going to build anything, it's very structural.
+0:04:56 We need documentation, we need planning, we need outlines, we need all of these guides in place before we start a project.
+0:05:03 Otherwise, you're going to be typing into the computer and wasting everyone's time. and what am I actually doing? I need plans and outlines and structure.
+0:05:12 And so vibe coding was a method of coding. It's not even a real term was just said, I'm just gonna sit down and start typing and see what I can make.
+0:05:20 I'm just gonna vibe out and start coding. And so ultimately when AI started getting better at coding, and we're giving more power to the AI to start coding, I can literally sit back and talk to my computer and vibe with the AI.
+0:05:34 And the AI is actually doing very structural things. and so ultimately was Andre Carpathi just last year. February 2025, he was the former Tesla AI lead and co-founder of OpenAI.
+0:05:49 OpenAI makes Chatchy B.T. He said this casually. He made a post about it. He said, this is vibe coding. We're vibe in here and that term stuck and now AI coding is synonymous with vibe coding.
+0:06:02 It means the same thing, even though what we're actually doing is technically vibing for building structured systems in a very planned-out way with AI, you know, it's not technically vibing, you know, vibe coding.
+0:06:17 But it's now the coin's term. Using AI to code is vibe coding. So that's the distinction there if you are ever confused on what you're actually doing with AI and coding and what vibe coding is.
+0:06:29 There's no difference at point, we are all vibing out here. So that's the, that's an important thing if you're ever doing any research or looking up stuff on your own and you're seeing the cross-contamination of verbiage and terminology and what is what?
+0:06:44 It's brand new. This term is brand new. We're on the forefront of emergent technology. So that is where we begin.
+0:06:50 So I want to take this moment again to say this is the hardest subject for me to teach by far.
+0:06:59 And it's not because it's actually difficult or because it's complicated, it's because I can actually guide you to a point where you can potentially destroy your entire business.
+0:07:13 If you integrate AI systems on a code level, you know, you're building internal systems and you're building databases to handle customers and clients and you're building all these systems on vibe coding where you can't read the code, and something happens to your customer information.
+0:07:32 What are you going to do about it? You're just going to trust AI and continue forward. Well, that is irresponsible.
+0:07:40 That's a very dangerous thing to do on a business level. Handing the keys to AI and saying do everything and letting it handle customer information and letting it handle do this inside of your internal systems that you're building is dangerous.
+0:07:56 You business, right? And so it's a very, you know, I think every teacher in any niche and any subject, you know, one of the qualifications of a good teacher is that, you know, we have to have the responsibility to say no to our students.
+0:08:11 So I don't do this. If we're teaching anything to anyone, that is a very dangerous thing to do. So at this point, I want to emphasize that that This is, you know, by coding here, this is going to be the most powerful and therefore the most dangerous skill that I can teach you.
+0:08:32 You know, unintentionally blowing stuff up, if you're not, you know, we're still, we're going to talk about security again. This is a main issue if you're building systems that you just don't have the technical prowess as a senior engineer would to build in secure systems.
+0:08:48 You have to do all that on your own. Whereas in something like NADN there are layers and API keys and all of these layers inherently built into it, all of these essential gates to get through.
+0:09:01 You don't have that when you're coding an app. You have to know what to do where, when and why, to keep your customers safe, your customer information safe, to keep your business information safe, your confidential information can just go out there if someone knows how to get into your AI-coded systems
+0:09:19 , okay? So this is hard for me to teach, and ultimately there are going to be two types of people in the overall course, right?
+0:09:29 In total AI mastery, we're essentially communicating to three types of people, which makes is very difficult to teach. But two major categories in this class alone, in this course alone, in AI coding, we have architects, and I'm just giving these archetypes to these types of people now.
+0:09:52 We have the architects, the builders, and we have the operators, right? Builders want to know everything about the systems, know how it works, know why it works, and be able to build it.
+0:10:04 step by step. This is how I'm going to learn how to do this thing. Well, inherently learning something like this that is so powerful and so dangerous, we have to start small, slow, careful, and I can't show you the big, cool, awesome, exciting things because you're going to go do that and blow yourself
+0:10:23 up. So I have to start with architects very slowly. And with operators, years, you want to see the outcomes, the goals, the results, you want to see what is capable.
+0:10:35 That's why you're here. What is AI for and what is the potential and how can I make money? I can show you all the demos and the experiments and the business, the real business implementations on how to do this inside internally to make money and do amazing things with it.
+0:10:55 But that means we're going to skip how to build, okay? And so, depending on what type, you know, what group you fall into, I'm going to teach this course very, very differently, and this is just a major point I wanted to bring up at this junction here.
+0:11:14 So I want everybody, just even if you don't know, what do you feel like you are? What are you leaning towards?
+0:11:21 Do you want to build stuff or do you want to know what's possible so that you can hire your team or put your employees through this course and they can become the builders.
+0:11:33 Type in the chat or let's have that discussion first because this is going to define who we are in this cohort for this session.
+0:11:42 I'll start. Yeah, go ahead. Boom. So I like, and we were talking about this earlier, but I know a little bit about software, but for me, I think that it's super powerful when someone that can see vision for a company, we're all like inventing products of different types, entrepreneurial mindset, all 
+0:12:02 that stuff. When you can take that person and be able to translate that to an app that can accompany your other products or services or whatever, that's where it gets super powerful.
+0:12:12 So for me, I'm looking to be 100% where I can go out I can build this out in line with the other bigger visions I have and see where those pieces fit in with the technology side, so I guess what would that make me probably?
+0:12:28 That's an architect, you're a visionary and an architect. I'm one of those. Cool, yeah. I've been gathering information on you guys, meaning I'm just trying to get to know you, right?
+0:12:43 And ultimately, the more information I can gather the more context I have from you, the better your results in this entire course will be in put output, context, context engineering.
+0:12:58 So this, I think at this point, I have to know this before we move on because I have two separate, entirely separate courses to teach.
+0:13:06 And so even if you don't want to chat about this subject, just type in the chat, say I think I think I want to build, I think I'm an architect or I think I want to get my team on board and I really want to see what's possible.
+0:13:21 I think I need to know this information before we continue. So go ahead, type in the chat, or we can continue.
+0:13:27 This is Rob. I don't like to type, so I'm not even going to type in the chat. Fair enough. You're going to tell you on that whisper flow.
+0:13:36 I want to be the guy that hires somebody to do this. I don't have enough time or patience to deal with that.
+0:13:42 I would like to have the vision and then know what's possible so they can't tell me they can't do it or more importantly that they charge me more than it should cost because I understand what it really takes to do it at least at a higher level.
+0:13:59 So for me that's kind of where I'm out with it and where I think that I would be able to use it with other businesses consulting that sort of thing.
+0:14:07 so really what you said last time we were on about you having, and I think it was actually on this Saturday program where Luther said, you know, if you want to custom something another built, we'll, you know, we're going to be doing some of that stuff and that's really where, you know, this for me is
+0:14:26 learning what's possible in all these different areas and then figuring out having a vision of how we could use that in a company I'm consulting with and then having you guys build it out.
+0:14:37 That's kind of the way I see things being used for me. Amazing. Yeah, that's that's very thorough. And so, you know, I can I can use that information and we can work specifically on those goals.
+0:14:49 So I still want to hear Omar. If you can give me your input. What do you want to what do you want to get out of this and Rex?
+0:14:58 Christian, I got you RJ Paul got you guys. Hey, this is Rex. Yeah. Yeah, good evening, fellas. So, um, yeah, I'm definitely like, uh, in the development phase of like, uh, personal, um, uh, virtual workspace.
+0:15:21 And, um, it's pretty cool that I got to, uh, lock in with all of you guys and, you know, get this training.
+0:15:30 So I feel like it go hand in hand with what I'm thinking. I've used some other applications to kind of consult with other devs.
+0:15:42 Have you ever heard of pre-dev? I have not. Yeah, it's pretty cool. The application is a desktop app, and it builds out matrixes for what it is that you have in mind, so you can get a better understanding of what it is that you're trying to develop, and it breaks it down into little milestones for you
+0:16:13 to see the overall landscape of the application that you're kind of built. So that's something that I've explored with. But like I said, there's not too many AI components with their application.
+0:16:29 I don't know if there's any to be honest with you. So I feel like it's really cool to network with you guys here at Clarity AI and apply my same ideas just to the environment here and just expand off of that.
+0:16:51 So yeah, I think, I mean, go ahead. I was gonna say ideally, ideally this community space when for our next cohort, getting the next group of people in here and as our community grows, this is gonna be such a valuable resource for networking and finding potential partners in your business ideas and your
+0:17:11 apps. That's really what the space, the more people that interact inside of the space are more likely to find business partners inside of clarity which is a huge goal of flying.
+0:17:21 I definitely want this space to become that. So yeah, well, you know, it's great to have visionaries, operators, architects, and visionaries are like inside of the space because we're all going to find our counterparts in here.
+0:17:35 Yeah, it's good, you know, I like it because, you know, I believe there was like one gentleman in from the United Kingdom who ended up speaking out, but for the most part, we're all American.
+0:17:49 From my experience with pre-Dev, I was consulting with devs in Israel, Russia, Romania, stuff like that. It's cool to just circle back and have an American team who kind of, you guys can grasp the kind of stuff that I'm thinking and stuff like that, so yeah, I'm just grateful for that.
+0:18:17 Appreciate it. Yeah, I appreciate the word spans, thousand. Well, cool. Let's get, let's get Omar. What's your input? Yeah, I'm kind of leaning architect, I'm trying to understand what's capable, what are, what we can, what we can go after for organization.
+0:18:38 The reason I got Nico is he's more of the builder. He's pretty spectacular with a lot of the technical side of things.
+0:18:49 So I may accompany him on some of the more for understanding, but I'm trying to figure out what's best for our organization and then we may be sending some more people to this later on as we learn more about this.
+0:19:05 So totally. Yeah. Yeah. Architect building. Great input. Yeah. And Maria, how about you? So you are muted. Yeah. Hello everyone.
+0:19:21 Thank you. Hi. Yes. I have to ask you one question because of course I would like to be an architect, a builder.
+0:19:31 But I think for my lack of knowledge of the technology. I may think that to be a builder could be way more difficult maybe than just to be operational.
+0:19:45 I don't know if at the beginning it should be operational and maybe after that it could take me to be a builder so but everything is because I don't know if I am ready to understand and how is to be a builder, or I'm not ready maybe with the time.
+0:20:07 So this is like my thing. Amazing, yeah, no. And so ultimately if you're on the fence, I'd say lean towards builder because even if you switch to operator and you can delegate everything and say, I think you are better at learning this skill and I think you are better at learning this skill.
+0:20:25 Having that builder knowledge in the back of your mind, and just even if you're not a master of it, you're gonna be able to make decisions better.
+0:20:33 So that's my input there for you. Yeah, okay. Cool, so see anybody that I miss calling out anybody, I think I got a good idea of, you know, you guys that are attending, this course is gonna be molded by you, right?
+0:20:51 Everything that we do, the more discussions that we have, the more input that I get, the more we can tailor what I'm teaching to each of you.
+0:20:59 So, Rob and Omar, you know, you guys are more on the leader side too. So, especially Rob, you know, being it being more on the operational side and wanting to see what's possible.
+0:21:11 I want to work more specifically. I think I'm going to lean towards the rest of today and even just the next couple sessions towards the builders.
+0:21:22 And I'll just say that right now. So, what we're going to be learning is tools. We're going to be learning things slowly just so you can get your, and all of you, you know, get your feet wet and see what this thing actually is.
+0:21:33 And then, you know, Omar, we can talk big picture stuff, Rob, we can talk integration stuff and how we can start putting different pieces into different places in specific conversations.
+0:21:45 So, I think it's important to see how it works to be able to understand that I love a little bit.
+0:21:52 Yeah, and I think, you know, you've been on here every day. So, you know, you're, I know you're dedicated to learn this stuff on a personal level too, which is amazing to see.
+0:22:03 So. He challenged me on day one when I made the comment about 36 hours and how am I going to fit it in my schedule.
+0:22:10 And so I had to flip it and make it a positive thing here. For sure. For sure. Yeah. It's definitely something I'm very interested didn't want to learn.
+0:22:22 It's been a tale is to carve out some time. That's the real struggle. That's the goal that AI is trying to solve.
+0:22:31 It's like the people that need AI the most are too busy to actually learn it. It's a paradox. Great, guys.
+0:22:39 That's amazing. That's amazing information. What we can do today is start off with a builder mindset and learn the stuff.
+0:22:52 So let me jump over to my screen share. So I made this quick list. Don't have to memorize this. I'm just using this as my guide to talk about this stuff.
+0:23:08 So essentially we have three major tool categories for vibe coding, we have co-pilots, we have agents, and we have prompt to app interfaces.
+0:23:22 And you don't have to know which is which, but each individual tool is going to have very, very distinct use cases.
+0:23:31 And so when we look at co-pilots, these are AI tools that are actually inside of your IDE. We'll talk about all this terminology and what all these acronyms are and things are specifically later on.
+0:23:41 So I'm just gonna give you the base of what tools you must be using to actually do this thing. So co-pilots, they're gonna be inside your IDE, they're gonna work, you know, they're very human controlled.
+0:23:55 It only makes suggestions for you and you're going to be actually doing the coding yourself. This is AI-assisted co-pilot coding, meaning you are able to code and the AI is helping you code.
+0:24:08 And that's really what co-pilot's actually do. So these are some of the co-pilot tools. Co-pilot itself, the tool called co-pilot is in GitHub.
+0:24:20 And so you can work directly in GitHub. For those of you that don't know what GitHub is, it's basically for storing all of your code.
+0:24:29 Anytime you're building something, GitHub is where you're gonna store your code. It's all organized and neat and taken care of inside of this tool called GitHub.
+0:24:36 And most of the IDEs that we use, these are just the tools, the name of the tools that we use, most of the IDEs are going to automatically connect to GitHub so you can save all of your code automatically.
+0:24:50 So, co-pilots are going to code alongside you. You are the coder and the AI is helping you code. Agents, agents are going to be semi-autonomous.
+0:25:02 The agents are going to do the coding. You don't have to know how to code to use agents. They're going to plan steps.
+0:25:09 They're going to make decisions and they're going to make changes. And this is what can get really dangerous. I told the story today.
+0:25:16 A major failure. Incredible. The worst failure of AI coding thus far. The case study that happened last year July 2025.
+0:25:29 This is all All emergent technology, the tool called Replit had a user was using the tool, just a customer, the customer was building an app, the app had a database of customer information and system information inside the database.
+0:25:46 And Replit, the coding tool, made the decision to delete the entire database. That's a big mistake. And so, you know, it was a huge, it was a huge failure in AI coding.
+0:26:02 And after that, July 2025, it's been a few months after that case, that can, essentially, that's been eradicated. That can never happen again.
+0:26:12 The guardrails we've gone from saying AI can make apps to AI can help you make apps, or AI can help you make systems.
+0:26:24 The AI can make systems terminology has been eradicated because of that one mistake. And ultimately, AI is getting better and better.
+0:26:34 And I foresee in the near future, I foresee, you know, 2028, 2029, AI is going to be making full systems with no human input at all, where it's just going to decide what to build and then build it and then start running it.
+0:26:49 Just in the next two years, I foresee those systems being in place. So as it is right now, AI is fully capable of building complete systems.
+0:26:59 But because of the guardrails, there has to be human intervention. And that is just a safety feature. It's a feature built in.
+0:27:07 There's going to be human intervention. And so what that means as no non coders for those of us that don't know how to code.
+0:27:15 In fact, RJ, you might be the only coder in the group. For those of us that don't know how to code, how are we actually going to achieve anything?
+0:27:26 Well, we can take, we can use AI to make the steps, you know, fill in the gaps in our coding knowledge so that our human intervention is knowledgeable and, you know, competent to make those decisions and say, okay, I approve this.
+0:27:39 And that's where the distinction comes in there for the agents. Then ultimately, we have the prompt to app interfaces, these are tools and the tools appear for the agents.
+0:27:49 We're going to be using OpenAI Codex, Cloud Code, Google Gemini code assist, and something they just came out with in November, Google came out with a tool called anti-gravity.
+0:28:02 It's their own integrated IDEs, their own system, and it is free and awesome. So we'll get into that. So prompts to app interfaces.
+0:28:15 These are, this is like replete, this is like bolt. This is like lovable. If you've heard about vibe coding, you've probably heard about one of these.
+0:28:22 These are the consumer facing vibe coding tools. And so realistically, I'm going so much into depth into these types of tools because ultimately you, as you're learning, you're going to want to pick a lane.
+0:28:35 You're going to have to decide on a tool to use. and that's going to shape your behavior as an architect.
+0:28:40 Do you want to learn coding and have AI work alongside you? Do you want to have an agent build everything for you in a fully capable system?
+0:28:49 Or do you want a customer, consumer facing, I don't want to say customer facing, consumer facing, easy to use single prompt to full app design, hit the button and make an app kind of ease, then you're going to choose one of these.
+0:29:04 And it's not just a one and done, you know, bolt-in-replet and these tools, you can iterate with them and reprompt them and and build out really cool stuff.
+0:29:12 They're just not going to be as fully capable as an agent system or a co-pilot system. Okay, so choosing a tool category is going to be your first step and the simple decision tree there is, well, what do you want to build?
+0:29:28 If it's a fully, you know, fully integrated system into your business, we probably don't want to use lovable. Lovable is good to make landing pages and lovable.
+0:29:37 You know, Bolt is good to make me and Zach right now, we're building an app together. In Bolt, we're going back between Bolt and I'm using OpenAI Codex.
+0:29:50 You know, Zach's the Bolt Master, we're co-creating this app. And so going back between these two tools is an amazing workflow because of the things they both integrate and offer individually.
+0:30:05 So, choosing a lane and starting off very slow, it's about what your needs are. So, let's jump into, to switch my screen share back.
+0:30:31 Does anybody have any questions on those tools? I know there's a lot of terminology. We're going to cover IDE, all of these things, GitHub, what is all that stuff.
+0:30:39 We're going to cover those things, but if anybody has any questions so far. Cool. So a couple of things we can do as, you know, building out our understanding of vibe coding and what, you know, how we're going to start using these tools.
+0:31:00 Picking a lane, picking your goals, picking the scope, all of that stuff can actually be pretty daunting. So like, well, I don't know what I want to build.
+0:31:07 Coming up with app ideas is part of the problem. Well, we can get away from the idea that we're going to be building apps, you know, the, even the title of our Zoom class is app building, but essentially we're building whatever we want, the capability of AI coding we can build whatever we want.
+0:31:25 We can build automations, making NADN and no code tools obsolete. We can go down that route. We can do fully integrated chatbots and AI assistance inside of our business.
+0:31:39 We can put intelligence inside of our systems. We can do outbound call agents, all this kind of stuff. So how do we decide what to focus on, what lane to pick, what tool choice to use?
+0:31:53 Well, that's where context engineering and advanced AI comes back into play because we can scope out all of that using AI.
+0:32:03 So I think one of the best things if you're brand new to this stuff is coming back into the tool I suggested on Monday and come into notebook and we can start a new notebook.
+0:32:19 And we can brainstorm ideas here. Now, I prefer using this in ChatGPT. I'll show you what I do in ChatGPT.
+0:32:26 But in notebook LM, they just came out with their deep research tool. Okay. When you start a new notebook, you guys can see my screen now.
+0:32:36 When you start a new notebook, you can come in here and right away in the center bar right here, switch it to deep research.
+0:32:43 Now you can just blabber to notebook LM and start coming up with your idea. Okay, so for example, I want to come up with a personal tool, some kind of software or integration or automation that's going to help me develop course material for clarity AI, so I can focus on the material itself and not having
+0:33:08 to put anything together, We're finding sources, finding all that stuff as a headache and I want to solve that pain.
+0:33:16 Simple as that. I used Whisper Flow. We talked about it. Whisper Flow to generate that and now I can just send this off.
+0:33:25 The second thing I want to add here is look up and cite all sources on how this is done if there are any tools available in the market that achieves this.
+0:33:35 I want to compare and contrast my ideas with available tools. Right, whatever you want to say to brainstorm this into the deep research tool, I'll send this off and what's great about using notebook LM deep research over chat GPT deep research will compare and contrast the differences here.
+0:34:00 So I'm going to come into chat GPT, come into the deep research tool, chat GPT, I believe was the first LLM to come out with deep research.
+0:34:10 What deep research is actually doing, we can watch it run in chat GPT so you can get an idea here.
+0:34:15 So I need to create an app or a tool or a service or an automation or some kind of system in AI vibe coding that will help me organize my course material, come up with new course material for clarity AI and teaching the cohort sessions.
+0:34:31 Obviously, I'm just making this up as we go just to give an example here. What do I want to say, look up and research any other tools that may achieve this?
+0:34:42 I want to compare and contrast what's available on the market with the ideas that I may have. I'll send that off.
+0:34:50 Now, what ChatGBT does is going to ask you clarifying questions for your deep research, and you can answer these questions to the best of your ability, whatever you want.
+0:34:58 So I'll just answer them. What kind of course, Kanton, are you organizing everything AI, advanced AI, everything automation, using no code tools, and some light coding tools, and vibe coding, we're going to be working with AI agents, databases, vector systems, and everything in between.
+0:35:23 What formats do we plan to use? I don't know, you can decide on what formats I just need information gathering and I need to find a tool that's gonna help me do this or build a tool that's gonna help me do this.
+0:35:41 Generating lesson plans, organizing ideas, scheduling sessions, I think scheduling posts would be a better idea. Again, I'm actually hitting my button and rambling into the chat.
+0:35:52 You can see what's popping up here. I will often say, and I use this prompt all the time. I don't know.
+0:36:00 You decide this right here. We'll talk about this much, much, much more in advanced AI. This right here is your pathway to creativity.
+0:36:12 It's going to, this prompt is going to open up a specific technique in prompt engineering called chain of thought prompting, essentially the AI is going to come up with different chains of thought, different lines of thinking, different logical paths that it will follow and make decisions based on that
+0:36:33 . If you say, I don't know, you're giving creative power to the AI to make to make those decisions. Oftentimes, what happens when you're building is you say, I want you to do this.
+0:36:45 This is what what I want. And it's going to do everything in its power to get you that outcome. Like, okay, I want this to happen.
+0:36:53 I want this to happen. And I want you to do this. And ultimately, that chain of thought, that single chain, that single line of thinking is not going to produce the actual results that you're looking for.
+0:37:05 So when you say, I don't know, you decide you have creative potential or you have creative freedom, you're going to find much more potential routes to take, and it may even suggest things that you've never even heard of that you can implement into your systems.
+0:37:19 So I'll talk very casually. I'll say, I don't know. I'll say, you decide. I'll say, you know, talk to me like I'm five years old, and all of those prompts are ultimately the context, the creative context for brainstorming.
+0:37:33 I'm not looking in this case for a specific outcome, which I would be in context engineering, looking for very specific results.
+0:37:41 I want to see what's available. And so that's the way I talk to the AI. Now, I'm bringing this up here in terms of advanced AI and context engineering because when you can do this with your coding assistant, in whatever IDE that you're using, you're ultimately going to see amazing astonishing results
+0:38:03 . Coding is very structured and coding has to, you know, your code has to function a specific way. And so when you say I need this to happen, the code that's being written could be the complete wrong approach every you know any creative knows there's a thousand ways to do one thing and if you're saying
+0:38:22 with your limited knowledge I need you to do this the code assistant is gonna try and do that and there could be a far better approach so building this in to your to your your natural language building this natural language into how you prompt is essential saying, I don't know, is amazing.
+0:38:41 All right, so I'll just send this off and see what we get. We should have our notebook LM generation done by now.
+0:38:51 And great, so looks like we got 71 sources. We're researched, and we got the top 20 sources loaded into the notebook.
+0:39:01 So I'm gonna go ahead and import those. Now, these could be websites. These could be PDFs, whatever notebook LM decides is necessary, or on topic, it's going to put those sources in here.
+0:39:14 So great. I see this one right away. What is RAG? I'll click on this one. This little button right here will take you to the exact source.
+0:39:21 Let's see what this is. So this is from Amazon. This is a retrieval augmented generation article directly from Amazon. That's great.
+0:39:32 looking at another source. Hey, it found clarity. Look at that weight. That's pretty cool. Totally accident. That's that's fun. How about this seven best deep research agents?
+0:39:59 Great useful AI, don't know what this site is, but obviously you get the idea, we can visit all of those sources gathered in notebook LM.
+0:40:08 And now the notebook without having to manually fill in all of your sources, you now have a database of sources you can chat with about your app, your service, your whatever, whatever you want to code.
+0:40:20 And so in this case, it's my, I'll call it course creation, whatever course creation notebook.
+0:40:32 And I can say, is this a viable tool? Is this something I can build? Are there other tools like this on the market?
+0:40:42 Essentially, you have the context on what I need to know, something like that. Just having conversations, again, getting conversational when your brainstorming is better than prompting.
+0:40:54 Prompting, we talk about that. We're going to talk about that heavily conducts engineering in AI, advanced AI. But being conversational in a brainstorming phase is going to be better.
+0:41:05 So anyway, you get the idea. You can start having conversations with all of these sources is to brainstorm your app or your project, right?
+0:41:16 The more you can gather knowledge here and gather understanding, the better you will be set up to start creating outlines and designing your project.
+0:41:25 So I want to emphasize that this phase, you know, for all you builders, especially those of you like me, that just want to dive into making the thing.
+0:41:35 I want to jump into the coding tool and I want to start seeing stuff pop up on screen and watching stuff happen Well, this is the biggest pitfall again.
+0:41:44 You're going to blow yourself up make outlines make guides do research Talk to the AI and gather all the information about what you're trying to do then ask questions about those guides on what you're trying to do Then question if what you're trying to do is even possible So make sure you do that before
+0:42:04 you start a project because ultimately you can spend all your time, all your money, all your credits on coding. And now cool, you've had a lot of fun, but nothing's built.
+0:42:15 You guys get the idea. So ultimately, I want to stress, for all of you architects, make sure you are planning.
+0:42:23 The planning stage is massive. And I am not a planner. This is my hardest skill for me to learn. luckily using notebook or using ChatGPT.
+0:42:31 So again, I prefer ChatGPT because I think we talked about it this morning. I don't even remember this morning to hack, but basically we have the big three LLMs.
+0:42:47 ChatGPT, Google Gemini, we have Cloud. Okay. Likewise, we have those same big three IDE tools, open AI codecs, cloud code and now Google anti-gravity and so the way that you are working with these tools ultimately every single app that's ever been created has evolved to take the shape of its audience
+0:43:14 . You know just as a weird example when Instagram came out it wasn't even a photo-sharing app it was something completely different and immediately was acquired by another team that turned it into a photo sharing app and now Instagram is barely a photo sharing app it is an entire platform for business
+0:43:30 marketing and media. Ultimately, what these LLMs are doing is starting to take shape depending on their audience. Now, every time somebody says this tool is better, we have a group of people going to that tool.
+0:43:46 And now, okay, well, now this tool is better and we have a group of people going to that tool. And so these groups of people that are taking the advice and the suggestions and all of these things are inherently shaping the way these LLMs are, you know, their capabilities and what they're slowly merging
+0:44:07 into to output. And ultimately, the three, the big three coding assistants, the coding agents are now specializing, starting to specialize in specific audience use cases.
+0:44:22 So cloud code, this is all, this is my expertise. This is not out there in the public, but it's my expertise that cloud code is starting to slowly specialize for engineers.
+0:44:33 If you want very specific code, you don't want to blow things up too much. You don't want the agent to rewrite anything.
+0:44:40 You want to be present. Even if you don't have coding experience, cloud code is very structural and very slow, methodical.
+0:44:49 Codex is very experimental. Not experimental in it doesn't perform. It will actually be very creative. And you can say, I give you full creative freedom to do whatever you want.
+0:45:01 And it's going to make really interesting and valuable decisions. As a designer, that's super valuable to me, right? I want to see what's possible.
+0:45:13 I don't have all the answers and I'm not a master of everything to see what the AI comes up with is super valuable.
+0:45:19 But if you're an engineer trying to build something specific, that is terrible. You don't want your agent making things up and experimenting at all.
+0:45:26 So, you know, ultimately, I use codecs for for very specific design as well. I can say change this exact thing in this exact way.
+0:45:34 And it's going to do it just fine. But ultimately, it's starting to be more of a creative space. Google, oh, and we got some chats in here.
+0:45:43 I'm just rambling on, let's see. I'm gonna look at the chats real quick. Maria and RJ, are just as what's the app?
+0:45:53 This app right here that I'm brainstorming, is that what you mean? And Maria says, how do I know if what I want to do is possible?
+0:46:01 Yeah, that's a great question. We'll get into that after my rambling session. just two minutes. Basically, I just want to touch on Google.
+0:46:11 Google is now shaping itself to be a fully integrated environment. It always kind of was. If you're building in the Google environment, Google makes it very easy to do Google things.
+0:46:21 If you're building in Google Cloud Run, it's their cloud service, cloud server, and they're hosting stuff. You can run your apps on their servers.
+0:46:31 Then if you're running your apps on your servers and building your apps on their platform, it's going to be very easy to integrate.
+0:46:38 And so that's Google's thing. If you want to fully enclosed environment, that's very easy to integrate in all the spaces.
+0:46:45 That's what you're going to choose Google for. And it's, you know, this is just my expertise. It's not Google isn't saying, Google is good for Google things, and chat LGBT isn't saying we're good for creative things.
+0:46:56 You know, this is just what is slowly taking shape. Because again, this is happening right now, you know, 2026 is the year that We're going to that that people are going to start making great changes Cool, so how do I know if what I want to do is possible?
+0:47:17 Yes. So this is this is that process Maria Going through this research. I'm showing two different methods. One, using it notebook LM Go ahead So using yeah, go ahead Okay, so if you're speaking, you just muted yourself.
+0:47:50 Okay, yes, I am, I am hitting notebook. Can you hear me? Yes. Okay, yes. Yes, I'm just open the Notebook LM, so I should go to the create a new Notebook.
+0:48:11 Okay. Yep. Create a new Notebook. You can create as many Notebooks as you see fit. We don't have to just have one Notebook for the course.
+0:48:20 This is a creative space. You can create as many as you want and just start brainstorming your ideas. Ask the AI, ask the AI, what can I do?
+0:48:31 How do I? Is my idea possible and just start having those conversations and you can find that out pretty quickly?
+0:48:39 So the difference between notebook. Okay, notebook is going to come in here with all of these sources. It found the top 20 sources just based on that one prompt.
+0:48:50 Now I can make a better prompt. You know, getting into advanced AI stuff make a better prompt to prompt notebook to do the research and you're going to have better sources, right?
+0:49:01 So notebook is going to bring in all of these sources and you can have a chat with all of these sources.
+0:49:06 ChatGPT is going to, Where did I go? ChatGPT is going to produce one research paper with all of the sources cited and for me this is much more valuable because I can take this in as one big chunk of context and load this into my notebook lm as one single source.
+0:49:33 I can do this several times, create a research paper with chat gpt. I can do this several times on several topics for several lanes to get my idea across and have sources that are there very well developed, not single sources, but an entire research paper full of many sources on my topic.
+0:49:54 And so same idea, same approach, two different ways to go about it. Ultimately, in chat GPT, we can open up a project, which is similar to a notebook.
+0:50:07 Open up a project. I'll name my project, clarity idea. I don't know. And similarly, I can load my files into my project.
+0:50:24 Okay, that new PDF that I just created, I can load into my project and have all of those documents in here that I can then chat with just like notebook LM.
+0:50:35 Okay, so really, really honing in this step for all of you architects. Plan out before he build, I hate this step.
+0:50:48 It's going to produce the results you want way faster, hands down. I am the example of things blown up. I've blown myself up twice legitimately.
+0:50:57 You don't want to do it. I mean, seriously, the only way I was able to recover from these instances of just going all in and seeing the consequences is because I'm an entrepreneur.
+0:51:10 If I was running my business and I blew myself up, you know, solo running my business and surviving on that and I blew myself up in the way that I did.
+0:51:19 I'm going to use that term. That's my technical term. When you're going down an AI route and you're building and you're building and you're building to your limitless potential and something goes wrong and you don't know how to solve that and you can't solve that because you've expanded your reach with
+0:51:35 AI. You're expanded what you can actually work on because you can. You're going to see the consequences and so I told this, I mentioned this this morning.
+0:51:46 The best thing you can ask yourself is, you know, you shouldn't build something because you can, right, just because you can build something doesn't mean you should.
+0:51:58 You should only build something because you should, right? You should only build something that is something you need, right? The thing you see the ultimate results from, or the inevitable results from, that is what you should build instead of just going for what you can build.
+0:52:14 Now, again, I build everything that I can because I want to, and I want to experiment, and I want to come up with the failure states.
+0:52:25 I want to hit those failures, and I want to see that happen to me so that I can teach you how to not do that.
+0:52:32 And this is one of those instances where I am personally very excited to jump into the coding and start coding right now with all of you.
+0:52:40 show you exactly what to do and what to say and how to, how to say it, but I'm holding myself back again, the way that I'm going to teach the architects is very, very different than what I'm going to teach and show to the operators.
+0:52:54 And that's something I want to, I really want to switch gears into with you, Rob, especially. And Omar, you know, you're, you're in kind of both boats so we can discuss higher level things in the community too, if you want to.
+0:53:06 on top of these lessons where we're building things out and I'm teaching the architects how to do this stuff. We can always open up conversations inside the community.
+0:53:19 You know that being said I'm gonna jump over there real quick. Yeah somebody had a question. Yeah, quick question, Kirk.
+0:53:25 Yeah, yeah this is all good stuff for my ADD brain. Can you do like a high-level super fast recap of like the steps you took for the planning, you know, there's no problem, there's creating a project, there's research like you just do it super quick.
+0:53:42 Absolutely, and I'll give you a better one, okay. Notebook LM, you know, we're going to be running through Notebook LM in advanced AI, that, you know, we're going to focus on that and run through that and understand that and how to use that as a viable tool.
+0:53:59 Everyone in this course today is also doing the total AI mastery. So I mentioned just notebook LM, and so I can mention it here.
+0:54:10 That's just one method. And we're going to go down those methods in the advanced AI course. What I'm going to do you, one better, is say, for those of you that are confused by that process, the brainstorming process that had just demonstrated, they're like, oh, you can do this, and you can do this, you
+0:54:27 can do this to brainstorm. I'm going to tell you right now, use your LLM of choice, use chat GPT, use GROC, use whatever you want to use, and have a conversation with it.
+0:54:42 Seriously sit down and actually brainstorm your idea. That's all you need to do is have this conversation. And you can start to get down these interesting routes where you can have really high-level business conversations.
+0:54:56 You can say, look up the market value of this idea. Find me other apps related to this. Find every single app that does this idea.
+0:55:09 Is this a viable app to take to market? Should I spend my time on it, you know, just have those questions in your chat.
+0:55:18 And ultimately, that's it, right? That's, you don't have to have a specific tool or specific method. What I really want to hone in today is I am so excited to start coding with all you guys, but planning and slowing it down and taking that step and understanding what we're about to do could potentially
+0:55:40 damage your business, you know, damage your, if you're starting a business on your own, if you're solar pernure and you're like, I have this idea and I'm going to go down this route.
+0:55:49 I'm going to tell this story again. My client, I've mentioned him before, he did the same thing that I want to prevent happening to you guys.
+0:55:59 And that's why I'm really honing this in again is he was like, I have these ideas. I'm going to build all these things and he went and did it.
+0:56:06 And he was very successful and he built all of those things. And none of them hit. None of them were successful because he built something because he could, not because he did the market research, or he had, you know, he had the build plans to have the specific implementations that allowed him to pick
+0:56:23 up a specific clientele or whatever. I don't really know the situation, but he built everything and it was beautiful and it failed.
+0:56:34 That's one way you can blow yourself up. It's not just security issues and it's not, you know, it's the time issue.
+0:56:41 You're going to spend all of this time creating something that doesn't work. And I don't want that to happen, especially in this course.
+0:56:46 I've done it. Part of my job is to do that. So I can tell you not to do that, right?
+0:56:53 I got a bit of an interjection. I could throw in there too if you got a minute. This coming from my world and what I do, I operate in the software world, already I've done it with developers and coders and all that.
+0:57:06 So I generally know how this stuff goes together. But But coming from someone, I've probably spent, I would say between $4,000, $5,000 on vibe coding credits, AI credits in the last.
+0:57:19 Explain what that really means. What are credits and what are the explainers? When you're using a vibe coding platform, I personally use Replet, which I'm sure we're going to cover all this stuff later.
+0:57:31 Every time you run a prompt and it does work, it builds you for the scope and how much work was done.
+0:57:40 So my you know average on one of the projects is usually between like two dollars and eight dollars every time I type something.
+0:57:49 And so I'm going along building and I'm building some I think it's an incredible product. I know it's needed because we need it in one of my companies that it's a that's going to help us coach our students better and get our educational content out there, make it make it more easily accessible.
+0:58:08 But what I wanted to mention, there's a lot of pitfalls in vibe coding where it seems so easy and you just want to go for it.
+0:58:19 And I did do that to some degree with this app. And then I had to retroactively go plan and just one quick story.
+0:58:27 This app has video hosting in it and it has very advanced video features. and I went and built this thing only to find out that the video features that it initially used aren't going to work for my use case at all.
+0:58:47 It works for one person using the app, barely with the one it chose to begin with and I'm like so and it started like freezing and it wasn't holding the workload good.
+0:59:01 And then I asked, like, what's up with this? And it's like, Oh, this video player is not good enough for what you want to do.
+0:59:08 And so I had to go through this whole process of getting API access to this other like video hosting platform, getting that.
+0:59:16 And it was a huge work around. And that wouldn't have ever happened if I had done more thorough planning before I started the app and researching all the different features that the app consists on and what are the smartest ways to implement those features.
+0:59:34 And so anyway, it's a word of caution here is that vibe coding seems like you could just get in and it will spit out amazing results immediately.
+0:59:44 But throughout this course, we're gonna teach you guys how to think methodically behind your prompts and your projects so that you don't have to end up in these like corners where you're like, oh my gosh, like I got a rehab half the app because it was built the wrong way to support my overall vision 
+1:00:07 and those types of things which are can be pretty costly to go to do those workarounds but it could also hold you up.
+1:00:15 That all being said, your guys competitive advantage going through this course is learning how to of things strategically beyond what the simple prompt window is on these vibe coding apps.
+1:00:28 That's going to be your competitive edge because I guarantee you, there is probably, at this point, I don't know if it's hundreds of thousands or maybe millions of apps that are just dead on the shelf stalled inside these vibe coding tools where someone's probably got about 30% or 40% through And it's
+1:00:49 just stuck at something or whatever and they don't know what to do or it's going to be really expensive because they found out I got to go back and rework a whole another thing.
+1:00:59 So the goal is to get you guys to use these superpowers, which is vibe coding, but getting you to understand technology stack and understanding what to ask for in the order to ask for it before you ever start the project.
+1:01:15 So yeah, anyway, that's my word of caution, but also the good news is when you learn this process, you can actually ship products that are incredible and you do it all by yourself.
+1:01:30 So anyway, I just want to throw that in there. Yeah, it's very dictating and that's why I want to, I'm so excited to get into it because I love it.
+1:01:38 It's a psychological reward because you're typing on the screen and then you're seeing your visuals pop up like there's my app that is just all this nonsense and now there it is that was in my brain and now it's there it's it's amazing and so I'm very excited to start but I want to yeah yeah sorry it's
+1:01:56 rica yeah point and I think I mean because of the ease of use or the is with which you can put things together.
+1:02:08 It is so easy to go to stray away from the initial plan that by the time you get down, you ask yourself what are they even trying to build in the first place.
+1:02:21 It's more to do what we probably have to deal with how easy it is to build, which is actually what causes us to stray away from the original bone, that easily anyways.
+1:02:37 I mean, you take yourself not much planning required. I mean, I can just put this together. And then, one week down the line, you so far away from the initial plan, you can't even remember what problem you've done yourself with.
+1:02:49 Yeah, that's called feature creep. We don't want feature creep. And I want to put, yeah, that's, that's a great, that's, that's what happens, right?
+1:02:59 And I want to put what Wade said into even more context here for all the solar renewers and all the, you know, the individuals learning this stuff and funding themselves, okay.
+1:03:11 Wade said he spent $5,000, all right, $5,000 in credits. Yeah. He said he spent $5,000 in credits, and then he said that half of that was rebuilding his mistake, okay?
+1:03:29 That is way too costly to do. And all of us here, we're learning this stuff and going down these, these, call them explosion tunnels.
+1:03:40 If I'm going to say blow yourself up, that's my technical term. And because me, especially I want to, I want to experiment and I want to see what my students will do, what they can do and tell them what they should not do.
+1:03:56 So yeah, I mean, spending that much money is a learning process that's very valuable. I've spent plenty of money for data gathering like that.
+1:04:04 It's not a loss, it's data gathering. And so, ultimately in your business and implementing AI tools, you know, we don't want any losses whatsoever in your business.
+1:04:16 That's just unacceptable. However, if you are coming in with an experimental eye, saying, let's see what AI can do. We're going to have to take some of those losses as data gathering because that is also extremely valuable, especially when we can immediately take that loss data and load it back into 
+1:04:37 the AI to say, look at this failure case, how do we build around it, how do we make sure this doesn't happen or how do we prevent this, develop processes and develop documentation and develop guardrails inside of my system so that this doesn't happen and the AI says, cool, never again, let's do it.
+1:04:57 So amazing, yeah, great, great, bring up, Wade. So yeah, I mean, anyone else with questions, we can open everything up again if anyone has more specifics if they have used any tools or hidden any roadblocks on anything quite yet we can dive into some specifics.
+1:05:17 Zach, what are you working on with your, can you talk much about that after building? Yeah, I guess to give an example to people listening in, I've been vibrating for maybe eight months now.
+1:05:31 And I can agree with everything Kirk is saying here. You can, it's definitely a dig thing you can spend too much money, but there's ways to avoid that and be smart.
+1:05:40 So learn from other people's mistakes not yours if you can. But I'm working with a client project. I'm actually getting paid to build something which is fun.
+1:05:48 And it is for a doctor. And he wants to be able to have it, to where people can connect their Fitbit, Apple Watch, Woop Watch, or ring that kind of thing, where it pulls in your HRV and sleep data, and then it's going to have his own spin on that information.
+1:06:12 So it will be real world data that goes into this app that will be able to provide AI feedback based on that data.
+1:06:20 And it's a little bit more advanced than like a typical app because you have to get APIs and authorization from like Aura ring and things like that to get it to work properly.
+1:06:31 But this is going to be a progressive web app. So it's not going to be something that would be on Apple Store, but it could be used immediately just by connecting a domain to it.
+1:06:42 And I would say it's about 80% done. So it's really powerful already. And it's fun to build that super quick.
+1:06:53 Yeah, it's just last time I sat down with you. I was like, yeah, I just got, I just got this job.
+1:07:00 And now it's 80% done. I present that thanks to AI. That is amazing. Yeah, speed is amazing. I was having this conversation with one of my previous clients he's a pilot and he's totally at a loop in AI stuff.
+1:07:16 But he also likes to invest. He likes to build things and I told him, you know, hey, you have an app idea.
+1:07:24 It's going to cost you 100,000 to $250,000 or more to build this app. The time frame is months, six months, one year, two years, right, to develop this thing you're trying to build.
+1:07:38 I was like, John, I can make you that thing in two months. And he was like, you know, bullshit, that's not possible.
+1:07:47 Yes, it absolutely is. This is the real power of what we can do. And again, this is why it's also very dangerous because you can build something and ship it with flaws.
+1:07:59 And those flaws are going out to your customers. And that is something we just cannot have. And so I really want to look at this with a professional eye.
+1:08:09 that's what this is for for everyone to be professionals and come out of here able to call themselves professionals. Yes, I can build software using AI, not look at this vibe coder building all these errors.
+1:08:23 And now a software engineer has to go and clean up this mess if we want to ship this app. Well, I don't want that to happen.
+1:08:29 And it is possible to ship apps by yourself. It's amazing. Definitely possible. Yeah. And not just apps. Again, I want to I want to hone this idea into, you know, we talk about apps because that's for me.
+1:08:43 That's like in my creative mind that was the holy grail. I am never going to be able to build apps.
+1:08:49 I cannot code. That's my mentality. And now that it's completely upside down, I just build apps now. It was like downloading from the matrix.
+1:08:57 I learned how to talk to the AI and I didn't have to do anything else. I just build apps now.
+1:09:03 This is incredible. But it can be anything. You know, we're talking about no code automation. We're talking about NADN. You can automate in code, right?
+1:09:12 These no code tools are very simple interfaces to build automations for no coders. This is a concept I'm going to touch on a lot in this particular course is AI coding is making everything else obsolete.
+1:09:31 Now that doesn't mean NADN is not a tool is something we should not be using, and I wanted to point this out in day one.
+1:09:40 Very soon, if you haven't already, you're going to start seeing YouTube videos, whatever messaging is saying that NADN is dead.
+1:09:48 No coding is dead. We can use cloud code this, this, and that. Because AI is actually, and really is, it's getting so good that everyone is a coder.
+1:10:00 So no code tools, what's the point? We can just code automations instantly or near instantly instead of having to build drag and drop tools.
+1:10:11 Why am I going to spend all my time learning NADN? Why am I going to do that? Well, it's not dead.
+1:10:18 It's not going anywhere. These no code tools are still viable solutions on a business level, on a business and scalability level because what they do very well still is integrate other tools very safely and securely into your system.
+1:10:36 So even if you're coding something from scratch and building everything out and you have this front end, you have your back end, you can still call from your software or whatever to and edit and workflow to go out to all of the tools that you need to use safely securely and then bring all that information
+1:10:54 back into your app. That's really where the marriage is going to take place in the future. So ultimately, learning NADN as a builder, AI is getting so good.
+1:11:07 And AI is going to replace, you know, AI coding is going to replace almost everything. I don't even know how to quantify that because you will be able to do make build imagine that literally anything with AI coding.
+1:11:21 Everything else is pointless. So it's a very, it puts us in a very hard place to make decisions on what I should be spending my time on.
+1:11:31 Well, I'm here to tell you exactly what you should be spending your time on. Don't worry about those big questions.
+1:11:37 You're going to run into them, and that's why I want to sort of scare you on day one of vibe coding.
+1:11:43 Everything else is obsolete. Let's do this. No, that's not the case. We need to learn very specific things in specific ways, and it's the marriage of everything that's going to give you total AI mastery.
+1:11:58 That's the truth of it. Until every single person that uses a computer is also an AI coder, there will be a need for all of these other tools.
+1:12:10 That's my take on that. Yeah, that's good take. We get a little bit of time, I can share, I can share some more insights if you want.
+1:12:25 Kirk, I don't know if unless you had it. Sure, yeah. Yeah, go ahead. Cool. Yeah, and for those of you that you are on here in like first time, if I'm coding or learning this, it's like my favorite thing to do with AI.
+1:12:39 And it's been really powerful and actually really profitable, my story is I used to sell insurance, life and health insurance.
+1:12:49 I did that for four years before AI and I've been able to build an AI automation in five coding business that completely replaced my income and it's 10 times more fun and creative.
+1:13:02 And I think it's important to have fun and be creative when you're making money, I'm not just doing boring stuff to make money.
+1:13:10 And it's made my life just a lot more exciting because I get to wake up and build stuff and use my brain and create.
+1:13:18 And also my clients are super stoked because we build it fast and they get a tool that dramatically helps their business in some way and that's a good feeling too.
+1:13:29 And I didn't know anything about coding, zero. Like I don't even know one line of code. I tried to learn, my brain doesn't do that.
+1:13:37 It's just not built for that. But I've always loved tech and apps and software. And I had to like pay people to build stuff, which is very expensive.
+1:13:46 A lot of back and forth takes a long time. Then you're kind of trapped with that person because they have all your code and everything.
+1:13:54 And it's a nightmare. And this is a revolution, really. I call it the no-code revolution because now every day entrepreneurs, business owners can leverage AI and bring their ideas to life very quickly.
+1:14:12 And not only can they bring a software idea to life, they can make a lot of money doing it and have a big impact with it because software is very impactful.
+1:14:22 We use it every day. And if you can build cool custom stuff that either helps other people or helps your own business, It is a thousand times worth the time and energy and headaches to learn the skill because there's just a big impact you can make and it's a lot of fun.
+1:14:38 So that's my two cents. Yeah. I'm excited for what we're going to be learning with clarity and moving forward. And I know we're going to do some really cool things and do it right.
+1:14:48 So I'm super stoked. It's more than two cents there right there's worth with $2 million, at least, that's great. You know, here and stuff like that too, it's just the way Zach speaks when we met.
+1:15:00 We really connected because we're on the same plane. I don't know anything about code and we just want to build cool stuff and make money.
+1:15:06 How do we do that? Let's combine forces and things, again, things I never thought possible. I never thought I'd make apps.
+1:15:17 I never thought I'd write code, build software. where now I'm connecting to enterprise level databases and writing hundreds of thousands of lines of rows of information and querying information of vector databases and knowledge graphs and all of these things that I just, I didn't even knew existed when
+1:15:38 I started this stuff and going through this journey and using AI to learn everything, your everything compounds. And so that's why today day one, I really wanted to just keep things slow and small and say this is dangerous.
+1:15:54 This is amazing power. It really, it really, really is where you can change your life, your business with with this stuff.
+1:16:02 So let's take it slow. Let's do it right and not blow it up. Amazing stuff guys. Any more questions? I know there wasn't much to go on today, but any any concerns for the material coming up.
+1:16:26 Cool, no questions. You guys are rock stars. Yeah, I mean, essentially, we have about 12 more minutes. That's all the material I have for you.
+1:16:34 I can maybe demo a few things, but ultimately my my big demos, especially for, you know, for you, Rob. My big demos, my big showoffs come later because it's way too much to take in for any architects on day one.
+1:16:49 I think just the idea that we're going to be us in this room right now. You know, in the call this morning, I was telling the team and everybody there that we could potentially, you know, clarity, I could potentially be outputting the next, you know, million dollar, billion dollar entrepreneurs or business
+1:17:11 owners using AI, right? Everyone that comes out of this course are going to be AI experts and have the potential to be AI experts.
+1:17:19 And therefore, we, I, myself, Kirk, I have the responsibility to make sure that I'm producing experts that will go out into the world and benefit our world, right?
+1:17:31 benefit our society and benefit our business and you know everything that we do. So ultimately you guys have the potential to shape the future of AI.
+1:17:42 Everyone coming out of these courses and adopting AI early on you know even if you feel behind in AI, I feel behind in AI.
+1:17:50 I feel like I don't know anything. That's very common. That means you're in the right spot. That means you have the will to learn new things and that is the hardest skill picking up so I got my two cents to throw in here at the Yemen Yemen so setting in and going through this stuff what I know about 
+1:18:09 sales and talking to people my age and or you know 50 something 60 somethings is that what you're going to be my audience I don't have to be the smartest person in the world I just need to be the smartest person in the room.
+1:18:28 And one of the things that I'm finding and really gathering with this, again, what's possible, but not only that, it's having the to be able to speak and to understand and have the the verbiage, you know, to be able to talk to things about what what is vibe coding.
+1:18:49 Do you know how it came up? You know, those sorts of things where people just go, okay, you know what, we give up, you're the guy, you know, tell us what to do.
+1:18:59 At the end of the day, that's really what it's about for me is to be able to gather information to be able to gather and understand the words, to have the vocabulary, to be able to have somebody understands like, okay, look, I've invested my time so that I can help and guide you in a direction to be 
+1:19:15 able to leverage this. I'm not the guy that builds it. I know the guys that build it. I know the twikies, the, you know, the guys that just live eat and breathe this stuff and love to build it, love to eat that.
+1:19:28 You know, I know Kurt, you know, and I know Zach, and it's like, you know, that's all I need to know.
+1:19:34 Exactly. Yeah. And so having that and setting in these, these what seems to be for me, what would be so valuable is really valuable because it helps me to understand and get how to sell you guys.
+1:19:48 Yeah, that's the way I see it for me. Yeah. Oh, anyway, I appreciate you and I appreciate being here and you know really enjoy it and, you know, Wade, he's what I can do with Wade is like, you know, he literally lives like a hundred feet that way.
+1:20:05 I remember he said that. Yeah, so I'm building a place on the back of his acre property and, you know, we got a social experiment going here.
+1:20:17 Anyway, can you stand each other? It'll be interesting, but he's right there, and obviously he's got a passion for this kind of stuff, as well as some other things.
+1:20:24 He's a smart guy, although I wouldn't tell him that. But, yeah, look at the guy. I mean, he clearly is a loser.
+1:20:37 Anyway, I appreciate everything you guys are doing, and I appreciate being invited into the group, And looking forward to how this builds momentum and who I can find that comes in and you know because I'm looking for business owners who want to put a team of people through the Institute.
+1:20:57 And and or you know build some really cool apps that you guys are going to be able to build so that's my.
+1:21:04 Yeah, part of our business model for clarity, AI also is to have a agency arm of it.
+1:21:17 And so that's not right this minute, but that's probably I would say our 90 date plan to open that up right now is just getting the infrastructure for the education dialed in.
+1:21:31 But, you know, we will be having a agency arm where we can build automations, we can do vibe coding, we can do that.
+1:21:40 And quite honestly, we are looking to recruit for the people that are going to help us fulfill that and manage that business and even the education right out of the student base.
+1:21:54 So not that everyone needs to do that or wants to do that. But like we're this the institute into some degree is a manufacturing plant for AI experts for us to to be able to say hey do you want to go deeper and you know join that those are the parts of our business potentially if it's a good fit.
+1:22:13 So that also being said what we are currently working on as well is a pretty robust affiliate program. So people that want to talk about clarity AI I want to feature it on their social channels.
+1:22:29 One of maybe rep our products, our AI agency stuff and all that, but don't want to deal with all the client management.
+1:22:36 You just want to do the handshake and hand it off. Then we're trying to create that kind of situation where you could go out and sell AI related products and services, and then we could come in on the back end and fulfill all that.
+1:22:52 And you guys get a rip off the top and don't have to deal with the management or the building or any of the ongoing stuff.
+1:22:58 So, yeah, there's different facets to this business as it rolls out as part of the overall model and why I'm invested in it.
+1:23:08 I'm looking at the over thing. But it all starts with education because it's not only the fastest way to get a foothold in a brand and AI right at the moment, I feel like, but it's helping us create people that would be great assets to all the things we're doing while educating them for whatever their
+1:23:27 own path is as well. So there's going to be a lot of synergy that develops here with everyone. Lots of synergetic growth potential inside of this community to possibly start earning a living inside of our space with your skills.
+1:23:45 So So, very, very cool stuff. Yeah, so that, I mean, that being said, right, this is today, day one of coding.
+1:23:58 We want to just, I wanted to just keep it more light. You have to not do anything too technical. So, be prepared for this course to get very technical.
+1:24:11 AI automations or AI coding stuff to get very technical because this is inherently the most technical we need to be coding itself.
+1:24:22 We're going to have to be looking at code and essentially reading the code, maybe not becoming coders. I'm trying to.
+1:24:28 I'm still not. I still can't do it. But not becoming coders essentially. That's not what this course is for, but there are areas where you'll have to start reading particular segments of code.
+1:24:40 That is extremely technical. But just like we talked about yesterday, for those of you in the automation course last night, you can already read my very complex automations with just the basics that I gave you.
+1:24:52 You know what those nodes are, and you know what they can do, even if you don't know what my automation does.
+1:24:59 And so same thing here, you're going to see lines of code that you'll start to recognize and you can go in there and say, I know what this little piece of code does in my app.
+1:25:08 Again, things are going to get very technical or understanding of all this stuff. We got to lock in. Congratulations on your first week.
+1:25:16 Congratulations on day one of AI coding. We are vibe in here. This is it. This is the holy grail. So, very well done.
+1:25:26 For those of you that were in all three courses coming here every day, I really, really appreciate your time. You know, you guys were trying to teach you how to take back your time.
+1:25:35 That's what this is all for. So, we really appreciate the time spent and the time you are investing in yourselves to do this stuff.
+1:25:44 Hey, Kurt, I just want to say I'm feeling the vibe. Feeling the vibe, man. That background is vibe, and for sure, this was my backyard at the house I sold.
+1:25:53 Oh, yeah, that's a vibe for sure. Yeah, so you're trying to look at it. Look what I got. It's it's it's kind of the same same color, right?
+1:26:02 There you go. Anyways, guys, congratulations. Um, we're vibing. We're going to get into it. We're going to start off next week.
+1:26:11 Um, you know, join office hours. If you have any technical questions, if you have projects to work on, office hours are the time.
+1:26:19 And then we can continue with the material in the evenings. So we'd thank you Kurt, appreciate you. Ah, you are welcome.
+1:26:27 Alright guys, see you next week. Appreciate you all, see you next week. Thank you. Thank you.

@@ -1,0 +1,280 @@
+﻿0:00:06 And we're in Thoppflow, right? This is the app. Can we build an out live or have been building out live?
+0:00:15 Taking everybody through the process, starting in bolts, bringing it into GitHub, GitHub, into Visual Studio Code where we have much more granular control over everything, little things we can do inside of the agents.
+0:00:27 definitely able to do that stuff in Replit and Bolt, but those tools have their own sort of top-level systems that just don't quite let you get in there and make some really valuable deep changes, fully custom, you know, whatever you want to do.
+0:00:45 It's much harder to get those results in Bolt, especially from the get-go. So opening up Visual Studio Code, where we left off, we had a couple of changes.
+0:00:55 We're following this document and I'm struggling to pull this up again. My computer's been going real slow. I've been running so many agents.
+0:01:05 It's been getting real hot. Real warm every day. Last week, or a couple days ago, I had six to eight agents running, doing tasks in my visual studio code setup.
+0:01:24 So this document, again, this is what we have access to in the community, and we're going through the vibe coding phase map to build out the rest of these phases.
+0:01:42 So we finished up with phase two, construction, now we're on phase three, verification and hardening. So this is where we fix bugs.
+0:01:52 We start adding in real structure, foundational structure. We're not trying to add new design changes, feature changes, everything is going to be focused on good foundational code, right?
+0:02:08 So a couple of ways I start this. I have a series of prompts, but lately, I've just, again, resorted to conversational prompting.
+0:02:19 Just having a conversation with either chat GPT to get the idea, to get the fundamentals on the, you know, my brainstorming process, then bringing that into to Visual Studio Code, or just having a chat with Visual Studio Code and asking it to look things up right here.
+0:02:44 Lots of changes continuously with all these new tools, and I think Codex has seen the most drastic visual changes in the models we're using, the layout of the actual agent interface right here because they keep changing what you have access to and what the thing can actually do.
+0:03:05 So the settings and how we interact with the model itself can always hit the slash for bringing up the command menu.
+0:03:14 This is true on any of the models or any of the agents, right? We can bring up this command menu to see the options right here.
+0:03:22 But something codex really dove into way harder, more recently is the planning mode. There was a planning mode, but it wasn't as robust as clouds planning mode.
+0:03:37 In cloud, you can come down here. You can swap this to edit automatically or you can swap it into plan mode and plan mode literally just starts writing documents and making brainstorming decisions without actually changing any code.
+0:03:52 The plan mode is massive. A huge improvement over just trying to start coding right away with the agents, building out plans to implement is the way to go.
+0:04:03 So not just in a planning phase, but throughout development, creating documents, creating plans to get stuff done so that you don't see any regressions in your code.
+0:04:15 You're not seeing changes in one area affect another area that breaks everything and then you go fix those changes and it breaks in another area, you can actually plan stuff out in a very robust way.
+0:04:26 So, gosh. Started coughing so bad today. So, planning mode in both codex and in cloud code. So, I've been saving my codex credits, but we can use codex today just to show you it's, you know, it's all relatively the same.
+0:04:46 Just navigating the interface is slightly different. So, what we have access to here in Codex is Rex. We have access to this toggle right here, default permissions or full access.
+0:05:04 This is dangerous mode. We have access to dangerous mode in Cloud, but you actually have to get in here. You have to open up the developer platform.
+0:05:15 You have to get onto your Cloud account, and you actually have to go into your account and allow dangerous mode to appear in the options down here.
+0:05:25 It doesn't appear automatically. What dangerous mode is, Cloud calls it, it's called code dangerously or something like that, dangerously mode.
+0:05:38 And so I want to illustrate dangerous mode without going into my Cloud stuff, I don't really use Cloud for production anyway.
+0:05:47 I use both, but I really heavily use Codex and so I can show you that today since we've been using Cloud for the most part and what dangerous mode actually looks like.
+0:05:58 What full access can do is run commands in the terminal. So without that full access, default permissions or no dangerous mode, the agent could potentially give you terminal commands that you would then copy and paste into your terminal.
+0:06:17 Again, just following the layout navigation buttons up here, the tiny little buttons in the top corner. We can click this one to bring up the terminal for this project.
+0:06:29 So you could get terminal commands from your agent, then you would have to manually copy and paste those terminal commands into the actual terminal to run them.
+0:06:39 The agent doesn't have access to your actual terminal. Well, if you turn on the full access, now it has access to your terminal and it has access to the internet and it has access to your computer and it has access to everything.
+0:06:53 So it's, you know, there's all kinds of warnings on these modes if you go into the, you know, go into the system stuff.
+0:07:00 They say be very cautious. You're giving the agent access to everything. So don't tell it to go delete your database because it will.
+0:07:10 So full access mode or in cloud. It's dangerous mode. However, these agents are getting so much better, especially just since last year, that dangerous mode isn't necessarily dangerous anymore.
+0:07:26 These agents are very careful. They have all the guardrails that are installed and enhanced by the companies themselves so that the dangerous mode is very, very structured and ultimately just that much more powerful.
+0:07:40 All right, so pop in this thing into dangerous mode, I'll use codex, and I will need to start a hardening pass, okay, so we have to fix bugs.
+0:07:56 I know there's some troubleshooting issues, we saw those again occur from last week. We can make performance improvements, reliability, security adjustments, making sure everything, you know, for building an app like this one that has potential users using the app where they can log in and store their
+0:08:13 credentials, everything has to be super secure. So let's dive into it. I do a couple passes. I used to have a big prompting structure for this, but I do a couple conversational passes.
+0:08:26 And the first one is, again, you remember from last week, we have quote-unquote unsaved changes as a way to start learning the GitHub stuff is when you have items up here in this little section, you click on it, that'll open up your work tree or you can see your changes.
+0:08:46 These are things that have not been committed to GitHub, right? If you want to think about it in the most simple terms, committing these changes to GitHub means saving your changes, right?
+0:08:58 saving your changes to the cloud. That's the simplest way to think about it. So we have unsaved changes, quote-unquote, in our work tree that we need to commit.
+0:09:09 Okay, we'll talk about how to organize the work tree and make nice, make nice commits here. We haven't really done that.
+0:09:17 We've just been, I've just told you to go and save your changes, right? So we'll do that here. I'll just say save changes.
+0:09:24 Nothing to organize yet. I'll commit that. And now we can sink those changes to the actual GitHub branch in GitHub.
+0:09:38 What I did just now was I saved my changes to my local folder. Now I can sync those changes to my actual GitHub branch on GitHub.
+0:09:50 up. Messed it up, I'll say okay. And now my changes are saved to my GitHub branch. Great. So let's take this first pass.
+0:10:01 The first pass is I need you to do a repo-wide scan to look for any vulnerabilities in the code.
+0:10:11 This means anything that could cause errors or problems, you decide on what's best and what to come back with, do a full exhaustive report and report back to me your findings.
+0:10:26 Okay, just a really broad generic sweep, nothing specific, I'm just, I'm not trying to get real information from this, I'm just trying to get context on what is actually going on because I didn't do anything in here, I didn't make any of this stuff, just tell me what's going on.
+0:10:43 Look for vulnerabilities. What do we have? Okay. So as I mentioned several times now, you get pretty good at multitasking.
+0:10:54 So I very much enjoy opening multiple windows and multitasking. This agent is going to cook. I could either go do something else or I can open up more chats and do my work that much faster.
+0:11:10 Right. So I'm going to open up a new chat. I'll just close down Cloud. We're not using Cloud for this session.
+0:11:16 We are in fact in Codex. Okay. I've been saving Codex for my personal work, but I'll show you this now because it's literally the same.
+0:11:24 We just have the easy dangerous mode access. So I'm going to open up a new chat. And we have a general sweep going on right here.
+0:11:37 I'll do a more targeted sweep now. I'll say Audit the repo. I want you to look at our documentation, find any gaps in the documentation compared against the code.
+0:11:51 See if there's anything missing and see if we can update any documents or create new documents as you see fit.
+0:12:08 Look for documents that are in here that aren't really useful. We haven't really done a ton of work on this app, but eventually, you might have to do lists or checklists in here.
+0:12:20 Just pure documentation that is no longer useful. Just stale documentation. And so we need to archive or somehow clear out that from the agent, right?
+0:12:33 Anytime you're asking the agent to do stuff, it's going to go over here into your code base and start looking up all the context, gathering all the contexts it needs, the code, the documents, everything.
+0:12:45 And if you have a bunch of dead things over here, that's going to clog up your context windows. It's going to, you know, the agent could provide you information that's no longer useful, so we need to do these sweeps.
+0:12:56 So not a lot in this repo yet, but I'll just do a document sweep. Great, well, this one is cooking.
+0:13:05 again. Let's switch back over to the previous one. Again, Codex doesn't really show a user-friendly chat tab. You kind of have to see, all right, this one's got a yellow dot.
+0:13:21 It's got changes that I need to take a look at. This one's spinning, so that means it's still cooking. These are my previous conversations during my personal work, so I can see all of that.
+0:13:34 It's all kind to mix in where, again, Claude, you can more easily see, With Claude, you can more easily see your open tabs, your open conversations with Claude.
+0:13:54 I, by far, prefer Codex, it's getting better and better and it's still getting better and better than these other tools, I think, for me, you know, I've mentioned as a creative person, codex just feels more capable in my hands or I feel more capable with it in my hands over cloud.
+0:14:12 But making these two comparisons, this is, you know, everybody's using cloud except for me. Apparently, cloud is, you know, cloud is still incredible.
+0:14:24 So let's go check on the other one that finished. It's got a yellow dot. That means it's done. It's got changes.
+0:14:29 Let's go check them out. So we did a full scan here. All right. So findings ordered by severity, high severity.
+0:14:44 We got the transcript audio has no in function authorization checks, no rate limiting or payload limits, analyze thoughts, whatever that is in the code over here.
+0:14:57 is recording with our ownership. So we've got two high priority problems. We've got two medium problems. We've got three low priority problems.
+0:15:10 Great. Now, what I like to do conversationally is I'll just come down and say anything else. That's my go-to. Anything else.
+0:15:20 And usually it comes back with, oh yeah, we have these other high-level things or these things you can get to at another time, or if you want to just look at this other area, while we're working on this, it usually comes back with some else, right?
+0:15:34 Some other stuff we can take a look at. So, this one is cooking. Now, staying organized, staying on track, I'm getting really good at it just in my brain and knowing which agents are doing what, but it is hard to tell.
+0:15:53 So, If you're learning this stuff, just stay on track, especially with vibe coding, stay on one agent conversation. You're gonna get lost.
+0:16:02 It's gonna be feeding you all this information and you might give your agent instructions. You meant to give your other agent and now you're gonna be coding stuff that just, it's not gonna, it's not gonna be good, right?
+0:16:15 So, staying organized is hard. I recommend doing one chat, but I can do a couple. So, here's a few more lower priority issues, missing unmounted cleanup, weak input output validation, no explicit method guard in Edge Functions Awesome.
+0:16:37 Now again, conversationally, this is the broad audit. So it did look for any vulnerabilities, you know, anything that could cause errors or problems.
+0:16:46 Great. look for more stuff. Anything else? Look for more stuff. Now finally my last big prompt here is look up online.
+0:17:02 Anything related to these items. So we can gather their best practices on how to solve these issues. Do a targeted internet search on other developers and how they're solving these issues or any related information on these issues.
+0:17:23 Do not do a broad internet search and go over your context windows. Okay, that's a big important distinction right there.
+0:17:36 Do not do a broad internet search. go over your context window. So when Cloud or when Codex or Cloud, when these tools are searching the internet in dangerous mode, they have access to the internet.
+0:17:52 That's why it's dangerous. When they have access to the internet and they start browsing multiple websites, that's just filling up context windows.
+0:18:00 Many, many times I've hit a, hey, this entire chat failed because you hit context windows, you have to start over.
+0:18:08 Like, that's literally the message the pops up here. It says, this hit the context window limit started new chat. It's like, well, okay, all that work, all that conversation I've had is now wasted.
+0:18:17 I got to start a new chat. So, internet searches can hit your context windows very quickly. Again, the state of the technology context windows are getting bigger and bigger.
+0:18:29 That's one of the main reasons AI just continues use to get better. What makes AI, quote, unquote, get better is larger context windows, the ability to understand more information at once.
+0:18:43 So don't do a broad internet search, do a targeted internet search, and we'll gather best practices on how to solve these exact issues.
+0:18:56 All right, let's hop over to the other agent. Let's see what we cooked Next up, audit documentation gaps. So cool.
+0:19:07 We did audit and looks like we did some change log, changes. One reason I like Codex over Cloud is because it does show you the actual code snippets.
+0:19:24 Cloud will give you links to your actual code, but Codex actually shows the code snippets. This is my actual code, the section of code, in this case, it's a markdown document, shows the actual section that was changed and it shows the items that were changed.
+0:19:43 So anything that was read was changed into everything that was green, okay? So it's showing those changes, which I like.
+0:19:52 And here are the findings on the documents. Critical issue, type check is failing due to unused react imports, that's pretty important.
+0:20:01 Frozen spec versus code drift, accessibility gaps, okay, also saw that same issue in the documentation that we're working on previously.
+0:20:15 Cool. So let's do a follow-up for this agent. Again, this one is checking our documentation. I want you to compare the documents we have to the code base and make sure everything is up to date, then come up with a robust plan on how to update the documents and clean up the repo.
+0:20:44 I do not want any major code, structural code changes. We are only going to work on the documents.
+0:20:58 All right, so now we can pop this into plan mode. Where I want to start doing some work, let's pop this into plan mode.
+0:21:07 So when you use the word plan somewhere in the prompt, It's going to give you this prompt here to say, hey, do you want to switch this into plan mode, yes or no, or hit command shift P to switch this into plan mode.
+0:21:23 So I'm going to do that. Click the plan button or hit shift command P on my Mac and now we're in actual planning mode.
+0:21:32 This is not going to build anything. This is going to create a plan, a structured document we can follow. So I'll send that off and create a plan to clean up my documents in the repo.
+0:21:49 Cool, I'm gonna flip over to the other agent. Let's see what's cooking. Again, just getting better at managing this stuff.
+0:21:56 This one has yellow dot. I know that's the one I'm working on. This other yellow dot is from my personal work just earlier today, right?
+0:22:04 So, pop over to the other agent. You can see how this could get confusing super quick. Usually, I have at least three to five agents running, all doing different things.
+0:22:20 I get, I get really cross, cross-brained, when I have that many things going on. All right, so let's see we got lookup online, anything related to these items, and do some real data backed.
+0:22:35 research here for these specific things we need to clean up. All right, best practice, these are the sources we went to react, we went to Mozilla, we went to Superbase, OpenAI, cool lots of good sources on how to do this stuff.
+0:22:55 So now that we have some real-backed data, best practices with the best practice suggestions from all these other developers and websites.
+0:23:06 Now I can create a plan. This is going to make fundamental repo changes, fundamental code changes. I wanted that back to data before we start planning.
+0:23:20 Let's develop a robust and thorough plan to address all of these items. I want you to use best practices.
+0:23:32 You are a senior software engineer. I want to focus on no regressions and decoupled modular code. So decoupled modular code.
+0:23:47 I've been using this prompt more recently And it's just so when you think of modular code, you could be coding things and having little things working it could be all connected and all wired up and everything's working and it works great.
+0:24:03 Well, when you have an issue in one area that one issue is going to break everything else because it's all wired up and it's all connected.
+0:24:13 And so a more robust system, this includes, you know, any system, automation or, you know, a car engine, everything that's more modular and self-contained and running in conjunction, you know, running on its own, this little piece of code that runs great and it talks to this other piece of code that 
+0:24:34 runs great and it talks to this other piece of code that runs great. That's going to be a much more robust system.
+0:24:40 If something breaks in one area, it's contained in that area, and it's not going to break all your other code.
+0:24:47 And so that's simply decoupled modular code. Let's keep everything modular and robust. That's just the best practice thing. I myself am still discovering the best terms and the best language to use as a prompt to get that out of the agent, just using best practices and acting like a senior software engineer
+0:25:12 and, you know, looking up information. This is all great, but we still need to prompt the agent to do things the correct way essentially.
+0:25:24 So I'm still I'm still learning the correct language because these agents are getting so smart you could say, hey, build me an app and it's going to go do all the things now, which is just insane.
+0:25:34 So when you tell it to, to focus on no regressions, regressions again, that's just means you fix one area and it's all coupled and wired up to everything.
+0:25:44 If you change something in one area, that's going to change something in a different area you weren't intending to change.
+0:25:50 So we don't want that. We don't want that regression. We don't those errors, we want everything decoupled and modular. For the most part, this is the best language I found to prompt right here.
+0:26:07 You are a senior software engineer. I'm going to focus on no regressions and decoupled modular code or robust code or strong foundational code those keywords in the prompt.
+0:26:19 All right, so let's build a robust plan. Pop this into planning mode, I just hit Shift-Command-P, again, it's just giving me that prompt right here.
+0:26:27 Hit Shift-Command-P or I can click or type in slash and bring up the menu and pop it into plan mode.
+0:26:35 Cool. Let's develop a robust and thorough plan to address all these issues. Let's pop over to the other agent. Anytime you're in planning mode in cloud or any of these tools, it's going to ask you questions because it needs to understand more context for the plan.
+0:26:56 So this one was just waiting. It's got a question. It's not going to keep planning until we answer some questions.
+0:27:01 So how should we handle phase one spec docs when current code does not fully match them? I don't know. Sometimes there's language in here that's just I don't know what it's talking about.
+0:27:10 I don't know what docs are in here because I haven't even looked at them. So it'll usually give you a recommended task.
+0:27:16 Otherwise, you can type down here and say I don't know what this means. can you help me understand this so I can make a better decision, something like that, and send that off.
+0:27:28 You can always ask and always prompt these tools to help you understand. So you can co-create with these decision making steps, right?
+0:27:39 But I'm just going to say recommended number one. How aggressive should the documentation clean up be in this past? Let's just questions for now.
+0:27:52 It's probably going to come back with some more questions as it continues to plan. So let's jump over to other agent and there again, got some questions.
+0:28:06 Which rate limiting strategy should the implementation plan target for edge functions? I have no idea. Superbase database quotas, sure. How should CSP be rolled out to minimize breakage risk?
+0:28:25 I don't even know what CSP is. You get the idea if you're learning this stuff, you can go through it and really get to know it.
+0:28:33 But in this case, I'm getting better and better at coding terminology and understanding systems and all this stuff. So I'll say report only then enforce.
+0:28:44 For no regression confidence, Once what test investment should this plan include, Vytest plus critical integration test sure. So Vytest is part of the way these coding languages all interact.
+0:29:02 As I'm coding these apps, or this app in particular, and showing you guys this stuff, we are using a specific language and specific tools to write code for and out.
+0:29:17 Here's some more questions. And now this fails after transcript saved would behavior should we standardize keep recording plus show entry.
+0:29:33 Yeah, let's go ahead with that. How should we sequence rollout to reduce regression risk, two phases. Cool. Cool. So we are coding in a specific language, you know, a specific type of way.
+0:29:49 If you've heard anything about coding languages or you know, coding languages, you know, RJ is a coding master and Unities and C sharp.
+0:30:02 Coding languages, this is the hard part, learning coding languages, trying to figure this stuff out, building code. How do we learn these languages the right way and how do we utilize the language itself to make things?
+0:30:14 Well, the language we're working in over here is TypeScript and we're building specific types of TypeScript and React code.
+0:30:26 React is just another tool we're using. I don't want to learn how to say this stuff without making it sound too complex.
+0:30:33 Languages and frameworks and all all this stuff. Which default protection limits should we plan for target launch balance defaults? Great.
+0:30:43 Still just with the plan questions over here. So React is a suite or framework of tools that let you make stuff for the internet.
+0:31:00 Okay. This is simplest way to think about it. It's a framework that lets you code very easily to make cool stuff on the internet.
+0:31:10 And so we have these code files called .tsx code files. And we have code files with a .css. Okay, these two code files, let's see if I can make this bigger.
+0:31:24 These two types files interact together, .tsx and .css. The CSS files, this is the styling, we get into the CSS files to make everything look good.
+0:31:39 You know, we make it look the way we want it, all the UI, all that stuff. So, I'm ready to implement plan cool.
+0:31:49 So we are in a particular language and suite of tools over here, but you could potentially be coding in a different language, right?
+0:32:01 If you know what type of language your app or environment needs to be coded in, you can switch languages, you can switch your environments.
+0:32:08 And so by default, this app was built in this language with these tool setups when we started it in Bolt.
+0:32:18 Okay. Okay, so since all of this was created in Bolt, we kind of went down a set path. We picked a language, we picked a framework, so we picked all these things, and we went down that set path.
+0:32:32 And so one of the tools that we have is called vite. And so point is all of that stuff. We're gonna be doing specific vite things, react things, and type script things in our planning and in our implementation now.
+0:32:47 Here's a TypeScript, ESLint, Control right here, all this kind of stuff. So you get in the habit of understanding your main environments, or you just begin to learn these main environments, the codes and all the stuff, or the languages and all the stuff.
+0:33:05 You get to know that stuff eventually. You never have to actually learn the languages and what the tools mean. but asking, you're gonna get asked questions about it down here, right?
+0:33:17 If you wanna make good co-creative decisions with your agents, you're gonna just have to start picking up a little bit here and there.
+0:33:24 So, Vite Test, React, and TypeScript stuff is what we're gonna have to account for in here. Now, the reason just side note on that whole rambling sash is that the more you know about your environment and about your language, you can actually prompt more specifically and yield slightly better results 
+0:33:50 or better results just by using the corrects like, hey, can you check this in the react dev tools or whatever.
+0:33:58 And, oh, can you check the, the byte-lint test on this, this, and that instead of saying, hey, my thing's not working.
+0:34:06 Can you fix it? You start to develop the better language for yourself to prompt better. All right, that's the, that's the summary of that big rant.
+0:34:16 Learn a little bit so you can give better prompts. OK, let's refocus back at our jobs over here. Here, what we have is our broad sweep agent coming back with the implementation plan.
+0:34:34 We're ready to go. Let's check our other agent. The other agent has come back with our documentation cleanup. We're ready to go with our documentation cleanup.
+0:34:45 Great. So I'm going to come back into the broad sweep agent and I'm going to add one more pass, one more iteration to this plan.
+0:34:58 Instead of just saying yes implement this plan we've already done all this research we've done all these questions. Instead of just saying yes go for it I give one more prompt here and I'll say audit this plan see if you missed anything make any more suggestions that add value to the repo.
+0:35:18 I want you to compare this plan against the repo and make sure we are only adding high-value changes to our code base, I want no regressions, no bloat, you are senior software engineer, use best practices, go ahead and rewrite the plan.
+0:35:48 So now we did all this auditing, we did all this research and now it's actually auditing its own plan. So, self-critique is the technical prompt engineering term here, self-critique.
+0:36:02 Same thing, I'll flip over to the other agent, documentation gaps, audit this plan, see if you missed anything, make any more suggestions, only add high value changes to the repo, compare bloat.
+0:36:25 You're seeing yourself for engineer use best practices. Cool, flip back over to agent number one. And we'll just wait for this guy to cook.
+0:36:44 Now you notice, may have noticed, we've got four changes in the work tree over here. While these guys are cooking up some more stuff, I can come in here and commit these changes.
+0:36:56 So it looks like read me architecture, change log, repo audit. So I'll say four docs changes. Commit and sync. Great, now we have our lean security hardening plan.
+0:37:24 No regressions, no bloat. Perfect, you can expand out this plan. Read through the whole plan if you need to. What is in scope?
+0:37:34 These are our high-value changes, foreign and reliability handling, browser hardening, public interface, type changes, fire level implementation, lots of stuff, right?
+0:37:47 This is great. This is why planning mode is so effective is because it's going to be able to come up with things that you just don't know you need.
+0:37:56 And it's backed by online searches, backed by, you know, that targeted research to get the information for best practices. So all of this stuff is going to be implemented.
+0:38:12 I'll Okay, agent number two needs another question. How should read me, handle build, lint type check status to avoid future drift.
+0:38:21 Let's do evergreen plus link. Okay, another reason documentation is important. We need documentation because we need to know what's going on.
+0:38:36 Well, we need documentation because your agent needs to know what's going on. If you're just coming into a new chat and you say, hey, build me something cool, that's just causing messy code.
+0:38:46 The agent needs to go read the documents, see what exists, see how it's working, and then build code based on that.
+0:38:54 So documentation for the agent, making sure your documents are very strong for your agents to actually flow through your project.
+0:39:06 Alright, implement this plan. Okay, so keeping good documents, keeping documents up-to-date, making sure any change logs are added to updated change logs.
+0:39:28 This is one of the documents that was created in the initial pass. And it's something I added in here in the initial pass, phase 0 of our project phase map, creating all the necessary documents, the top level documents in phase 0.
+0:39:50 So all of that stuff, change log, the top level agents log, and the top-level readmeas, all that stuff gets created in phase zero, so now we're just simply hardening it up, making sure all the documents are linked, organized, and have everything we need.
+0:40:15 Cool, so these guys are going to cook for a little bit. it. While you're doing major repo wide changes, it's usually going to cause conflicts.
+0:40:34 If you start doing any other changes, I'd like to always be active and always be working so I can start a new chat and start doing more work here.
+0:40:43 Well, if I'm doing more work, creating more mess on top of this stuff while my other two agents are trying to clean up my mess.
+0:40:53 It's like, you know, you just mop the floor and then a little kid comes and spills a whole glass of orange juice.
+0:40:58 It's kind of annoying, right? So you want to make sure any repo wide changes are fully, fully gone through, fully implemented.
+0:41:08 You've got all the changes in your work tree being smoothly committed. There's no problems. All of that stuff goes through.
+0:41:14 This is your foundation for your code base. All of this stuff just being solid before you start adding any other changes.
+0:41:28 So let's see. We got documentation is finished. Agent number two is finished. And this is exactly, I was hoping this would happen, this is exactly what I was talking about.
+0:41:41 Okay, this is great. The agent said, hey, I noticed unexpected changes, what's going on here, there's stuff that I'm not expecting.
+0:41:54 And it stopped. It stopped on its own. That's excellent. So I've got two agents working simultaneously changing my repo. So this one came back and said there's things going on that I didn't notice and instead of continuing and just making a mess of your code, it stopped and it said, these are the changes
+0:42:12 that I'm seeing here. What do you want to do with that? So we can tell it's really good. The agent is really good at organizing and keeping track of what is in the actual work tree.
+0:42:25 It's really good at understanding these are the files that I'm working on. this is the changes that I'm making and these are the changes in the work tree that I'm not making.
+0:42:34 Right. Really good about keeping things separate and organized in its own right. And that's just a feature of functionality of Visual Studio Code and using GitHub and all of this stuff, merging code and version control, all of this stuff that works kind of under the hood and behind the scenes.
+0:42:53 Super, super powerful inside of these tools. But the agent don't have to know how all let stuff works quite yet.
+0:43:00 But the agent is now smart enough to say, hey, there's stuff going on. What do you want to do with it?
+0:43:06 Do you want me to ignore it and proceed with this docs only? Or do you want me to include this in the cleanup?
+0:43:14 Now, if you don't know what you're working on, okay? If you don't know what files are being changed over here, you could run into issues.
+0:43:24 Again, cross making a mess on a nice clean floor, spilling your orange juice on a nice clean floor, that could totally happen.
+0:43:32 So, if you don't know what you're working on, it's always best. Let the agents cook, let them figure their stuff out, then you can keep going with your changes.
+0:43:41 Okay, in this case, you can also just ask it. I'll say are these other changes going to hinder our work here.
+0:43:52 If not, you can ignore them and continue as is. Do not continue working if you're unsure. Okay, one of the ways code is tracked is, you know, I'm still not a coder.
+0:44:20 I'm getting better at learning languages and all the technical stuff. I'm a AI expert, not a coding expert. But one of the The way things are tracked is with, so if you look at, let's see if I can pull one up from a previous session, look at the little snippets here, the changes that are being implemented
+0:44:42 again in green in the little snippets, see if this will blow up, there we go. So we can see all of the changes that were made and everything that was edited, right?
+0:44:54 And so the agent has access to these edits and it'll say I'm noticing edits that I didn't make Let me go check those edits and see if they are actually going to hinder us over here Basically, that was my question are these changes going to hinder us?
+0:45:10 If not, let's continue as is so it can actually go look at all the changes being made not just in this session But in our entire work tree, right?
+0:45:22 So it's gonna audit that and say hey I found the changes, and let's see. This won't hinder our docs only pass.
+0:45:30 I check the workspace that are many existing non-dock changes. Great. I will continue as is with docs. Cool. Go ahead.
+0:45:44 So it's very powerful to use Visual Studio Code. It's just so easy to have your agents understand coding. Like actual coding work, the job of coding, right?
+0:45:58 Very cool to let your agents go ahead with this stuff. So I'm gonna let this cook a little bit. We've got some major changes up in the work tree.
+0:46:14 Let's check on. Looks like our. It's like both agents have finished. So what changed implemented the dox only plan is now applied with no new docs created and no runtime files edited awesome What changed validation great Let's go check on our other agent We'll close this down so it's less confusing So
+0:46:41 this is agent number one with the repo wide sweet And we are finished. So same thing, this one came back.
+0:46:56 I found unexpected modifications and several governance docs files that I did not edit, cool. Per your repo rules, I need your direction before proceeding.
+0:47:11 Will any of these changes affect what you are doing here? If not, you may continue. you, if they will affect what you're doing, do not continue working.
+0:47:28 Now for the most part, it's really hard to keep track of this stuff, but for the most part, if you know what sections of your repo or your code base you are working on, it's very easy to separate out the work and keep going, running multiple agents, working on different parts.
+0:47:48 Okay, similarly to how different team members would be building something different, you know, real people, real coders, working on the same project, they can work simultaneously on different sections of the of the code base, right?
+0:48:00 Same thing. But because we're not coders, figuring this stuff out, and you don't know what changes will affect what pieces of code, And especially if all of your code is just connected in all the big mess, making one change here is going to affect everything else.
+0:48:19 So it's really, really good practice to have strong foundational code, robust, what are my keywords, robust modular decoupled code so that not only is your code base strong and and sturdy and good foundationally but you can actually work on different parts of your app at the same time because it's not
+0:48:43 going to break anything else. Great. So know those unrelated doc changes do not affect this implementation so I continue to thank you.
+0:48:55 And we're finished. All right, so now that we're finished, we've got 42 new changes in the work tree. This is a mess.
+0:49:07 How do we commit these changes and keep good naming conventions, keep things organized, there's so many things going on in so many places.
+0:49:17 And as of now, all we know is committing changes means saving changes. So I should just commit them and save all my changes.
+0:49:25 You could do that if you're the only person working on this and you just don't care how your commits are going through, totally fine to just commit all your changes.
+0:49:35 However, much better practice and much better also for your agents is to commit your changes in a logical, you know, an easy way to recognize by the agent.
+0:49:47 And that means I'm going to commit these changes that this agent made in one go, so that all of those changes are organized to that task.
+0:49:56 I'm going to commit all the changes that my other agent made so that all of those changes are organized for that task.
+0:50:04 Okay, the reason being too is if you need to go undo anything. If you need to undo a change, you can say, hey, look at this diff over here and I need this fix and I need this fix over here.
+0:50:21 you have those things separated and organized that way. This simplest way to think about it is just keeping your tasks organized and saving those changes to each task, right?
+0:50:34 So two tasks happening at one time means lots of changes, but I can still keep things organized. So agent number one, I'm going to say make sure you run all the appropriate tests before committing changes, there are lots of changes in the work tree currently.
+0:50:57 I've been working on other areas. I want you to run the appropriate tests. Then I want to commit the changes we made in this session.
+0:51:07 Make sure to separate everything out accordingly. Okay, so we did our task, we did all the research, we made the plan, we completed the task, and now I'm going to say, run the tests.
+0:51:25 Make sure this code is passing the test. And here, those weird coding language and environment and frameworks keywords come in here, we're doing a lint test, we're doing a type check, we're doing a build, and then whatever this test is, just another test.
+0:51:44 So test suite is green, cool. Now I'll stage only the hardening session files, excluding unrelated docs task at its perfect.
+0:51:56 Everything organized. Now we can see the work tree much less. We committed just the changes from this agent. Lint is passing, type check passing, build passing, the test is passing.
+0:52:11 This is our commit with this commit message. Hardened edge security rate limits and regression tests. That is now saved, nice and neat and organized.
+0:52:22 We didn't just hit the save button, throwing everything in there. Now we've got nice organization to our, to our commit, right?
+0:52:32 I'm gonna come into the work tree again. We can see the changes that have yet to be committed and our new commit down here.
+0:52:40 Hardened edge security rate limits. These are all the changes we just committed, nice and organized in a single commit. You can see my previous commits.
+0:52:49 I have no idea what's in here. Let do it. save changes is my last weird commit. I'd have to go in here and try to understand what's in here.
+0:53:00 You get the idea. Keeping things nice and organized in your quote-unquote saves or your commits. So let's go commit our changes from the other agent.
+0:53:15 Documentation gaps agent looks like it already found some stuff here. Let's say can you run all of the appropriate tests and if they're passing commit the changes we made in this session.
+0:53:43 Now we got to error probably my internet. We'll send it again. All right, let me refresh. I've been getting this.
+0:53:54 My internet's been crappin' out and I'll just restart VS Code, brand finale, restart. All right. Let's The appropriate tests make sure they are passing, then commit the changes we made in the session.
+0:55:24 So you may have noticed, as we've been working on thought flow, we haven't really been working on thought flow. All of this word, all of this background stuff, this is the stuff that people skip, right?
+0:55:42 Right, this is why Bolt is so appealing. You make something, it shows up on screen, you can start clicking things.
+0:55:49 And then you're like, okay, make this button work, make that button work, ship the app. And this is why there's so much controversy with vibe, coding, and these agents is because people are making things, and they're putting them on the market.
+0:56:06 And they do not have security, and they don't have the foundations, they don't have the the security checks and the implementation and the good structure.
+0:56:15 And so these apps and these products that be in hacked and people are losing their data and customers or information is going out all over the place.
+0:56:24 And so it's just this big, this big software engineers are saying vibe coders are terrible for making these apps and AI sucks because this is the type of quality that AI produces.
+0:56:38 Well, that's not necessarily true. You can do anything a software engineer can do, you just have to think like a software engineer, you have to actually use good techniques, best practices, become an engineer that doesn't know code that doesn't know coding languages, right, you still have to become an
+0:56:56 engineer and a designer, you still have to do this foundational stuff to get your apps safe and functional and strong and working across multiple platforms, browsers, whatever.
+0:57:10 This is the foundational stuff. So even though this is a very small app, I haven't really done anything else on the app.
+0:57:18 You know, done any styling or made it work for a while because foundational work is what you gotta do. it's just what you got to do.
+0:57:31 So many issues in the industry right now with Vibecoaters shipping incomplete apps and it's a big problem so don't be that person.
+0:57:42 We got our completion here, WorkTree is clean, our two audits for vulnerabilities and our documentation gaps are now filled. We've got super strong Foundation, we can continue and keep building our app, right?
+0:58:00 Foundation work is key. Let's quickly jump back over to the doc here. So, verification, hardening, right? What we've done was essentially reliability, security, changing up the documentations, getting the documentations filled in correctly and adding some vulnerability adjustments.
+0:58:28 We really haven't done any performance improvements, and we really haven't done any bug fixes. Essentially, what I would do next is the exact same thing, two more audits.
+0:58:38 I would say two more broad sweep full repo audits. I would say first, just go through the repo, see if you find any major glaring bugs.
+0:58:53 And we know we have a couple of those. I don't have the app pulled up, but we know we have a couple of those from last week.
+0:58:59 There's three incomplete areas that we need to work on. So we're going to get those error messages. Those aren't necessarily bugs, but we are going to get some errors pop up.
+0:59:08 So do a big repo wide sweep, see if anything breaks, try and find bugs or broken areas. Okay, that's one big audit.
+0:59:19 Same process we did today. Big audit, find bugs and errors, repo wide sweep. Now performance improvements, this is a tough one to understand how to use correctly.
+0:59:36 When you say, let's do a big repo wide sweep to enhance performance, This is a step that should be done later, okay?
+0:59:44 A performance optimization and performance improvements should be done after you have a good foundation. The reason being is because if your app is not finished and you're adding performance improvements, optimization and performance improvements, you're optimizing something making it work super, super
+1:00:03 good. We talked about this a little bit. And that thing is now working perfectly. And you're like, oh, I'm not done yet.
+1:00:09 Let me add this, this, this, this, and this. Well now you have this really optimized, really incredible piece of code with all these other chunks added to it.
+1:00:19 You're gonna have to keep re-optimizing and re, you know, re-auditing and redoing that. So all of these pieces fit in and perform.
+1:00:27 If you just finish building first, prototyping, structuring what needs to happen first, and then you do performance, I keep it in my mind.
+1:00:38 You then you do performance optimization. That's usually the better step to go with early optimization and early performance enhancements could just add way too many problems to your app.
+1:00:51 So this right here, reliability and security, just making sure your docs are good, making sure the foundational stuff is there.
+1:00:58 And if you have customers, I would even say do a third security specific audit. repo-wide audit. Go through the entire repo, find security, any security issues, and let's tighten them.
+1:01:11 Now, as your app gets bigger and bigger, doing repo-wide sweeps is going to get harder, and your AI agent is going to have to work more, and it could miss more things, and so as your app gets bigger, you want to do targeted audit repo sweeps.
+1:01:27 So, for example, you know, audit my about page or audit my homepage or you know audit just certain sections of your of your app or your tool, certain sections of your repo instead of a full repo scan.
+1:01:46 Hopefully that makes sense. So reliability, security, repo wide switch sweeps for bugs and then save performance issue, performance enhancements until later on when you have completed all your features, right?
+1:02:03 In this phase, the nature of this phase means we are not doing feature changes, we are not doing design changes and we are not building anything new.
+1:02:15 That's when this should happen here, okay? That all happens in phase two construction. We should have everything built, we should have everything ready to go before we are doing performance enhancements, major bug fixes that we need to tackle and reliability and security adjustments.
+1:02:38 We can do these throughout in targeted ways, but you have to know how to do them if you still have feature changes to implement.
+1:02:48 And by meaning, know how to do them, I simply mean you have to know exactly what section of your app you're working on, say the homepage or the about page if it's a website, whatever, do targeted, targeted adjustments if you still have features needing to be implemented.
+1:03:07 I hope that makes sense. Last rambling section there. I'll open it up to questions. Foundational work that is the takeaway, strong foundational work, letting your agents do sweeps, finding issues, finding vulnerabilities, looking stuff up online.
+1:03:27 Right there, have your agent do that research, super powerful. Any questions on that, guys? Sweet, appreciate you being here. We can call it early, four to night, and I hope you guys have a great rest of your week.
+1:03:41 Have an awesome weekend. I will see you next week.

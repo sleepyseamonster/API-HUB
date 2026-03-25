@@ -1,0 +1,367 @@
+﻿0:00:07 Welcome Christian. Right on. This is week three vibe coding AI coding. Funny point to make about vibe coding already. The terminology is starting to shift towards simply AI coding, which is uh, something I was predicting.
+0:00:28 So I wanted to name this course not just vibe coding but I wanted to name it AI coding because that is essentially the direction of the industry and we're starting to see that happen already.
+0:00:39 Pretty cool. By the way, Christian, can you hear my mic? I had a, yeah, you can hear me cool. I had a had a switch mic.
+0:00:51 Awesome. So we're gonna jump into. Yes, sir. or how you doing? Can you hear me? That's right. Yeah. Right. Thanks.
+0:01:00 What happened to the mic? I was just, I had to switch it out earlier today. So. Okay. Stoke, man. Rock on.
+0:01:09 Thank you in advance. Yeah. Let's do it. So we're going jump into, we're going to jump into bolt. We're going to do a full build out in bolt just to show you, you know, last week was, was information download week.
+0:01:26 Yesterday it was more information download for automation, so today we're going to step back on the vibe coding stuff and kind of show you exactly what is the first steps you need to take when you're starting to vibe code, right?
+0:01:39 Last week was using codex, getting into these tools. I'll pop up my screen right now and show you I was actually coding all day working on this project.
+0:01:50 And so ultimately, you know, the the end goal for becoming a an AI coder is using tools like this and integrated with the other, you know, app to or a prompt to app tools like bolt, replet, lovable.
+0:02:07 In fact, I'll just pop up this. So I can show you guys just a little bit of stuff I'm actually building with codec.
+0:02:19 So this is an app that I am going to be marketing to content creators and, you know, anybody do an AI content creation.
+0:02:30 This is an app for you, right? So we have the ability to save creators in this list. if you want to model other content creators of a media library where you can drop your content, save all your content, save all your reference images, performance analysis where you're actually going to get the updated
+0:02:45 trends and this will score those videos that are coming in. And so you can relate to, you know, relate the scores to what you want to do in your niche.
+0:02:55 All that data is the most important thing as a content creator. So this is kind of the app I'm building for content creators as a centralized dashboard for a creation, and and building, right?
+0:03:08 Not just generative AI, but actually running your business this way. So then we have the AI studio. This is what I've been working on today, just making the content creation area where you can actually generate media right now.
+0:03:21 It's not hooked up. So it's just generating dummy images here. But you'll be able to generate your images, load in your reference images, create your videos, selecting the models, and pumping out your content, just like that.
+0:03:37 So that's what I'm working on just to give you some concrete, you know, real-world examples here of what this stuff can do.
+0:03:46 And I'm doing it in Visual Studio Code using Codex as my agent building everything. Okay, so that's kind of what I showed you last week.
+0:03:57 That's the hard, the quote unquote hard way, the expert level way using these professional tools. By the way, welcome in Maria.
+0:04:06 I think so far it's just you and Christian in this actual. Hello, hello. Hello, in this actual lesson, here's this great.
+0:04:17 So yeah, last week was hard week, we're going to jump into Bolt. So I'm going to build an app, just demo out the process step-by-step so you can see how to make apps and websites and landing pages like immediately and put them to work.
+0:04:32 If you're doing something like this inside of Visual Studio Code, you're going to have to run terminal code, run stuff on a local server, build a server, you know, buy a domain, all this stuff, and host your apps, you know, that gets it's a lot more involved.
+0:04:46 But with Bolt, let's jump into it. So I'm using Bolt because I'll just open up the clarity tool hub.
+0:05:06 I should be getting this clarity tool hub in the classroom, in the learning section of the community. be probably by the end of this week, if not this weekend.
+0:05:17 So in my tool hub, I have these two tools, Bolt and Replet. These are the two I would suggest to make apps.
+0:05:24 The other one is Lovable, and I have some experience with Lovable, but just not enough to teach it. Lovable got a bunch of funding, so if you're interested in taking a look at these apps, These are the quote, I'm quote, big three of the prompt to app builders.
+0:05:43 Replit, bolt, and the other one called lovable that I just don't feel enough to teach now. Wade, my partner, he showed me his app that he's building in Replit yesterday, I think.
+0:05:59 And it blew me away. I was like, man, I don't even know Replit could do that. But what he's building in Replet is, you know, these tools, even though they're not the quote unquote high level professional tools, you can still build professional.
+0:06:14 I mean, what he showed me blew my mind like this is so good. The app that he's building. And we're going to talk about working on that app, you know, as a product because it is so good.
+0:06:24 I didn't even know Replet could build that way. So these tools are no joke, right? Let's jump into bolts. So I'm just going to click on this so we can open it up.
+0:06:35 This is what it looks like, just like any other, you know, AI tool, you're just going to prompt it. You're going to prompt it to build an app.
+0:06:43 So I thought of something that is going to be useful for me. I've tried making something similar to this before, but I'm actually going to build an app that I want to use.
+0:06:55 So I'll go ahead and prompt it out. So the app I want to build is just like a recorder app that I can have on my phone, I can just record my thoughts all day.
+0:07:05 And my thoughts will get my to-do lists and whatever I'm thinking about. Record all that stuff and it'll have AI, analyze all that stuff, filling out my to-do lists, automatically adding those to-do lists to my calendar, all that kind of stuff.
+0:07:20 That's what I'm visioning. So let's go ahead and build it. So we could use our prompt and context engineering skills, jump over to chat GPT and start a session over here and build out a nice prompt for Bolt.
+0:07:39 So one of the differences here using Bolt and Replet is they are full production tools. So actually trying to come up with a super well built out prompt to use in Bolt is it It could actually be worse for the buildout.
+0:07:57 Being too specific and being too thorough could actually be worse for the buildout because tools like Bolt have all that kind of, you know, the agent stuff built in.
+0:08:09 They're going to know how to make their own agents as they're going, give the agent instructions, how to build out all the documents like we did last week.
+0:08:16 I had to prompt, create the ignore files, create the agent documents, create all that I had to prompt that. Well, if I'm trying to do that in Bolt, it's actually going to be too much information.
+0:08:27 And that's why these kinds of tools are much, much easier to learn, much easier to dive into. And Bolt.new is free to start.
+0:08:36 So if you wanted to try it out, you can click here in the tool hub and actually start building stuff for free.
+0:08:45 You get a limited number of credits, but you're actually using Claude as the model, right? OpenAI Codex is coming in here soon.
+0:08:57 That's what I use, but the other, one of the other big three LLMs, right? We have OpenAI, ChatchyBT, Anthropic Claude, and Google Gemini.
+0:09:07 We can use Claude inside a bolt. It's the sort of built-in language here. So already using one of the big three languages inside of this incredible tool.
+0:09:20 So I'm going to start prompting without a context engineering session. I'm just going to start talking to it. So I need to build an app where it is a mobile optimized web app.
+0:09:35 I want you to act as my senior software engineer and make the decisions on what is the best way to go about that, but it's a simple app where I can press a button, record my thoughts, and AI will analyze that information, keeping track of my to do lists or tasks or ideas that I'm having that I can implement
+0:09:59 in my projects. This is just going to be a record keeper of my thoughts, and I want it to be very fast.
+0:10:04 I want it to be very simple. I want the UI and UX to be very easy and intuitive and I want the UI to be energetic.
+0:10:18 I don't know. By the way, the acronyms UI and UX. That stands for, you can see right here, UI and UX.
+0:10:32 This is a design term, it's been around forever. I was a graphic designer, so designing UI and UX, this is user interface and user experience.
+0:10:41 So the user interface is what color are the buttons, what type of font are we using? It's the actual, what does the app look like, or what does the website look like, or what is the landing page look like.
+0:10:54 that is the UI. The user interface. The user experience is how the user, or if that user is just yourself, how is that user going to interact with those buttons, right?
+0:11:08 Is it really easy? Are there a bunch of menus? Are things hidden and buried and you have to search for them, or does it naturally flow?
+0:11:15 For example, this is a kind of a weird example, but dating apps have a very, very amazing UX. All you have to do to run that entire app is swipe left or right.
+0:11:28 That is peak UX. If you can run an app left or right, that is incredible. So the user experience is how you actually use the app.
+0:11:39 Is it easy? Is it difficult? That kind of thing. So I'm just saying I want the UI UX to be easy and I want the UI to be energetic.
+0:11:48 So just a vibrant, colorful, I don't really know what's going to come out. Let's see what else we need here.
+0:11:56 Build an app, keep track of my ideas. What my ideas to be analyzed by AI, but that analyzation will also go into some kind of database where they get stored.
+0:12:10 And I can come back to my to-do lists, my organized to-do lists, and my ideas. And I can view them inside of the app.
+0:12:22 So something like that, that's probably pretty good. I'm just going to send it off. Let's see what happens. This is what's great about Bolt.
+0:12:32 It is so user friendly and you can just make stuff and start using it. It blows me away every time.
+0:12:40 time. So it does take a couple of minutes, bolts just going to cook it up. And we're using the Claude models here.
+0:12:54 I could switch to, so if you want to run down this rabbit hole, Haiku is the cheapest and fastest model.
+0:13:00 Sonnet is the middle and Opus is the brand new model. And you can see if you hover over it, that'll be increased usage.
+0:13:07 It's going to get expensive it very fast. That's like what Wade was saying. I think he ended up spending about $5,000 so far, just burning credits and building this app.
+0:13:17 But I mean, it shows he's put so much time into that app he built on Replet. So it gets expensive if you're just running through prompts and burning credits.
+0:13:28 So it does start to add up if you're not calculating which models you're using at this point, but a good, you know, a good rule of thumb is always go for the middle.
+0:13:43 That's going to be the, you know, in any LLM or any tool, if you're coding, go for the middle, if you don't know.
+0:13:48 That's just going to be the best, well-rounded. All right, so while bolt is cooking, I'm so curious to see what pops up.
+0:14:00 It's very very addicting. We talk about this all the time. It's very addicting to build stuff and vibe coding. It's, you know, it's like, I don't have the example.
+0:14:10 It's like running a slot machine. It's like you put in the prompt, you pull the lever and something pops up on screen and you win big.
+0:14:15 It's just, it's so, so gratifying to, to prompt something and make stuff work immediately. You'll see what I mean when this app pops up.
+0:14:32 So, what we're going to dive into a little bit is talking about databases, right? We're going to talk about security databases that comes along with AI automation and vibe coding.
+0:14:45 So in something like this where I'm building this app, it's very simple, but if I wanted to move it into, you know, product territory.
+0:14:56 If I wanted to start selling this as a product and having users log in and create a profile and pay for the app, how does all that work?
+0:15:04 Well we have to start tracking, you know, customer logins inside of some system, inside of a database. And what both does is it makes all of that noise, all of that, you know, extra work happen automatically.
+0:15:20 Again, that's why these tools are so popular, it just works. You just start using it and it just works, which is incredible.
+0:15:30 With Visual Studio Code, you have to build it. You have to build it yourself, and so you can do amazing things, building things from scratch.
+0:15:40 But it does take extra technical knowledge. It does take extra time. Whereas with Bolt and Replet, you're going to end up where the trade-off is.
+0:15:50 Is it happens automatically and it just builds it for you, but you're going to ultimately end up spending more in credits or waiting for your credits to regenerate.
+0:16:03 Every month, if you're using Bolt for free, you get a number of credits per month. You use those credits, you got to wait for the next month for your credits to re-up.
+0:16:13 that is obviously not a production level value you're getting out of the app that is more casual. If you've got to wait to work on something, that's not a production level, right?
+0:16:26 So starting to add up costs and starting to add up, if you're starting to just work on these things, you're going to spend a lot of money using a tool like Bolt or Replet.
+0:16:35 That's where the transition comes into using a professional tool is you can tune cheaper models and do things on a scalable level, but you have to do it yourself, so trade-offs with everything.
+0:16:50 So, I just got a little beep in my headphones, that means bolt is done, and it's building the app. There it is, pops up, just like that.
+0:17:01 So, it's not actually going to run the AI, because it's telling me right here, I have to load in my API key for OpenAI, right?
+0:17:12 If I want to plug in any kind of AI, we actually have to use the LLM API keys. We talked about that a little bit, but I'll see if I can run it in today for this app.
+0:17:25 So cool, it's asking me to log in. It's already creating user account systems. I'll go ahead and sign up for my new app.
+0:17:35 let's see what happens. Sign up. Cool. We're in stop flow. Let's do it. We can record. Here I can view my task.
+0:17:50 You know, I'm seeing this for the first time. This is built in one shot. I got a task list and an ideal list.
+0:17:56 So I can record. Let's see if this works. networks. Yeah, not connected, right? That's to be expected. In a one shot with one casual prompt, this is like this blows my mind, just how this stuff can work.
+0:18:13 Obviously lots of iteration and lots of conversation with Bolt now, I can change and edit whatever I want. For example, let's see if I can do this right away.
+0:18:23 I'll say this is amazing. Let's change the theme to dark theme, make all the necessary changes, understand that request to its fullest and make this app a dark theme app.
+0:18:39 You can decide whether that is a toggle or a permanent change. let's see what we get. Okay, so just like with Codex last week doing it the hard way, all of those prompts, the quote unquote hard way, were to build out the correct documents, the correct files that we need for an environment to run.
+0:19:11 And so, Bolt, again, does all of this for you, and it builds all the necessary documents for the operation of the app.
+0:19:21 So here's the ignore file. We talked about that last week. We've got all the JSON files, all the package information, everything loaded in here automatically.
+0:19:30 You don't have to know what these files are. I don't know what these files are. It's just code, right? But it's all automatically created by Bolt.
+0:19:38 And in the bolt folder here, we have the prompt for bolt. This is like what we did last week creating the agent prompt and setting up our agent to understand our project.
+0:19:53 Bolt created a basic agent prompt and you can read it here. You know, very simple prompt. For all designs I want you to make.
+0:20:04 Make them beautiful. that's a pretty simple prompt, right? We can start making bolts do more and implementing more fine-tuned requests by changing this prompt.
+0:20:18 And so this is where I'd actually get into chat GPT and start context engineering and amazing agent prompt specifically for what I want bolt to do for me inside of this environment.
+0:20:33 You know, what its limitations are, what I actually wanted to work on, what the app is going to look like, all that planning stuff can go into the system prompt right here.
+0:20:45 The rest of this stuff, you know, it's all coding stuff that I just don't read code. I'm starting to learn it, though, this is one of the side effects of vibe coding.
+0:20:55 I can actually read this now, I couldn't write it, but I can definitely read this and know exactly what is what.
+0:21:03 And that's just a side effect of vibe coding. You're actually gonna learn to code if you put some time into vibe in, which is cool.
+0:21:11 Okay, so all this code, this is what's running the app. I don't know what any of it is, I can read it, but I don't know how it works.
+0:21:22 And let's see what we got back over here. There's our dark mode. Awesome. So another simple prompt, change the entire app to all these color changes, everything that all had to be coded in here.
+0:21:48 You know, if you're trying to redesign your entire app with a simple color change, that is so much coding in so many places, depending on the size of your app, right?
+0:22:02 And so easy, one prompt, make it dark, we've even got this nice gradient going on right here. That is, that's awesome.
+0:22:09 So obviously you can see the power immediately in doing something like this. So, I'm going to click the Preview tab, this will just open it up full screen outside of Bolt.
+0:22:20 So, I'll just connect to Project. We can preview the app full screen. I'll sign back in because now I actually have an account with my app and I'll show you that in a second.
+0:22:33 So, this is the full screen app. It's exactly what I want to, simple button, task list. we even have filtering right here.
+0:22:44 I didn't ask for that. That is awesome. And we got an ideas list. I can sign out of the app.
+0:22:49 This is cool. Super cool. So, little buttons right here, probably the most you're going to need to know about bolt, you know, the interface is pretty slick can pretty simple.
+0:23:05 There's not a lot going on except for prompting. Well, these little buttons right here. This is the preview where we can see the app.
+0:23:14 This is the code where we can look at all the files and this one is the database and the backend, okay.
+0:23:24 Bolt automatically has a built-in backend system. It's not even a coded thing. This is just part of bolt. So when you're running an app, or you're running a service that's connecting to customers, or you have operations that are running in the background that you're not actively using the app for, but
+0:23:45 the app is still doing stuff, you're going to have a back end. If you're just learning systems and coding, typically we can think of systems and apps and two parts.
+0:23:58 We have a front end, we have a back end. Well, the front end is what you are interacting with or what your customers are interacting with.
+0:24:07 And so we have to design the front end for the UI and UX. Specifically, the UX is where, you know, if it's hard to use, your customers aren't going to use it, you're not going to make any money if you're building an app.
+0:24:19 So the front end has to be designed really well. The back end has to be designed really well in a completely different way, it has to work, it has to work every time, you know, if customer information gets deleted or moved, you're done, right?
+0:24:36 That is absolutely no go. So the backend is actually harder to design and Bolt just has it, you don't have to design it.
+0:24:46 It's just there. So when we take a look at the bolt back in, we have our database, in this case, it's storing my recordings.
+0:24:56 It just made this automatically. It's storing my recordings, which I have none. It's storing the tasks that get categorized by the AI, and I have none, and it's storing my ideas.
+0:25:09 So simple storage. And this is going to be permanent to my account that I've signed into. You saw how I signed in.
+0:25:19 Well, it's already built in authentication. This is such a huge task for building any kind of system where you have to have people log in, even if it's an internal tool in your company.
+0:25:33 And you're using this internal tool. We obviously don't want people outside of the company to have access to this tool work well your employees and your company members can log in internal service has to be very, very secure.
+0:25:49 The security is the first gate, right? So you have to build all of that stuff. You have to code that stuff and it's very, very difficult if you don't know what you're doing.
+0:26:01 However, PULT tools like BULT, they just have it. It's already built. The authentication layer is already done. And so you can see the two options that it comes with.
+0:26:13 You can sign in with email and you can sign in with Google just kind of like everything that you build an account for.
+0:26:18 You can just sign in with email or Google. And if you want to do any advanced stuff, obviously, we, you know, Bolt can allow for that.
+0:26:27 And I keep, you know, I'm using Bolt as the main example here because this is what I use, but again, and kind of like all these tools, bolts, reflet, levable, they do the same thing, similar on the same level on all this stuff.
+0:26:43 Okay, so it's actually creating this authentication layer already and it's already managing users. I didn't even tell it to do this.
+0:26:55 I didn't say, hey, I want to log into this app and I want customers to use this app. It's already creating a user management system here where me as the developer, this is a critical layer for security, there's a side note, a more advanced note.
+0:27:13 But as a developer, I do not have access in my back end to anyone's passwords. That is a critical layer.
+0:27:24 So any time you're logging into a service and you're entering your password, you're entering your information, that company in that service actually doesn't have your password.
+0:27:35 It's not visible with the proper authentication systems and security in place, specifically this day and age on the internet. But any time you're giving your companies and these services you're logging into your password, they can't see it, okay?
+0:27:53 The system sees it, nobody else can see that password. So you, again, you have to build all that stuff when you're coding, but it's already done.
+0:28:07 I can have other users immediately log in to my thought flow app and it will all be secure, already, just like that.
+0:28:16 It's incredible. So user management is taking care of authentication, is taking care of if you need to build servers. You do it right here, right?
+0:28:25 We're already doing this. So this is the local server that's running. Don't need to get into that. But the other back-end system is organizing the secret keys, right?
+0:28:38 So super base, this is the, the, in bolts back in, they are actually using super base for their database. And so you can actually go into super base and make a new database and customize your database.
+0:28:55 You don't need to worry about that, but that is actually how you do it in Visual Studio Code. You need to create your own database.
+0:29:02 And so there are database services. Superbases, the one that I use, it's free to start, and you can scale that to enterprise massive, massive amounts of data, and it's very, very fast.
+0:29:16 And so Superbase handles a lot of security stuff. It's very good. And so Bolt actually uses Superbase in their back end.
+0:29:25 Don't need to know what that means. Just connecting all the dots that Bolt does it for you. So that's the main takeaway here.
+0:29:33 So I can add new secrets. I can add my super-based secrets if I want to make customize my database. And I can add my open AI secrets so I can connect to my open AI account and start using the AI in my app.
+0:29:49 Now if I'm running this app for customers, I would need to like vamp up, revamp my open AI account, Start dumping money into my open AI account because my customers are going to start using that account as the primary account right you're connecting to your business credentials Okay, so let's go ahead
+0:30:11 and do that. You know lots of lots of stuff to dive into here But point is the back end is just made for you.
+0:30:20 It's incredible every time I see this stuff happen This app is built. It's ready to go the last thing I need to plug in is the is my open AI key.
+0:30:29 So this is something that just popped up by the app. I don't know what's going to happen when I click on this.
+0:30:35 And it's just, OK, so it's automatically adding a name here for my open AI key and it's asking me to paste it into the secrets.
+0:30:41 Great. So I'll go ahead and do that. I'll get into my open AI account. Again, this is open AI platform, different than chat GPT.
+0:30:53 This is where you can actually test models and build stuff and see what happens, and make new models, and all this kind of, you know, all this kind of playground stuff inside of OpenAI.
+0:31:05 Don't need to worry about that at all if you're building stuff. You come up to Settings, API keys, billing, and usage are the only tabs you're going to have to know here.
+0:31:19 We talked about this a little bit. API keys, billing, and usage. Billing is where you go throw in some credits.
+0:31:26 I am automating and vibing all day every day. $10 a month is by far enough to do everything that I need to do.
+0:31:36 And again, that's why I like to use OpenAI for solo use is very, very, very, very, very cheap. It's the cheapest.
+0:31:45 There is. Cheapest and powerful. So people ask all the time, why aren't you using cloud? Why aren't you and cloud cloud is very expensive for solo use.
+0:31:56 Now if I had specific use cases for cloud or I needed to utilize cloud models for my business, that's a different story.
+0:32:02 That's a business expense. But for everything that I do as a solo business owner in my other businesses, $10 a month it runs my business easy, which is crazy.
+0:32:14 These models are so cheap and that's one of the, here's a side note on that. The fundamental, you know, the key advances in AI technology is currently is not actually that the models are getting better is that the models are getting cheaper.
+0:32:28 Just two years ago, the same model that I'm using for, you know, $10 a month, it was $60 per one million tokens.
+0:32:39 Don't need to know what that means. $60 per one million tokens. Now it's $1.20, $1.20 per one million tokens. The cost is incredible.
+0:32:51 The, you know, of these models are just incredible. So anyway, billing, API keys billing and usage usage is where you track your usage, just keep in track of what's going on.
+0:33:03 So I'm gonna come into API keys. I'm gonna create a new key. Again, keep your API keys very, very safe.
+0:33:11 If anyone has your API key, they can use your services. is. What's my new app called? Thotflow? Thotflow. Yeah. That's great.
+0:33:23 I even like the name. Thotflow. Okay. I'll just create a pro or select a project here. It doesn't matter. I'll probably delete this API key because you are about to see it.
+0:33:40 And that's immediately breaking security protocol. Don't share your, don't share your keys. So I'm going to copy that, come back into both, paste my key right here and create that secret.
+0:33:54 Now my new app is connected to AI. That secret key pops up in here. Again, as a back end owner of this app, I cannot see any of the secrets.
+0:34:14 That is the security layer that is built in amazing security at every step. I cannot see the secrets. I cannot have access to anyone's super base.
+0:34:26 I cannot have access to anyone's open AI keys if I am selling this app as a service. I'm curious to see what happens.
+0:34:38 Let's see what happens. All right. So that's still an error here. So errors again, super common. We talked about this in automation.
+0:34:48 90% of, I'll say 99% of building automations is troubleshooting errors. 90% of vibe coding, a little bit better. 90% of vibe coding is troubleshooting errors.
+0:35:02 So really easy and bolt. What's amazing is that this error message even pops up. Bolt knew that if something goes wrong, there should be some kind of error message to the user.
+0:35:19 That is a security and functionality feature of the UX. Your apps and your services should not fail silently. That is just a golden rule if they fail and don't tell anybody that they fail.
+0:35:34 That is a failure for your app or your service, your internal tools, whatever. You have to be very, very transparent for your customers and for logging the errors themselves, keeping track of the errors so you can go fix them, right?
+0:35:50 So Bolt automatically knew from my one simple prompt that we're going to need some kind of error handling and UX UI if this button fails.
+0:36:02 That's amazing. That blows my mind. I didn't have to tell it to do that, right? That's super cool. Alright, so what I do here, a couple ways we can do it in both.
+0:36:12 There is a select button down here. And selecting that button lets you choose elements on the screen. This is a relatively new feature in Bolt.
+0:36:28 We can do this in the other tools, but I can select this box right here and say, why is this here?
+0:36:43 Something like that. We can get as specific as we want, but even better than that, I'll remove that and just take a screenshot so that Bolt can visually see what I am visually seeing as the user.
+0:37:02 And this is very helpful for vibe coding in general. Show what you're seeing to the agent because you can describe it all day.
+0:37:11 You can describe it perfectly and the agent doesn't have eyes. It's not going to know what you're seeing. So say, this is what I have.
+0:37:18 What does this mean. I'm getting this error. What does this mean? How can we fix it? Let's do that. So again, using Sonnet, I could switch it to a cheaper model.
+0:37:49 I'm on the the beginner plan. I forget what it's called. It's the beginner plan with Bolt. So I am using credits on my plan.
+0:37:58 I could switch it to a cheaper plan for these simple questions. Okay, rule of thumb is if you're not doing big brain power, turn the brain power down and save your money.
+0:38:09 This is a simple question. I'm not asking both to build anything or do this whole, this whole buildout was done on the Sonnet model.
+0:38:19 For simple questions, I can change it to the cheaper model and save my credits. It's also going to answer faster and perform faster.
+0:38:29 All right, so we got to answer back here. I got a beep in my headphones from Bolt saying we're finished.
+0:38:36 So microphone permissions are blocked. That's a pretty funny fail there because it's just saying, hey, I got to enable my microphone to be used with this app.
+0:38:56 For the sake of demo, I'll say, I don't know what this means. can we add some kind of microphone selection pop-up the first time the record button is used so this doesn't happen again.
+0:39:16 I don't know what this means. That is, you know, I don't know or I don't understand in context engineering those are becoming so much more powerful.
+0:39:25 It's not just going to answer you again in a different way, it's going to actually open up a new prompting technique.
+0:39:35 We have that list of prompting techniques that I put up in the community. It's going to open up tree-of-thought prompting.
+0:39:41 When you say, I don't know, are there other ways we can do this or explain this to me differently? It's going to open up a new prompting technique where it's going to travel down different methods of thinking the AI is going to travel down different methods of thinking to help you solve that problem.
+0:39:59 Instead of working on something one linear way, the AI is now deciding which way is the best for you because you don't know what's going on.
+0:40:11 I don't know is becoming such a powerful prompt. All right, so we're going to add a micro, both says we're going to add a microphone setup dialog that's perfect.
+0:40:34 Great first time you click the record button a friendly microphone setup header will pop up let's try it out. Okay in bolts I just got a beep again in bolt you have to wait for the done message if you try and use the app while it's building you're gonna get some errors so you'll get a done message this
+0:40:55 blue message pop up and a beep an audible beep. I'm getting that in my headphones. All right. So now we've got a network error.
+0:41:07 Let's see. Let's see if my internet's still working. I hope we're not having a technical failure with the classroom. That'd be funny.
+0:41:16 So again this iterative process. Errors don't mean it's broken. Errors don't mean that you know it's not working technically because this message is showing, it is working perfectly.
+0:41:31 If it wasn't showing, that's something wrong, right? That is not working. So errors are exactly what should be happening. And in this case, it's happening because Bolt hasn't really finished building this app.
+0:41:46 We one shot the app. Now we got to kind of figure out what's not running, what's unfinished, wherever pieces left behind, stuff like that.
+0:41:53 So the fact that this error is even popping up means that it's working amazingly, and I can just take a picture.
+0:42:02 I'm now getting this error. Can you diagnose what this means and implement the fix? So that's a more, that's a bigger brain power prompt.
+0:42:19 I'll say it that way. When you say analyze this or diagnose this or dissect this, anything that needs more thinking power for you, diagnose this problem, figure out this problem.
+0:42:34 If that's going to use more of your brain power, you can assume that it's going to use more of the agent's brain power.
+0:42:40 And so in this case, I would keep it on a more expensive model so that I'm getting more brain power for a diagnosed prompt or an analyze this prompt or something like that.
+0:42:53 Just kind of rules of thumb you start to build in. As a matter of fact, I still don't really know where the line is.
+0:43:01 When exactly should I use a cheap model? When exactly should I use an expensive model? I don't code so when I'm asking questions that are just like, hey, can you change the color of this thing?
+0:43:12 That seems pretty simple to me sometimes and so you know put it on a cheap model. Change the color of that.
+0:43:20 Well then it's this big system rewrite. We've got to go into the original code and map all the keys and do all the stuff just so that color changes and that little you know low-brained small brain to keep I'll use that as a technical term small-brained model now has to do this huge task and again that's
+0:43:41 where failure your happens, that's where things start to hallucinate. It's going to make changes that aren't the best. And that is where a lot of problems in vibe coding come in.
+0:43:51 You're just using the cheaper model instead of the expensive one for a big brain task. But it's hard to know, what are what are cheap tasks and what are what are big brain tasks if you're not a coder.
+0:44:05 Great, so what do we got here? Fixed to the network error happens because browser speech recognition needs to connect to Google, okay?
+0:44:18 So the app isn't on HTTPS, HTTPS check. Great, let's see what happens. Yeah, so unable to connect to speech recognition again, So I'm actually not on Chrome.
+0:44:36 So both here things were on Chrome. Things, you know, the error is actually coming from no connection to Google. I am actually using chat GPT Atlas as my browser.
+0:44:48 So this is a good example of where you can get to a point. If you don't know what the error is, or I should say if you know what the error is, in this case, I have no idea what this means, but it's saying, hey, try refreshing Chrome.
+0:45:06 Well, there's the error, I'm not on Chrome. I don't know what it means, I don't know what the code is, but that's the problem.
+0:45:12 That's when you can start dissecting things and moving forward and saying, okay, this now is an issue. It's a simple issue, I just gotta get on Chrome and run Bolt, right?
+0:45:22 That's a simple issue, but you guys get the idea here. So, I might jump on Chrome, but I might try and troubleshoot, right?
+0:45:30 This is the problem that vibe coders run into. I could jump on Chrome and keep going with Bolt and see what happens.
+0:45:38 Or I can say, hey, I'm actually on chat GPT Atlas. Can we build things a different way? This is where vibe coders get into problems, right?
+0:45:46 Because now you're plugging holes. You're putting patches on things instead of fixing the core issue and the core issue in this case is that I am needing to be on a specific browser.
+0:46:02 That's an issue because if I'm trying to distribute this app, people aren't going to be using Chrome every time, right?
+0:46:09 So thinking ahead, thinking that stuff, that's where the real challenge comes in as a builder and as a designer. It's not the actually building anymore.
+0:46:16 Well, the professional decision is, well, I'm not going to continue fixing this error. Okay, that's the key takeaway. The level up in your skill is knowing not how to fix the error, but knowing not to fix the error, going down a different path.
+0:46:37 And so an approach that I would take here, take a screenshot, jump into chat GPT and start brainstorming, right? If you start telling Bolt to do stuff, you might be building things that don't work.
+0:46:54 Build for, build for chat GPT Atlas. Well, okay, now Chrome users aren't going to be able to use it. Build for Chrome.
+0:47:00 Well, now, you know, Safari users aren't going to use it and, uh, you know, whatever. You're going to be patching things that aren't necessarily making positive changes for your app, okay?
+0:47:14 The level up in your thinking when you're building this stuff is knowing when not to fix problems and not to continue building things, right?
+0:47:27 You just, you don't want to add stuff to the fire. We want to solve the root problem. And the root problem here is the speech recognition service needs specific whatever.
+0:47:40 I don't know what that That is, it needs something, needs to be on Chrome, in this case, but we can figure out what that is another way.
+0:47:49 I'm building an app in Bolt. My app is giving me this error message. I'm actually using a chat GPT outless, it's saying the network connection is invalid and switching over to Chrome would solve that.
+0:48:02 I don't know what that means. There was a mention of using a local host, I don't really know what that means.
+0:48:09 I kind of do. But in this case, I don't want to say I don't really know what that means because we'll see if that solves the problem.
+0:48:17 Again, opening up the tree of thought prompting, so we can solve, is it a local issue? Is it a browser issue?
+0:48:25 Chat GPT is going to think creatively to help me understand different solutions. I'm not saying, hey, help me fix this error.
+0:48:35 I'm saying, I don't really know what's going on. Let's explore what's going on. And so I don't know. It's a really good, is a really good prompt here.
+0:48:48 So I'm gonna give some context now, right? Context engineering, I'm gonna say this is for an app that is able to record my thoughts and use AI to analyze those transcriptions.
+0:49:02 So the app is recording my voice and transcribing that. I think that is the issue here. Can we work out a solution that we can feed back into Bolt?
+0:49:23 Here's another quick tip. Here is a typo that Whisper Flow made because I said Atlas and that sounded pretty close to Atlas, probably another, that's got a capital O.
+0:49:37 So it's probably another tool or system or something that I've never heard of. So what you can do in a whisper flow, this is just a side note, side pro tip, use in whisper flow, okay.
+0:49:50 All of your transcriptions are saved, so you can copy and paste your transcriptions and use them in case they don't actually pop up in the service.
+0:49:59 You can come into whisper flow and grab them again and repaste them. The other thing we can do is come into the dictionary And save things you want the transcription to remember.
+0:50:14 You can see my last one here, it was bolt.new. The transcription wasn't saving that as bolt period new. So I changed that in the dictionary.
+0:50:25 So now when I say bolt.new, it's written like this. Okay, it's the same thing I'm going to add a new.
+0:50:32 I'll say chat GBT Atlas and it pops in here correctly, of course, but just keeping a good dictionary that will pop in here every time I say chat GBT Atlas now.
+0:50:45 It's never going to have a transcription issue pro tip on whisper flow. So of course, chat GBT is going to give us a breakdown here.
+0:50:57 why Chrome Edge is mentioned. The only work when the app is running on Chrome, they fail. If it's not what local host means, here are some examples, the core problem.
+0:51:13 Again, I don't really read these throughputs, the intermediate steps. I scan them, but I'm not trying to dissect the problem from this intermediate output.
+0:51:25 but whenever I'm context engineering, I'm trying to get the result. And so I'm seeing, is this the correct context? Not, is this the correct answer?
+0:51:35 Okay, so the core problem, the real issue, you're trying to use browser-based speech recognition in an environment that does not support it.
+0:51:42 That is the key issue. That's the problem right there, right? So two real solutions. This is why I said, I don't know, it's going to open up tree of thought So we can utilize different options here, different solutions instead of saying I need you to fix this.
+0:52:00 Well, that's one option. We can explore other options by saying I don't know which is the best way and it might completely change what your, you know, what your AI is doing and what your, you know, how your app is being built in this case.
+0:52:20 Cool. So two real solutions, browser native, that's going to be dependent on the browser, only works in Chrome, you know, downsides, it won't work in outless.
+0:52:34 That's funny. Option B, proper production grade solution is the recommended solution of course. So we're going we can an API calling to Whisper, we can call it to DeepGram, et cetera.
+0:52:48 Why, what bolt likely generated and why it failed? Yeah, so we're giving some extra reasons here. And then this is what we can tell bolts.
+0:52:56 This is what I asked ChatGPT to do. Give me the, what I can insert back into bolt. So it actually wrote that prompt for me.
+0:53:08 Cool, so scanning this prompts. I don't really know what this means, but it's saying do not use browser native speech for recognition.
+0:53:16 That's what we want based on the recommended feedback here. Instead capture microphone audio using media recorders or audio is a blob.
+0:53:26 I don't know what this means. You know, we can we can run through all that as we're building stuff out.
+0:53:32 So I'll say that right. I'll come in the chat and I'll say, I don't really know what any of this output means.
+0:53:41 Again, I do, but just for the sake of conversational prompting and building context, this is how you can start to learn this stuff very quickly and implement the correct choice based on this context engineering session.
+0:53:55 So I'll say, I don't really understand what any of this output means. I want to stay away from browser recording because I don't know what this is and I want to stay away from browser specific recording.
+0:54:13 I want to do a solid solution here calling to an API. You mentioned whisper. That sounds good. Can we do something like that?
+0:54:27 By the way, this is just a technology tidbit fact. Whisper is actually the transcription API that Whisper Flow is built on.
+0:54:44 Whisper Flow, this company built their app on Whisper, which is made by OpenAI. So, we can technically use the same transcription API that Whisper Flow is using in my bolt app here, which is pretty cool.
+0:55:09 So again, intermediate, just scanning, saying yeah, let's go use an API, use whisper, cool. So now that I have that context, a little more fleshed out, I'll go ahead and copy this prompt for bolt, pop it in, see what we get.
+0:55:29 Now at this point, I'll say in my experience solving issues like this where you're actually building in a full back end API, calling to another service, this is a technical build out.
+0:55:41 Well, it starts to get technical. Doesn't mean it's going to get hard inside a bolt. It means I probably won't be able to finish it in four minutes is all.
+0:55:50 I could probably finish it in 20 more minutes. That's all that means, right? So this is it, guys, like this is how you build apps, just like that.
+0:55:59 And you can start to get really complex and really detailed. Very quickly and run your app. That being said in the last four minutes here, what it means to run your app, all you need to do is come up here and click Publish.
+0:56:17 That's it. You publish your app and it gets published. Bolt handles the backend. So you don't need to set up any kind of server, any kind of distribution, any of that.
+0:56:30 It's going to be hosted on Bolt servers. Two ways you can do that. You can do that for free and use a Bolt domain, a free Bolt domain so your app or your service will be, you know, in this case, thought flow dot Bolt host, just like the clarity tool hub.
+0:56:53 I'm using a free Bolt domain to run this app. I did not pay for this domain, but obviously you can see the trade-off here is it's not necessarily white labeled.
+0:57:08 You can buy your own domains, however you want, whatever domain provider you want to go with. I have my domains in GoDaddy, you can use whatever you want.
+0:57:18 When you go to publish, you can set up a custom domain. I'll let this keep cooking And before I show you that, it's got to finish cooking before it'll connect.
+0:57:31 But you can set up a custom domain easy as that. Plug it in, run your app, send it out into the world, just like that.
+0:57:40 It's, it's amazing. Cool. So now we're using, we rebuilt the voice recorder auto recording. uses Media Recorder API, capture raw audio, transcription service, it's going to create a new edge function to just transcribe the audio.
+0:57:59 You know browser limitations, let's actually see if that solved all the issues. Check check, I am brainstorming my thoughts. I'm going to give a to-do list here.
+0:58:10 I need to conclude this lesson, ask anyone if they have any questions and go eat dinner. Okay. So here's the first real bug.
+0:58:27 I can't stop the recording. I'm clicking on it and it's not stopping. That's funny. There's no way to stop the recording.
+0:58:37 I can't click on the button when it's recording. But this is the iterative process. This is super fun for me.
+0:58:48 Like, okay, now my app is working. I love chatting in my case. I love chatting with Codex. It's like, all right, this isn't working or let's do this now.
+0:58:57 Let's change this color. It's very exciting to see your, you know, the ideas in your brain space come to life and just start working and letting you interact with them, which is the addictive part, right?
+0:59:12 So the anime overlay is blocking the actual button. fixed. Cool. We've got to wait for that blue square. There it is.
+0:59:23 Let's try it again. I need to conclude the lesson. I need to ask anyone for questions and then I need to go eat dinner.
+0:59:36 Transcription failed. Yeah. Again, errors aren't a failure. Errors mean it's working. Okay, it just, it's working in an incomplete way.
+0:59:47 This is not, this is not a bad thing. This is a frustration point for a lot of people, but the simple fact that I'm getting this error, I did not tell Bolt to account for transcription failures, right?
+0:59:59 That's really amazing. Bolt just decided. Let me think of all these ways this app can fail. Let me build it.
+1:00:05 Let me build in the message boxes themselves. Let me make the message boxes red. So the UI, UX experience is very clear, this app is working exactly as it should and in this case it's telling me that I need to keep working on the transcription functionality.
+1:00:23 Very cool stuff. So just real quick to show off the publish here. In fact, before I do that, this is where you want to, you know, before you publish, you want to come up and name the thing you actually want to name it.
+1:00:38 It's going to lock in your name for the project inside a bolt and lock in the free domain. If you want to use a free domain, you see, I didn't really quite lock in my name and it's got the extra characters there.
+1:00:52 So you can lock in the name right here. Let's call it .flow. So it's still most likely going to add extra characters just because it is a free domain.
+1:01:10 I'll publish it. All that really does is send a new prompt. And now we have the option for custom domain.
+1:01:25 Whatever service you buy your domains from, you can plug that in or you can buy a domain from whatever provider bolt uses.
+1:01:32 I'm not exactly sure. And there we go. Yeah, we got some extra characters in here. But this app is now live.
+1:01:44 If you guys go to this website, you can use this app right now. I'll just drop it in the chat.
+1:01:56 Just for fun. Don't have to do it. But just to show you that, yeah, that my app that we built tonight is live and you can actually create credentials in login to my app.
+1:02:06 What I will see in my backend if you do that test, I will see your username and email pop in here, but I will not see your passwords, right?
+1:02:18 In my backend, if you log into my app, I will not see that information. The security level is gated right up front and bolt handles all of that stuff.
+1:02:32 So that will conclude the material, guys. Super fun starting to dive into bolt. Again, you can use it for free, just to experiment and play with.
+1:02:41 You get a limited number of credits, but that being said, you can switch the model to the legacy model. It's not very smart, it's not gonna build stuff very good, but you can use more credits it's when you're asking very simple questions, you know, build your app and saw it.
+1:03:01 Then when you're doing simple like, hey, change the color or change, you know, change the word or change the title, switch it to the legacy.
+1:03:10 And that is very, very, very cheap to use the legacy model here. Cool. Any questions? pretty fun straight forward session, but if any topics you want to bring up.
+1:03:32 So if your website was like you're intending it to be hosted on like Azure domain.
+1:03:43 Is there any way that the AI could pair it to like what is that Microsoft Azure active directory or anything like that?
+1:03:56 Yeah, so wherever you have your domains, you can connect that up through. I'm not sure how bold does all that connection, but it'll route, you know, you'll have to go into your domain host and add the DNS and add all that stuff to connect to Bolt, standard for any domain for provider, right?
+1:04:16 Whatever steps you need to take in your DNS, in your particular provider, you do those same steps and you can connect it up in here.
+1:04:25 That's so helpful because it's like the way you just built that app so fast and then, you know, if you pair it to Azure AD, that's like, yeah, that's money right there.
+1:04:38 Yeah, it's money. Yes. This is it. Like you can just ship stuff same day. Think about it. Ship it same day, which is, you know, this is a very simple app.
+1:04:50 I built it in an hour while talking about it. But you see the, you know, we see the power here.
+1:04:55 You see the potential. And the more time you spend on it, you can build really amazing stuff. Again, I was blown away with what weighed built in Replet.
+1:05:05 I've just assumed and thought working in these professional tools, that is how you have to build very high-level connections and accounts and all this stuff.
+1:05:17 But he's doing it in Replet and it blew my mind, right? So you can do it in bold, you can do it in Replet.
+1:05:22 Lovable, I'm still not sure. I don't have the confidence to teach lovable. So pretty amazing. Yeah, that's cool, man. It's fun stuff.
+1:05:34 I think it's super predicting, especially when you dive into bolt and you start playing around for free and you're like, Oh, man, now I've got to pay for it and get more credits.
+1:05:42 Oh, geez, it's very predicting. Cool. Any other questions, guys, this is a super fun session. It's always fun to do the bolt, the bolt workshops, because it's just it's very rewarding to see stuff on screen happening with very little effort.
+1:06:01 So if there's no questions we can call tonight early again and you guys can have an excellent weekend. Thank you.
+1:06:11 You are welcome. Yeah. I think that I have a question. So basically for what we So today is to create apps.
+1:06:22 So these apps will be for absolutely anything that we want. It doesn't matter for anything. It doesn't matter. Anything. Doesn't even have to be an app.
+1:06:32 You can build a website. You can build a landing page. You can build a, I'll show you here too. You can optimize for mobile apps.
+1:06:42 We can change it to the mobile view over here, right? And if I wanted to build us an app for mobile, I would say, hey, you know, I'd tell Bolt, hey, make sure all the code is optimized for mobile, use the mobile specific, whatever, to build this app, and it would optimize for mobile.
+1:07:03 You can build, you know, cell phone apps, whatever you want to do. Anything, anything. Okay, okay. Thank you. And the one that you suggested, this one that you were using the Bolt.
+1:07:20 And you mentioned that it's coming like a kind of for free with some credits. If we just want to to practice to do one, we can say a small project.
+1:07:31 Do you consider that with those credits, it will be enough? Well, you mentioned that you can use a specific amount of credits Vermont that is coming for free, but just for something simple practice, it's going to be enough or okay.
+1:07:46 So, yes, so that's a good question. It's a limited number of credits. You'll probably run out of credits before I, you know, like this app, how many prompts was this?
+1:07:56 This was four prompts. We could definitely build this for free. Definitely, definitely build this for free. But it's going to take, you know, this app in particular is going to take some troubleshooting to fix the transcription issue.
+1:08:11 I don't know how many more prompts, but it's very, you know, very, very doable to build this for free. That being said, if you run out of credits on any of your plans, the free plan included.
+1:08:23 If you run out of credits, you just have to wait for the next month and you'll get those credits back.
+1:08:29 So you can work completely for free if you have time to wait. If you don't have time to wait, well, then you got to buy more credits.
+1:08:36 Okay. And for example, now that you need to troubleshoot a lot of problems, this is consuming credits. Yeah. If I go in here, it's just to fix things.
+1:08:46 Okay. Every time I put a prompt in here and send it, that's going to use up the credits. So I think on my plan, let's see, I'm on the pro plan.
+1:09:05 So I'm not, I'm not on this plan. Let's see. There's my plan right there. $25 per month, I get 10 million credits per month.
+1:09:15 You get 1 million credits per month. So I get 10 times more. 1 million credits definitely could do what we did today, easily.
+1:09:29 We could leave it, keep troubleshooting on one million credits. I don't know how much troubleshooting is necessary, but I could probably finish this entire app on one million credits.
+1:09:39 Easy. Okay. But again, if you run out of, on the free plan, if you run out of your one million, you just wait for the next month and you'll get another million credits again.
+1:09:53 And the most complex the app is the more consumed you do. Yeah, so that's actually a very good question relating to context windows.
+1:10:07 Okay. So what that means is not necessarily that the app is complicated, but the longer you have a conversation.
+1:10:18 Okay. Similar to chat GPT, similar to chat GPT, the more you have a conversation, the longer that chat is, is actually what costs more.
+1:10:34 That is because Bolt is trying to remember the entire conversation every single time you send it something, it's going to read everything in here.
+1:10:45 And reading everything in here is actually what's causing credits. Okay, so the longer you are working on your app is actually what's causing credits.
+1:10:58 Now the way we get around that, well, there's technically no way to get around that. But these apps and all of these tools, chat GBT included, will compress their context windows.
+1:11:13 So at a certain point, that limit will max out. And it won't just keep going and going and going and going.
+1:11:20 But what that means is what that means is the longer this conversation is both actually won't remember the beginning of your conversation.
+1:11:33 Okay, this is stuff where we talk about it and we're going to talk about it a lot in the following weeks in advance AI course so that we can understand it and apply it in this use case.
+1:11:44 But basically the bigger your app is, it doesn't matter. It's going to cost the same every time you put something in here.
+1:11:52 It's going to cost the same. You're going to hit a window on context, but go ahead. Okay, so do you think that something that could help maybe a little bit will be to think it very well at the beginning and maybe once that you have already everything like a kind of in your mind, set up, just go and do
+1:12:15 very precise instructions exactly what you want. Of course, it is going to come more because you want, I don't know, think something at the last minute, but like I come with a very structured plan of what you want.
+1:12:29 Exactly. Yeah. That's why I've talked so much about the planning phase. Plan. Yes. Plan your apps. Definitely make a solid plan.
+1:12:39 You come in here with a solid plan. Like, okay, right. These are the colors that I want. This is how I wanted to work.
+1:12:45 You tell it exactly what you want every single time. That way you're not wasting prompts trying to fix things that you don't like.
+1:12:53 It's planned out, you know what you want, and you tell it exactly to do that. And you'll save your credits.
+1:12:59 Yeah, absolutely. So that's why I say, plan to do the planning phase, because it's going to be cost effective. And in the long run, save you a ton of money, save you a ton of time.
+1:13:11 Okay. Okay. Yeah. Thank you. You're welcome. Great questions. Yeah. I'm excited to. I'm excited to keep working on this actually because I love I love brain dumping and I use chat GPT for that.
+1:13:29 So I was just like I need I need a one button where I'm just on my phone and I can say this is what I'm doing.
+1:13:35 This is what I need. I'm actually going to develop this. I think it's just to have you know. Cool guys, any other questions?
+1:13:51 No, I can't think of anything right now. Right on. Yeah, nothing from me. Oh, good. Excellent. Well, I appreciate you guys being here.
+1:14:04 thankful for your attendance. It really makes me happy to see people joining these classes. You guys have a great weekend.
+1:14:15 Take care for the rest of the week. Have an awesome weekend, and I will see anybody in the office hours.
+1:14:20 Christian, I'll probably see you over there on Monday, Maria. If you want to join office hours, obviously, anytime you guys go join.
+1:14:27 Yeah, just one question. On Monday, the open space for the office needs to be related to the class for Monday or if I have a doubt from the class of Tuesday, it could be on Monday.
+1:14:40 Yeah, office hours, anything, anything you want to talk about, anything you want to work on, doesn't have to be specific.
+1:14:46 So if you want to talk about bolt stuff on Monday, we can do that. Okay. Oh. Thanks. Thank you. Right on.
+1:14:56 Thanks guys. Appreciate your time. Appreciate you being here. Thank you. I'll see you later. Bye. Bye. Yeah.

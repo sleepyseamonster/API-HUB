@@ -21,7 +21,7 @@ Instead of selling "custom automation services," we are building a "Platform" wh
 
 ## Current Status
 - The frontend developer portal is implemented in `frontend/` with a typed mock data provider.
-- Backend gateway, Supabase schema, and n8n workflow artifacts are planned but not implemented in this repo yet.
+- Backend gateway and Supabase schema are still planned, but the transcript hot-folder n8n workflow artifact now exists in `automations/transcript-hot-folder/`.
 
 ## Source of Truth Docs
 - `docs/README.md`

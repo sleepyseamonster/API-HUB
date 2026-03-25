@@ -1,0 +1,275 @@
+﻿00:06 Alright, alright. How's it going? Week 8, I think still lost track of my weeks. I think we are week 8 automation.
+00:18 So we're gonna pick up where we left off. By the way, I got these boxes up here. I think I mentioned this last night.
+00:27 I'm rebuilding my closet over here. So these boxes are gonna be behind me. not moving out, not going anywhere. We got a few more weeks.
+00:39 So opening up my screen here here. Great. So this is the NADN Canvas space that we've been working on, the same one from the beginning.
+01:06 I've just been tidying it up and building out this structure here. I'm going to make this available in the classroom, in the learning section, in the community, when this is all nice and tidy and organized, we've got our demo workflows in here.
+01:24 So let me make sure I'm sharing my screen, right? So same Canvas space.
+01:45 That's what I live about in and in. just a free playground to build in. So this is our air table base that we've connected up to manage this space.
+01:56 Agent Hub 2.0 is what I called it, and it's just connected to the air table nodes in here. So this first workflow, we can generate images is with NanoBanana sending those prompts from the agent hub into NanoBanana right here using the HTTP request.
+02:25 So airtables managing that, we're getting everything back into airtable. Same thing down here, this is our workflow we started last week where we can ingest transcripts and load them into the database.
+02:37 So in this case, my transcript knowledge database is just going to be air table and we've built a table to organize all of that structured data that we started the manual process in advanced AI.
+02:53 Built everything out manually, figured out the process to create structured data, then we were able to make that system prompt systematize that manual workflow.
+03:04 So to create the system instructions for this agent, right? So this agent, system instructions, is saved in our air table base in this agent's table.
+03:22 Okay, it's my text chunker for knowledge base agent. So I'm going to spirit of saying organize and cleaning up. I'm gonna copy this name and rename this agent.
+03:35 TextJunker for KnowledgeBase, that's my agent. Same thing for my other agent in here, prompt refiner agent. Just so we're organized and practicing best practices, naming conventions, staying organized.
+03:51 One last tidy up thing. This is common to just make a mess. So I'm showing you the little tidy up stuff.
+03:57 it's just very good to pause sometimes and clean up your space. So that's kind of what I'm just showing off right now.
+04:03 I'm going to create another label here. This is just a sticky note. We can come up here, click the button right here to create a sticky note.
+04:11 And I'm going to label this workflow what it is. This is just my method of labeling things. I make these little sticky note labels and stick them above all my workflows.
+04:20 So this is our ingest, ingest the transcripts to restart my computer.
+04:39 It's going so slow. I restarted it earlier and I think it needs an update. me and my behindness on updates, there we go, all right, ingest clarity transcripts, right?
+04:58 So just to test it out, let's grab some more transcripts and load them in. So we loaded the one transcript.
+05:05 This was the first one that was, it's a week one of advanced AI that got chunked up and loaded in some discrepancy right here.
+05:15 I noticed last week two. This is coming in as week two. Not sure why. That's fine tuning these little things.
+05:21 These are very common to see little things, especially when you're coding, but definitely as well in automation. You see little errors, little things that's not throwing an error.
+05:32 It's not giving an exception. It's not telling you, hey, this is an error, but definitely something to look into if you're trying to productize your workflows, you know, they have to be working professionally, right?
+05:44 So This is our week one. Let's go ahead and ingest some more weeks here. So I find it organized all the transcripts we have so far.
+05:53 I've been downloading them and re-download them But now I got now I got our transcripts right here. So I'm gonna load in a couple the way this workflow works is a submission.
+06:04 That's how we decided on it last week to trigger this workflow. Form submission. Okay, what I'm going to do is show you how this works on another level.
+06:14 So if I publish this workflow, just making sure everything is saved, we're published, awesome. If I publish this workflow and use the production URL, okay, this is just a URL to this form.
+06:35 You can give clients and customers internal employees this URL, and it's going to open up this form when you navigate to this URL.
+06:46 Okay, you can customize these and it end nodes. There's documentation. You can do little HTML customization stuff if you want to make a really light custom form.
+06:57 It's not very, you know, it's not an ideal form, but it definitely is a great trigger here. So if I navigate to a new browser and I enter in that URL, it's actually going to trigger that form.
+07:14 Okay. So let's see if we can toggle this on. Don't I think I need another update? It's not letting me save the workflow.
+07:24 I'm two updates behind so I'll have to figure out that but I don't feel like doing that right now this time so I'm just gonna test it instead of running it and publishing it let's just test the workflow so I'm gonna grab the test URL.
+07:38 Same thing just showing you the differences you know we have two URLs in most of these most of these web hooks you know all of these triggers where you're getting information from somewhere else, where we have a URL, we have two, the test URL and the production URL.
+07:57 Okay, the test URL runs in the instance of your N and N session, and you can run it by hitting the test buttons, right?
+08:07 Very simple. If you want to test, hit the button, you can test it. The the production URLs will only run for the automation when it is published and it is running.
+08:20 And I think I need to update to do that. There's been some major critical updates, and I'm just not keeping up with it.
+08:27 So I've got too many things on my plate doing too much to keep up with my end and end updates.
+08:35 My automations are working. That's all I need. So same thing, right, testing when it's unpublished and production when it is published.
+08:49 So let's just use the testing URL. I'm going to come in here to my form. I'm going to grab the testing URL, copy it.
+08:56 Now the difference is I have to manually trigger the signal in and it in, right. If I go and use the URL, not going to work, oh here we go, it is working.
+09:13 This is what I'm trying to see, right? This is the URL, we navigate to that URL, and it's actually going to open up that form.
+09:19 So you can put this URL as a link somewhere, you know, wherever you want to put this link. And it's going to upload this form for your use cases, right?
+09:33 So let's go ahead and add in some new transcripts. Now I'm going to test it here. I'm going to stress test this by adding in all of these forms or all of these transcripts and see what happens.
+09:48 This is great stress testing and failure testings is common, you know, trying to break your automations part of the process, part of the troubleshooting and creating robust systems.
+09:58 So I'm going to see what happens when I submit all of my transcripts. Okay, we're getting this error in here.
+10:08 Let's see what this is. So check the field is binary. And in fact, it is binary. This is similar to the problem we were having before.
+10:18 Now what's happening is we are getting multiple forms in here. We talked about troubleshooting. Methods of troubleshooting. Okay, it was working with one form.
+10:29 Why is it working with multiple forms? You can have to figure out problems as they arise. This is again, why this is tedious, but also why it's so powerful, breaking your systems and creating deterministic workflows that just work.
+10:43 You don't have to worry about them ever again. Okay, so a couple methods that I use to troubleshoot. We sell one.
+10:49 I'll just copy the entire workflow, including the labels and everything doesn't really matter. I'll copy it. I'll come into chat GPT.
+10:57 I'll paste it. And this is the workflow right here. It's all written out in JSON. And I'll just say I'm getting an error in my export node.
+11:10 Can you tell me why that is? Or sorry, it's my extraction node trying to extract the details from the transcripts.
+11:23 Cool, so send that off first pass. Let's see what we get. The other form of troubleshooting. Coming into the node itself.
+11:35 And we have usually have error details. For the most part, you're always going to have error details. But sometimes the error details are empty based on certain information coming through.
+11:45 It just really depends. but for the most part we're gonna have error details coming in to the node itself, right?
+11:53 So I just clicked on the little down arrow, expanded this out, we can see all of the information about that node.
+12:01 Okay, this is similar to troubleshooting and coding, you gotta find the stack, you gotta figure out what's going on, you gotta code the stack, whatever it's called in encoding terminology.
+12:12 But it's the same thing here. It's returning this. We've got errors, we can actually copy this and add it to our conversation in chat GPT.
+12:21 So I'm just going to leave it collapsed. I can't read this. I don't know what's going on. I'll come over here and click the little copy button.
+12:34 Click the little copy button. Now I've got the actual error details. So I've loaded it in my whole workflow. And it looks like ChantyBT is already figuring out split-out node is trying to split these.
+12:47 It's not really working. Cool. I'll add in the error context Paste in that whole error.
+13:11 Let me make sure, yeah, this is the error. Paste in that whole error. I'll say this is the error from the extract node in and it in.
+13:20 Use this context. Let's brainstorm some more solutions. Extra problem. No binary. Why this happens? Trigger the idea, you go through these steps, you work through it, you have these conversations with JATGBT as your partner working through this stuff.
+13:51 The reason this error is happening, and I'll tell you, is because same thing we've been running into with our errors throughout our builds, every time we're hitting some kind of problem, it's usually this same problem, and it's working with arrays.
+14:04 The information coming through is in array format. Okay, we have an array of this is a file, that's what I named it, this is a file, 0, 1, 2, 3, 4, up to I think I had 21 files, so 0 through 20, 21 files, and it's these are now inside of an array, so it's not able to determine what we're trying to extract
+14:35 . Okay, this extraction node is not able to determine what we're trying to extract. So it's giving an error. Item zero has no binary because the information coming through is in a ring.
+14:49 I know that. I know that's what this error is. But if you're running into trouble and you're having these problems, I want you to know that you can troubleshoot inside chat GPT.
+14:58 That's how I ultimately learned all this stuff, just getting through and fixing these weird situations and then finally understanding, all right, I'm causing the weird situations.
+15:07 Let's make it way easier for myself and just get smarter about this. So ultimately, you can work through anything that comes up.
+15:14 So I know what this one is. Same issues. We have an array issue. So what that means is this node has to process these forms one at a time.
+15:26 Well, how do we do that? We can run them one at a time. That's not a very effective automation, I want to be able to drop in all my stuff and just let it go.
+15:35 That's kind of the point, right? In my head, this is what I'm thinking, and I'm brainstorming, and I'm building, what's the goal of this automation is to drop in all my stuff and just let it go.
+15:44 Well, how do we solve that? We need to deal with arrays. Okay, same thing. We've got our nodes for dealing with arrays.
+15:53 This one is the one we haven't talked about yet. We haven't talked about this at all because it is hard and confusing and is very tedious to get to work right.
+16:04 But it's simple loops. Okay, running in loops. Now, the proper word for this node is split in batches. Okay, if we're looking at these other array handling nodes, we have split out and aggregate.
+16:21 This will split out all the items in an array. This will collect a bunch of items you can tell by the little icons as well.
+16:32 This will take a single thing with lots of items and split it out into all the items. This will take a bunch of items and smash them all back together into one thing.
+16:41 Well, the real name for the loop over items is called split in batches. Or it was, I should say, the old name, they named it loop because it's actually what it's doing now.
+16:54 So we're going to split in batches or loop over items, meaning we can plug in the loop, run this through and get each item to process individually.
+17:10 Cool. Let's try that out. Break the routes here. Just kind of reorganize. Take the car engine apart, put the pieces back together.
+17:22 there. Let's plug in the form into the loop. And let's run the loop. Let's see what happens coming through into the loop node.
+17:31 Okay. So we've got a done branch. We've got a loop branch. We can see that here. This top branch is the done branch and this bottom branch is the loop branch.
+17:43 So branching, we've done a little bit of it. We talked about it when we talked about the logic nodes splitting out different routes to do different things based on conditions.
+17:58 Okay, similarly here, this loop node, what makes it confusing is these two routes, what is done and what is loop, what do these actually do?
+18:09 Well, when we have a bunch of items coming in, it's going to continuously running down the loop path, always running down the loop path until we have no more items coming in.
+18:21 In this case, we can see we have one item, which is one giant array of things. All right, so we've got a loop in here.
+18:35 Let's see what happens if I plug it into the extract node, run the extract node. Okay, I'm going through this kind of sequentially, So you can see how troubleshooting and putting stuff together, just making the puzzle pieces fit together actually works.
+18:51 So you can innovate on your own. That's the real goal here is to turn you guys into masters. So you're not having to follow me step-by-step or follow step-by-step guides to build anything.
+19:00 You're able to just think about this stuff. All right, so same error. Let's see what's going on. Well, we still have an array coming in and that is still the problem.
+19:09 So this is not solving our problem right here. how can we deal with that array even further? Let's try a split out node.
+19:24 Got the form, plug it into my split out node, run the split out node, see what we get. Nothing, nothing's coming through.
+19:34 The binary array does not process through the split out node. Okay, a couple of things we can check in the split out node is all right, fields to split out.
+19:45 What is actually coming in here, agent instructions, don't know what that is. Tapping back and forth between the different views, binary is what we need to process.
+19:56 If you remember from last week, we need the binary to process in the extract file. So that's something we're going to need.
+20:02 But tapping through the different views, let's see what we have in the actual schema here. So in the schema, where you can see, all right, these little icons represent data types, right?
+20:16 You'll get to know the data types. But if you just recognize the little icons, one of the easiest ways to practice remembering the little icons and what kind of data types they are if you come into an edit fields node, I'll just open up a blank edit fields node.
+20:33 It's my favorite node, it's so simple, and it does so much. We can see the little icon types right here and they're label.
+20:42 So this little t, this is a string, number, that's obvious, Boolean, Boolean is either true or false, that's all a Boolean is, is true or false, yes or no, one or zero.
+20:56 row. And here we have array and object and binary data. Okay, the other data types. This is it. These are all the data types that we have to figure out.
+21:07 So arrays, this is a problem area. And if you look at the little symbol right here, you can remember that these three little lines, if I can do many more for you, these three little lines are the array.
+21:26 Let's to the schema view. Remember, we're trying to get the binary, but we have the schema view over here, and there it is, there's our array.
+21:34 So we have an array called this is a file, and inside of that array, there are individual objects. This is a file zero, this is a file one, and each of these, this is a file.
+21:50 I named it that way. Remember, if that's confusing, I named my labels. This is a file because just to make sure it's coming through that I change that in and it's something we can manipulate.
+22:04 All right, so each of the files has their their information about it. Okay, the file name week seven, vibe coding transcript, the file size, all that stuff.
+22:15 Right. It's a it's a text file. So we're getting all that data to come through. Let's grab this array, drag it into the split out node.
+22:24 This is a file array, and we can execute that. Boom. That's what we're looking for. We got 21 items coming out of our split out node.
+22:34 Now we have each individual file split out and coming through. Now, we can plug these items into the loop node.
+22:50 Now, just to demonstrate the loop node again, before we plug it into the extract from file node, I'm going to add a weight node.
+22:56 This is a very simple node. I did that very quickly. You hit tab on the keyboard. That pops up the node explorer.
+23:07 I typed in weight and hit enter on the keyboard and that popped in the weight node. Okay, if you get really fast at keyboard shortcut, size you're building this stuff.
+23:20 Otherwise, come up here, click the plus, same thing, type in weight and we can find our weight node. So this is a very simple node, it's just a timer.
+23:31 It's like setting alarm or setting a timer for a certain amount of time. Easy, straightforward. So I'm going to have this wait for two seconds just so you can see what's actually happening in the loop.
+23:46 And I'm going to plug in the wait node to the back of the loop. Okay, this is a loop so it's going to have to continue processing over and over until it's done.
+23:58 And it's going to process until it's done every single item that's coming into it. So to run this, I'm going to come into the form node and pin the data.
+24:15 We talked about this a couple of times. Actually, don't think I can pin the data here. That's fine. Let's see if I can pin the data here in the split out nodes.
+24:24 We talked about this a couple of times, pinning the data. That just means you click the pin, the node will turn blue and the data is saved inside of that node.
+24:33 it can run from that position onward without having to rerun it from the beginning and keep running and keep processing all your data through.
+24:41 Ultimately, if you have workflows that are many, many, many, many steps, some of my workflows take an hour or two hours to complete and you're testing out this section right here.
+24:52 You don't want to wait for two hours just to get to that point so you can keep testing and building.
+24:58 You want to save the data, pin the data as you go. So you can start from this point and continue onward.
+25:05 So I'll go ahead and run it and to make this even easier, I'll add an edit fields node, okay. Edit fields node to the done route just so we can see what's going on.
+25:31 Okay, this is the done route. We have the route just displayed here. Nothing's going on. We can just see it, we can just see it travel down and stop.
+25:44 All right. Let's run it. So I'm going to run it. It's going to loop. And it's going to wait. What did I say?
+25:51 Two seconds. Okay. It's going to wait two seconds. And then it will repeat repeat. Go back through the loop. Wait two seconds.
+26:00 Repeat. You can see where we're at. We've got eight items through here. Eight items. Once we hit 21 items, that will complete the processing of everything inside the loop, and we'll hit the done route.
+26:18 I should have said it to one second. Okay, so loops are a difficult thing for people to learn. It's confusing when you go to set it up on your own.
+26:33 What is the loop route? What is actually happening inside of the loop route? What is the done route? What is the done state?
+26:38 What does done mean? How does the data coming through, and how am I getting it? Okay, so we hit 21 items, 21 items processed, 21 items finished down the done route, and now we've got 21 items in the Edit Fields node.
+26:54 Okay, if it come over here, we've got our transcripts, 21 of them in our Edit Fields node input ready to be processed further.
+27:11 Right, so what we can do from here is add processing into the loop, okay, add processing into the loop. So anything we want to do to each item individually, we can process inside of this loop.
+27:28 This is very helpful if you're doing any kind of API calls, okay, side note on API calls. Because if you're processing any data, let's just jump back up here to our Google Nano Banana run.
+27:44 If you're trying to process multiple runs through Nano Banana, you're actually going to hit rate limits and, you know, inside a foul, inside of your API, that's just how these things work.
+28:00 using APIs and using these tools. You end up hitting rate limits. It's just what the company installs so that they can't immediately go bankrupt overnight if somebody's running all their all their costs up.
+28:13 They set rate limits for their customers. And so ultimately any tool that you're using, you're going to hit some kind of rate limit if you use it a ton.
+28:20 Same thing with chat GPT if you're using it a ton, you're going to hit rate limits where it's just like, hey, slow down, wait an hour and you can continue, right?
+28:30 So same thing here, if you're automating, you have the power to run things really fast, processing your data really, really fast, and so you'll hit rate limits very often in a lot of tools.
+28:44 One way to mitigate hitting those rate limits is to put a simple loop where it's going to pause, it's going to process the data, pause for an amount of time, you know, one minute, then move on to the next one, process that data, pause for a minute, and move on to the next one.
+29:03 Instead of sending 21 items through some kind of processing immediately, it'll pause on this loop. Okay, that's just a use case.
+29:11 I know that's probably confusing, trying to think about it abstractly as a concept, adding weight timers in a loop to defeat your rate limits.
+29:21 Don't worry about that, but there's so many practical use cases for using a simple loop structure with a wheat node like this.
+29:29 But we can make this more advanced by putting more processing inside of the loop. Let's add our extractor file here.
+29:40 We're going to process now one at a time. Instead of all of them, we're going to process one at a time.
+29:47 Now I'll tell you right now we're going to get another error. I'll explain that as we go, but crazy building this stuff out.
+29:55 It is just building Lego pieces until they don't turn red anymore. So I'm going to leave my wait timer just to emphasize this.
+30:03 I'll set it down to one second. Now what's going to happen is data will come through the loop. It'll attempt to extract.
+30:13 if it succeeds, it'll pass on to the wait timer, then do it again, right? So we'll have one second between each processing of the file.
+30:25 Great. I'm going to clear out my execution. Clear out my execution. So you see all the green stuff goes away.
+30:34 That means we have no data in our workflow. It's completely blank. However, since I pinned the split out node, We still have 21 items saved.
+30:44 I don't have to restart and rerun the workflow, loading in all of my transcripts. That data is saved right here.
+30:51 So I'm gonna run it from here. Just click the little play button right here on the edit fields node. And, whoops, maybe we won't have to run it again.
+31:14 Yeah, I think we will have to run it again. and never mind my painting here, since it's binary data, most likely that's the case.
+31:25 See, new stuff all the time. Anyway, let's just run it. Dropping my transcripts, hit submit, let's see what happens. I know we're gonna hit this error anyway, so here it is, right?
+31:43 Now, what's happening in here? Let's open this up. But this is a new error, which is great. We always want to see if we're having troubleshooting issues and we're having errors.
+31:52 We want to see new errors. We want to see errors and we want to see new errors because that means we're making progress.
+31:59 If we're not getting anything, no errors, but it's still not working, that's the worst case scenario. If we're getting an error and we're adding fixes and we're getting the same error, well, we're not making any progress.
+32:10 So getting different errors is a great, uh, great thing here. So I'm going to do, I'm going to copy the error coming to Chatchy PT, paste my error.
+32:22 I'm getting this error. Can you look up information in any end documentation to help me troubleshoot this error? Now what I did there was say, hey, just go straight to the docs.
+32:36 I don't want you to figure this out. I don't want to guess, go to the documentation, look it up, and figure out what this error is coming from.
+32:46 All right. So, FormTrigger File Handling. This is what the binary structure looks like. Comes through like this, Core Troubleshooting. Okay.
+32:59 Real world, real world causes, awesome cause number two, no file actually uploaded cause three form trigger. Awesome. So we've got our error.
+33:10 We've got our data based information. Let's do our final step here again, just uploading or copying the entire workflow. Copy it, paste it.
+33:27 Good. Now I can see the real issue. You have two architectural problems, not one. You're splitting JSON before extracting binary.
+33:37 Yes, we are. This is a mistake. Thanks, chat. Ouch. When this is a JSON field, when you split out node problem two, you're trying to split the file before extracting it.
+33:49 Yes, yes. Correct architecture, correct order. Awesome. So you get the idea of troubleshooting, having these conversations. Now I know, again, what, why this error is actually happening.
+34:05 By an area safety rule, this is great. I'm just kind of scanning, seeing what other information it's giving. Or you should do right now, delete split out now to the loop, to the wait, to the edit fields.
+34:19 Awesome. Cool. So big picture, binary life cycle issue. And ultimately, that's the root of the problem. We're trying to get binary data type.
+34:33 But we are processing it as an array. If you remember, in the edit fields node just to test and look up these data types.
+34:44 Binary data is a different data type than an array. Okay, we're struggling with the same issues we've been struggling with, trying to process arrays and now we have binary inside when array.
+34:56 This is always going to be a contention point and that's why the array stuff split out out of gate loop over, super confusing because anytime you're working with these nodes, there's probably issues, so it's hard to learn them.
+35:10 So again, conversation with chat TBT, you can make it through all these troubleshooting issues. Basically, since I know what this error is, just from practice, again, going through the reps, getting this stuff down.
+35:23 It's my least favorite way of teaching and learning, but in automation, that is the ticket. So in essence, we need to process each individual binary piece of binary data before we split it out into an array and we can't necessarily do that because everything is coming through in a single form upload.
+35:46 What does that mean? That means we have to upload our our transcripts one at a time. If we upload them one at a time we process them one at a time that is the solution.
+36:00 Okay, the reason I wanted to go down this dead and route with you guys is because this is one, actually this right here, trying to process data, is one of the number one stall points, the number one headaches for automation.
+36:18 Okay, you're building something, you're putting in the nodes, you're troubleshooting, you're getting farther, you're troubleshooting, you're getting farther until you hit this point where you just cannot go any farther.
+36:30 Well, then you have these long conversations as I'm suggesting you do. You have these long conversations with Chat GPT to try and troubleshoot the issue.
+36:38 We've talked about this so many times. You get into these Chat GPT loops where it's suggesting a fix. You go fix it, it still doesn't work.
+36:46 You keep working on it until it finally circles all the way back around to giving you the same fix. It gave you in the first place that didn't work.
+36:54 And now you start all over again and you're banging your head against the wall, okay? This is why I've said a few times, instead of thinking about it that way and saying, all right, let's go down this path.
+37:06 I've gone so far. Let's make this work. There's, you know, we're getting farther, we're getting farther. You got to delete it and start over.
+37:14 You got to start the whole thing over, okay? The quicker you start over, the faster you're going to implement the correct path.
+37:23 You're not going to be faster by fixing the errors. You're going to be faster by starting from scratch, and it's very hard to do.
+37:32 It's very, very hard to do. This was an intentional, sort of, dead end path, so you can see it was brainstorming, emulating how you would brainstorm through this process.
+37:44 We need to process a bunch of transcripts. Let's do it. We're doing it right. We're getting so far and it's still not working.
+37:51 Still not working. Well, it's a fundamental architecture problem. It's not a build problem. We need to process ultimately. The real issue is we need to process our files completely differently from the beginning.
+38:12 We need to start over and do this completely differently. The form submission works, but it does not work for our use case.
+38:21 Okay, it's emphasizing this. It's really hard to start from scratch on any build, but I wanted to, I wanted to emulate that.
+38:30 Okay. So you get the idea here, troubleshooting, going through this process, this, you know, this is how it goes. If you're not finding problems and not, you know, running into issues, most likely you're doing it wrong because you should be hitting issues on a good build.
+38:51 You're making progress if you're hitting issues. But in this case, and in so many, many, many cases with NADN, unfortunately, you get so far and you just simply have to start over.
+39:03 And there's no way to know that, especially as a learner. Okay. The planning phase is massive. Planning phase is massive.
+39:14 The more you learn about vibe coding as well. We'll talk about more of these techniques. Just showing you some of my work I've done that is not technically coding.
+39:26 I showed it towards the beginning of vibe coding sessions, but I'm bringing it up now because it's just getting better and better, especially for automation.
+39:34 By coding is getting better and better, but what I use it for is I'll create a planning project in Visual Studio Code.
+39:44 I won't do any coding. I'll just say, hey, you know, look up this information. Look up that information. Save all those documents and Visual Studio Code and CodeX is going to write all those documents into my repo.
+39:56 And it's going to create this very robust plan for me on an NADN automation build, okay. So using Visual Studio Code, learning vibe coding to not necessarily code, but to use it as a creation tool for project management, project planning, massive game changer for anything that you're doing.
+40:18 Use it to plan your next art projects, you know, use it to plan your next whatever. use vibe coding to create these well-rounded documents inside of a folder.
+40:29 You can just jump into those documents or more importantly, load those documents into chat GPT and say, hey, here is my mega build out plan.
+40:40 Help me get through this in an end. Okay, the planning phase is massive. I'm not great at it. I've had so many instances where I just troubleshoot and troubleshoot until I just mash it together and make it work and learn that way.
+41:00 But now with vibe coding and having accessibility to those tools to just simply plan robust planning, that's the key here.
+41:09 So what we would have discovered in the planning phase is that our form submission is fundamentally mentally wrong architecture for this entire automation.
+41:20 We got to start over, delete it. Okay. The proper proper ingestion, we can do something like a Google Drive folder, I could load everything into Google Drive, Google Drive can process those folders.
+41:35 We can get them one by one from Google Drive. And I'll just, I'm not going to set up Google Drive, it's kind of a pain in the butt to set up and I was most likely going to host some kind of workshop independently of these courses.
+41:51 At some point soon, just so we can set up Google Drive appropriately, not just for end-it-end, but for automation, you know, automation and, you know, MCP access and server access and all this stuff, we can set up our Google Drive folder correctly.
+42:09 So So that's most likely something I'm going to do in the future. But for now, you can see we have our Google Drive options, download a file, download a file from Google Drive, that goes straight into an extraction node, just like that.
+42:30 So we can load in all of our files into Google Drive and one by one, they can come through the Google Drive download a file now, download them one by one, and then extract them.
+42:44 Okay, so a proper trigger here. We're just kind of illustrating this now. We don't have to go down this build out route.
+42:53 Today, it was kind of like failure study because it's very easy to get down these failure routes. But proper architecture is hard to know.
+43:04 It's hard to learn, hard to figure out when you're learning. where do we start? What is the right way to do this?
+43:08 You just don't know. I don't know. Learning that stuff, figuring it out in the planning phase, that's going to be your quicker route to success than trying to troubleshoot over and over and over.
+43:22 Though, troubleshooting this way is the correct process. All right, so this is more, I'll say a proper architecture. We have a schedule trigger or some kind of timed trigger, or we could even have a Google Drive trigger on changes to a specific folder.
+43:50 So every time something is dropped into a specific folder, that would actually trigger the automation. So this is just going to monitor a folder.
+43:59 Something goes in. it automatically triggers, runs, downloads the thing that just got dropped in, and then it can get processed and extracted.
+44:11 Okay, looking at this mess right here, this architecture, much, much cleaner, much closer to what we had before, just into the form, Then process with a single document.
+44:29 Now we can batch process documents from a Google Drive folder something like that, right brainstorming creativity definitely plays a part but Planning planning looking up this stuff how to do it, you know, getting a good idea for what you want then asking chat to be tea How should we do this?
+44:48 How should we do that? You look up the documents, you know, all that stuff all that planning phase Cool, so let's shift gears here a little bit because now our text chunker knowledge base is fundamentally broken.
+45:11 So what I'm going to do is set it back to our original configuration where we can ingest It's one document at a time.
+45:41 Okay, I'm just going to go in and double check everything's connected. I think this is where we had before. Pretty simple.
+45:51 Let's run it. Let's throw in a file. And since it's passing here, I can assume that it will pass here as well.
+46:12 We didn't touch any of that area, but we can watch this one come through. Actually, let's send in a different one.
+46:18 I'll stop this run. I sent in the same week one file. Let's send in week two. Week two, advance AI.
+46:43 In fact, I'll let this run. OK. it. So our single run method here, this works fine. We, you know, quote unquote, attempted a batch upload system.
+47:01 Our first attempts didn't work out. We did the research. We did the planning. We got proper architecture right here. I just don't want to go set up Google Drive, but you get the idea loading into Google Drive.
+47:13 That's the correct architecture for a future use case. Okay, so the other methods here, I don't know how to say this without it being too confusing.
+47:26 Let's say method number one is exactly what we've been doing. Running workflows, you hit the button, it runs, or we can publish it.
+47:35 It's just going to run, start to finish, we can see it turned green, and we can see everything come through.
+47:41 I'll just double check air table. There it is, our new items from, okay, same discrepancy error, which is interesting, we're not getting our weeks in here correctly, so more troubleshooting for the workflow here.
+47:58 But we're getting our workflow to run, and it's working correctly, running one form at time. There is a technical term, I guess, this is running a single workflow.
+48:17 We can run multiple workflows in parallel. Multiple workflows in parallel. So single workflow run, this is one method. It's just normal run workflow start to finish, method two is running workflows in parallel.
+48:38 That simply means running the same workflow at the same time to process more data, processing I can literally process two times the amount of data if I'm running, if I'm dropping in one transcript at a time.
+48:56 Okay, ideally, we know this is not the correct setup. We need this kind of setup to batch process, but if I'm batch processing, I can run down multiple chains at the same time to run in parallel.
+49:16 This is literally doubling my speed. Well, extrapolate that. Now I've quadrupled my speed. Okay, this is where automation really starts to take a turn.
+49:29 If you can build systems that work in parallel, this is a lot of processing power. We need servers. We need all kinds of stuff.
+49:39 If we're running many, many, many things in parallel, that's just the technical side of things. We need processing power, right?
+49:48 Well, if I'm running many, many, many items, I don't have to be limited to one single operational chain.
+50:00 I can run many, many items, you know, through batch processing, getting all the transcripts in here. I can run down multiple chains, you know, the same chain in multiple instances to increase my speed.
+50:18 Okay, there's no, I don't know if that's just adding confusion to the mix here, but running a single workflow, method number one, normal, run the workflow, start to finish.
+50:30 Running in parallel means we're running multiple copies or multiple instances of that workflow at the same time to process data that much faster.
+50:43 Alright, so this concept is going to come into play with our probably next week, we're going to finish this off, get the proper you know proper architecture in here, get everything uploading and actually process, get all those transcripts in here.
+51:04 Okay, the when this is really going to come into effect and how you can see things running in parallel is when we have to make this sound too confusing, but we're going to have multiple workflows, multiple different workflows working on the same process at the same time.
+51:27 For example, just to make this sound more simplistic, this is easier to understand.
+51:38 I could run my generate images workflow at the same time I could run my chunking workflow. I could run both of these at the same time if I wanted, right?
+51:50 Makes sense. Run this workflow and run this workflow. They're both running at the same time, okay? Well, we could have multiple workflows working on the same output, but the same goal, running at the same time to increase our output speed and, you know, throughput, output, throughput, results, if you
+52:16 wanna think about that, we could run in parallel, okay? So I'm just bombarding you with this concept right now, getting your brains wrapped around it because we're not gonna really need to see a use case for real parallel running unless you want to go forward and build into systems where you can start
+52:37 processing data very, very quickly. That's how you do it. But to grasp the next step of running our next nodes.
+52:46 Okay, this node right here. Let's see. Execute sub workflow node. Okay, just to get your mine wrapped around this, this node will actually run another workflow.
+53:09 Okay, so this node can be plugged in to a workflow this workflow will trigger and this node will trigger a new workflow.
+53:20 That node will or that workflow will run and possibly trigger yet another workflow. You can see it just chains and grows and spirals.
+53:28 And so I don't want to make it too overwhelmingly confusing. So let's restate the concept here. Okay. running multiple workflows at the same time is faster.
+53:46 That's it. That's the main concept. That's what we can wrap our minds around. But it gets confusing the way in it and does it.
+53:54 Just because the architecture itself, how this stuff actually triggers and runs, it feels more confusing than it actually is. Same thing with the loop nodes and the split out nodes.
+54:07 It feels very confusing. That's just the nature of this drag and drop stuff. We're actually coding with no code. These no code tools actually do coding work just by dragging and dropping and playing around in this digital space.
+54:24 Okay. So bombshell concept, running multiple workflows flows at the same time is running in parallel and obviously increases your output, increases your speed.
+54:40 That's the baseline concept. Multiple workflows equals faster. Great. So bomb show concept, and we'll get into talking about our multiple parallel running potentials here.
+55:00 Cool, open up for questions. Yeah, if bombshell at the end there, but if you guys have any questions, we can talk about parallel instances or anything like that.
+55:08 Or if you want more about the troubleshooting phases, Google Drive specific questions, loops, anything that comes up, we can talk about that now.
+55:28 Again, with the NADN, this is just doing the reps. Unfortunately, it's my least favorite teaching style and way to learn.
+55:36 But that is how we got to do it with NADN. Just one of those, one of those things. That's how we got to do it.
+55:44 doing the reps, skidding the practice. Awesome, guys. I want to make a fundamental note here, too. You know, I've mentioned this at the beginning.
+55:58 The AI landscape is changing so quickly. NADN, you know, there's talk about NADN and all these no-code tools being obsolete.
+56:05 That's not necessarily true. There's two different skill sets. You can learn no code automation or you can learn code automation before as non coders coded automation was just out of the question for us.
+56:21 And so all of this new stuff coming out people say, oh, NADN is dead automation is dead. You got to learn vibe coding vibe code this vibe code that cloud code can do NADN better than NADN can.
+56:31 and all of this sensationalist language, right? It's two different disciplines. You can learn no code automation and ship systems very quickly.
+56:43 That's a skill set. Or you can automate in vibe coding and spend a whole long time building an automation in code.
+56:53 You can totally do that. So two different skill sets. I just wanna emphasize that, keep that in mind. But the AI landscape is just changing so much how we do things is changing so much all of the skills that I'm teaching you here should translate to any automation any no code automation tool not just
+57:12 any then you know the same principles. You know, hopefully the same principles, or I should say, hopefully you're picking up the principles because these same principles will translate to any no code tool and the idea of automated systems in general.
+57:31 Right, it's really hard to teach concepts without concrete results and automation inherently is about achieving concrete results. So the two ideas don't mix, but effectively teaching concrete results is only going to go so far in the AI landscape.
+57:51 Concrete results, the process of getting those results may be, may actually be obsolete in the next few months, and then you learn a new concrete results driven tactic, and now that tactic is obsolete.
+58:05 So, these techniques and these concepts will not go out of date with the updates in the AI landscape. All right, hopefully, I know it's complex and, you know, generalizations and breaking stuff and intentionally showing you things that don't work, but this is going to be the thing that puts you above
+58:27 the rest when we are learning automation, when you're actually building systems. Anybody at this point can build NADN workflows, but those NADN workflows may be the thing that's obsolete in the next few months.
+58:45 Your automation concepts and things that I'm showing you with NADN as the format will never, will never deprecate. I hope that makes sense, but a lot of stuff, a lot of concepts, a lot of stuff to figure out here.
+59:01 And then, of course, learning and it in or no code tools or vibe coding tools. Just a whole other beast to tackle and learning the interfaces and what's actually available.
+59:11 And you don't know what you don't know what you don't know yet inside of all these tools and just figuring out these tools.
+59:18 I know that headache as well. So anything you have any tools questions or any conceptual questions all that stuff we can talk about in office hours or you can post it up in the community as always so I'll wait a couple more seconds if you guys have any more questions otherwise.
+59:35 Appreciate you very much and I'll see you tomorrow night.

@@ -1,0 +1,308 @@
+﻿0:00:06 Alright, so this is week four of automation. It's crazy. Time feels like it's just going by so fast. So let's dive into it.
+0:00:18 We're gonna do air table stuff. Now air table stuff, what I want to emphasize again, air table is an automation tool.
+0:00:25 If you're a solo builder, you know, Christian, I see you in here. Air Table is going to be the tool.
+0:00:34 It's going to be amazing. It does so much. And so what I'm going to frame Air Table as is a data pass-through system.
+0:00:41 Okay, Air Table is a database, but ultimately for building automations, we're building a some sort of hub where data can pass through, be stored, be, you know, place somewhere, grabbed again and utilized throughout automation and that's exactly you know essentially what AirTable is that's exactly what
+0:01:00 we need to complete an automation we need somewhere to put data in intermediate steps or to store it eventually you know at the final step and load up into databases and all that kind of stuff so AirTable is the tool NADN and AirTable you know if you're Solar Builders, especially these are the best for
+0:01:24 me. They are just so easy to teach again. That's why I use them. But AirTable is definitely going to have some power.
+0:01:31 So I'm going to put it up here. So Omar, I'm looking at you. You and Nico, if you're building other automation with your Microsoft tools, you can think about AirTable.
+0:01:42 Just reframe it as this is a data pass-through hub. Right, somewhere to store data, you know, basically just using an Excel sheet is an equivalent though air table as an automation tool is going to be the way to go if you're trying to build your own automations, but you can find equivalents for data 
+0:02:04 pass through. All right, so in air table, okay, I'll do it, we're still kind of debating what tools to use internally.
+0:02:13 So sure cool. Yeah, I talked with Nico this morning and he showed me the Microsoft power power. Was it powerhouse something like that?
+0:02:25 Basic concepts, you know, across all these automation tools, so whatever you decide on, most likely I can pick it up immediately.
+0:02:32 And if you know if you guys need specific tech technical help on that stuff, I can pick it up even if it's That's something I've never seen before.
+0:02:41 Thank you. You're welcome. So, air table, again, think about it like a data hub, what does that mean? Air table is going to be your dashboard for everything.
+0:02:55 We can store account information if we're trying to automate to different accounts and different services, passwords, you know, just store everything in your actual automation hub project, in this case air table.
+0:03:07 So opening up air table, these are all my air table bases for different projects, different tools, different apps, back end for different apps I'm running.
+0:03:16 So basically on the left over here, you have work spaces. Work spaces, you can think of these like folders where you're going to house all of your databases.
+0:03:29 And so these two right here I have actually paid for. When you pay for table and start doing automations and do an AI work, you set up one workspace.
+0:03:41 And if you want to utilize the AI and automation features, you have to pay for the team plan. Okay, that's where air table starts to profit is using AI and automation inside of it.
+0:03:52 But before any of that, you can use air table completely for free as a data pass through hub. So basically these are all workspaces.
+0:04:02 I'm paying money for two of these workspaces, and this is my main workspace right here with most of my databases inside of it.
+0:04:11 Sleepy-C monsters, kind of like my umbrella, a business name for my other stuff, so that is my official business workspace right here.
+0:04:21 Are you sharing something? Am I messing something here? Oh, yeah. I thought that popped out. I'm so sorry, yeah. Thanks for calling that out.
+0:04:31 Zoom troubles, last couple of days, I don't know what happened last night and I was worried all day today, like hopefully things go through, how's that?
+0:04:42 Yeah, that's good. Great. So I was just pointing out on the left, we have workspaces and in the middle, these are all my databases right here, thanks for bringing that up and stopping me.
+0:04:55 So, in my workspace, I can create a new database just coming up here, and we can build with Omni. We'll be doing some of that, but most likely, as you're learning and as you're getting past the learning point and starting to build stuff, it's actually much easier to start on your own than use Omni to
+0:05:14 do special tasks, you know, just ask questions or have it to build stuff into your custom app from scratch. Then AirTable uses this terminology app because you can essentially build the interfaces, you know, attach forms and interfaces to your database and run everything with customer-facing interfaces
+0:05:37 that you can customize. Okay, I won't get into that quite yet. If you wanna do deep dive on AirTable stuff, we definitely can.
+0:05:45 But opening up a new base, This is what it looks like, similar to Google Sheets. You can create a new sheet essentially in AirTable.
+0:05:55 They're called tables, so I can create multiple tables and have similar setup in each of the tables. Okay, so I'm going to start with one table, rename the table, all data.
+0:06:15 keep it simple. And then we have views over here. We can separate data and filter and group data into different views.
+0:06:24 We'll get into that later on. But the same thing over here, I'm just going to rename the default grid view to all data.
+0:06:33 Don't have to know about different views quite yet. But, just to point it out, we can create new views, and this is where you can build in calendars, galleries for displaying images or profiles, Kanban view, Timeline view, typical stuff you would see in, you know, a CRM or some kind of calendar system
+0:06:57 or something like that. So, that is all views really are. And the grid view is the classic sort of spreadsheet style grid, okay.
+0:07:05 Okay, opening up air table, these default fields will pop up. So what I like to do, always just start from scratch.
+0:07:13 The way my brain works, I like a blank slate starting from nothing, and then I can start building. That's just the way that I work instead of going in and trying to tweak and change stuff, figure out what I'm doing.
+0:07:24 I can just build it out from scratch. So taking a look at this first field, this first field in air table, the columns are named fields.
+0:07:34 and the rows are named records. So in this first field, this first field is named Name and we have three default records.
+0:07:47 Okay, I can delete a record. I'll just right click on it, delete it. I can add a record. Pretty simple.
+0:07:54 And so for the first field name, I can change this to anything this can be, you know, So title, something like that, if you're doing content creation, Christian, this is where you can start building out content records and implementing automation to do your generations and stuff.
+0:08:17 So we can have a first field named title, I'll create a second field, we'll call this. We'll call this, so we're going to get into using data types or understanding data types in N&N.
+0:08:33 I've talked a little bit about data types, basically, we have numbers. That's a type of data, words, that's a type of data.
+0:08:41 The technical term is called strings. If we're using words, the data type is a string and that is coming over from coding terms, we call it a string.
+0:08:53 And so when we're dealing with data types we can create field types that handle different data types. Okay, so some of them are pretty self-explanatory, single-line text.
+0:09:05 That is just one line of text and I can name this test single line, something like that. And all we can really do in a single line is add one line of text.
+0:09:22 Pretty self explanatory. So if I go past, you know, if I keep typing one line, all we're going to see is that one line of text.
+0:09:30 Similarly, we have long text. If I type into a long text field, okay, this actually opens up. We can blow this up into a better view for long paragraphs or you know whatever kind of text you want to drop in here.
+0:09:47 I think the character limit on the long text field is something like 10,000 characters so that's something to keep in mind AirTable does have its limits when it comes to certain things where you can get into that stuff too.
+0:09:59 So as we're adding new fields you'll be able to start to understand data types in automation And the way that AirTable handles certain field types is directly related to data types.
+0:10:15 And that is where things get really exciting. There's a number of fields in here. You can play with AirTable if you want to set it up and start messing with AirTable if you haven't already.
+0:10:25 Just play with them. See what they do. Some of them are very easy and very straightforward. For example, user, I can call this field, I don't know, team members, something like that.
+0:10:39 And I can assign different people in my account using my account. So team members or something like that assign them to a particular record.
+0:10:49 So air table fields, pretty straightforward. They have one task and you can figure out what that task is. Some of these field types are directly related to you know, you're working in Google Sheets There's any other kind of spreadsheet.
+0:11:04 It's very similar. Very very easy to pick up once you understand. Okay columns are fields and Rose are records once you wrap your mind around that.
+0:11:15 It is very easy to pick up the similarities So I'm not gonna go through all these field types. We're just gonna start building something and we can pick up the skills along the way.
+0:11:26 But that is it, you know, manipulating field types and how these fields communicate with one another and how the field types communicate with different tables and linking records.
+0:11:38 That is the magic of air table. So what I'm going to do is create a new field. We'll call this this is a long text and we'll this prompt.
+0:11:53 I'll do a demo in my head here. I haven't really built this out. So I'm just going to build it from scratch.
+0:12:00 You can see what a live build looks like planning this step out or, you know, not even planning this step out.
+0:12:06 So I have a field called prompt that's a long text field. I can simply type in here. I'm going to add a new field called, so be a long text field.
+0:12:17 And we'll call this Agent Instructions. So now I have a field where I can add system instructions that I would context and prompt engineer a nice system prompt, same thing we've been talking about in Advanced AI.
+0:12:40 How do we create really good agent prompts for we can use context engineering and add a nice agent prompt in here.
+0:12:48 So I'm going to have an agent prompt that rewrites my basic prompt and turns it into a nicer prompt. So what are some agent instructions I need for that?
+0:12:59 Let's jump into chat GPT and I'll say write me a prompt for an agent that will rewrite basic prompt inputs into nice beautiful prompts.
+0:13:19 Something like that. You are a master prompt and context engineer. Make sure to add all of the appropriate scope and guard rails to this agent system instructions.
+0:13:35 Understand what appropriate is in this context for this task and execute. So that's a good one. When you're conversational prompting, you can say things like just figure it out, understand what I'm trying to say, and so reiterating that fact, understand what appropriate means in this context is actually
+0:14:03 going to add a ton of definition to the instructions for CHATGBT or any agent if you're building that into an agent, you know, I could build into this prompt right here to understand what appropriate is or something like that.
+0:14:17 So that's actually a good one. Understand what I'm actually saying and decide for yourself what is best. All right, so CHATGBT is doing an incredible job already at Prompt Engineering.
+0:14:29 We have a role. You are a prompt refinement agent, core objective, preserve original intent, improve clarity. Here are the guardrails we talked about last night.
+0:14:41 Okay. This is something that's happening in the prompt. Again, prompting is not the sole solution to security, but telling your agent what it is allowed to do and what it is and what it's not allowed to do is is easy guard rails to build right into your system before any data gets processed.
+0:15:02 Okay, here's here's how I want you to output. I have no idea what chat you BTE decided to write for this agent, but it's coming out pretty good already.
+0:15:12 Style guidelines, you know, I can tune all this up, I can keep having this conversation making this prompts better and better, but I'll go ahead and grab this prompt, jump back into air table.
+0:15:24 Well, I'm here. I'll just come up and name the base. We'll name this, yeah, agent hub. Okay, so I'm going to input those agent instructions.
+0:15:53 And now we can see we have long text. If I click in here, I can expand this long text field out and we can see the entire prompt.
+0:16:02 Great, so now I have a prompt field and agent instructions field. What else do I need in my head here?
+0:16:09 I'm thinking, so I'm really just demonstrating the fact that we can vibe, we can vibe build. And so if I come up to Omni, this is what's great about AirTable, but you can use Changi BT just as well.
+0:16:27 locate my all data table see what we have here I'm trying to build an agent hub basically I will have a user prompt input section and an agent instruction that will read that user prompt and output a nice a nice prompt based on the user's input.
+0:16:49 Don't add superfluous fields to this table but But make some decisions on how many tables, if I need any extra, to add into this table and to say fields, something like that.
+0:17:13 So Omni, you know, this is really where AI and automation is starting to excel, specifically automation in more ways than you realize is, okay, I am building an air table base I can automate parts of that build by letting my agent Omni do that for me.
+0:17:32 Okay, so let's see what Omni does in here. Omni decided to add an agent. And let's see what we got.
+0:17:44 So Omni set up a new agent here using GPT 4.1, and it's basically got, basically got the same kind of prompt in there, but now we're feeding it the other tables.
+0:18:01 Okay, we'll come back to that, but basically point is here Omni decided we didn't need anything else. We just needed an agent output right here, so that's what I needed to know.
+0:18:11 Vib automating. So what I really want now is to get some kind of output field or results field for this automation to dump back into the results.
+0:18:24 So let me go ahead and add another long text field. We'll just call this refined prompt. Something like that. Cool.
+0:18:35 Title it. Test case, I'm titling this entire job, this entire record. And now we can start building the automation. So what we need to do to get this over into N and N and to get it automating is to run that same exact thing we did last week.
+0:18:59 We're gonna do this so many times. So come into automations, we can add a trigger. What is the trigger? Let's figure it out.
+0:19:12 So when a record matches conditions, when a form is submitted at a scheduled time, let's just say, when a record matches conditions in a table, I'll choose my all data table.
+0:19:27 That's going to trigger. So when a condition happens inside of that table, it's going to trigger this automation run. So let's add a condition.
+0:19:34 Let's see, what should we add in here? I can say when my prompt is not empty. What does that mean?
+0:19:45 So in data, I can say, when I actually have something in here, then the automation will actually trigger. So if I'm going to input a prompt that needs to be rewritten, I'll type something in, hit enter, and that is now not empty.
+0:20:03 So that will trigger the automation. Cool. What else can we do? We can say when, that's it. When title is not empty, not a lot of choices.
+0:20:13 We can add more stuff in here. So what I love to do, this is kind of my go-to here, is adding a field that acts as a button.
+0:20:22 Last time we did a checkbox, this is just a simple field type. Yes or no, on or off, simple checkbox, and that actually was the trigger to fire off that automation.
+0:20:35 My go-to is actually using a single select dropdown so we can use a single select option, like a button, and fire off an automation.
+0:20:46 So in this one I can add options similar to Google Sheets or something. If you're doing drop-downs you can add in multiple items for the drop-down options here.
+0:20:56 So the first one, I'll say, well, I'll say, choose action, second one will be, generate prompt. And I like it personally.
+0:21:22 I like using the single select dropdowns because you can color code stuff. So it kind of starts to feel like buttons.
+0:21:29 Ultimately, you can turn air table into a working front end or working dashboard. So just color coding stuff for me is actually a fun win to make this feel more like a system, you know, more like a front end system.
+0:21:44 So choose action, generate prompt, I can rearrange these, these subactions. I'll go ahead set the default to choose action and create the field.
+0:21:55 That was a lot. What did we actually do here? We have a single select drop down. And when a new record is created, the default selection will pop up as choose action.
+0:22:06 That's just prompting myself to click here and choose something from this drop-down. The only option we have is Generate Prompt.
+0:22:15 That's kind of my go-to. I generally set up something like this for any type of manual trigger, run the automation, or do this, do that, because you can add multiple selections here.
+0:22:28 So if I'm generating prompts or I'm generating images, I can have another option that will run another automation to generate an image and I can trigger that like a button.
+0:22:40 I can come in here and say generate image or generate video or you know run client information through the nurturing system or whatever I want through my manual option trigger.
+0:22:55 All right so let me this up a little bit and we'll name this field.
+0:23:10 Select action. Again, air table, this is going to be your hub for everything, but you can also start designing this to feel more like a front end system.
+0:23:20 So I'm prompting myself to come in here and select an action, in Cool, now it's great about the grid view as you can hide and show different fields.
+0:23:35 So for now, I'm going to, we'll come back to this. I'll hide my agent here that Omni created. And now this field is hidden from view.
+0:23:45 We can toggle on and off whatever fields we want. And so now we can see only relevant information to whatever workflow we want to build.
+0:23:55 say in this case I'm generating better prompts or in another workflow I could be generating images you'll only see the relevant fields that you want in any given view and that's where views come in you can create new views and hide and show different fields so if I create a new view here I'll just create
+0:24:16 a new grid grid view, we'll call it, I don't know, grid two, all, grid two. So grid two shows all of my data and all data just shows these two views.
+0:24:30 So I can switch that around and come into my all data view and show all of my fields. Come into my grid two view and hide the fields I don't want to see in this particular workflow.
+0:24:48 Okay, it gets really cool when you start building advanced stuff, keeping everything organized and just seeing the correct data presented to you in the right way, you know, the way you build stuff out.
+0:24:58 According to what views you want to work with, you know, whatever workflows you have in mind, you can organize everything into views simply by hiding and showing the relevant fields.
+0:25:12 Cool, so, so So now I have an all-data view and I have a grid too. Let's go ahead and rename grid too.
+0:25:30 This is my workflow. Awesome. Back into automations, we've got a new field to trigger the automation, manual trigger, by selecting that button, quote-unquote.
+0:25:49 So now in the all-data view is not going to work. I want to work in my workflow view. So I'm going to change the table.
+0:26:00 It's refresh. All-data table. That's why it's not refreshing. We got it all-data table. Brain took a dump for a second.
+0:26:11 So in my all-data table, I can set my new condition where select action, that is that drop-down field we created, the select action field.
+0:26:26 The condition is when select action is generate prompt. So when this is true, this will trigger and run each step.
+0:26:43 Great, so let's run a script. This is exactly what we did last time, a little confusing. If you don't know about scripts, but this is going to be the same exact script and I'll have this available in the community.
+0:26:54 I'll just pull it up. Again. Okay, same exact script. We're going to use every single time. And what I need to do to build into the script is the grab these variables right here.
+0:27:11 Okay, it's underline and red, airtable saying, I don't know what these are, we need to create those. And so to create these, I can just double click on the word and add it as an input variable.
+0:27:25 So this is the name of the variable, webhook url. This is the variable we're searching for or looking at. Have you want to think about it?
+0:27:34 This is the variable we're interacting with. Same thing over here. This is the variable we're interacting with record id. So I'll create a new input variable.
+0:27:45 Call it record id. By the way, I could name these variables whatever I want, whatever I want here, and whatever I want here.
+0:27:56 It just makes sense to name them what they are and what they're doing, right? Just good naming conventions. So action.
+0:28:03 I can name this whatever I want. But why I chose why wrote this script this way is because we need the record ID.
+0:28:12 We need the web hook. Those are very solid. This is from AirTable. This is from Niden. And the action is what are we doing?
+0:28:19 What are we trying to do? Well, we are We're trying to generate a prompt based on the dropdown, spy selecting, generate prompt.
+0:28:32 That's what we're trying to do. So coming back into the automation, I can set this action variable to generate prompt.
+0:28:47 OK, the reason this action variable exists is when we start doing logic and branching in your automation, sorting things into different routes, say resumes that are accepted and resumes that are passed or not accepted, we need to start branching that stuff off.
+0:29:08 And so if we add a check here saying, yes, resumes and no resumes, we're actually looking for some kind of variable in that logic.
+0:29:19 Is this true or is this false? Or is this acceptable or is this not acceptable? And that's basically what this action variable is doing in this case.
+0:29:27 It's saying, well, what are we doing? If we need to go down different routes, meaning, if I want to do different actions, maybe generate an image or generate a video or process my client information or whatever, I can choose a different action in this case and set that as my variable.
+0:29:51 Does that make sense? Does that, I know it's a lot of technical stuff here, does that kind of make sense on why I'm naming this variable action and why I'm giving it that value?
+0:30:05 You just give me a thumbs up or something. So we need to add new or we need to add the values for the web hook and the record ID.
+0:30:18 So I'm going to jump into NADN just to make this much more visually appealing. We can talk about the same exact principles over here.
+0:30:26 And we can actually start building our NADN workflow. Okay, so new workflow, new canvas. My trigger is going to be the web hook from air table.
+0:30:39 So I'm going to find the webhook trigger and I'll add an edit fields node. Every automation app is going to have some kind of edit fields node.
+0:30:51 It's going to be called a variable node or a storage node or even a notes node somewhere where you can just input data, talk to it in a manual way, in a manual sense and pass it on.
+0:31:05 And so in the manual sense, like literally clicking in here and typing in whatever I want, that is pretty manual.
+0:31:14 So what I am doing in AirTable is I have three variables, okay. Three variables, one, two, three. I've named the first one, webhook, and have not given it a value.
+0:31:33 I've named the second one, record ID, and not given it a value, and I've named the third one action. And I have given it a value.
+0:31:50 Generate prompt. So if I run this edit fields node right now, You'll see what comes through. Webhook is equal to nothing.
+0:32:03 Record ID is equal to nothing. An action is equal to generate prompt. That is what air table is sending over to NADN.
+0:32:11 Webhook, Record ID, and action. So we need to actually get the dynamic record ID. We need the actual record ID that we need to send over.
+0:32:25 If you remember what dynamic variables are, we can just add a new edit fields node here. So edit fields node into edit fields node.
+0:32:38 We can map in variables by clicking and dragging. And now this is a dynamic variable. what ever this action is is going to be equal to whatever's coming in.
+0:32:53 Okay, it's not hard coded. If I were to just say generate prompt right here, this action can only ever be what I typed in here.
+0:33:03 But if I add the dynamic variables as the whole drag and drop method of coding, quote unquote, coding in automation with these no code tools.
+0:33:13 Well, now whatever this action variable is is going to get passed on. So this is a dynamic variable. So we need to get the actual record ID from air table.
+0:33:25 We need to get a dynamic variable. So we can do something pretty handy inside of air table. I'll go ahead and create a new field.
+0:33:35 This is a formula field similar to Google Sheets or Excel or whatever, you can just write in, they're the same formulas, right?
+0:33:43 Whatever you want to do, adding and multiplying and all that kind of stuff. I'll call this field, RECID, and I can use a built-in formula just like we have in Google Sheets.
+0:33:55 I'll type in REC, and this built-in function right here, click on that. This is the only built-in function I use.
+0:34:06 I don't really use a lot of functions. It's just not something you need to know unless you are heavy into that stuff.
+0:34:12 You already know it, right? There's no reason to get into built-in functions or, you know, built-in formulas in air table unless you want to.
+0:34:23 Not required for automation. But however, that being said, that you can write formulas with Omni. You can just talk to Omni right here and say, I need a formula that does blank, and it'll just create that formula for you.
+0:34:36 You need to do a bunch of addition and multiplication, whatever, you can just write that formula with Omni. Pretty cool.
+0:34:43 So this is a built-in function and this will show, this will expose the record ID of each record. This is just an air table thing.
+0:34:55 AirTable randomly generates a record ID for every new record. And so what I've done with this built-in function is just show that AirTable record ID.
+0:35:06 This is how we can pass off information via the record ID to different tools. So this record ID, it's an AirTable thing, all I did was let us see it.
+0:35:19 It's in the background running all the time. Every record has a record ID, but now we can see it. So we need to get this record ID to our N and N.
+0:35:35 So essentially what I need to do here is get this record ID in here. But like we did just a second ago, if I hard code, if I type the record ID in here, this can never change.
+0:35:53 This is a hard-coded variable and it can never change, meaning the only record I could ever get and work with is this one.
+0:36:01 Well, I want to get records dynamically. This is where the script comes in. So I'm going to jump back into the script.
+0:36:10 Same thing we did in AirTable, dynamically adding a variable I'm going to do that same thing in in air table.
+0:36:21 So to get the dynamic record ID this blue plus button whatever you're doing in the Automations tab whenever you see this blue plus button that means you can add a dynamic variable way less visually understandable than just dragging and dropping like NADN.
+0:36:39 We've got to go through this weird menu system and find the find the dynamic variable but we're trying to get the record ID.
+0:36:49 We want to send the record ID with the web hook and the action. Record ID variable is equal to record ID.
+0:37:01 This is now a dynamic variable that shows in the back end the actual record ID. Cool. So last, the value we need in here is the web hook that is in and in.
+0:37:24 This is how airtables going to trigger the automation. So we need to get this web hook. You remember from last week, web hooks are way overcomplicated if you're doing any learning about them.
+0:37:35 It's just a URL. And when we navigate to that URL in whatever fashion it's going to start this trigger. So I'm going to grab the test URL.
+0:37:48 The difference between these two URLs is the test version works when your automation is unpublished. The production version works when your automation is published.
+0:38:02 So whether you're unpublished or published, you have to decide, you know, choose which which URL you're using. So I'm going to grab the test URL because I'm unpublished.
+0:38:13 Copy it and paste it into the value right here. That's it. That's our scripts. This is the same script we're going to use every single time.
+0:38:23 And never going to change the only thing that changes is whatever variables, whatever you want to name your variables and obviously whatever webhook is related to your workflow.
+0:38:36 Cool. So I'm going to come up here, way in the corner, finish editing, finishing that script. And that is our entire air table automation.
+0:38:45 This will trigger, when this condition is true, and it will run that script, that script will navigate, essentially navigate to that URL, therefore, triggering the webbook.
+0:39:07 Okay, let's test it out and get some data flowing, so I'm going to toggle on this automation, we can name it.
+0:39:14 It's something simple for now, trigger. This stack will get quite filled up with different air table automations. There isn't a great way to organize this stack.
+0:39:28 So just good naming conventions as you're building automations in air table is the way to go. So I'm going to come back into the data.
+0:39:36 I'm going come into NADN. I'm going to execute the workflow. So this trigger is waiting for that signal, waiting for that URL to be navigated to, quote, unquote, and we can trigger this.
+0:39:47 So I'm going to send over this record and I can trigger it by making this condition true when generate when select action is equal to generate prompt.
+0:39:59 There it is. Jump into edit in and there we go. Web hook was triggered, trigger fired off and we're getting all that data to come through.
+0:40:11 So I'm going to create an edit fields node here and we can map in dynamic data coming from airtable. Now headers, this is just internet stuff.
+0:40:25 Don't need to worry about headers. This is how the webbooks are talking airtable, all that stuff. Don't need to know any of that.
+0:40:34 What we do need is the query. This is everything coming through the web hook or from AirTable. Okay, so just like I demonstrated, we have the web hook now has data in it.
+0:40:46 The action now continues to have the variable and now the record has the record ID. So we can map this stuff coming through dynamically.
+0:40:57 Instead of hard coding it in here, I can map it in dynamically. So I'll drag in the record ID, the action, and don't need the webhook.
+0:41:10 There's nothing we can do with that. So we don't need to pass that on. I'll rename these variables. Instead of dot query, you can see they're inside of the query object.
+0:41:23 Again, getting into data types. The little cube here means object. So inside of the query object, we have two strings, the t is a string, we have two strings, and so I'm simply going to remove the query dot and just leave the variable name, just like that.
+0:41:47 So now I can execute this, and we've got that dynamic data coming through the actual record ID from that record and our action that we dictated are created.
+0:42:00 Cool. So now that we have that record ID, can add an air table node and using air table as the hub, we're utilizing this as our main data pass through and storage system.
+0:42:16 So I want to get a record in my actual air table NADN node, okay air table is sending us some information, we'll NADN now needs to gather that all from the source, right?
+0:42:31 So I'm going to add my air table node. I will choose, let's see, I'm going to go ahead, same process, creating an API key, come into your account settings down here.
+0:42:46 It's behind this thing. Account settings, BuilderHub. I'll open the BuilderHub in a new window, personal access tokens, and I can create a new token.
+0:43:00 Or I can add this to an existing token. If you have new airtable bases that you're building and you want a specific key, a specific token, that's going to run multiple bases, you can add your base to an existing token.
+0:43:16 But for now, I'll create a new token. We'll call it delete this because I have too many. Now, these scopes, I went through this quite fast last time, but it's these three scopes every single time.
+0:43:30 And I'll show you why I know that. In airtip or in Niden, again, reading Niden left right top to bottom.
+0:43:42 We start up here and we adjust the settings this way. So first step create a credential can click in here create new credential.
+0:43:53 I need to add an access token. Well here NADN gives me those air table scopes. Make sure you enable the following scopes there they are right there.
+0:44:04 Again every single tool is going to be set up differently. But Niden has incredible documentation. So good to read through that.
+0:44:12 You can learn anything with docs. But it's giving you the scopes right here. So I'm going to go add those in the Builder Hub, data.RecordsRead, data.Records Write, and schema.basisRead.
+0:44:29 I'll add a base using my brand new base or selecting my brand new base, a agent hub creates a token.
+0:44:44 There it is, keep your secure, keep your API keys safe, and secure. Don't share them. I'll go ahead and copy that, come into the agent hub and create a new table.
+0:44:56 This is just my method, you know, whatever system you're adapting to, you can follow this same method. I think it's incredible to keep everything in one place.
+0:45:05 And ultimately, you can use your storage system as a lookup table for your quote unquote environment variables. And that's what this essentially is.
+0:45:17 Your API keys are your environment variables to run your APIs. So we need to have access to them in the automation, but not expose them.
+0:45:30 We'll get more into that. I mentioned it last week, but this is a huge part of the automation if you want to utilize your API keys in automation.
+0:45:40 We'll do it many times. Okay, deleting the junk fields. I can keep this one. This is a long text field.
+0:45:49 I'll name it keys. Paste in my key. This is my air table access token.
+0:46:05 Great. Paste that token right here. Name, I'll name my credential and name my connection to air table. This is my AI agent hub.
+0:46:20 There are so many places where you have to name stuff, a rule of thumb naming convention is when you start a project, meaning an automation, just name it one thing, wherever you're naming anything, name it the one thing, name your automation one thing, name your storage systems one thing, name your credentials
+0:46:40 one thing, and you'll save a ton of time figuring out what you name things and why. So that's just my practice and naming convention.
+0:46:52 Great. Got a new connection. I'll choose my base. This should connect now. There it is. Yeah, Agent Hub. Choose my table, all data, and now I can search for that particular record ID.
+0:47:06 Well, I'm getting it from the webhook, but from the webhook, I am inserting it into the Edit Fields node, so I can grab it from the Edit Fields node, the dynamic variable, the actual record ID of my record.
+0:47:31 And when I execute this step, now we have that record information coming into Niden. So the air table node now is fully connected to air table through this chain right here.
+0:47:46 The edit fields node is a pass-through step just cleaning up data. There's a lot of stuff going on, so I just like to make this more readable for me, for humans.
+0:47:56 That's what an Edit Fields node is great for, just organizing your data, cleaning stuff up, making it readable and passing on the readable data, right?
+0:48:06 I could read through all this. It's not that big, but sometimes this data coming through is so much you just wish you could pass on and see the simple stuff.
+0:48:18 And so we can use edit fields, nodes throughout in different places just to clean up and organize data. So I can rename this clean, clean variables, whatever, something like that, anything you name your nodes in here is up to your preference.
+0:48:39 However, you want to organize your workspace. Okay, so now we're getting that record. And what are we getting? We're getting my prompts and we're getting my agent instructions.
+0:48:49 These are the actual agent instructions that I want to send to a real agent. Let's go do that. I'll set up my open AI node.
+0:49:00 Message a model. I need my API key. I already set that up on some of these. Let's see what I have here yet.
+0:49:10 I'll use my master API key. That one's already set up. We can do this many, many times, but I think I've shown that workflow before just getting in there and grabbing your API key.
+0:49:20 That's something I would do just to store my API key in air table for this project, whatever API key I'm using.
+0:49:27 I'll store that in here. By the way, I'm going to be working on this project to demonstrate automation in the following weeks.
+0:49:36 So we're going to be building upon this exact automation. So stuff I'm talking about that may feel like holes or gaps will be filling that in in this exact automation in the following weeks.
+0:49:50 But if you have any questions you want to bring up in a few minutes, feel free. But let's check this out.
+0:49:55 We're now in the open AI node and we can set up the model here. Talking with Nico this morning, we just discovered that 4.1 Nano is no longer the cheapest.
+0:50:09 They finally made the five GPT-5 series models, the cheaper ones. So I'm going to choose GPT-5 Nano. This is the most powerful cheapest model or the cheapest, most powerful model.
+0:50:23 However you want to view that in your mind of all the models. Of cloth, you know, anthropic of Gemini, the GPT Nano series are the cheapest models that have the most capable, I mean, they are the cheapest and they have the most capabilities for a cheap model.
+0:50:42 By far, by far, by far, by far, cost and capability. Great, so we can now add in the user message.
+0:50:53 Remember the roles here, we can set the role to user assistant or system. The way things are moving with agents don't need assistant instructions anymore.
+0:51:02 We just need user instructions. I'll click add a message and we need system instructions. Well, this is now exactly like having a conversation with chat GPT.
+0:51:17 Here is my prompt, my input. I'll go and fix that so we actually get something coming in there. But we've got a dynamic user input.
+0:51:28 I want to make this prompt better. And we have our agent instructions on how to do that. I'll map in my agent instructions.
+0:51:38 So if I blow this up here, we can now see the full agent instructions linked up inside of anything. The terms here, I say linked up or mapped in, were dynamically adding these variables.
+0:51:53 So link up or map in, I'll use those terms interchangeably. Okay, so let's see what happens, let's go add in some better data here, I'll add in a new prompt, I'll say a yellow car, let's see what happens, I intentionally built this, prompted this to come out a certain way, so I'm curious to see what 
+0:52:25 is actually going to happen here. All right, so I added a new prompt. I want to run this again. So I need to trigger this again.
+0:52:32 I can just delete this. Let's rerun the automation starting from the beginning. I'll go ahead and save the workflow before anything happens.
+0:52:48 And, oh my gosh. There, and it did my service. So, save the automation before anything happens and re-trigger it. So, since we're on test mode, this has not been published.
+0:53:10 I have to manually trigger the event now or officially in test mode for this web hook. It's waiting for a signal.
+0:53:19 If you were in, if you had the workflow published it would just be on and running and waiting for signals whenever they come in.
+0:53:27 But since we're not published, I have to manually say, all right, let's go ahead and test. Now we're for that event.
+0:53:33 You can come into air table and manually trigger that with my button. Jump back into the workflow and we'll get an output from our agent.
+0:53:45 Let's see what happens. So this is where the topics of speed and reliability come in. If you're building a chat bot, you absolutely need speed.
+0:54:02 If you're building some kind of analytical system, speed is probably not so good. You want something that's better thinking, higher thinking.
+0:54:11 Great. So without any instructions to my agent to say what kind of prompts I want, I just said a yellow car, and it actually wrote my prompt a little bit better.
+0:54:23 Describe a yellow car and vivid cinematic scene, focus on its color details, design features, blah, blah, blah. It technically wrote my prompts a lot better.
+0:54:31 Well, obviously we can tune up the agent instructions to say, what kind of prompts do I need? Is this for image generation?
+0:54:39 Is this for passing on to another agent that's going to take in instructions and do work? What kind of prompt are we actually trying to build here?
+0:54:48 And that is where refinement comes in next week. We'll be talking about how do we actually tune up our agents to pass information to other agents and do work in multi-agent workflows, stuff like that.
+0:55:02 And we'll also be talking about building agents, an agent management system in your hub. It can be air table or anything, but we can actually build an agent management system and dynamically get those system instructions.
+0:55:18 Okay, whatever agent we want to manipulate in NADN, All of that information gets passed into the system dynamically. A couple of reasons why we do this.
+0:55:30 We want to do this with API keys and we want to do this with agent instructions. All right, let's demonstrate a couple of things here.
+0:55:41 One, I'll go ahead and remove the dynamic system prompt. and I'll hard code my system prompt into my agent. So same thing, this is going to perform exactly the same way.
+0:55:58 I have the same exact system prompts in this agent, good to go, it's going to work exactly the same way.
+0:56:06 I'll get rid of the extra stuff here. Okay, this This is going to run exactly the same way as we set it up with our dynamic variable.
+0:56:16 I hard-coded the system prompt in there, nothing is different. However, if I go to export this workflow, I'll just download it, whoops.
+0:56:36 And we'll pop it up on screen. So the workflows are written in JSON. This looks like code, but this is just simple JSON.
+0:56:43 So this is human readable, quote-unquote code, all right. So this is the entire workflow, these are the instructions on how the workflow is built, what nodes are being used, what information, you know, how the information is passing on, how they're connected, it's just how Aniden is built, right?
+0:57:02 We can see all that information in the JSON. Okay, so what I'm looking for here is this right here. Okay, this is my agent.
+0:57:13 And this is my agent in and in and probably can't tell looking at it. But this is my agent. Here's the model.
+0:57:22 These are all the settings we set. And here is my system prompt, the whole thing. If anybody has access to my workflow, they have access to my agent.
+0:57:33 They have access to my system prompt. They can manipulate this and change it and make my agent do whatever they want.
+0:57:39 Okay. So while you're testing, sure, it's fine to hard code stuff in here, but when you're implementing a, you know, something for production and development, you want dynamic variables, just like we did it, mapping dynamic variables in from your data hub, you can use air table or another source as your
+0:58:02 data hub for dynamic environment variables, quote unquote environment variables, trying to make parallels from coding. So you never want to hard code your API keys into your tools.
+0:58:16 You never want to hard code your agent instructions into your agents in any then everything is completely exposed that way.
+0:58:26 Now, there really is not much somebody can do unless they're already an expert at hacking. So, you know, if you're worried about getting hacked, Yeah, definitely.
+0:58:37 If you're just passing workflows off to your friends and to your team, not a big deal to have hard-coded stuff in here, as long as you know, yeah, if this is going out to customers or onto the internet, we need to swap out for dynamic variables.
+0:58:50 So this isn't going to break anything. It's just something to be extremely aware of. Don't ship automations with hard-coded information.
+0:59:01 Okay, so that is the main bonus, the main takeaway from today, air table is your data hub. We can build inside of it, we can run data through, we can pass data through it, we can store our sensitive data inside of it and dynamically map that into air table.
+0:59:21 Okay, so let's just run this one more time just to show how it looks when it is dynamic. I think coming in from airtable, I'll go ahead and re-trigger it.
+0:59:40 So I broke the automation right here, so it wouldn't just run again. I want to connect up the dynamic variable.
+0:59:47 So I disconnected it, it's common practice, disconnected, don't let it run, plug it back in. And now we have nothing coming through the agent and I can map in the system instructions again.
+0:59:59 So I'll just delete this out. Map in the system instructions. I'll download the workflow. Okay. Looking for my agent. There it is.
+1:00:31 Okay. There's the agent. You know, there's the model, there's the user prompt, and here is the system instructions. That's what it looks like.
+1:00:41 It's a dynamic variable mapped in. So, this is how you do it, right? On a production level, you want to add in secure dynamic variables.
+1:00:59 great so main takeaways today I want to build out this automation just we've got an awesome head start just because we dumped all this info last week so I was moving kind of fast if there's any questions about any information on air table any questions about NADN we're going to be building this same 
+1:01:16 automation and expanding on it talking about all the different techniques in air table and in NADN So you have a kind of an established frame or reference to see how it evolves and how it builds out and what techniques I'm using.
+1:01:32 Because you saw me start it from scratch you know that's we can just keep iterating and quote unquote vibe automating to build on top of these things and create a fully working system that is secure.
+1:01:43 So we built the air table automation. This is still a confusing point just because the script stuff and building this in here and all these variables, it just doesn't look nice.
+1:01:54 But it's exactly the same thing we did right here, adding into those variables manually to air table. Adding in those variables manually here, let's me get them dynamically from air table right here.
+1:02:09 Okay, so this is the chain connecting NADN to AirTable. This is it. This is going to be the same thing every single time.
+1:02:20 Webhook coming from AirTable. Optional node to clean up your data. I like it just to have it. This is kind of like a starting point of NADN.
+1:02:31 This is still like internet stuff. This is the starting point of NADN stuff. So I like to have clean data.
+1:02:37 It's just a preference thing and then the first air table node getting everything from air table, whatever we're going to be working on all of your data, all the information client information, whatever you have in here that you need to pass through an automate files, you know, whatever that is going
+1:02:56 to come in with this first air table node. So I name this, usually name this air table node, something like all data, because that is my first table.
+1:03:15 So, same thing, every single time, right here, in and in and coming from air table, and in air table automation, this is the same exact automation every single time.
+1:03:25 Um, what I've done in the past is I just, I have a default database that's just set up with a blank table, a blank table, and one automation with this exact thing set up.
+1:03:41 Okay, same script already set up. I just have to paste in the web hook and I have to name my variable.
+1:03:50 That's it. So that's something I've done in the past. Now I just start from scratch or use Omni or whatever, but that's something you can do is have a default database, where it's just set up with that script.
+1:04:03 You just start that database or duplicate that database and rename it something new, and you'll be able to start off with the, quote unquote, default settings, right?
+1:04:15 Same thing in N&N. For default N&N workflow, you just build this right here. Save it. This is your, Default, air table workflow, and you don't have to rebuild this every single time, you'll just start with this stuff because it's going to be the same every single time.
+1:04:36 And that's where we're going to start off next week. So if you guys have any questions on that flow, I know there's a lot of technical stuff, just clicking around, clicking buttons in air table and figuring that stuff out can be tedious.
+1:04:49 You have chat GBT and notebook LM to help you through some of the more detailed stuff and obviously me in the office hours, but if you have any questions right now, we can tackle that.
+1:05:23 Cool. No questions, guys. So next week, again, from here on out, we're just going to be doing this automation and talking about the principles like today was dynamic variables, right?
+1:05:39 Talking about these principles, but I hope that I can relate all this information in a way that will translate to any other tool, not just AirTable and N at N.
+1:05:50 These are the tools that I use as a solo designer, developer, whatever, solo automator, but all of these techniques, all of them, all the principles, all the flow, everything can be translated to other tools.
+1:06:05 So I hope I can speak that way. I'm trying to keep it open-ended without losing detail on the content. But if you have any platform-specific questions, I'd be happy to answer those if you're using other platforms too.
+1:06:18 I think some people use a make.com, Danny was using make.com, so stuff like that, if you have any other specific questions, I've used tons of automation tools and tons of database or data hub tools, except for Microsoft.
+1:06:36 But I could figure it out. Pretty great. Cool guys, if there are no questions, we can call it short again for tonight.
+1:06:45 Excellent stuff. Great job making it through. As always, appreciate you very much being in these live sessions. It definitely feeds me, energizes me to see you guys interacting and being here.
+1:06:58 So I appreciate that. Thanks, Kurt. You are welcome, guys. Looking forward to the rest of the week. And congratulations on We're completing their first month tomorrow is it month one down we're cruising through so Yeah, I'll look forward to more.
+1:07:17 See you guys tomorrow. Thanks. See you

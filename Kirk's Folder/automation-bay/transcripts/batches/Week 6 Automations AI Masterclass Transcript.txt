@@ -1,0 +1,287 @@
+﻿0:00:06 Alright, Christian made it. We're trying to figure out if we're having any issues with our Zoom call again, cuz I don't know what- what happened that first time, and now I'm paranoid that it's just not working, so, glad you made it in.
+0:00:21 We'll get started. Yeah, Awesome. Cool. So let's, yeah, let's jump into it. I'm going to share my screen. I'm going to clarify everything we talked about last week.
+0:00:36 There's just so many moving parts, so many pieces, so much jumbo going on in automation. And that's kind of what it is.
+0:00:43 It's just a pile of parts and we got to put the parts together into a working machine. Knowing what those parts are, are the beginning of the battle and then making those parts fit together in the right order.
+0:00:56 That's where we're at now after learning a few skills. So let's pop it up. I started, started, yeah, you can hear me okay, Christian?
+0:01:09 Cool. I started organizing our project here. This is the same one, you know, the same canvas space that I said I was gonna be organizing.
+0:01:17 I started organizing it a little bit. So we've got the nodes laid out here for you and this was what we've been working on, this little automation right here.
+0:01:28 This is where we've left off last time with the split out node fumble because most likely it's a version issue that I'm having with air table.
+0:01:41 Don't have to worry about that. As long as you're staying up to date, that's kind of a big deal in N&N and all these tools.
+0:01:48 They don't automatically update, right? Like most AI tools, this is more like a coding tool. It's not going to automatically update and apply things to your workspace because sometimes when the app updates, it changes fundamentally how the nodes work.
+0:02:08 And if the app automatically updates and changes your nodes and breaks your automation, that is a know go. So you have to manually say, okay, you know what, I'm ready for an update.
+0:02:20 All my nodes are ready. My automation is turned off. I'm ready to go. Let's update. And there you have it.
+0:02:27 So most likely I just I do so many recordings and I do so much stuff. That's where we were rumbling around and running into errors last week.
+0:02:36 But I thought that was really cool to just see yeah, I'm a master at this stuff. And we still run into errors.
+0:02:42 That's the whole point or the whole, you know, aspect of building it's a lot of troubleshooting. Great, so this is where we left off.
+0:02:51 I swapped out these two nodes. Just getting to know these two nodes again as we learn more about data types and what these specific nodes do, they have a very specific use case.
+0:03:05 And so we'll practice with these two nodes again and again. But for now, let's just build this one out I've done a lot of talking.
+0:03:15 I've done a lot of showcasing, moving stuff around, making it look pretty, but we haven't actually had a successful, fully-built automation run yet.
+0:03:25 So let's change that today. I think what I want to do is just start from scratch. I've made a joke about this in vibe coding.
+0:03:37 So you have the power to just build something super or Nate, then delete it, and start over as a learner that is such a great method of learning, just keeping the basics building up on the basics and starting from scratch to refresh your memory and keep going.
+0:03:55 That's a great way of doing things. But as an AI builder, there's no loss, essentially when I vibe code something, I'm telling my agent to start from the beginning all the time.
+0:04:07 We go down these holes, you know, we go down these paths, we get into these loops, we follow these rabbit holes and we get into these error loops.
+0:04:15 And sometimes the best way is to just say, you know what? Now that I kind of have an idea of what's going on, let me start from scratch.
+0:04:23 That is a completely viable approach, especially in vibe coding, in automation, not so much if you're dragging and dropping stuff in here, it's a lot of work to rebuild it.
+0:04:33 but I figured I can redo this one, start from scratch and just move super quickly through this build so that you can see what we can do.
+0:04:50 Okay, so this is the airtable base that is running this one. Let me just close out all this noise here.
+0:04:59 This is the airtable base that is running this automation. So we're getting our agents, we're getting our workflow. I'm gonna rebuild the air table base and the edit and workflow from scratch.
+0:05:14 All right. Let's do it. So I'm just gonna come into my air table count, find my workspace, create a new air table base.
+0:05:27 I'll build from scratch. told you we'd be doing this stuff many many times so it's good to see the whole process again start to finish all I did there was closed down Omni we get a fresh base blank table going to delete out some of these fields here we don't need right clicking on them deleting them 
+0:05:49 and I'm going to be moving fast through this so again just watching back these videos but this will be a sort of end to and demo, right?
+0:05:57 So I'm going to leave in these three default records that are blank. We can add in some information here. This row, this field is called title.
+0:06:09 Just going from memory because I am actually going to be building this from scratch with a new approach. This is gonna be prompt.
+0:06:21 And we have a second table. Let's go ahead and name this table workflow. This is where I'll be doing my work.
+0:06:31 I'll name this grid view workflow. And as I always do, I create a new view. Make a grid view and call this grid view all data.
+0:06:47 That way we can see everything that's going on in the table. add a glance separate from our relevant fields in a workflow view.
+0:06:58 Let's name this AgentHub 2.0, Color it, do a nice icon and I'll name my new table, create a new table.
+0:07:18 Name my new table. I'll start from scratch. This is my API keys. This is where I can store all of my keys, so I will delete the default fields that pop up in here.
+0:07:37 Holding Shift on the keyboard, I can click on a single field, hold Shift on the keyboard, and select the last field similar to how Shift Functions when selecting multiple things, right-click on one of those, delete it.
+0:07:50 This field will be called keys. I can double-click on the field name, call a keys, and we can create a new air table access token.
+0:08:03 So I'm going to come into the Builder Hub, click on my profile settings. It's underneath this Zoom thing. Click on my profile settings coming to the Builder Hub.
+0:08:14 I'll open this in a new browser window. I've got all my crazy access tokens I need to organize. Let's create a new one.
+0:08:24 This will be Agent Hub 2.0 and we can add scopes here. Now that we get these scopes from N&N.
+0:08:35 I'll show that again in N&N but it's always going to be the same exact scopes data dot records read at a scope data dot records write at a scope and schema dot bases read okay those three scopes every single time when you're creating an access token in air table to connect to n and n or any automation
+0:09:02 we need these three scopes so any automation tool that is, I'll click add a base, I'll wait through all my bases, find agent hub 2.0 and create the token.
+0:09:22 Access token only gets shown one time. I'll copy it, come straight into the agent hub, there's Rick, comes right into the agent hub, paste the API key, and I can name this, your table, your table access token.
+0:09:51 So now we're saving that key for personal records and we're saving that key as a dynamic environment variable for automation.
+0:10:00 Pretty cool. Great. So now, just working from memory, I'm going to create a new table. Start from scratch. This is our agent.
+0:10:17 Technically, this is our agent hub, I think. Let's just call it agents or agent list or something like that. I don't know.
+0:10:23 You can always get creative with your builds. This is why it's so fun. To lead out the default fields, can call this long text field.
+0:10:36 This is our system prompt field. And so we'll have the name of our agent and the actual system instructions for that agent.
+0:10:53 Okay, I'm going to add a new field, so be a formula field in the formula box. This is similar to writing formulas in Google Sheets or Excel or something like that.
+0:11:04 You can use Chatcha VT to look up any formulas, but they are actually the same formulas if you know Google Sheets, same stuff.
+0:11:16 So there's my video. Cool. That's working. Didn't realize it wasn't on here. Here I am. I'm going to hit the keyboard type in REC.
+0:11:30 This just brings up a built-in function for Record ID. Okay, this is just a built-in air table thing. Just like Google Sheets or Excel has their built-in things.
+0:11:41 I can find the record ID of any record that pops in here. So if I add new records, these are the actual air table records, I record IDs for these records, just an air table thing.
+0:11:55 All I'm doing now in this field with this built-in function is showing that record ID, exposing that record ID, just an air table thing.
+0:12:06 So I'll call this record ID. I go back and forth in the way that I name things. In fact, let's try and keep it consistent.
+0:12:21 So record ID, named like that. I have a specific naming convention that I use and move across my different stuff.
+0:12:30 So I'm going to name it like that, record ID, anything, basically anything that I'm automating is going to have a naming convention like that.
+0:12:41 Great. So got my API keys, got my agents, blank agents table set up in here, got my workflow with nothing in it.
+0:12:48 Let's go ahead and create a new field. This will be a link to another record. This is the most complex thing in air table.
+0:12:57 This is the magic of air table linking records. So clicking the plus to create a new field, we have this option for a new field type.
+0:13:09 Well, the field type I'm choosing is link to another record. That means I can link to any of my tables and find a record inside of a different table and put it in this table.
+0:13:22 Okay, so I'm going to find a link, I'm going to link up to my agents table. rule thumb is everything gets turned off until you know what it is.
+0:13:33 You'll learn what this stuff is and until then you can turn it off. Alright, so I won't name it. I'll just get a default name to pop in here.
+0:13:42 I'll click Create. And now from my agents table, I can look up anything that I want. Let's look up the system prompt and maybe the record ID.
+0:13:57 I don't even know. Let's just say system prompt for now. We can always go back. Cool. So now I have my agents linked record and that agents linked record is going to show the system prompt.
+0:14:15 Cool. So I need to build a prompt refining agent. That's the first goal here. I have this ID in my head.
+0:14:22 I'm going with it. So let's build a prompt for finding agent. I need you to build me a prompt refining agent.
+0:14:29 Your task is to write the system prompt for a NIN agent node to process a user's basic prompt into a nice good prompt.
+0:14:46 Something like that. Great. Ultimately, this prompt will be used in generative AI. Let's focus on image generation. So you'll take in a basic prompt from the user and output an advanced prompt to be copy and pasted into an API for AI generation.
+0:15:14 Something like that. You can always iterate upon system instructions as they get built out. So this technique asking AI to write prompts, this is an official technique called metaprompting.
+0:15:33 The better you get at metaprompting, I think it's one of the number one skills, if not the number one skill in the world right now.
+0:15:39 If you can ask agents ask AI to write probes for you, you can make anything right now. It's crazy. So metaprompting, that is a go-to topic on your own at home.
+0:15:57 Look up metaprompting, learn how to metaprompt, become a master prompt engineer and emphasize with emphasis on metaprompting. Cool. So just reading through this, This is my normal workday, my brain is usually overloaded just because I'm doing so much stuff and today, particularly, my brain is overloaded
+0:16:18 , so I'm going to say that, I'm going to say it's so silly, but it's so simple to just say I'm overloaded.
+0:16:30 Write me the system instruction so I can copy and paste, then tell me what to do. So here it is.
+0:16:43 Copy this into your entity agent node. Great. That's what I want. So let it, let it finish before copy it.
+0:16:50 This is a common thing that if you're doing copy and paste blocks, let the block finish. It happens all the time.
+0:16:56 You hit copy code and the block isn't being finished. writing, getting written out yet. So copy that, what to do next?
+0:17:04 Paste it into your agent node. How to use it in your app, great. I get the gist from here, thank you.
+0:17:11 So I'm gonna take my new agent system prompt. I'm gonna come into my agents tab. I'm gonna drop in my brand new system prompt.
+0:17:20 And this is my, now, this is my prompt refiner agent. Right, so the goal is to drop this straight into NADN, but again, we're going to use automation.
+0:17:40 We're going to map up the dynamic system prompt from AirTable into NADN. So that is what I, that's why I'm adding it into AirTable here.
+0:17:50 So again, linked records kind of confusing. Using we added a linked record right here to agents, well, in the agents table, we're going to have a similarly linked record or a field linking that record.
+0:18:04 So I'm going to do is just hide this linked field in my agents table. Let's start on the automations. I'll come into air table automations.
+0:18:16 We're going to trigger NADN. And so we need an air table trigger that's going to run our web hook to NADN.
+0:18:23 I'll click add trigger. This will be when record matches conditions. What table? Let's work in our workflow table. Add a condition.
+0:18:36 The condition is when something. Well, we need some kind of button, some kind of trigger, some kind of automatic procedure or manual procedure.
+0:18:46 Let's go set up a manual trigger. We'll come back into the data, come back into my workflow, set up a new manual trigger field.
+0:18:58 So I'm going to click the plus, create a new field, click on single select. This will be a single select drop down similar to Google Sheets, very easy drop down system here, but we're going to use it as a button.
+0:19:13 So, I'll just call this drop down, generate, I'll add a second drop down, call to choose action. That'll just prompt me to actually select something here so we can start to build this out as more of a dashboard user interface app style automation build here.
+0:19:37 I'll set the default option to choose action, click create the field, oh let's name it, choose action. Hey this is just prompting myself to utilize this field and we can even emphasize that, I'll just add something like this.
+0:19:59 Hey click here and do something. So anytime a new record pops up in here. Now the default is choose action and I can select generate option.
+0:20:11 Cool, so let's run some data through. I'm going to put in a test record here. My prompt is go with my standard testing prompt.
+0:20:29 Yes, cannot type. a yellow car. I can select my agent I want to run here from the drop-down now it's going to be linked up to my agents table so I can choose my prompt refiner agent and see that boom prompt coming in here just like that.
+0:20:50 Then I can click the generate button, send it off. So let's jump into automations, finish this off in my workflow table when my new field choose action is what when this is set to generate.
+0:21:11 This will trigger. When this is true, this will trigger and activate everything else. I'm going to add a new action, run a script.
+0:21:21 This is the confusing part. this never changes. It's exactly the same every single time. So I'm going to come into the totally I mastery document.
+0:21:36 I have it for you guys in the community. Let's go down to automation and here is the air table script.
+0:21:47 Just copy that. Actually there's my button right there. Copy that. come back into Airtable, paste that script. Now we have to add in the variables.
+0:21:59 Airtable underlines the variables that we need, the actual words we need in here. So I'll double-click that first squiggly copy it.
+0:22:09 We need to add input variables. I'll paste that first name in here. Let's add a new input variable. I'll paste the second name, copy it, paste it, bracket ID.
+0:22:25 It's out of third one. Action, I'll copy it, paste it, cool. Web hook URL, we need to get from end to end.
+0:22:37 Again, this is the same every single time. Record ID. I'm going to click this blue plus and choose Airtable record ID.
+0:22:46 Action, this is a variable you can make up. What are we actually doing? We are generating a new prompt. Ideally, that's what's in my head.
+0:22:57 So let's say, Jen, prompt, something like that. Great. Let's finish this off by getting the web hook in NADN. So let's jump back into NADN.
+0:23:12 Now we can finally start building off this portion of the automation. So I'm just going to move over to a new section of the canvas.
+0:23:22 Hit tab on the keyboard. That's the same as clicking this little plus button. So I'll hit tab on the keyboard.
+0:23:28 Type in web hook. Start typing it. Hit enter on the keyboard. You start getting and really fast with keyboard shortcuts the more you do it.
+0:23:41 Here's my web hook. I can name this, I don't know, generate actions, something like that just to get it differently labeled than the previous web hook in this canvas space.
+0:23:58 I got my test URL and production URL. So again, the test URL is going to run when the NADN workflow is unpublished and the production URL is only going to run when the NADN Canvas workflow is published.
+0:24:19 Okay, so two different URLs have to flipflop between them if you're testing or running production. That's just the way NADN handles these webhook calls.
+0:24:30 So I'm going to copy my test URL, let's jump back into air table and I can paste that webhook URL right there.
+0:24:42 This finishes off the script, click finish editing. We have all of those variables set up nice and neat for us right here to reference.
+0:24:51 I can change anything I want before I set it up. If I need to rename stuff, once you set it up, if you start changing the name of things, it's going to break all your connections.
+0:25:01 We'll get more into that where you'll get more into that the more you're trying to rename things. And you want to do Nami, I mean I'm doing this.
+0:25:14 And so we're going to test this out, right? So we need to trigger this condition. Meaning, we need to fire this off and it in.
+0:25:34 There's my webhook. I'll click on execute workflow. The webhook is going to wait for a signal. Again, this is in testing mode.
+0:25:44 It'll wait for a signal after hitting the button. In production mode, it's just going to always be on, always be waiting for a signal.
+0:25:53 So I'm gonna jump back into air table. Select Generate, and that should come through. Oh, here's a great first actual error.
+0:26:17 So nothing's coming through. Look what happened over here. I'm going to come back into AirTable. This is all part of troubleshooting.
+0:26:25 It's a very common thing. I obviously do all the time. Come back into AirTable. Come into Automations. And we actually got to turn on the AirTable Automation.
+0:26:35 So I'm going to rename it, trigger and add in, flip it on and now, now we can run it.
+0:26:47 So I'm going to come back into the data, re-trigger it, and just select something else then select generate. And now we can get that one popping through.
+0:27:00 Great. So the webhooks firing off we're getting all that information coming through all the information coming through air table is always going to be in the query right here so I can close down everything else headers.
+0:27:12 That's a lot of primators don't need we need the query. That's the actual air table record ID and my variable in the action I sent over.
+0:27:25 Great, so step two, my favorite node, the simple node, is the edit fields node. This is just a great tool for cleaning up data, setting different things you need to pass on.
+0:27:37 Very easy to use. So I'm going to set up the record ID, drag and drop, and the action into the edit fields node.
+0:27:46 I'm going to rename these fields, just simply record ID and simply action. Anytime you're passing data through, you always want to just execute the step.
+0:27:59 It's wise to not move on until your nodes are green. If you're moving on and you don't have green nodes, you're going to be doing all this extra work when something might not even be working upstream in your automation.
+0:28:13 So execute the step, get everything to pass, make sure it looks good, and then we can move on. So I'll click the next node.
+0:28:21 This is air table. We're going to get a record. And I can find my new credential or create a new credential and find my base here.
+0:28:36 So I'm going to click on create new credential. paste in my air-table access tokens. That's what I already got from the builder hub saved nice and neat in my API keys tab.
+0:28:51 So I'm going to copy that access token back into in it and paste that access token. And again, those scopes we set up are labeled right here for you.
+0:29:04 That's how I found that information when setting up that axis token, but these are the same scopes every single time.
+0:29:13 Let's name this agent hub 2.0. Save it. And we are connected to AirTable.
+0:29:30 Let's find my base, there it is, AgentHub table should be workflow table. And I can grab the record ID. There it is coming in from the Edit Fields node, that's what we're passing from AirTable through the web book into NADN, and now I can grab that record ID.
+0:29:53 What this airtable node is doing is using that record ID to find that actual record in air tables. I'm going to click Execute Step, and now I have all my information coming through from airtable into NADN.
+0:30:10 There's my prompt, there's the title, the agent message coming through, that is awesome. So this right here again, this is the base step, this is the same every single time, just changing out those variable names, you can name your variable whatever you want, you know, the buttons, whatever you want,
+0:30:29 but this three nodes step is the exact same process every time you want to set up in air table. or air table into N and N.
+0:30:41 Cool, so we're getting our data through. Let's click the plus, add an agent, open AI. Let's send a message, message a model.
+0:30:57 Now I'm going to go get a new API key just so you can see how this is done again as well.
+0:31:02 Moving through from scratch, start to finish. So I'm going to open up the OpenAI dashboard. Again, this is the platform.
+0:31:13 This is different than chat GPT OpenAI platform is where you can build out agents. You can build assistants. You can play with all the models and you have access to their API.
+0:31:28 You can set up your API keys. So a lot of stuff to play with in OpenAI platform. don't need to know any of it.
+0:31:35 Come up here to Settings. We have the three sections API keys billing and usage. This is everything you need to know.
+0:31:43 I'm going to come into API keys. Create a new secret key. Let's call this Agent Hub 2.0. I could even create a new project for this but I'm just going to put it in one of my other projects.
+0:32:00 Again projects can be a single automation or they can be a team-wide thing. So your whole team has access to a specific project.
+0:32:08 So I'm going to choose my digital automation diagram project. It's my automation melting pot. Great Seeker key. This is only shown to you one time.
+0:32:21 I'll copy it right away. Let's jump into air table. will paste the key. This is my open AI secret.
+0:32:38 Cool. Got my new secret key. Let's jump into NADN. I'll create a new credential inside of my model, my message model node.
+0:32:53 Create the API key. It's name it. Again, keeping naming conventions, everything I just name everything related to the actual automation name that I came up with.
+0:33:05 That way everything stays organized to the thing instead of creating so many things. You lose track of so many names going different places.
+0:33:13 It happens pretty quick. So now I can choose the model I want to use. Let's use the GPT 5.2, all right, they don't have the 5.2 nano yet.
+0:33:34 This is a brand new model's coming out this week. It's been exciting to to code with these new models coming out.
+0:33:40 So I'm going to use the GPT 5 nano. This is currently the most powerful cheapest model or the cheapest most powerful model.
+0:33:48 Have you want to think about that? Great. So let's plug in some stuff here. I got my prompt. This is my user message to the agent.
+0:33:58 This is coming from air table. There's my prompt. I'm going to add a message. We're going to set it to the system role.
+0:34:07 And we're going to drag in the system message that I want to use here. That's my actual agent. So you're a professional image prompt for finer.
+0:34:18 Awesome. Let's go ahead and run it. Taking in my basic prompt and spitting out a nice refined image prompt for image generation.
+0:34:34 Much better. Create a cinematic photorealistic still of a gleaming canary yellow sports coupe, a parked on a rain slick city street at golden hour.
+0:34:43 That's great. That sounds like a good image generation start. Cool. So I can do a couple of things. I can keep passing this on.
+0:34:53 I think for this phase, I'm going to pass this back into air table. Let's get this refined prompt back into air table.
+0:35:00 So I'm going to select my air table node. What do we want to do? We want to put this into air table.
+0:35:08 That means we need to update a record. Okay. So I choose update a record I'm going to find my same credential, Agent Hub 2.0, choose the base, Agent Hub 2.0, choose the table, workflow table, and now we can update that same record.
+0:35:36 Okay, so I'm going to use the record ID coming from air table. So here's my last node, the message model, message a model node.
+0:35:44 I'm going to drop this down. This is my air table node. Find my record ID. We want to update this record.
+0:35:53 The only thing we want to change is getting in that new prompt, right? We don't have a good place to put that prompt.
+0:36:01 So let's go ahead, jump back into air table. I'll come into my workflow and I'll create a new field. So be a long text field so we can store a long prompt, we'll call this refined prompt.
+0:36:20 Click Create field, now we got a nice and tidy space in this record to store my new prompt. Jump back into NADN, we'll get a little error thing right here saying, hey, you updated your air table base, but we have an updated this air table node.
+0:36:39 So we have to update this air table node with the changes tiny little button right here. Boom, there it is, the new field.
+0:36:48 So I can actually close out all of these fields. I don't want to change any of these fields. And now I can drop in my new refined prompt.
+0:36:58 And actually, I do want to update a different field. So since I removed one, let's add a column to send.
+0:37:06 I'm going to affect this field, the drop down. And I'm just going to set this drop down. Currently, it's set to generate.
+0:37:16 When we click it, it gets set to generate. Well, I'm just going to automate it, getting set back to choose action.
+0:37:26 You'll see what I mean in a second. Great. So this is our update node. Let's execute the step. Boom. There it is.
+0:37:35 Jump back into air table. We have our choose action being set back to choose action. If I want to click generate again, it makes it easy.
+0:37:45 I can just click generate again. Now that it's automated back to choose action, and we got our refined prompt in here.
+0:37:53 Very nice. We'll fleshed out prompt for image generation. Cool. See if I can sneak in a couple more steps here since we started a bit late.
+0:38:09 Let's jump into a new node. So I haven't organized this quite up yet with the other nodes we talked about for internet stuff.
+0:38:19 Okay, internet stuff. We're talking about webhooks and internet stuff. We're talking about HTTP nodes. HTTP nodes. It's the same HTTP is anytime you're up here in your navigation bar, we have these methods where we can enter in URLs and go to those places.
+0:38:44 Well, this is the same thing. I can enter in some kind of URL and go to that place in NADN, in this node, and do stuff there, right?
+0:38:55 Okay, internet stuff, especially HTTP nodes, this is the hardest thing to do in NADN because it's very custom. It's the way that everything is done.
+0:39:08 Okay, same with the air table node, same with the message of model node, everything is done through an HTTP request, but NADN has built-in nodes, okay?
+0:39:20 Built-in AirTable node, built-in OpenAI node. If you want to do any work with some service, some tool, some platform, some website that doesn't have a built-in node in NADN, well, we can still go there with an HTTP node.
+0:39:38 This is just a generic blank request to go out into the Internet and do stuff, okay? So it gets complicated, it's very custom, it's very confusing and so this is just, this is probably the hardest thing to teach because there is no way to teach it and it's the hardest thing to learn because it's different
+0:39:58 every single time, every single service you want to use, it's a different setup. So that being said, let's tackle one way to set this up for one specific use case.
+0:40:08 case. And in this case, I'm going to do some AI generation in automation. So we talked about in advanced AI, go into foul.ai.
+0:40:22 And this is the number one hub for all of the generation models, generative models. And so all of these models have a backend API.
+0:40:32 we can use and we can reach into it and grab it and use it with an HTTP node in and in and in.
+0:40:41 This is how we automate generative work. Great. So I'm going to find a model here that I like. Go to choice for me just for the sake of ease right now is going to be the nano banana pro.
+0:40:58 and so we're going to use the text to image model. I won't get to down the rabbit hole on which models to use right now but text to image model.
+0:41:10 Okay, now I'm going to I'm going to come into the API. Okay, the API, this is how we connect to anything doing internet stuff.
+0:41:25 So something you're to have to learn. Look for an API. Does the service have an API? How do we access the API?
+0:41:32 What are the API docs? Okay, that's the new language you're going to have to learn. So I'm going to look for anything API.
+0:41:38 And so foul that AI has API docs. All of this stuff, if you are a coder in the past and you wanted to connect anything, you would have to know this and write this code, we can do this much much easier now.
+0:41:54 So I'm going to come in here and find the actually this is the easiest way.
+0:42:06 Copy everything. Okay, just select all all the noise all this mess. come into a new chat GPT window, paste in all of that mess, everything, and say, dash dash.
+0:42:27 I'm building an HTTP node in NADN. I want to connect to this API. Can you walk me step-by-step exactly through everything I need to do in order?
+0:42:37 Walk slowly, I'm a beginner, something like that. Great. And so ChatchyBT is going to tell me exactly how to build this from scratch, step-by-step.
+0:42:53 Again, this is a blank custom node. There are so many settings you can do in here. It is a lot to handle setting up HTTP notes, but should be pretty straightforward going through ChatchyBT.
+0:43:11 So create a workflow in NADN, all right, done. We need to set the HTTP method to post. Okay, what does that mean?
+0:43:20 Oh, there it is. Great. Set it to post. What's next? URL. Great. Let's copy that back into NADN, paste the URL.
+0:43:42 Okay, what's next? Let's see here, header. So So we need two headers, one called authorization, with my file API key, one called content type with this value.
+0:43:54 Let's do that authorization, copy that, I'll add two headers, authorization, add another header, this one is content type.
+0:44:11 Now, this is very complex, this is very technical, but the more HTTP nodes you do, you find they are actually very very similar if not the same in their setup.
+0:44:22 So when I say it's different every single time, you're just not sure which kind of setup you have to do, but the more you do, all of the setups end up being some structure that is very similar.
+0:44:34 So you get these habits down. So it ends up being pretty straightforward the more you do, just like anything else really, I guess, learning it makes it easier, but in this case, this looks and is quite technical, but you're not going to have to memorize any of this.
+0:44:53 ChatchivT will walk you through all of the nuance here, which is great. Cool. So this is the JSON body. I need to send body content type, JSON, JSON body.
+0:45:05 What does that even mean? I'll just copy it. There it is, send body. body content type, JSON, set it to JSON, and boom, paste that JSON body.
+0:45:22 Okay. If again, context engineering, prompt engineering, if any of this is confusing as you're going through the setup here, you just ask, you know, copy this section, ask it in the chat, say, I don't know what this is.
+0:45:36 Can you walk me through this? You come into NADN, and you take a screenshot, you paste that into chat, and you say this is what I'm seeing, can you walk me through this, so using those skills to help you get through the setup, it ends up being pretty straightforward.
+0:45:53 I say that a lot, but the more you use AI, the better it gets. Alright, so now we have a prompt, a JSON payload that we can send off to the models, the the way that I'm expanding this out, what I did here was I pasted it all in, then I can toggle this over to Expression Mode.
+0:46:12 This is something you wanna get in the habit of doing, just setting your JSON to all these body sections, all of this stuff to Expression Mode.
+0:46:21 Then that simply creates this toggle right here to expand out that text box so you can see it. Very technical process just to open it up so you can see it.
+0:46:36 But now we have some sections in here and some settings we can tune up based on the generative model. These are nano bananas settings and so this is the prompt section.
+0:46:46 I can actually delete this default prompt, let's add in my refined prompt. There it is, dynamic adding that dynamic variable in there.
+0:47:01 Now we can see there's my actual prompt coming in here. Want to generate one image, let's set the aspect ratio to 16 by 9.
+0:47:12 If you know anything about aspect ratios, you know what that means. Otherwise you can just ask, you know, what's a cinematic aspect ratio or what's a cell phone aspect ratio and it'll ask Chatchy BT and it'll give it to you.
+0:47:23 You can put in those aspect ratios, safety tolerance, pretty self-explanatory and resolution. We'll just leave those settings at that. Looks good.
+0:47:36 Last thing I need is my file API key. Let's come into file, come into my homepage, my settings, API keys, same as other services.
+0:47:53 I'll click add a key. This is my agent hub 2.0. Create the key. It's only going to show it to you one time.
+0:48:06 Keep them safe. Right away, come into my API keys table in my agent hub. paste my key. This is my foul API key.
+0:48:23 Great. Back into N8N. Now I can paste my foul key right there. It's very explicit on keeping the word key.
+0:48:36 You can double check your We need to be word key then the API key, paste in my API key and technically it looks like we are set up, good to go, I didn't miss anything, good to go, let's execute step.
+0:48:59 And boom, we're getting that response going to foul, we're doing internet stuff, we're setting up the HTTP for getting a response URL.
+0:49:07 Let's check foul now. I'll go check my recently used models. Let's see if we're getting anything. Nano banana pro. Come into the it.
+0:49:29 Request. Let me see if I can pull up a split screen here. So we can see it better. Okay, I can't do too much, can't pull up the split, so let's see what we got coming through.
+0:50:34 So there it is, create a cinematic photorealistic still of a gleaming canary yellow sports coupe. There's my new generation in 16 by 9 aspect ratio, cinematic aspect ratio.
+0:50:47 So that is working in foul. That looks great. We're doing our internet stuff successfully. We're getting that response URL. We're getting that generation to come through.
+0:50:57 Let's see it took 22 seconds for the generation. Okay, we're going to do a simple, simple trick here with a very simple node.
+0:51:10 I'm going to add a new node in n and n. We have our successful generation, but we're not actually getting that back out of file yet.
+0:51:20 We need to call back into file and download that image out of file. So what we're going to do is just simply wait.
+0:51:32 I'll add in a weight node. we haven't really talked about this, but this note is so simple and self-explanatory. It's not much to teach.
+0:51:39 That took about 22 seconds to generate. So if I add a weight timer of something like 45 seconds, if this is running and doing generations, it'll hit this weight node pause for 45 seconds, that generation will be happening in the background.
+0:51:56 After 45 seconds, the automation will continue on. So that's a cheap, easy method on making sure your generations or making sure long processes finish is just waiting.
+0:52:11 I had a wait note and just wait for it, right? For now, since the generation has already finished, I'll just set a wait timer of one second.
+0:52:20 We can run it right away. I'll go back, you know, if I'm running this, I'll go back and make sure that is set to something like 45 seconds just to be safe.
+0:52:31 Okay. Now we need to get that image out of foul and into, and it in or into air table, right?
+0:52:40 So let's download it. Well, how do we download stuff? We got to do internet stuff. So I'm going to find another or put in another HTTP node.
+0:52:50 Anytime we're downloading anything, it's much easier. we need to set the method to get and we need the URL that we're downloading from.
+0:53:00 Well, we're getting that directly from file that's coming through. We have our response URL coming through. I'll just grab that URL from the weight node passing from the HTTP node, execute the step, and we should have our URL right here.
+0:53:31 that is our new image. I can copy this, come into a new browser, just to test it. There it is.
+0:53:43 Awesome. There's our new image. So all we need to do now is put it back into air table or drop it into AirTable.
+0:53:53 So, click the plus, create a new node, AirTable, let's update a record. Okay, we want to update the same record we've been working with.
+0:54:10 I'll find my same credential, AgentHub 2.0. Choose the base, AgentHub 2.0. Table. We want the workflow table, and now we can update this record with the new image.
+0:54:25 Well, where do we want to put it? We don't have a place to put it yet. Let's jump into air table.
+0:54:33 Come into the workflow. Let's In AirTable is this attachment field, okay? This is specific field type that takes in files, all right?
+0:54:50 So we'll just name this attachment field, image, or generation, or something like that. I'll create the field. Now we can drop in our image here.
+0:55:02 Jump back into N8N, let's refresh the AirTable node. there's our new image field and it may okay I was going to say it may have an error here because of that same air table array thing we're having before but it's working fine so ultimately we have our image field what air table needs specifically is
+0:55:36 an image array, okay, not the actual URL kind of gets confusing when we talk about adding in files dynamically. We can talk about this in more detail, but basically I want to put my images into my image field.
+0:55:55 Let's hide all the other fields. We don't want to update and I can find my same record ID. Let's go way back to air table, grab the record ID.
+0:56:06 Now I have a feeling we're going to get our first true error here. Let's execute the step and there it is.
+0:56:15 Okay. This is that array stuff, right? So figuring out how to work with arrays, figuring out how to use these two nodes specifically.
+0:56:28 It's the same thing we kind of faulted on last time, all right, Arrays, and these two nodes specifically doing weird stuff, something we're just going to have to practice with again, automation in this case, it's about doing reps and that is my least favorite style of teaching.
+0:56:45 Just do it again, do it again until you get it, but in automation, that is kind of the thing we got to do here.
+0:56:52 So what I'm going to do is we could use the split out array tool, but what I'm going to do here is something even simpler.
+0:57:03 Okay. Break the route, separate that, and I'm going to add my favorite node in here, keeping things nice and easy.
+0:57:13 Edit fields node. This is just the best go to here. So I'm going to add in the URL and you can see right here how this comes through images 0.URL that is part of the array.
+0:57:31 Okay, we'll talk deeply about arrays. It's the hardest data type to understand. So just understand that we need this sort of folder structure to come through.
+0:57:45 Okay if I click execute we can see that folder structure to come through images images url that's what airtable needs and that's where we keep having these issues with the arrays.
+0:58:00 Just an airtable thing just a data thing so now we have our cleaned up array i'll plug it back in And now we can plug in the same array here just without all the extra stuff.
+0:58:18 So I use my Edit Fields node to just clean up, get rid of all this extra stuff. That's where we hit that error.
+0:58:24 And now we can pass that on to AirTable, I'll click Execute Step, Boom, there it is, jump into AirTable, and now we have our image inside of AirTable.
+0:58:39 little trick. Hit this button to change the row height. We can see things a little bit better. Boom. And there it is, guys, full end to end prompt refiner and generation build.
+0:58:59 Okay, what I can do on my next run, I could have another generation, call it whatever generation. Number two, let's have a, I don't know, just my simple, safe for work testing prompts.
+0:59:21 this is my prompt. Wow. This is my prompt that I want refined. Let's choose the agent I want to use in this task.
+0:59:33 There's my agent. Let's run this generation again. I'll come into NADN. Let's save the I haven't published it, so I'm still in testing mode, so I can, I'll have to hit the button here to test it, instead of just letting it run, right?
+0:59:59 So I'm going to hit execute workflow, come back into airtable, click generate, and boom we can watch it pop in here, okay.
+1:00:16 there is the ended end workflow running and we should be getting stuff back in here. Oh, here's an error. Great.
+1:00:39 Let's see what we get. Oh, so I didn't set this back to 45 seconds. I knew I was going to make that mistake.
+1:00:54 Didn't set it back to 45 seconds, so there's nothing generated yet, so we got that error. We'll just run it from here on down and we can finish this one off.
+1:01:09 While this is running guys, we'll go ahead and open up two questions. Then we can see the result. Super technical.
+1:01:33 If you're new to this stuff, big information download, but again, watching back these videos, this is a full step by step on how to do a generative automation now with an air table base management tool.
+1:01:46 Full step by step, from scratch, starting from the beginning, and that finished all the way through. So we can pop into airtivel and now we have our red car.
+1:02:05 So basic prompt gets refined via the agent. The refined prompt gets sent to in this case Google nano banana pro and we get image generation, just like that.
+1:02:18 It's super easy. Cool guys. Yeah. So more of this kind stuff, repetitive work, that's really what automation is, is turning repetitive work into automated work.
+1:02:40 But the automated build is repetitive work, kind of a funny realization there. So the more you work with it, the better you get at it, more you understand the stuff.
+1:02:53 But if you guys don't have any questions for for today. We can call it for the evening. Appreciate you. Awesome.
+1:03:21 Awesome. Yeah, thanks, guys. So again, definitely want to watch this one back because this is a full step by step.
+1:03:28 So if you can master this step by step, it's essentially, you know, we did everything from the beginning, setting up the web hook, the build out in air table, doing all the scripts, getting the agent set up and actually getting internet stuff, connecting via HTTP.
+1:03:47 That is the bulk of everything. If you can figure out this right here and just extrapolate that and innovate this into doing different tasks, calling to different tools with HTTP, throwing an agent in there to process things, is dumping your data into some kind of storage hub, like AirTable, just so 
+1:04:09 you can see it all processing. And working with all your data, so it's not nebulous, it's visual. That's, this is it, right?
+1:04:20 This start to finish, you can build off of this with different tasks. Throw in maybe, you know, send yourself an email instead of send to AirTable or you get the idea, this is really all we need.
+1:04:36 Cool, awesome, well, still don't know how I feel, struggling through, still don't know how I feel for office hours tomorrow, but I'll send another message to the community, and I'll see you guys for vibe coding tomorrow night.
+1:04:50 Take care guys. Thank you

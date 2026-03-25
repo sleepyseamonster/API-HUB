@@ -1,0 +1,279 @@
+﻿0:00:06 Alright. How's it going, puhm? Hmm. Good. How you doing, Kurt? Good. Good to see you. Alright, so I'll just, I'll give a couple seconds, I guess, see who else pops in here.
+0:00:25 Alright, so continuing on from last week or working on .flow. My app here, so I'm going to start it up.
+0:00:34 I got Visual Studio Code open, so to run the app again, little complex learning stuff, learning terminal, learning how to run it, let me just close everything out, make it easy to see.
+0:00:50 Coming up here in Visual Studio Code to the little layout navigation buttons, we can hit this middle one and that's going to open up the terminal down here.
+0:01:04 Okay, terminal, this is how we can run commands on the computer itself. So this is actually the terminal inside of Visual Studio Code.
+0:01:15 So, running this command, the two commands, you'll have to memorize NPM install to install the dev environment and NPM run dev.
+0:01:27 This is to run the development environment. So just making sure we're in the thought flow folder here, I can run that to start up the the local server and get my URL.
+0:01:44 There it is. Okay, so now I have my app running on my computer, using my computer as a sort of server here and running this URL from my actual computer.
+0:02:10 Okay, so we have a couple of things to work on. Just clicking around on the app, we're getting to the point where we can finally start working on it, all the setup is good to go.
+0:02:18 So we got the UI UX nail down last time, but where we left off is the implementation of skills. Okay, skills in AI coding in in, you know, I'll just say it's the future, using skills, having skills is the future.
+0:02:36 So what skills are, it's a specific mark down file that gets added into your project, just like these other markdown files, just like the actual agent file so that the agent can, you know, this agent can read its instructions and perform.
+0:02:55 We can have skills files that are many sets of instructions or little, little agent brains that are simultaneously running, depending on what task is being done by the agent.
+0:03:09 So skills that's really where things are heading heading in the AI world, adding little plug-in, there's no word for it, it's skills, giving your agent skills to do different things.
+0:03:22 So the way we create skills, the way that I like to do this is me open up Cloud. I've been busy vibe coding all day on my codex credits so we'll continue to use cloud for.flow.
+0:03:41 So, cloud code, the way that I like to come up with skills, if I don't know what's needed, generally you're going to start to figure out what skills are and what skills can do and say, hey, you know what, I need this skill for this situation.
+0:03:56 Can you build it and it's just going to build that thing, right? But before that point, I'll say, I need you to audit the repo and analyze any gaps in our workflows here.
+0:04:10 Let's focus on the implementation of skills where I really want you to put your time and effort in is analyzing what skills might be beneficial and how we can run those skills including using sub agents.
+0:04:27 Sub agents Another new tool, a new agentic coding upgrade that's, you know, all this stuff is just happening.
+0:04:39 It's coming out. It's so new skills and subagents are the new thing. So I'll just ask, let's scan the entire project, go through the entire repo and see if we need any skills.
+0:04:58 Okay, model switching, definitely want to get in the habit of switching your models for different tasks. What is this here?
+0:05:07 So just running commands, let's do that. Switching your models for different tasks, you'll save your credits, right? That's all it's really a lot of users to you, yeah, good.
+0:05:22 Yes. Probably get a couple more of these. So switching models, okay, lots of, lots of questions. Basically, Cloud is just asking for permission to run commands in the terminal.
+0:05:35 That's really all it's asking me forward, saying, hey, can I have access to your actual computer for a second to figure the stuff out?
+0:05:42 Yeah, go ahead. And the reason it's asking me that is because I'm running locally on my computer. My repo is on my computer, so it's asking for permission to go into my folder and say, hey, can I just run these commands to look at what we got going on?
+0:05:59 Yes. Now, the reason it's asking is because not only can we switch models, which I'm trying to explain here, we can switch models for different tasks.
+0:06:10 Default is going to kind of just automatically select the model that's best for or whatever question you're asking. This is a cloud code thing specifically.
+0:06:21 I don't really rely on that. I'll usually choose the really cheap model for small tasks or the really big model for big tasks.
+0:06:29 And I would say that browsing your entire repo is always going to be a big brain task. But in this case, clouds using the middle ground model because our project is actually not that big.
+0:06:45 So along with switching models, you can click the little slash here, switch model. We can also say what mode we're running in, okay, ask before edits.
+0:06:59 That's clear. That's the mode we're running in. It's asking me for permission before anything. We can switch that to edit automatically or we can switch that to plan mode.
+0:07:08 So any time you're building, again, pop this thing into plan mode, this is how you can start to really flesh out and brainstorm, build thorough documentation before any code gets built, that way it's getting built right the first time.
+0:07:24 So I'm just going to switch it into edit automatically, we'll get fewer permission asking for permission from Claude and it's just going to go through and see what we have.
+0:07:35 See if there's any holes in the project, see if any skills can benefit us at this point, and we'll see what we can do here.
+0:07:45 So last week, here's the UX checklist. Last week, we created a ton of UI UX stuff. UI UX Playbook, the development style sheet.
+0:07:58 These are all the documents that were created from our session last time. So this is great that Clawed is now analyzing our new documents from last week and saying, hey, let's figure out some skills, let's see what we get.
+0:08:20 So skills, if you guys have heard anything, the latest trends in the AI coding stuff is, I don't know, there's been so many name changes.
+0:08:32 It was Claude Bot, like lobster claw, Claude Bot. They had a copyright issue, so they changed it to Malt Bot.
+0:08:42 Malt Bot is a semi-autonomous agent that people are just going nuts over. And everyone's saying Claude Bot or Malt Bot, this is the future, if you're not using Malt Bot, you're gonna be left behind all the same jargon, and all the same sensationless language, because multiple doesn't need to be prompted
+0:09:07 . And it doesn't ask for permission. It can just do things on its own. And that is awesome, but that's also terrible.
+0:09:15 If you give multiple access to your computer, who knows what can happen? This is like the actual Doomsday stuff when people say, AI is so bad, AI is so bad, AI is so bad, it's really not unless you give it access to everything with no guardrails.
+0:09:32 And so some guy just created this free project and he put it on the internet for fun. He put it on GitHub and people started downloading it and using it and it just blew up.
+0:09:45 It is not safe, it's not okay to use unless you know what you're doing, but it's cool, right? Well, Cloudbot, or now it's called OpenClaw, third name change, the developer of OpenClaw, just got acquired by OpenAI.
+0:10:06 So this is where this stuff is going. Some guys sitting on his computer, making weird stuff, vibe coding, now it just got a multi-million-dollar job working for OpenAI.
+0:10:20 OpenAI makes ChatGPT. Okay, so OpenAI acquired this guy, this, you know, his project, so therefore him, right, because this is the direction this stuff is headed.
+0:10:33 All of this stuff, you know, I'm getting all of these questions here. Cloud is stopping and saying, hey, am I allowed to do this?
+0:10:40 This is amazing, right? We want to have human in the loop. We've talked a little bit about human in the loop.
+0:10:46 We need human in the loop. We need the overall, you know, the oversight for somebody to check off on the AI's work because the AI's work, it's really, really good, but it should not always just be shipped off, especially to having access to sensitive material and having access to your customers, sending
+0:11:07 data to your customers, whatever, that's just security issues, right? That's a no-brainer. Well, the fact that OpenAI has acquired this guy's project for total autonomous AI agents, it just says a lot for where this stuff is headed.
+0:11:27 That's my whole point there. So, AI is getting so good. In the near future, it's just going to be able to, you'll be able to send a text message or call your AI and say, hey, I need this done by this afternoon.
+0:11:41 Can you do it by the time I get home? And your thing will just run spin up on your computer, start working, do whatever it needs to, and get your tasks done for you while you're not even there.
+0:11:54 Crazy, right? But for now, blood is saying, hey, can I do this? Can I do that? Can I do this?
+0:12:01 Because it's going through my entire project. It's being very safe. It's being very secure. It's asking for permission before it looks at anything because this is where the stuff is now.
+0:12:13 If it just starts changing everything and I don't know what's going on, it can break my app and then I have to start from scratch or whatever.
+0:12:24 Cool. A couple more here. It's writing to the change log now, so this is probably towards the end of its scan, but you can see it's working.
+0:12:34 It's doing a ton of work on its own, But it's pausing, asking for permission. So while this is finishing up the next step, kind of, or the next understanding of using Visual Studio Code as a tool, not just AI stuff, is knowing how to commit your code back to GitHub, right?
+0:13:13 We haven't done that yet. We've actually gone too far in Thoughtflow. Too far then is actually good or acceptable. It's kind of like saving your work on any other software or any other tool.
+0:13:27 You want to save your work often just in case anything gets lost. Well, we haven't actually saved our work yet from last week's work and so you can see up here in the corner might be small on the screen share.
+0:13:42 We have 45 changes that have not been saved and so we need to handle those changes before anything happens or you know if something goes wrong or something breaks right we want to be saving our work often but we'll back to that because it looks like Claude has finished.
+0:14:04 So let's see what we got. We got a full audit report here. Critical gaps. Don't have skills. We're missing governance files.
+0:14:13 Okay. We can tackle that. Development style sheet has nothing enforced. We can handle that. I don't, you know, reading through this stuff, typically, if you're vibing code in something and it's giving you a full technical readout of your documents that you didn't create.
+0:14:28 you're probably not going to know what it's even talking about and that's okay you can just ask it hey what's this document or where can I find this document in the in the navigator over here so I can click on it and read through it whatever you can just come down and ask you know bring up bring up development
+0:14:51 style sheet for me it's something like that It'll just give you a link to whatever documents, whatever pieces of code directly in your thing here.
+0:15:04 What it's saying, we need to tune all these things up, and it went ahead and just built the skills for me that it saw we needed.
+0:15:15 So skill feature name, implement screen style component, behavior screen, I don't know what any of these skills are going to do, but essentially now these little things, these little sections of our project are going to run and do jobs for us automatically.
+0:15:39 Okay, something like this can kind of glean what this actually does, a pre-merge UX checklist skill. Most likely, you know, of course, we can ask cloud, we can say, what does this skill do?
+0:15:52 Most likely, the skill will, anything we're creating for the UI, the UX, this skill will just run and make sure the UX meets our requirements from our documents before we're allowed to send it off and save it.
+0:16:10 Most likely something like that, right? So it's going to come up with all these cool skills, which it did. And now it's discussing the sub agent that it builds and ran and used to do all this stuff, right?
+0:16:25 So pretty cool. Got our skills, we got our sub agent popped open. This doesn't really change the app, right? We haven't jumped into the app and still haven't started developing the app.
+0:16:35 We're still setting up this project because as a you know, as a solo coder and as a vibe coder The real power and leveraging AI is to get your systems to work for you And if you're building something in your app and you say, you know, okay, let's go Change the button from blue to orange and then it goes
+0:16:58 and moves the button instead of changes the color or something like that You're gonna have to keep prompting and keep prompting and keep prompting And that's just the iterative nature of building anything, even if you're coding, you have to iterate, you have to build upon that stuff.
+0:17:14 Well, if we have skills that look at those things and automatically know, hey, let's make sure that's working before we actually implement it and you have to go make changes, game changer to your workflow, right?
+0:17:27 Skills. So just coming up with skills at the beginning, it's very common, I, every so often I'll do this step again even on my huge app.
+0:17:38 I'm building right now. I'll say at this point scan the entire repo. See if we need any new skills based on all the new features we have.
+0:17:48 And it'll run through the scans of my app now. You know, this took however long. Eight minutes, ten minutes. Scanning my app takes like a few hours now, right?
+0:18:00 And it'll go through. Take all that time and find the gaps that we need. So pretty cool. All right, so we got our skills, we got our documents, we got our skills, we got to set up.
+0:18:10 Let's ask one more final question here. Let's say, are we ready to vibe? Let's see what Claude says. Are we ready to go?
+0:18:23 Are we ready to start working on this and making those changes and making those iterations? Cool, almost. we got three more things.
+0:18:32 It cracks me up every time. This is great because the agent that has access to your project, access to your context in no matter what is always going to have that much more decision-making power or the ability to work with you on making decisions.
+0:18:50 So cool, active bug blocking trust in the app. We got missing governance files. MVP scope is undefined. And let's go ahead and work on this.
+0:19:02 And so three things, I'll pop this into plan mode. Plan out how we can implement these three items you suggest.
+0:19:14 You're a senior software engineer. Don't bloat the project. Use best practices for 2026. And go ahead. Cool, now it's great.
+0:19:30 This is kind of the last prep step if we tab back over to the phase map document. Phase zero, we got our initial setup.
+0:19:42 Phase one, we got our UX and UI documents built out. So we're kind of right here in between phase one, phase two.
+0:19:53 We're ready to start our construction and execution our building phase. So, in this building phase, we need to make sure we're not trying to do any major redesigns.
+0:20:07 This is a very common practice. This is just best practices for any project. You want to lock in scope. You want to say this is what I'm working on.
+0:20:17 Don't go down these other rabbit holes, especially encoding. because all right let's let's lock in the UX UI. Let's make sure you know in this actual app.
+0:20:30 Let's make sure our tasks work. Let's make sure our ideas work. Let's make what we have. Let's make it work.
+0:20:39 Let's not go off on all these tangents and all these rabbit holes to just build cool stuff because it's fun.
+0:20:45 And locking in your scope, making sure you're staying focused in the construction phase is especially important in vibe coding as solo coders that don't know how to code because the more you go off on these tangents and rabbit holes and say, oh, it would be cool if we have this button over here that 
+0:21:04 does this and let me open up this other page where we can enter in our profile information or all this stuff.
+0:21:10 You end up causing this sort of code trail, this really messy trail. And by the time you're done with all these new things and you want to optimize as this huge mess of stuff, just piling on stuff, piling on stuff.
+0:21:28 So you want to really work in contained scope, sprints, detail out what you want to work on. Only work on that.
+0:21:36 Yeah. It's very common practice in any industry, stay within your scope. But it's really easy, especially if you're a creative person like me, it's like, ooh, be cool if this did blank, you know.
+0:21:51 So let's lock that down right now. What I want to do is get all these errors fixed. I actually want to use my app.
+0:21:57 We haven't been able to use it yet. That's all I want. Let's lock that in. That's our first sprint for construction.
+0:22:03 Let's construct. So I'm going jump back over to you, VS Code. Let's see. Great. So I'm going to let. This is awesome.
+0:22:16 I'm going to let Claude cook on this for a minute. But what's great is we can open up multiple agents.
+0:22:23 Okay, multiple agents can be working simultaneously. So I'm going to pop open a new chat with Claude. I'll let the other one keep cooking in the new chat.
+0:22:35 What I like to do to fix stuff is always provide a visual because Claude, you know, as it's coding, can only see the code.
+0:22:44 And if the code is right, but it's wrong on screen, sometimes your agents will argue with you like, no, it's working.
+0:22:51 It's perfect in the code. I'm like, well, that's not what I'm seeing. So if something I do every time I send off a prompt, is I take a screenshot, Just say, hey, look, this is what I'm looking at.
+0:23:04 Let's compare. So, oops, let me. Screen shot. Pop it in here. And it's great. It's going to give you, it'll pop up with messages if the other, if the other tab needs attention, so I'll jump over there.
+0:23:31 Review plan to set whether to proceed. Okay, so we got our plan. This is cool. You get really good at multitasking.
+0:23:39 I was always really great at multitasking. Now I'm incredible at multitasking, having multiple agents do and multiple things, tabbing over to do stuff.
+0:23:48 It's awesome. It's awesome. Super power. All right. So before even see this is what's great about it, before even trying to attempt this, Claude already said, hey, we have some issues we need to fix.
+0:24:04 So I don't even need to start doing that other stuff I was about to do getting ahead of myself, right?
+0:24:10 We've got bugs we need to fix. Cool. This is how Claude is going to fix it. We'll create missing files.
+0:24:20 That's great. And then we'll define the scope. This is perfect. Now something I've been doing more recently, especially on my bigger projects.
+0:24:30 It's probably overkill for something like this until this project might turn into something really big and really cool. Also, but at this point, it's still a relatively small app.
+0:24:42 But what I've been doing is instead of just accepting these plans that get built out, I'll say audit the plan, see if you missed anything, then make high-level next step suggestions, come up with several methods on how to implement this plan, choose the best methods, then rewrite the plan.
+0:25:08 Self-critique, self-audit, These are basic prompt engineering context engineering techniques, so we'll just have it do a self audit here So now I don't want to get ahead of myself.
+0:25:26 It's already known. We got stuff to fix I was just gonna go start fixing that stuff, but it's smarter than me.
+0:25:31 It knows what it's doing Okay, the real big crucial step here is before we start this next phase, I do want to come up here and save this work tree.
+0:25:52 Okay, well, I'll show you how to do that once the plan finishes because it's actually still checking everything, checking all the work we've done, checking the documents, you changed and altered, and so I don't want to send anything off that is still being worked on by the agent.
+0:26:15 Send anything off, meaning save it. Send it to GitHub. By the way, if you manually edit a document while the agent is working on it, that will be a conflict.
+0:26:35 So you'll try and, you know, you'll edit the document, you'll try and save it, and it'll say, there's a conflict, do you want to compare?
+0:26:43 Do you want to overwrite? It'd be the same as two humans working on the same document in some tool, right?
+0:26:49 There's going to be a conflict of what is the, you know, source document. So there's Maria. So a common thing I'm getting good at editing documents and editing code alongside the agent.
+0:27:08 And I'll get those errors where it says, hey, you're overriding stuff. Are you sure you want to do that? And I'm getting a little more confident in saying, yeah, because I can compare the agent code versus my code and see, the changes that are made.
+0:27:22 Here's what the agent did, here's what I did. It's not gonna overwrite one another, so I can go ahead and click overwrite and it'll save both of our changes.
+0:27:31 Stuff like that, you just pick up as you vibe code, all these little windows via Studio is such a powerful editing tool without AI, really, really powerful and ultimately easy to use, even though it's a complex technical tool.
+0:27:57 Cool. So audit of original plan. Let's see if we get any missed things. Here's coming up with the multiple methods.
+0:28:06 That's great. Three options for bug fixes. Two options for MVP scope. That's funny. The temporary documents that Claude creates are all there is.
+0:28:25 All right, so here's the new plan. I probably don't even have to read it. I had it do a self audit.
+0:28:31 So I'm going to trust it to go ahead. I'll say yes and auto accept. Great. Oh, and what I forgot to do.
+0:28:53 So I can stop it. It'll pause. What's great about the AI tools and using VS code is all changes. Honestly, it's beyond me and my coding understanding or development understanding how these tools work on the backend.
+0:29:13 But it's essentially saving or staging changes. And if you interrupt it, those Those stage changes are still in progress and you can either keep going and save those changes or revert those changes back to the original state.
+0:29:27 Don't worry about that. You can just ask the agent, like, hey, undo that or please continue or just common language like that and you'll start to understand those state changes of your code.
+0:29:40 But what I want to do before we go any farther, let's go ahead and save our code. code. And so the way we quote unquote, save code is by committing our changes into GitHub.
+0:29:57 Okay. Committing the changes into GitHub. So that gets a little confusing. Let's open up GitHub. Okay. Open up my GitHub.
+0:30:13 I'll find my repo. There's thought flow. And this This is what we saved pretty much, I believe we haven't saved anything new, so this is what we saved over from Bolt, and I haven't saved anything back into it.
+0:30:29 So what we do to make changes is come into our branches. Okay, this is the main, my main page, for my thought flow app, we can click on branches, and we can see I have two branches, test branch and main branch.
+0:30:46 If we tab back over to VS Code, we can see down here really small, I don't know if you guys can see it down here in the corner.
+0:30:57 We're actually working on my main branch, but we haven't committed those changes. We haven't saved those changes to the main branch.
+0:31:08 Now, what is going to be the best practice here is especially if you're designing an app that has customers and users and, you know, users are having access to your service.
+0:31:21 You don't want to interrupt their service, especially you don't want to break anything that you're working on, coding something. You save those changes, but it's actually broken and then your entire business is broken because now your users are getting all these errors in your app.
+0:31:36 So, you want to have staged branches or staged, saved changes for your app.
+0:31:49 Okay, that's the basic way of thinking about it. We want to have a main branch that's in production and we want to have a staging branch where we're in development.
+0:31:57 We can make all the changes. If all the changes are good and all the tests are good and nothing is broken and we get no errors then we can commit that staged branch to our main branch and now all of our users have those updates.
+0:32:12 So let's go create that best practice structure in GitHub. Okay so really easy. I'm going to come over here and create a new branch.
+0:32:31 We'll just call this Staging or development, we'll call it both staging dev, something like that. Now I'm going to create this new branch based off my main branch.
+0:32:50 Meaning it's just going to kind of duplicate whatever's on the main branch just to get it started and we'll have our new staging development branch.
+0:32:59 Okay, let's hop back into VS Code. Now we need to switch our branches over here. If I click down on this little main button again, we don't necessarily see our branches in this list.
+0:33:16 Okay, really complicated way of doing stuff in GitHub. It's kind of the old way before AI using GitHub and pushing and pulling everything.
+0:33:26 But what we can do now is have cloud do that for us So I'm going to say I'm going to come into cloud in fact this one is our paused Build out plan here, so I'm going to come into a new chat with cloud Just get rid of that screenshot And I'll say I I want to push everything in my local to my branch called
+0:34:01 , what is it, staging preview. Staging preview. Let's see what it is. staging development. Okay. So, this, this terminology right here, I want to push everything in my local.
+0:34:26 That means everything that I've been working on is still in my local repo. So that means it's still in that folder I created on my desktop.
+0:34:36 Nothing has been saved to GitHub. So when I'm pushing, that's GitHub terminology, I'm pushing everything into GitHub, I'm saving everything into GitHub.
+0:34:47 So I want to push everything in my local into my new branch called staging development. Great. do that now. Claude had some changes and we need to pop it into a different mode here.
+0:35:09 I don't know if it's permissions. There's a different mode. We'll try it out. Let's just send this off and see.
+0:35:19 So I want to push everything in my local to my branch called staging development. So yeah, I don't think it has access to my GitHub or it's going to try and create a new one inside of the local.
+0:35:41 Let's see what it does. Go ahead. You can come up with a commit message or say this is the new stuff.
+0:35:56 So a commit message, same thing up here. It's basically just a saving message you send off for all the changes.
+0:36:04 The commit message can be something like I updated the agent's document or something like that. Basically, it's a way to track the changes in GitHub.
+0:36:16 It has a commit message. So you can find that commit and find that message and say, all right, these are the changes I made.
+0:36:22 It's also good working in Teams. You add a commit message like, you know, Hey, Paul, I need you to look at the blank and then you commit that and Paul, you get that message.
+0:36:34 You can keep working, right? So commit message. That's what it's asking right here. Weird GitHub terminology just to try and save your work over there.
+0:36:49 Great. So here it is. This is the permission we need. We need to give Claude access to our GitHub. Let's do it.
+0:37:08 Cool. Go ahead and one more. All done. So now we created the staging development branch in the local, which means we can push our local staging development into our GitHub staging development, kind of confusing, but look down here, Claude created that for us, got everything set up for us, see if I can
+0:37:48 zoom in a bit. Okay, now we're on our staging development branch and we have no changes left to commit. That means staging development branch is current up to date.
+0:38:03 All our changes are saved. Let's pop over to GitHub, check it out. I'll refresh the page. Cool, and now we see this little indication right here.
+0:38:16 Anytime you see a branch, it's going to have a behind or an ahead number. This is an indication of what state your branch is in compared to your main branch.
+0:38:33 Super confusing, don't have to worry about that. You'll get used to understanding the commits, think of it as saves, and it's gonna help your brain process.
+0:38:45 Staging development is one save ahead of main. Meaning main is behind staging development. and we have not saved to our main branch yet.
+0:39:00 That's the idea. On a production level, you need a production branch, you know, a production main branch. That one is the working one, that one's online, that one has customers, that one's the functioning branch.
+0:39:15 Anytime you're making changes, they should go to a staging branch, you build up, you know, develop all your changes, develop all your updates, test everything, make sure it's working, retest it, right, and then you can actually push it, save it to your main branch, and everyone gets that update.
+0:39:35 It's cool. So we're ready to continue working. We're one commit ahead of main branch. Let's get back to work over here.
+0:39:52 All right. Working tree is clean. we're on our development branch. Let's continue. I'll pop back over to this conversation. This is the one I interrupted, and I'll just say, sorry, please continue.
+0:40:09 Right, there's two schools of thought. I think I talked about this. There's people that are really nice to the AI to get good results and there's people that are really mean to the AI to get good results.
+0:40:18 Two schools of thought, some people say that being really mean gets the results, but I don't know, it's a funny moral dilemma.
+0:40:37 So where we left off here, just to wrap our minds around all that work and all that multitasking, we created the audit plan, or I said, hey, are we ready to vibe?
+0:40:51 Claude said, no, not yet. These are some things we need to tidy up. But I said, cool, create a plan.
+0:40:58 We audited that plan and now we're actually executing that plan to clean up all those remaining items before we're ready to start building.
+0:41:08 This is what's great about the planning phase. If you can plan out your documents and build the structure of your app in here, you can just ask the agent, hey, what do we need?
+0:41:19 What should we do? you and it's going to know because it's inside of that scope. If you start building all kinds of things and you ask the agent, what should we do?
+0:41:30 it's going to say anything. There's way out of scope. Great. All done. Zero errors. We We got two warnings that pre-exist, fix the bugs, created those docs, awesome, let's go see if it actually did fix those bugs, jump into thought flow, I'll refresh it.
+0:42:10 And we still got some errors, probably fixed the bugs it was talking about, but we still have some pipeline errors, which is fine.
+0:42:17 Now we can finally start working, doing the fun stuff, I guess it's all fun, but we haven't done any work yet.
+0:42:27 Agents do it all the work. All right, so again, an iterative process, you can say, hey, is there anything else?
+0:42:38 Should we tighten anything up? But this process, but we just went through saying audit everything, look for areas where we can add skills, create those skills.
+0:42:50 Are we ready? Fix those last things. Now we're ready. Okay, this is a good workflow. What we just did here, you can keep going, but I think that these steps that we just went through is good enough.
+0:43:04 We can actually do some work now. All right, so what I like to do is close out all of my working windows, just to kind of refresh my brain, start from scratch as it were to, oh, and here's, here's what happens when you have a document that you edited, that then the agent edited.
+0:43:22 It'll come up with something like this. I'll just say don't save. Okay, so nice and fresh. We're ready to do some work, but as you can see, the agent changed a few more documents.
+0:43:34 We can do a simple commit here. Now that we got our development environments set up, Everything's looking clean. I'll just come up here and do a manual commit.
+0:43:42 I'll just say Let's do it. Whatever commit that Those will come that will commit those changes, but now we actually have to push them or sync them to GitHub, okay I saved them to the branch, but now we have to sync them into GitHub again.
+0:44:03 This is the old school ways it's just the way GitHub handles code merging very effectively. This is the way it's done.
+0:44:13 So merging, committing, sinking, pushing, pulling, just complex engineering terms for save your work. Great. So I'm going to open up a new cloud, fresh cloud window.
+0:44:30 Let's go grab those screenshots again. I'll say this is what I'm seeing. Can you see the error here? Can you trace the code and find this error and solve it?
+0:44:54 I'll swap it into edit automatically mode and I'll change the model. I want to is still relatively small. I keep saying that what is a small app?
+0:45:11 What is a big app? What is a big system? When you start having hundreds of documents, hundreds of pieces of code and when your actual code starts to become over 500 lines is when it starts to get big.
+0:45:30 If you have a bunch of pieces of code and all of those pieces of code are over 500 lines. Some of my pieces of code are over 2,000, 3,000 lines of code.
+0:45:39 That's not necessarily a good thing. That just means you want to section off stuff. So it's just kind of arbitrary.
+0:45:47 What is a small app? What is a big app? Once you start getting hundreds of things in here with thousands of lines of code, that's probably a big app.
+0:45:58 All right, this is what I'm seeing. Can you see the error here? Can you trace the code to find this error and solve it?
+0:46:04 Great. I'll open up a new Cloud window, a second Cloud window. We're having two errors. So I might as well work on both errors.
+0:46:14 So I'll take a screenshot of this one. I'm getting this error on this page. Can you see the error here?
+0:46:27 Trace the code. Find the error and solve it, please. Now the little blue dot here, we can tab back over.
+0:46:38 Little blue dot usually means we got to answer a question. I'll go ahead and say, yes, tab back over, let's say yes, swap this into edit automatically.
+0:46:50 We get a few less questions when it's in edit automatically mode. Yes, yes, yes. This is another reason I use Codex.
+0:47:04 Codex has a little more freedom. Cloud is very constrained and that's a good thing. You don't want your agent to run away with your code as an engineer.
+0:47:15 You want things to work very deterministically. But why I like Codex over Cloud? We've talked about this, my preferences. Codex feels more like a creative tool.
+0:47:30 It invents things that's not necessarily a good thing when you're trying to build something. But for me, as a creative person, I feel very creative.
+0:47:39 I let the agent do its thing and come up with stuff. Well, I'm doing something else, working on another aspect of my app.
+0:47:48 I come back to see what Codex is built and it's just amazing. Cloud is like, hey, can I do this?
+0:47:54 Are you sure I can do that? Here's exactly what needs to be done. I'm like, yeah, this is cool. This is great.
+0:47:59 This is exactly how you should work. But for me, as a creative person, and it doesn't feel as creative, right?
+0:48:05 So my personal experience and understanding with other developers and other engineers, Codex is better for the creative-minded people. Cloud code is better for the engineer-minded people.
+0:48:20 And then Google, its whole thing is keeping development sort of tight-knit in its ecosystem. So you can build in anti-gravity.
+0:48:29 We haven't really talked about anti-gravity. But anti-gravity is just Google's exact clone copy of VS code. Okay, this is essentially visual studio code, but it's not from Microsoft, it's from Google, okay, Google anti-gravity.
+0:48:48 So it's an exact copy of visual studio code and inside of anti-gravity, we have access to Gemini models and we have access to cloud models same as in Visual Studio Code.
+0:49:01 Okay, the difference between building something in here in Google is it's going to connect to other Google stuff really easily, right?
+0:49:10 If you're running in a Google environment, you're running on a Google server, versus like Amazon server, while using anti-gravity, is going to connect to that Google server very easily, building all your apps on the you know inside of the ecosystem that's kind of Google's direction.
+0:49:32 Codex feels creative, cloud code feels not constrictive but just very rigid in a sense that it does exactly what you need it to do which is what it should do but I love the creative aspect of this stuff and Google environment development.
+0:49:53 Let's see what we got. So still re-braiding over here and visioning. This is great. You know, this is what's so fun about this stuff, too, is because you can put as much into it as you want to get that much back out of it.
+0:50:15 I can open up more windows and I can come in here and say, you know what, let's, Can we slightly alter the gradient on the thought flow logo?
+0:50:29 Come up with something more cohesive to the color palette we have already. Let's just see what happens. There is a slight pink color in the logo that I don't like.
+0:50:40 I could definitely be really granular, really specific, but I'm going to see if codecs can be creative here with me.
+0:50:54 Again, getting good at multitasking, I can keep going. I can open another window. I can work on something else. There's not much to this app, but let's test out the check, check recording.
+0:51:07 Here's another error, so this is probably a core's error. If you start building apps, you're going to run into all kinds of internet stuff.
+0:51:16 But this is a great example of troubleshooting we can do. More of the manual approach to troubleshooting. I'll come back to this in a second.
+0:51:27 Let's check on Claude. yeah still cooking still cooking great so I'll leave this you know kind of round off today's session with this that we can pick up next time just to get you thinking about the next phase is you know next phase is fixing trouble level shooting, verification, hardening, you know,
+0:51:57 don't change anything, let's make everything work, performance, reliability. That's what's coming up next, right? So we can start thinking about that stuff.
+0:52:07 Whoops, let's see, Claude's got some. Yes. Okay, so the next phase, troubleshooting bug fixes, performance improvements, optimization all that stuff in the next phase, we can start thinking about that.
+0:52:26 So the way that we do more manual troubleshooting, this is common practice, this is how you build stuff. You need to open up the dev tools for your browser.
+0:52:40 Okay, it sounds complicated. Just right-click somewhere on your screen and click inspect. That's what it is on my Mac, on my chat, CBT Atlas browser.
+0:52:52 And that opens up the dev tools over here. This is where it gets super technical. This is how it used to be done.
+0:53:00 You know, manually coding something, checking this, coming in here, coding it again. Now we can just have AI read all this and do all this for us.
+0:53:08 I am not a master of this at all. There's a lot in here. This is just coding stuff that I don't know, right?
+0:53:16 I use AI and I don't need to know this stuff. Learning it, but but we don't need to know it.
+0:53:21 So basically, anytime you have errors, we're getting these errors originally, Bolt was confident in building some kind of error handling UI and UX, meaning Bolt just knew, at some point we're gonna have issues.
+0:53:40 Let's go ahead and make this little box. Let's make it red. Let's put the text in here and it just refresh.
+0:53:47 So I'm going to get a check, check, new error. Let's make it read. Let's give this feedback to the user.
+0:53:53 Let's make this an element in our app. Well, it's actually able to do that and detect that because we're actually getting real errors from the Internet.
+0:54:06 Okay, real errors coming through here. And the app is able to read these errors and bolt for saw that one of these errors was gonna be something like this.
+0:54:18 Okay, don't have to know about that. You'll see how to troubleshoot, handle errors, what the AI can do on its own.
+0:54:27 But knowing how to come into the DevTools, again, I'll just close this out, can right-click anywhere, click inspect, and we come straight into the console.
+0:54:37 This will show everything that's running, anything that's loading. There's a ton of stuff in here. here. So I'm going to clear this out.
+0:54:46 I'll record something again so we can refresh this. I cleared it out with this button right here. Check, check. Let's get this error.
+0:54:56 Okay. And boom, we got four errors happening right here. So I can copy these errors. I'll just right click somewhere on one of these errors and say copy console.
+0:55:07 Okay. It's the manual way of troubleshooting. This is the way you're going to have to do it because VS Code and Cloud doesn't have access to the internet, and it doesn't have access to that current session, and it can't actually see those errors.
+0:55:23 Side note, you can connect it to the internet and let it see those errors, do an advanced testing and do an advanced setups.
+0:55:31 You can just let it run and find those errors on its own, but we're doing the manual process so you can see it.
+0:55:36 All right, so let's check in our four chats here. The first one came back, we said bug, two related issues, error handler, no token, failure pattern, cool.
+0:55:54 What you need to do is verify in the console. So I'm already taking a step ahead. It's telling me open dev tools, check the console, and do what we just did, copy those errors and paste them in here.
+0:56:04 here. So I'll do that in a second. We're multitasking. And so I'm checking three different things here. We got this error.
+0:56:15 We got the error popping up in here. We got the error popping up in here. So I'm checking this one.
+0:56:24 I'll just say I'll paste that entire console. And I'll just say getting these errors when clicking the record button and then clicking stop.
+0:56:33 up. I'm not sure how to follow it. Can you trace the error and solve this issue? Something like that. Send that one off.
+0:56:45 All right. Let's head back to our first chat. Again, this is advanced multi-tasking. You don't have to do four tabs open, but this is just how my brain works best multi-tasking.
+0:56:56 So what Claude told us to do, here's everything we checked. Well, actually, you need to go into the dev tools, check the console, and and give me those errors.
+0:57:03 All right, let's do that. Here, let's refresh this. So I'll clear it out. I'll refresh the page. We'll get those errors, copy the console, pop back into cloud, paste those errors and it has the context, but I'll just say, here is the console.
+0:57:29 It's coming to the next chat. this one's still cooking. It's coming to the next chat. This one is the one that altered the logo gradient.
+0:57:40 Okay, we're cooking. Let's go check the logo gradient. I didn't even notice. Yeah, that's a big difference. Changed it more yellow from the orange color to the pink color.
+0:57:48 Now it's a more yellow color. I definitely don't like that. So I'll have to get more specific on my next iteration with the logo.
+0:57:56 But I mean, that's that's the power, right. You can have so many windows open as much as your brain can handle multitasking and just do work across the board, which is why this is so fun iterating.
+0:58:08 All right, let's see our next window here. I'll close this one down so we can clean up some mess here.
+0:58:14 This is the recorder error. Let's go ahead. Yes, we'll come back into this one and cool console. Console confirms it exactly.
+0:58:25 Could not find the public task. Go to SuperBase dashboard. So here's the fix right here. This is a manual process.
+0:58:33 Getting back into SuperBase, fixing this stuff up. That's just something I'll have to do next time, right? Trouble shooting and actually be hardening the system, verifying everything that is phase three, fixing the bugs, right?
+0:58:53 But that's it. That's how we troubleshoot, coming into the console, you know, basically just waiting till Claude finds something and then doing what it tells you to do, even if that is coming into the console.
+0:59:05 Again, console. I'll just right click somewhere on the browser. This is true for any window. I'll just come into chat GPT.
+0:59:14 I can right click in here or maybe not in chat GPT because it's its own thing. I'll come into maybe Notion.
+0:59:26 Notion, click inspect. And here we have the DevTools for any website, right? It's just an internet thing, a browser thing.
+0:59:36 So right click, inspect, jumps straight into the console and now we can see any errors or warnings we can copy and paste into the agent.
+0:59:49 Cool, I get so pumped up this stuff, you know, once you get to the level where it becomes creative and not analytical or not task oriented, it feels like painting, it feels like making music.
+1:00:03 I can just move so fast and then create stuff on the screen that has immediate feedback and immediately works and you know as my whatever's in my head coming out and essentially making me money which is great so it becomes very artistic but that's I'm a creative person so that's So that's me, right?
+1:00:25 I'll open it up to questions. There's a ton of info. As always, watch back the videos. See what's going on or office hours or specific details.
+1:00:40 But if anyone has anything, we can talk about it. Welcome. Cool, yeah, essentially with this app, so what we've done, it's been four total hours, four total hours on this app, right?
+1:01:06 Built it in Bolt, did the first pass, the second pass last week with the UI, UX, and now the, or a couple of weeks ago, you get the idea, I think it's been four total hours on this app.
+1:01:20 So overall, not a lot of time, you know, in this in this four hours, I'll say five hours we can clean up the errors Being that it's a small app I'd say maybe More than an hour to to clean everything up honestly, you know troubleshooting This is the real meat of it getting through this stuff making things
+1:01:42 actually work But hitting this phase of Optimization performance improvements optimization This is a whole subject, this is a whole topic, this is a whole thing, there's techniques, there's methods, you know, optimization, making things run faster, making things run smoother, make loading times faster
+1:02:05 , smoother. If there's long loading times, something can be tuned up and made faster, right, optimize. So that's a, that's a big thing.
+1:02:20 I heard somebody's mic come on. I don't know if someone's trying to talk or not. Kristen says yesterday, how did the update and end-to-end affect your automations?
+1:02:36 I had a couple issues. That's just because, you know, I do so many things and I wait too long and I update here and I don't update here and I update over here sometimes my whole systems are quite messy just because I'm presenting so many different stages of so many different buildouts to so many different
+1:02:57 people. I just forget and I can't keep track of things. So yeah, I mean, the only reason it was kind of a hassles because I just didn't keep things up to date normally.
+1:03:08 It didn't keep up with things, but it wasn't that bad. It went pretty automatically. I just had to click into everything, open it up, and it automatically sort of just updated.
+1:03:19 So not so bad. I was dreading it, but it was totally fine. I just had waited too long, and my automations were working, and I didn't want to mess with them, but it's fine.
+1:03:31 Cool, guys. Well, I'll wait a couple more seconds. If there's any questions on Construction phase today getting things set up working and going for it Otherwise Call it early again Awesome awesome Well you guys enjoy the rest of your week have an excellent weekend I'll look forward to next week See you
+1:04:01 guys later

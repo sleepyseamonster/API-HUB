@@ -1,0 +1,462 @@
+﻿0:00:06 Cool, we got the crew again and looks like, uh, Tony, Tony's a new name I see in here. Wait, just told me, uh, we got you in here, Tony.
+0:00:16 So welcome in. So, Tony, there he is, how's it going? Good to see you, brother. Good to see you. How's it How's it going?
+0:00:24 Cool. So, we are doing it week two, AI automation. So, congrats, everybody, again, I'm just so pleased with everyone's input and attendance and joining these calls just means a lot to me to see everyone willing to learn this stuff and taking the time to invest in yourself.
+0:00:44 So, welcome. week two AI automation. This is download week for those of you that were in the call last night.
+0:00:51 This is download week, info dump week. We're going to be absorbing a ton of information, but I love to give you too much information, love to give you too much information early on, because then you have the what's what.
+0:01:10 Okay, if you start to go out and experiment with different things. It definitely promotes a little bit of shiny objects syndrome and that's the number one killer of all of this stuff is just picking up too many tools going down rabbit holes where you get stuck especially in vibe coding especially in 
+0:01:27 automation. We go into these infinite loop cycles trying to build things using LLM to help us build things and if you're not doing things correctly in this automation stuff you're going to hit those roadblocks and get frustrated very easily.
+0:01:42 So I like giving you too much, just so you can get a full strategic overview of what we're going to be doing.
+0:01:49 Even if you're overwhelmed and say, wow, this is a mess, I want to show that mess to you because it's very easy to navigate it once we have all the information.
+0:01:58 So that being said, let's jump straight into NADN. And Tony, we're using NADN. You probably got to load down a little bit.
+0:02:06 We're using NADN in this course. That doesn't mean you have to use NADN. we're using NADN because this is the best teaching tool to learn no code automation and automation logic and flow overall.
+0:02:21 I'll share my screen up here. I was just thinking about this today. I can actually teach vibe coding methods using NADN as a visual.
+0:02:33 It's just so easy to see things going into place. So, even if you jump to another automation tool, we're going to get into the AI of AI automation very quickly.
+0:02:45 So, you're going to be able to use AI tools that build automations for you, that build workflows for you, and it end does this, and I'll be showing you some of that stuff in the coming weeks.
+0:02:57 But, and it end, despite whatever tool you're using, it's still an incredible teaching tool, even if you never build automations inside of it, you're going to learn everything very clearly.
+0:03:08 So I'm going to leave it at that and we'll dive into the download here. So let's see. I opened up.
+0:03:17 We have our demo class. This is what we were working on last week, just kind of putting stuff together. And this is is one of the reasons NADN is so great is because this is a creative space.
+0:03:32 You can just make a mess in this space and still run working automations. You could have working automations doing their thing off to the side while you're prototyping and building new implementations.
+0:03:44 And so hands down, that's what makes NADN immediately a more useful automation tool. It's a creative space, it's a builders tool.
+0:03:54 And we can see everything very clearly laid out, I'll organize, move stuff around and invent in this space. All right, so this is simply what we're working on last time, really basic nodes.
+0:04:06 What we're gonna dive into today is kind of the interface a little bit. Not too much, there's not a lot going on here.
+0:04:12 It's pretty self-explanatory. You have your navigation stuff over here for your profile and your account and all that stuff. So we don't need to spend a lot of time on the, on the interface, but over here this plus button is going to open up all of the possible nodes we can add in.
+0:04:37 And NIDAN just does an amazing job at adding, you know, organizing all of the nodes in a very step-by-step flow, right?
+0:04:47 So we already have some trigger nodes in here. We talked about trigger nodes. We can add another trigger node. This is actually the first option, if you don't have any trigger notes, the first option is to add a trigger, so it's very logical on how Aniden organizes this stuff.
+0:05:03 We're going to skip AI, and we're going to go down to the very next option. Just as soon as you open this up, very next option, this is the tool selection.
+0:05:12 So when we talk about tools, we're talking about apps. Okay, there's ClickUp. We got air table in here. We're going to be talking about air table a lot.
+0:05:21 So you can browse this list, And you don't have to search through everything. You can actually type in here and find whatever tools you want.
+0:05:28 But this tools list, most likely for whatever native tools you're using inside of your business, most likely there is at this point a built-in, here's high level, a built-in tool inside of N&N, right?
+0:05:49 And at end is doing a great job and all these companies are doing a great job is just making this stuff so easy Very quickly.
+0:05:58 So there's notion you get the idea So that takes care of that list this third list in our drop down here data transformation This is some of the stuff we're going to be talking about Okay, some of this stuff for one of these things we already know right here Oh my arrow right here edit fields node Okay
+0:06:20 , and it feels note that's your go-to note we're going to be using this one a lot in probably a several times in every automation you build.
+0:06:27 I'm going to back out of this and we're going to talk about the flow. So I'll come back into data transformation, the flow nodes.
+0:06:34 This is way overlooked as the bread and butter of automation. This is why we automate is because we can create decisions, you know, decision rounds, sorting rounds.
+0:06:47 we can use logic, just like encoding, we can use logic to run down different implementations, different automations, different workflows, different actions.
+0:07:00 And if you can set up your logic to work for you, you can turn on your automation and let this thing make very critical business decisions.
+0:07:12 Just as a quick example, right? Let's say you get some new leads into your CRM, As soon as they land into your CRM, you want to start processing those leads in a specific way.
+0:07:22 Right off the bat, we can say, all right, warm leads, go north, cold leads, go south. That's a decision we have to make and we have to start sorting that stuff.
+0:07:33 And we can do it very, very quickly. And so the bread and butter here, being these nodes that can start sorting and moving down different routes, it's the whole thing.
+0:07:44 the whole, it's the whole reason why we automate is because we can automatically do this stuff. So we're going to talk about the logic nodes.
+0:07:51 Now a lot of this stuff, you know, some of these things I've never even used. And that's normal. Everything in here has a specific use case, but in my business, I haven't used every single tool in here.
+0:08:05 It's just not necessary. It's kind of like, you know, those extra buttons on the calculator that I've never touched. All I know is divide, multiply, plus, minus, equals.
+0:08:14 There's a bunch of other buttons on that character that I've never even touched, right? So same thing in any event.
+0:08:19 There's no need to learn all of this stuff. You're gonna learn exactly what you need for your business. And ultimately, I'm gonna teach you every single note that you need.
+0:08:30 Then you're gonna have to decide, all right, well, we also need this email or tool. And you'll go find that and plug that in, right?
+0:08:37 I can't teach you that if I don't know you need that in your business, but most of these nodes, we're going to use over and over and over again and you do not need to know every single node.
+0:08:49 That's just silly, honestly. So core nodes, I'm getting into this option here because core nodes, this is kind of confusing point I'm making here is just stay out of the core stuff.
+0:09:04 We can find the specific nodes that we need from the core like HTTP or webhooks or execute sub-workflow just by typing in here.
+0:09:12 This is going to kind of confuse you. So if you're browsing in it and just playing around with stuff, we're going to go into data transformation, we're going to go into flow.
+0:09:21 Human in the loop stuff comes later. Okay, this is what we're focusing on today. So So data transformation, we have a couple cross contaminated ideas here.
+0:09:36 So filter, this is data transformation and in the flow folder here, we also have filter if and switch.
+0:09:49 We'll get to that in a second. But we also have this filter in the flow section here. So, some of these nodes are actually in multiple sections.
+0:09:56 It's just again, and it is really great at organizing everything and making things stand out for you as a learning tool.
+0:10:05 All right. You get the idea of browsing this, taking a look at things. Let's focus on these three logic nodes specifically because logic is the whole point of automation doing things in a workflow automatically.
+0:10:21 We've got to have some flow nodes. I'm going to pull out the three main logic nodes And we'll take a look at them Again, I could do this with all these hot keys and stuff, but it's very simple to just find this stuff and you know kind of point and click So I'm showing you a point and click Great, so 
+0:10:47 Logic logic and flow So, okay, when we are doing any kind of processing, say sorting leads, we need to decide is this warm, is this cold, or have we contacted them yet, or no, has they responded?
+0:11:05 Yes or no? Like all of these things, they have to go down these specific routes. All right. And I'll show you, I'll show you exactly what I mean with some examples.
+0:11:13 But showing you these nodes right now, just getting to know these three nodes, these are going to be the ones you want to focus on over anything else.
+0:11:23 I'm showing you this now and it is more complex, understanding logic and understanding how a complex automation flows like we haven't even started automating, we're learning all these decision trees and these decision making things.
+0:11:36 These three right now in the beginning are going to save you so much time. I've seen people trying to do these complex things and they have no idea that very basic logic nodes exist.
+0:11:49 So what is logic? If you've ever touched coding at all, even if you haven't touched coding, it's very simple to think about.
+0:11:57 But if you've touched any coding at all, these logic nodes are simple if statements, okay? If blank then blank. If something happens, then do something else.
+0:12:10 If the lead is warm, then pass it down this route. Or if the person has come into my CRM, then send them a welcome email, right?
+0:12:24 If and then, if something happens, do something else. That's it. OK, all the complexity of anything you want to do in automation is if statements.
+0:12:36 if this, then do that. That's it. And when we're looking at these three logic nodes, these are basic. This one itself is an if node, right?
+0:12:47 That's it. True or false? Is something true? If something is true, we go this way. If something is false, we go this way.
+0:12:58 Okay. It's very simple. It points it out for you. These other two aren't very self-explanatory, but they are actually if statements okay the filter let's crack it open take a look we have two values and a let's call it a condition here so we can say let's say one is equal to one I'm just typing this 
+0:13:28 in here, is 1 equal to 1, I'll execute this node, and you can see one item kept. So yes, in fact, 1 is equal to 1.
+0:13:44 Looking at it this way, looking at the flow of this actual node, it gets confusing. So just like we talked about last week, if you can think about this in plain language, read it in understandable language, is 1 equal to 1, read it like that.
+0:13:57 I could say anything here. I could say is irk equal to Kirk. Okay, is Kirk equal to Kirk? Well, yes it is.
+0:14:09 I'll execute this node and we see we have one item kept. So we'll talk about what that means, kept or discarded.
+0:14:15 Let me put something else in here. Is Kirk equal to Wade? Is Kirk equal to Wade? Watch what happens when I run this no it is not so we get one item discarded okay very simple this isn't if statement so let's go into the if node where we can actually visualize the visualize this a lot easier it's going
+0:14:40 to say true or false in here it's a little confusing though it is a very basic if statement when we break it down conceptually if node same thing I'm in the actual if node and it looks exactly the same.
+0:14:57 So value one is Kirk equal to Kirk is Kirk equal to Kirk. Let's execute this. True. Yes, it is. Kirk is equal to Kirk.
+0:15:10 And so if I back out of this note, now we can see this notice turned green. It has run. It's successfully executed and we've got the true branch continuing on.
+0:15:19 I don't know if you guys can see this. I'll zoom in a little bit more. we've got one item coming down the true branch.
+0:15:26 Yes, Kirk is equal to Kirk. Come in here, say is Kirk equal to Wade? No, that is false. Kirk does not equal Wade.
+0:15:37 That is false. And so we have this executing and passing down the false chain. Now these are simple examples. And when we start learning data types, don't worry about this yet, you know, information download, don't worry about this yet, but when we start learning data types, we can do complex, we'll 
+0:15:57 just call these conditions. So we can add in numbers. Let's do a number here. So I'll add the operation is equal to, a number is equal to, and now we can compare numbers.
+0:16:20 This will make a lot more sense than using words, but if you understand the words, you'll understand the numbers. Is one equal to one?
+0:16:29 Let's run this. Yes it is true. We're getting operation to come down the true branch. You guys get the idea here.
+0:16:37 So we can compare very complex things. Basically, we have our CRM running into this node, and that information each lead is tagged with a little blurb that says warm or cold okay we're thinking hypothetically here and I'll show you some concrete examples to hone this in right now it's just trying to 
+0:16:58 absorb this this is info dump we're gonna get through the logic nodes and then we'll put it into practice so you can actually see what all this weird math stuff is great so let's say we have a comparator here I'm not gonna I'm gonna butcher all these terms like I said all these terms keep changing, trying
+0:17:18 to drop parallels from coding in the automation world and automation terms in the coding world just to make teaching this stuff easier, but then two weeks goes by and all the AI-verbaged changes anyway, so it makes it hard to teach terms and stuff like that.
+0:17:38 All right, so we can just say we have this hard-coded value in here. and my keyboard is stuck moment.
+0:18:09 Right, let me get my other keyboard. Nope. Maybe whisper flow will help me here. Warm. No, something stuck. Let me refresh my screen share and see if that helps.
+0:18:50 All right. Right. So while I'm reloading this, does anybody have any quick questions? I know it's, if you've never done any kind of logic, this is just too much, too much information all at once.
+0:19:06 Does anyone have any quick bring ups? Right? Falling along. By the way, if you don't have a micro camera or anything that's fine, you can always type in the chat.
+0:19:38 You can and send me a message or you can post up for everyone. All right, let's try this again. I know my keyboard is dead.
+0:20:20 We're, let me troubleshoot while I talk. So if you guys have fallen along, okay, then we don't have to harbor on this too much.
+0:20:28 You guys get the idea here. We can compare things, we can compare strings. We'll get into data types. By the way, can anyone still hear me okay?
+0:20:36 I just wanna make sure I'm not having a total technical failure. You guys can hear me? Yeah, cool. Great. So yeah, we don't have to spend too much time on this if you guys are picking up.
+0:20:57 We'll get into data types, strings, numbers, boolines, arrays, objects, these are all things you're going to have to know, So just like learning JSON, it's just another thing we're going to have to pick up on an understand.
+0:21:09 But luckily in Niden, if you don't know anything about the differences between string numbers, arrays, objects, all you really need to understand and start learning are these little symbols.
+0:21:20 If you can match these little symbols in Niden, you're probably doing it right. Okay, it makes it's Niden makes this stuff so easy.
+0:21:28 So, the filter node is a single if statement, and we can compare stuff like that. The if node is a single if statement, but we're already starting to branch things off.
+0:21:43 This is essentially binary branching. We can say yes or no, true or false. This is a Boolean, true or false, okay.
+0:21:52 Okay, what the switch node then does is this is similar to coding. If you've done any coding, this is a switch case, right?
+0:22:00 So we can add multiple routes as many routes as we want. But each of these routes, and again, we'll dive into these interfaces and all this stuff.
+0:22:09 Each of these routes is a unique if statement. So let's see if I got my keyboard. There we go. So, in this first if statement, we'll compare number and we'll just say is 1 equal to 1.
+0:22:27 Run this. Yes, it is. And so we've got three routes. Again, we'll go into this node in too much detail.
+0:22:36 You're going to hate the switch node. Don't worry about it. This is information download week. I'm going to be presenting all of this stuff.
+0:22:43 So what I did was added three routes inside of the switch node. And now we have three routes coming out of the switch node.
+0:22:51 I set the condition that if statement in the very first route is one equal to one. Yes, it is. And so we have that data processing down the first route.
+0:23:02 Okay, this right here, it's technical. If you've never done this stuff early on, it's very technical to be throwing this at you right now.
+0:23:10 but this right here is all you need for automation. If you can figure out these three nodes, you're going to be building things right away, especially adding the AI element into it.
+0:23:21 You just send things off to an AI, the AI classifies it, and then sends it down the switch node to be processed.
+0:23:28 It's amazing. So learning this stuff first before AI, this is it, right? If you can learn this logic stuff, you can do very complex things.
+0:23:37 Again, I showed off some of my automations. so I'll just bring this one up to show you what you can do very, very quickly.
+0:23:50 Okay, lots of branching going on here, different routes, different processes coming through into these automation chains. Okay, we don't have to dive into this, but multiple routes coming out, multiple things happening, multiple ways of processing information, the branching and routing and logic is all
+0:24:13 you need to do complex stuff, these three nodes. Okay, information download. Cool, so what we're going to do is build an AI chatbot right now.
+0:24:28 It is far easier than you think, especially if you already know what chat GPT is, and you're using LLMs. So, right away, let's build something.
+0:24:40 We talked about the first two basic triggers. These are the ones you're going to use all the time, schedule trigger.
+0:24:47 If you want anything to run on a schedule, you know, every day, send this out, qualify my leads, whatever. you're going to run the schedule trigger for automatic workflows, right?
+0:25:00 Well, we have a huge list of triggers. Again, navigating this. You can always find whatever nodes you're looking for, just by typing in here.
+0:25:10 You can just type something, type in some tool that you're using, and it's probably going to be somewhere in the navigation here.
+0:25:17 So I'm going to click add another trigger, and we have the trigger list popping back up. I'm going to add an on-chat message trigger.
+0:25:29 I'll click out of this just so you can see it. We have our new trigger node. Now let's zoom in so we can see what this one does.
+0:25:38 When a chat message is received, this will trigger. When this node is in the workspace inside of the canvas space, we're going to have a new execution button down here, okay, this button just says start the workflow, right, that button will also pop up next to a trigger node, if it's not the trigger 
+0:26:01 node, we'll see execute workflow. Same thing over here, open chat, that is our execution button, so it appears down here.
+0:26:10 If I open up the chat, we now have a little chat interface inside of n and in. And so I can type something in here.
+0:26:20 Let's just say, hey, there it is. There's my message. And now this node triggers when chat message received and it received a message.
+0:26:31 So it's firing off. We talked about our JSON schema. Let's go into the next node here. And I'll add an edit fields node.
+0:26:45 I'll back out so you can see it. Okay, edit fields node, just like we did with our very basic example.
+0:26:55 I have the trigger, edit fields node, trigger, edit fields node. Edit fields node is the easiest node because it's blank.
+0:27:05 We can add in whatever we want here. So let's look at the input coming from our trigger is this information right here and there is my actual chat input.
+0:27:16 I can drag this schema into the edit fields node and map in that data. Again, information download today. Follow along.
+0:27:26 We'll do some easy stuff in the next in the next few minutes. So now my chat input is mapped into this edit fields node.
+0:27:35 There it is. And if I execute this step, it's going to pass into the output, hey, great. So now we have my input coming in and passing through this edit fields node is not really doing anything.
+0:27:50 It's just passing that information along in a dynamic variable. This is what we talked about last time. Dynamic variable. It's mapped in here.
+0:28:00 I could hard code a variable in here. this is a hard-coded message. This is no longer dynamic. It's not linked up in that expression.
+0:28:15 If I execute the step, the chat input is going to come through as my hard-coded message. This is why we use dynamic variables, okay?
+0:28:27 If I trigger the chat node again. I'll come down into the chat. I'll say, hey, this is a new chat.
+0:28:41 Send that off. The chat node is going to trigger and it's going to pass that message along. The edit fields node is going to trigger and pass along its information.
+0:28:51 Let's go see what's happening inside the Edit Fields node. Well, the new chat input came in here, but we're not mapping that data dynamically.
+0:29:02 The only thing that could ever pass through the Edit Fields node is what we've hard coded in here. Nothing is passing through.
+0:29:10 This is a pitfall for a lot of beginner automators. You're accidentally putting exactly what you want in here instead of letting the data flow through the chain.
+0:29:21 That's why we use dynamic variables. Okay, we'll talk about that. So this is the whole, this is the whole thing right here, you know, using logic and understanding dynamic flow.
+0:29:33 That's it. That's the whole automation game. So if it feels confusing, that's okay. We're going to pick this stuff up as we go.
+0:29:40 This is the whole thing like week two. We're done. and you've mastered automation if you can figure this out. So, I relinked the dynamic variable, it's turn green.
+0:29:52 And it makes it very easy, it's turn green, it's linked up, it's ready to go, so now I can execute this step and we have the dynamic chat input passing through the edit fields node once again.
+0:30:03 So, once again, the edit fields node, it's not really doing anything, it's just passing the data along in this case.
+0:30:12 Great. Let's add a new node. We're going to add our AI. Okay. Let's talk about AI in automation. If you've learned anything about AI automation or using agents, agents is the hotness.
+0:30:26 AI agents is the whole thing and people are doing it wrong. Hands down. So I'm going to add in And four agents, just so we can take a basic overview or a full overview of this and talk about what these agents actually are.
+0:30:45 So that right away, week two, you have an understanding and we can build upon that, let's see. Now, one more, of course, my favorite here, OpenAI, just because we can do so many back-end things with OpenAI, it is my favorite.
+0:31:23 Okay, so we have the NADN agent. we have the OpenAI agent, Google agent, and Anthropic agent.
+0:31:37 Okay. And 8N agent. Obviously, these have their logos on it. We can tell which is which, but these are all effectively the exact same tool with a few distinct changes.
+0:31:52 And those changes are simply the the particular company building these built in nodes automatically hook up their LLM to the agent we can see that this is open AI agent chat GPT right this is the Gemini agent and this is the cloud agent.
+0:32:18 It's already hooked up. That's the only difference with these agents. The LLM is installed so to speak. With the N8N agent, we have to install, quote unquote, install that chat model.
+0:32:34 So we have to actually plug it in. You can see these agents don't have a little chat model handle here.
+0:32:40 Let me zoom in so you can see it. Chat model. We've got to actually add the model to the N8N agent.
+0:32:47 It's a blank slate. Okay, I can come in here. I can choose my model. Let's just say OpenAI model. I'll back out so we can see what's going on.
+0:33:00 Okay, so now effectively what I've done here is I've turned the N8N agent into the OpenAI agent. there's now no difference between this agent and this agent.
+0:33:12 Same thing. I can swap out the chat model. You guys get the idea here. I can add in Gemini. Plug in Gemini and now the N8N agent is no different than the Gemini agent.
+0:33:30 Okay so why would we need to use these specific agents when the N8N agent can kind of do everything. Well, there's a couple of reasons.
+0:33:40 A couple of reasons we actually won't get into today, because that's a huge topic. But knowing what agents in NADN actually are, these little squares, what are they?
+0:33:52 Here's the NADN agent and the other three big three, the big three LLM agents. So let's now we know that.
+0:33:59 Let's just get rid of these. And we'll focus on Open AI, so we can understand these concepts. That's agents in a nutshell, that's it.
+0:34:08 So how do we set them up? Let's use OpenAI to demonstrate that. Cool, so this agent is no different. When we break it down, I'll show it to you on the inside.
+0:34:21 When we break it down, this is gonna be no different than using chatGPT. Show you what I mean. Come into chatGPT.
+0:34:31 I have the user input box so I can provide a user input. I'll just say, hey, that's my user input.
+0:34:44 Now, chat GPT has instructions. It has a backend prompt to give it its brain power to provide me a response.
+0:34:53 And so, on the backend, those are called system instructions. We talked about system instructions building custom GPTs last night. Chat GPT has its back end system instructions.
+0:35:06 It's big brain so that it can respond to me. No different than if we are using the open AI agent.
+0:35:18 Okay, let's skip all of this stuff right here and come straight down to the messages. this is the key thing.
+0:35:25 So what we're sending is let's just leave it at text and skip the type. We're going to focus on these two boxes right here.
+0:35:34 Okay, the role. User role, we have the system role and we have the assistant role. Let's get rid of the assistant.
+0:35:42 Don't need to worry about that at all. It is in fact becoming obsolete. Little backstory is that before agents, Everything was considered an assistant, and so you needed special system prompts, top level instructions for your interfaces or for your systems, and you needed specific assistant instructions
+0:36:05 , top level and specific instructions. System assistant and then your user instructions. Well, now the system instructions kind of take care of everything, because everything is now an agent.
+0:36:19 And so the agent follows system instructions, we can get rid of a system. All right, information download, you guys keeping up great.
+0:36:30 So making this as simple as possible, don't worry about using any of those other agents, any of these other tools.
+0:36:39 We'll get into them. Okay, I'm just going to double check here and show you here. There's a ton of AI agents in here.
+0:36:44 These are all AI agents or some of the old AI assistants. There's a lot in here. Don't worry about any of them, especially if you want to build with open AI and build agents and systems and all this stuff.
+0:37:01 You only need to use this one for everything or Gemini Reclod, the big three. You only need to use this agent, or the Gemini agent, or the Cloud agent.
+0:37:12 You only need to use this one, and it will replace all of these other column basic ones. We'll touch on them so you understand the difference and when and why you will use these in a complex automation.
+0:37:28 You don't need massive brain power all the time. If you're just doing sentiment analysis, summarization, classifying text, right? These are very basic, and if that's all you're doing in your automation, we can use basic brain power and not rack up your credit charges.
+0:37:49 So open AI agent is no different than talking to chat GPT. Well, how do we talk to chat GPT? We need a user input and we get a response.
+0:38:00 on the backend there is a system prompt. So here's my user prompt, I'll say, hey, and I need a system prompt to tell the agent what to do.
+0:38:14 So I'm going to add a message, the type is text, we can ignore that for now, you can do more complex things, images and files, but we'll say text.
+0:38:22 Well, add a system prompt. So this is what my agent will do. This is why agents are so powerful is because it's not locked in.
+0:38:30 We can make this agent into anything and do anything that we want and process information however we want, which we cannot do in chat GPT.
+0:38:40 We can tailor chat, we can, you know, fine tune chat GPT's behavior, but we can't change what chat GPT actually does.
+0:38:47 That's what we can do inside of these agents, and that's why they're so powerful. So the agent prompt, I'll say something simple, I'll say, you are a friendly assistant.
+0:39:02 You're going to respond in the most friendlyest, bubbliest, happiest voice anyone could ever imagine. And that's it. Okay, there's my prompt.
+0:39:13 That's my system instructions. You're the happiest, bubbliest agent, and that's how you're going to respond. Great. So when I execute this node, we'll get a response.
+0:39:27 But now we have to look at the more complex stuff. So Omar, we talked about making connections, connecting tools. It's not hard.
+0:39:37 It's just every tool is different. So, let's jump back into the edit fields nodes. We can get a handle on how to read nodes one more time.
+0:39:49 We talked about this last time. We have an input section. We have a processing section, and we have an output section, input processing output in every single node.
+0:40:03 That's how it goes, and in every single workflow, in every single automation, that's how it goes. we have an input, the processing could be really long, lots of steps, and then an output, very simple.
+0:40:17 So anytime you're looking at a new node, plug in something in, there's top down, left to right, understanding, basically. So at the very top, left-hand side, this is the name of the node.
+0:40:29 I can name this node appear. Here, call this pass-through, that's what this one is doing, information pass-through. Okay, then in the processing section, we can go, excuse me, top down.
+0:40:46 So step number one, we have to choose the mode. I've been skipping over that and just typing stuff in here.
+0:40:52 But step one, choose the mode, well, manual mode, great. right, then I can manually drag and drop and type stuff in here.
+0:41:02 Step number two, put stuff in here, right? Step number three, if I want to check this, I can. You get the idea.
+0:41:09 Top to bottom is how we're going to configure every single node. So when you have a more complex node, let's start from the beginning.
+0:41:17 Come up here. We'll name this friendliest agent ever. name of my node. Great, let's come into the processing section and start at the top.
+0:41:31 I need to set up a new credential. It's what we talked about last time. It's not hard, but every two, Let's set it up.
+0:41:41 I'm going to click here. I'm going to create new credential. Every single tool has a process to set up, and every single tool has amazing NADN documentation.
+0:41:55 NADN does an incredible job at documenting everything, how to set things up. So what I do every time I plug in a new tool that I have no idea what's going on, I open up the docs.
+0:42:09 I kind of give it a once over, like what do I need here? all right, what am I doing? I'm trying to do not embeddings.
+0:42:16 Let's just do chat open AI and that sounds good. You know, I'll just kind of guess. This is my professional workflow, right?
+0:42:25 I just kind of guess. And then I copy everything. Select all copy everything, copy it, come into chat, GPT. I say walk me through setting up a node in an end step by step, But talk to me like I'm five years old, go one step at a time.
+0:42:43 Don't move on to the next step until I'm ready. There it is. Walk me through this. Talk to me like I'm five.
+0:42:53 That's how I set up new tools, all right. It's very easy. Once you get the hang of it, every tool is going to have a very easy setup until we get into doing Google stuff, Google and meta.
+0:43:04 just stay away from there impossible. So hard. So hard to do Google and Meta stuff. That's intentional. All right. So we can skip through the docs.
+0:43:16 That's how I do it. I asked chat GPT. All right, step one. Click Create Workflow. Open in and in and start.
+0:43:24 Great. You guys get the idea on how I do that. So let's do Open AI. I'll show you right now.
+0:43:29 I'm going to create a new credential. I'll just back out so we can start over. Okay, step one, create new credential.
+0:43:37 Drop this down, click on create new credential. We're going to need an API key and we're going to need, That's it.
+0:43:44 It's optional. Everything else is optional. We're going to need an API key. So I'm going to come into open AI platform.
+0:43:53 All right, so let me come over here. Open AI platform is different than chat GPT. OpenAI Platform is a playground for using their models, building agents, and experimenting with things.
+0:44:08 It's a playground for all of that stuff. That's where you're going to find your API keys. Using OpenAI chat models on your own systems costs a number of credits, but we'll talk about credit usage, all that stuff when we're trying to deal with expenses and building stuff.
+0:44:29 and I got Rex and Maria. Maria, you can hear? Okay. Yeah. That was a while ago. I'm not seeing your chats in time.
+0:44:38 Talking quick and getting excited here. It's like I'm here. Yeah, great. All right. So open AI, open AI platform. I'm going to jump into the BuilderHub, I keep calling it BuilderHub.
+0:45:00 This is the Builders Circle Tool Hub, Clarity AI Tool Hub that I've vibed coded for you guys. And I have the very first one as open AI platform.
+0:45:11 That's different than ChatGPT. So we can open this up, a login to open AI platform. This is how we do all of the backend implementation.
+0:45:34 If you're vibed coding, you're building apps, you're building internal software, you're going to be utilizing open AI's chat models. This is how you're doing it.
+0:45:45 We're doing it in the back end of things. We're not actually using chat GPT. We're using open AI models. All right.
+0:45:54 So all of this, this is a whole new thing to learn. Don't worry about any of it. We don't need to know any of this at all.
+0:46:00 You're going to come up to settings. This is where you're going to live in open AI. API keys, billing, and usage.
+0:46:10 I don't even know what any of this other stuff is. That's not true, but basically you only need API keys, billing, and usage.
+0:46:18 And so coming into billing, you throw a couple credits in here. I think I put in, you know, $10 every two months.
+0:46:27 And I use OpenAI in my systems all day every day. It is incredibly cheap to run OpenAI models. Again, if we're trying to build anything, this is why I use OpenAI overclod over all of these models.
+0:46:41 We can do amazing LLM things for very, very cheap using open AI models. Just for reference, the open AI 4.1 nano is the cheapest model that exists and it is one of the most powerful for anything you can do that's not coding.
+0:47:05 We'll get into all that stuff, right? You can tune your usage if you're building actual systems for your business and you know you're calculating costs and billing this is when the model fine tuning meaning using specific models for specific use cases gets important but until that point open AI is the
+0:47:22 cheapest that's good enough we'll start with our so $10 every two months you know $5 a month to run all of my automations all day every day is not bad.
+0:47:34 So you got to throw some credits in there and then we can create an API key these are all my API BI keys, you can set up very project specific or tool specific or department specific.
+0:47:49 If you have multiple people needing to use a specific tool, you can give those people an API key is however you want to distribute your keys to your employees or whatever you want, right?
+0:48:03 We can distribute keys however you're we're going to learn API keys. Every single tool has an API key if we're using an external tool and calling to it, we have to set up an API key.
+0:48:14 You're going to learn this stuff again. This week, information download week, I'm shoving everything in your face so that next week we can just start picking and pulling from this array of information.
+0:48:26 You don't have to absorb all of this today at all, okay? We'll go through everything very slowly. So information download, of course, you will have the recordings drop on Friday, and if you need any clarification, you can always shoot me a message in the community, bring up questions on the community
+0:48:45 feed, whatever you want to interact, and of course office hours for specific help. Create new secret key. Easy as that.
+0:48:56 I'm going to create a new key. We'll just call this testing. I have so many keys that I have to label my demo keys like this testing delete this.
+0:49:09 Set up a project. You can set up obviously different projects if you have different systems or different departments can have their own project.
+0:49:17 We'll understand this much more detail. I'll just choose one of my blank like my default project, so I'll choose this one.
+0:49:26 Create that key. Now here's an important thing. This is my actual key. If you get this key, you are going to have access to my account.
+0:49:37 API keys are the literal keys to your systems. If anyone has your API key, they have usage of your tools.
+0:49:48 They have access to your systems. keep your API keys safe. That is a security issue right away, okay? Keep your API keys safe.
+0:49:59 Now, what happens here in most of these tools is they only show you the API key once. And they're not even showing you the whole thing, right?
+0:50:08 Just looking at the screen you guys aren't going to be able to use this and go start using my systems.
+0:50:13 They don't show you the whole key and they only let you copy it one time. You're going to have to keep it safe and organized on your local machine or in some, you know, file storing System that you have So I'm just going to go ahead and copy this.
+0:50:28 I'm going to delete this key afterwards anyways, so it doesn't matter And we'll jump back into Jump back into workflow.
+0:50:44 I I didn't open a new tab, so let's jump back in. You can see I'm using hotkeys, so I can move very quickly when I'm actually building.
+0:51:15 Whoops, and what I accidentally did was, I didn't open a new window, so I lost what we just built, but no big deal.
+0:51:26 Havons all the time, save your workflows. Do as I say, not as I do. Come up here and save your workflows all the time.
+0:51:39 Great. So we're back to where we were just like that. I'm going to create a new key, a new credential here again.
+0:51:45 So now we're back on the screen. I have my API key. I'm going to paste my API key right there.
+0:51:50 It still doesn't get shown to you. Obviously, if you store that in your own personal file storing systems, you're going to be able to see that entire key and have that key.
+0:51:58 So again, always keep it safe. Nothing else here is required. I'll call this my demo key or something. I forgot what I called it and save it.
+0:52:13 Just like that, this workflow is connected to my open AI account and using this agent is now possible and it will draw credits processing messages.
+0:52:27 is. So we're talking a little bit about models. There are a ton of models. Don't worry about it. These are just the open AI models.
+0:52:38 Okay, if you're trying to LLM hop and use Google, Cloud, Groc, Lama, Mistral, all these other LLMs are going to have a ton of models and you will have to research these if you want to optimize your costs and all of that stuff.
+0:52:56 I don't know what half of these do because I'm only using my specific models for my specific use cases, you don't have to know all of this stuff.
+0:53:06 You'll only have to know which models you need for your specific use cases. I'm going to find the 4.1 Cheap as one 4.1 nano super cheap super powerful and now we're set up this will actually process my responses.
+0:53:30 So I'm going to set up a system message since I lost that accidentally and the prompt is You are the friendliest, bubbliest agent ever respond in the happiest, friendliest voice only.
+0:53:44 Whatever I said last time, it's a very simple, simple system instructions. If you were on the call last night, you saw a very complex system prompt that we built out live.
+0:53:57 Great, so this is a common thing that happens. Now, I'll point this out because you're going to run into this and it's a very simple silly thing that I'm doing here on accident.
+0:54:09 I have not processed any data in this workflow. I'm trying to configure this node right here. Well, let's open it up.
+0:54:22 There's nothing coming in from my other nodes to link up in here. I need to link up a dynamic variable.
+0:54:31 Well, I can't do that because nothing is coming in, why is it? What's going on? Why can't I link anything up?
+0:54:38 Well, we have to, as we're building, consistently process data down the chain, executing each node and moving that testing data or sample data that we can utilize to link up and move on in the build.
+0:54:56 Okay, so I'm going to go ahead and just rerun this to get data moving down. Now, the pro tip here is when you're using things that are going to cost you money, disconnect them first.
+0:55:10 You don't want to be spending money on testing runs if you don't have to. So, I'm going to disconnect this.
+0:55:16 Right here, I can trash this route, disconnect it, or with it still connected, I can turn it off. Right here, I'm going to turn off my open AI node so that it doesn't run and burn my credits on this testing run.
+0:55:33 And I'll go ahead and test again. Chat model, a chat trigger has a new execution mode. Open chat. I'll open it up.
+0:55:43 I'll say, hey, send that off and that will trigger. I'll go ahead and reactivate my open AI node. You can see that it's not green because it wasn't executed, but the data has just simply passed through it, nothing executed, super handy to just deactivate your nodes.
+0:56:06 I'll come back into it and now we can link up the dynamic information coming through. There it is. And we have nothing in the Edit Fields node because I didn't put anything in here.
+0:56:19 I can go ahead and relink that. Now we have that dynamic variable. I'll execute the step. Pass that through. Slide on down to the next connected node.
+0:56:32 It's an easy way of sliding through your workflow without having to click outside and back out and move around. You can slide through your nodes.
+0:56:40 We'll develop the techniques and the hot keys and all that stuff will come naturally. Again, this is just information downloads.
+0:56:50 You have everything you need to start building if you want to. And we can pick and pull from this information in the following weeks.
+0:56:59 Great. So now I do have something in the edit fields note. This input is going to be a list of all of the previous nodes in the flow.
+0:57:08 So if you have a hundred nodes, you're going to have a hundred items in here all containing the data passing through those nodes.
+0:57:16 So it's very handy to see what's moving through in every single node. You can see all of the input. So there's my chat input.
+0:57:24 Hey, it's passing on to the edit fields node. Edit fields node is passing it on to this node. There it is.
+0:57:30 Hey, so I'm just going to grab this schema, drop it down in my user input and dynamically link that user input, meaning no matter what I send off, the agent is going to dynamically receive that input.
+0:57:46 It's not hard coded. Now I can just run this. It's going to process my input. Hey, and it's going to give me a response.
+0:57:57 Great. There's a response. Hi there, smiley face star. How are you today? I'm so excited to chat with you. What's going on?
+0:58:05 Super friendly, super bubbly, just like that. And that's it guys. We just built our first chatbot AI agent live easy, way easier than you may think to do this stuff.
+0:58:20 It's very mystical, it's very magical, but that's it right there. It's just an extrapolation of that process. And if this still feels very, very technical, how do I know what to set up when and where?
+0:58:34 That's what we're going to learn in the following weeks, but you actually now, okay, zoom out. You have the logic.
+0:58:44 You know about triggers, you know about passing data, and you know about connecting tools, and you know about connecting AI.
+0:58:51 That's it. That's everything you need to know about automation. Obviously, it gets a lot more complex than what we can do.
+0:58:58 How do we do something? When do we do something? Why do we do something? That's the real trick. But this is it.
+0:59:04 All of those crazy things I show you all the time. This is it right here. That's all I've done with more steps.
+0:59:11 Very, very easy when you start breaking it down. And again, if this is still complex right now, we're gonna know, we're gonna learn exactly when, why, how to use a filter node.
+0:59:22 We're gonna learn exactly when, why, how to use an if node, when, why, how to use a switch node. Using different models in the AI, connecting tools, this is really where the magic happens, but you don't have to know about this yet.
+0:59:36 We'll talk about tools. Connecting tools, the agent is gonna have access to your spreadsheet or something like that. And it could look up information on your spreadsheet.
+0:59:47 It's gonna have information, it's gonna have a connection to your privacy policy or your cancellation policy or something like that, right?
+0:59:57 And it's gonna have that exact data as a tool to understand and respond with. Okay, tools gets very complex. This is when when we start seeing errors and if you've Learned about AI and you've heard the term hallucination and all of these things This is where that starts to come in errors mistakes hallucination
+1:00:21 the agent has autonomy to do these things and it's actually doing the wrong thing and Causing errors. Well, it's your fault It's your fault because you told the agent to be super friendly and bubbly and you didn't tell the agent to be secure and handle data correctly or something like that, right?
+1:00:44 This is where prompt engineering, context engineering truly comes into play. This is why A.I. advanced A.I.s before automation, so we can learn how to build robust agents.
+1:00:57 Then we can build those agents into automation, okay? And so I'm just seeing the comments again. I got RJ here saying, this is a great point, RJ.
+1:01:07 If you lose your API keys, this is a great bring up just, if you lose your API key, okay, let's just say I close out of the screen and oh my gosh.
+1:01:16 I don't have access to my key anymore or I think somebody stole my key or whatever. You simply delete it, okay.
+1:01:23 You delete it, you create a new one and you plug it back in. Very, very, very easy to handle your keys, but keep them secure, keep them safe, you know, key management, they're the keys to your house, they're the keys to your business, they're the keys to your systems, think about it like that, they are
+1:01:41 your keys, keep them safe. Pretty straightforward, but yeah, if you lose your key, you can always delete it, make a new one, link it back up.
+1:01:50 You are in control of your keys. So, again, information download week, we're going to be downloading, you know, just absorbing a ton of stuff.
+1:02:04 There's a ton of information last night, ton of information tonight. There's going to be a ton of information tomorrow night.
+1:02:09 But that means I'm giving you so much to work with. If you're a doer, you can go start doing. If you're a learner, we can take a step back and you can come into the office hours, you you can message me in the community, and then watch the videos back if you need to to pick that stuff up.
+1:02:28 But what I wanna emphasize, you do not have to learn and master and know everything that we just talked about today.
+1:02:37 We're gonna be doing this stuff every time we build an automation. We're gonna be doing these exact same things. It's gonna be very, very easy to pick it up as we go.
+1:02:46 Great, nailed it down guys. That's all you need for automation. Any questions? Let's open it up. Let's have a discussion how we're feeling.
+1:02:55 Let's talk about this stuff. We can open up for questions. Daniel, I see you in there. How are you feeling about all this stuff?
+1:03:10 Danny, is it, have you started down the automation route already? Is it pretty straightforward? forward. Sorry, I just threw my tablet to my face.
+1:03:19 I get it. I played with it before. I was using make, but I like the any one a little bit better.
+1:03:25 So yeah, hanging in there, I'm going to play with it tomorrow. So we'll see. Oh, yeah. Hell yeah. Hell yeah.
+1:03:32 So right away, you can start jumping into this stuff. Like I said, this is I need logic and understanding that flow and you can build anything.
+1:03:43 Cool. Cool. Anybody else have any questions, Omar? How you feeling about this technical stuff? No, this is great, I'm following along.
+1:03:55 I am also going to start jumping into this probably tomorrow, Thursday, so. Good, yeah. I mean, you know, me as a teacher, that's why I like this information week two is information download week because it gives the people that are ready to go, something to go on and and then it gives the people that
+1:04:12 are maybe less along, farther, need a little more learning. It gives you a goal to work on. So information down on week is my favorite.
+1:04:23 You know, I've had maybe a comment question all in one. We're, you know, we've got 500 plus employees and we're a Microsoft shop and we've got copiled licenses.
+1:04:37 And I know you talk about the big three. There's also maybe another fourth one in there and they've got their own agents, but I'm trying to make the relationship, I guess, and figure out what path to take as well.
+1:04:53 Yeah, with co-pilot stuff, you mean? Yeah, I mean, this is going to be useful to build some stuff for our business, but we're trying to keep everything inside of our network using our tenant and one of the reasons for co-pilot.
+1:05:14 But this is going to definitely come in handy in some areas. Yeah, I mean, and that also major point is why I like using edit and to teach if nothing else you're going to be learning the exact same concepts and, you know, flows and it's all the same logic.
+1:05:33 It's all the same, you know, trigger input processing output using logic, using these if statements to control the flow. It's exactly the same no matter what, you know, umbrella you're working in.
+1:05:46 and it's the same concept. So, and it ends just makes it easy to teach. Well, this is really good. Appreciate it.
+1:05:54 Cool. Yeah, you're welcome. By the way, for those of you that are more experimental, I do talk about the big three and I focus on chat GPT just because it works so well for learning its cheap to use these models.
+1:06:11 GPT 4.1 nano, the cheapest, is up to the expensive, I shouldn't say expensive because they're still pretty cheap, but I want to say big brain power models when you start getting into the coding stuff, right?
+1:06:28 So that's why I use OpenAI, but for the more experimental of you, I'm just going to pop open a blank slate agent.
+1:06:38 This is an NADN agent where we can swap out any model and we can choose a model from this list here.
+1:06:45 If you haven't looked at OpenRouter, this is a platform and we can touch on that in we can touch on that in the Advanced AI, or we will be touching on that in the Advanced AI course.
+1:07:01 OpenRouter is a platform where you can just connect to any model. It's an open space where you can just connect whatever model you want to use, you can switch between OpenAI, you can switch it to Cloud, you can switch it to Gemini on the fly.
+1:07:16 So you can plug in different models through OpenRouter into this single connection right here in your agent. If that sounds confusing, don't need to worry about this at all.
+1:07:29 But basically we can give an agent access to any of the models at any time using OpenRouter. This is a whole separate platform.
+1:07:37 You gotta create an account, all that stuff, and figure it out over there. But if you do wanna jump into that experimental exploratory stuff, OpenRouter is how we can turn a blank agent into an agent that can use any LLM at any time.
+1:07:57 Great. Any technical questions? Does anybody started building anything and has a technical question, and you guys are killing it. What do you think about this, Rick?
+1:08:36 Sounds complicated, but I'm sure I'll even really get it. Yeah, so like I said last time, you know, learning JSON, we're gonna pick it up along the way, learning how to connect stuff, we're gonna pick it up along the way.
+1:08:50 I just like that, you know, week two, I try and just give away too much information. It's my favorite week.
+1:08:57 So don't feel like you need to know all this stuff at all at the beginning of this entire program I said we're gonna take things very slowly and I mean that we're gonna and I want to also teach to the individual So people that want to take it away and start experimenting they can they know exactly what's
+1:09:13 going on here already They can start going but don't feel like you have to know this stuff right away Yeah, no cool.
+1:09:20 Yeah, that's It eventually sinks in but it takes a while Yeah, and you'll be surprised. It actually doesn't take that long.
+1:09:28 Okay, there's an info dump, but you're gonna pick this stuff up right away, very methodically, and by the end of it, you'll be surprised, really surprised.
+1:09:38 Okay, cool. And Christian, let me hear your input. How does this feel? I know you've been working on watching my YouTube videos and building some of the content automation stuff.
+1:09:56 How does this compare to that material on that side? If you're speaking, we can't hear you. All good, he says.
+1:10:36 OK. Cool. Yeah. So let's see. Danny, since you're farther along, have you run into a specific instance where you feel like, oh, man, I want to automate this so bad?
+1:10:57 What is something that you want to start working on? Everything. I want everything on everything I guess would be probably just starting with like newsletters and getting those turned into blog posts and getting those turned into social media and then pins on everything and all of that.
+1:11:16 Basically I just want to create one thing and have it create a million things for me. So which is possible I've seen it I just have to focus.
+1:11:24 Yeah so we're talking about last last week. That's very, very doable. Yeah, maybe even go into YouTube, but I don't know for hearing it off.
+1:11:33 Yeah. Yeah, so I'll show you. So let's see here. Oops. So a couple, you know, I've shown off my YouTube automation.
+1:11:51 This system is super powerful for me. I think, I don't know if it was this morning or yesterday, this was a clipping automation so I can load in my long-form YouTube videos and, you know, there's a ton of clipping tools out there, AI clipping tools.
+1:12:05 Opus Clip is one of them. You can load in your long-form videos and it will clip down your videos into short clips, adding subtitles.
+1:12:12 It picks out, you know, the most interesting information and clips that. But here's the point I'm making here is that But I built essentially, I built a very powerful app using no code automation drag and drop.
+1:12:29 This is a tool that I can load in a video. I'll just show you a very simple intake form. I just pop in a video URL and it starts processing.
+1:12:42 That's it. It'll rip apart the video, find the most interesting things. it'll use AI to read the entire transcript of that video, find the most interesting points, get the timestamps from those sections, then it will go through this video processing and clip up the video.
+1:13:02 It will create a cover image for the short form or social media. it will add the, it'll based on the content of the clip, right, a caption, and publish it to all my social media channels.
+1:13:17 So it's going to write a title for YouTube. It's going to write a caption for all the social media and pump it out to my air table base.
+1:13:26 My air table base where all that stuff is loaded in. This is my air table base and all of that content comes in here automatically.
+1:13:36 labeled from my auto clipper tagged for the platform it's going to be published to, you know, here's the clip. There's the cover image.
+1:13:47 I was experimenting with, obviously, clickbait stuff for a while. Social media, if you guys don't know, social media is a whole nother game.
+1:13:55 It's really hard to do social media stuff, but me and my brother have a business teaching, you know, basically how to start a social media business.
+1:14:03 So this is a, this was a a huge fun experiment, but basically what I want to show off is the automation itself.
+1:14:10 The Clipper built out, I built out that system and automatically clips up my videos, loads all of the short form in here to be queued up and published to all of my channels.
+1:14:26 So I built what is essentially an app in no code automation. So this is how powerful we can get, but what I want to point out is, look at some of this stuff here.
+1:14:39 You guys can already read some of these nodes. I know it still probably looks a little complex, but here's an air-table node, here's an edit fields node.
+1:14:47 I got weird crazy branches going on, here's an edit fields node, here's an open AI node. You're already starting to see the bulk of some of this stuff I'm putting in here.
+1:14:58 Obviously there's some other nodes you haven't learned yet, but it's very, very simple to pick those. The nodes you haven't learned yet are very, very easy and that's why I haven't shown them to you yet.
+1:15:07 So you're gonna pick those up on your own. So then what I wanna show you Danny is basically what you want right here is you want something like this.
+1:15:26 Basically this chops up all my content, re-reads all my content blog posts. It basically takes a newsletter and chops it up into all different content for all of my platforms here as well.
+1:15:41 So YouTube, TikTok, Instagram, Facebook, and then it'll write this model right here is actually just chopping up the character count and posting to X.
+1:15:54 So I mean, social media automation, this is easy, easy jam here. It's very, very doable. So I'm excited to work on your stuff with that.
+1:16:06 Let's see what else we got. Sure, guys. So I think, you know, as we bridge into some of the vibe coding stuff to I want to make this point.
+1:16:20 I was going to make it at the beginning of this session, but we kind of just jumped straight in. I wasn't sure if I'd have enough time.
+1:16:28 Here's a major, major concern. As you learn this stuff, if you start watching YouTube videos, and the more you learn, you know, the more our algorithms and chat to BT is going to start suggesting stuff to you.
+1:16:43 But what you're going to find is that people right now are saying this sensationalist stuff like any day in his dead, don't learn automation, automation in 2026 is not what you want to do.
+1:16:53 Don't waste your time. Don't do it. Don't do it. And that's just sensational stuff. Especially on YouTube, you're going to find that because, you know, all of my peers, my competitors are using that language because it's clickbait flat out and it is dead.
+1:17:07 Do this instead. You're going to find that all over the place. And so I've been, I've been running into a lot of problems with that in my other businesses.
+1:17:14 My clients are coming to me like, why am I wasting my money with you? You're teaching me automation and that's not what I should be doing.
+1:17:21 No, fly it out wrong. Do not listen to that stuff. Automation, NADN, all of these tools are not dead. The major concern, however, is that automation, no code automation is no longer the end goal.
+1:17:35 Well, you know, if you can implement no code automation and build these amazing systems into your business, that's just the middle step now.
+1:17:44 Because everyone is going to be able to code using vibe coding in the very near future, that means you're not stopping at no code systems.
+1:17:53 You have a whole other level to get to because you can, and you're able to build integrations with vibe coding, right?
+1:18:01 And so what YouTubers are doing is saying, don't learn NADN because you can build automations in vibe coding. Well, yes, you can.
+1:18:12 You can do that. We can skip NADN and no code tools altogether, but that doesn't make them obsolete. And so this is happening right now.
+1:18:21 And I was talking the way the other day, you know, we want to start building internal tools and doing, doing all these things.
+1:18:27 And we want to branch part of clarity into automation agency where we can actually take on clients and build automation solutions for businesses.
+1:18:37 And I was like, you know what, let's just give it, let's give it a couple months actually. What the major concern is, is only affecting agencies because the product that an agency can provide is an automation build.
+1:18:53 Well, because AI is getting so good, And anyone can actually vibe build automations now. You can use AI to build automations for you.
+1:19:06 We don't even have to do all of these things I'm showing you in N&N. We can skip ahead and just let AI do that, which I will be showing you.
+1:19:13 But the AI portion of N&N won't make sense if you don't know this stuff right here. And like I said, week two, we have everything we need to know.
+1:19:23 now we can pick and pull the information that we're going to be using when, where, and why. Okay, so basically in it end, this is just like vibe coding now.
+1:19:35 I can say, hey, build me this complex thing with all these steps and make it do this. And it's going to build out a workflow for you.
+1:19:43 I'll be showing you this in great detail because this is where you're probably going to be doing most of your work.
+1:19:49 AI automation isn't just using AI. inside of your automations. It's using AI to build your automations. And so this big fear, this big confusion that's happening, the major concern is for agencies and their services.
+1:20:05 And that's why all of the sensationalists' language is being passed around. Do not start an agency where your end goal is selling and it end workflows to people.
+1:20:17 That's not a good idea. I'm telling you that right now. That's not a good idea. because your clients are going to be able to build their own automations.
+1:20:26 So N&N is not dead. It's just not the end goal anymore. And it's especially not something that you should be focusing on if you are an automation agency.
+1:20:35 That's it. Don't listen to all that other noise. Tony, did you have something? I saw your mic come on. I do occur.
+1:20:45 How you doing? Great class, by the way. This is now my background. I do not come from an agency of building AI.
+1:20:52 I am blessed every running a financial and insurance agency for the past decade now. Amazing. Yeah. So one of the things implemented into my business, trying to figure out is, okay, we have 50 agents that we got to pay commissions every month.
+1:21:04 and we work with over 55, 70 different carriers. So every carrier has different commission statements. What will be the best way to create a commission system that one is, well, on the back end, it extracts the commissions from all the different carriers.
+1:21:20 It's able to identify what the agents are and then it's able to create the commission's report but then the front end for the agents to be able to have a portal where they can come and access their commissions.
+1:21:30 There's a system that says gentlemen that I'm working with, he developed contract commissions, but obviously it's different. He figured it out already on the commission space, but on mine, if I want to just implement that for my business, it's the best to do it on 8 a.m.
+1:21:46 8 a.m. or for a platform. Good question. So a lot of your questions, I am very happy to work with you and answer all of those questions in great detail and show you exactly how to build that.
+1:21:59 This is what I love to do, right? A lot of those questions can be answered, you know, following along in the advanced AI course.
+1:22:08 I'm teaching you exactly how to answer those questions using AI, how to make business decisions using AI, and then using those same exact business decision results to actually start a build plan and implementation plan, meaning you're going to have a list of tools you can use, should I use NADAN?
+1:22:25 Should I do this? Well, there's so many things to choose from. That's part of the advanced AI course is teaching you how to navigate that mental space and that tool space and the money and all of these factors that come in.
+1:22:39 We can balance everything with some AI prompt engineering. Now on top of that, the marriage between these tools of talking about NADN and vibe coding and interfaces and front ends and back ends and all these things, it is such a creative space now for builders.
+1:22:59 And so ultimately, you know, if you're, if you're more of an operator, if you're going to be hiring people to start using Aniden and building internal systems, I can speak to you differently.
+1:23:08 But if you're the person that's going to be actually building these things, getting into the weeds and picking apart all the tools, I can speak to you even, you know, differently still.
+1:23:18 So basically, the marriage between all these tools, Aniden, it's going to happen in NADN and AirTable for a business to implement solutions quickly, efficiently on a high level and then be able to scale those quicker is in AirTable and NADN.
+1:23:46 And it doesn't have to be NADN, we can use make.com, we can use whatever kinds of tools like that for the actual automations.
+1:23:54 But people are not utilizing air table to the degree that it can be used. Air table is an incredible tool.
+1:24:01 And I get this all the time in my other businesses. Can I use Google Sheets? And I'm saying, if you're using Google Sheets to manage your business on a scalable, you know, at scale, you are doing something wrong.
+1:24:17 You know, I'm not the best business advisor, but Google Sheets is not the way to be doing things. Only because a tool like AirTable is going to handle that exact same information way more efficiently, way faster, and it's AI capable, and it's an automation tool.
+1:24:33 It's an AI tool, and it's an automation tool. Okay, so if you come into the community, you can click on the link to, I'll start this link in the chat here again.
+1:24:43 This is, I built this little tool you can have access to everything that I'm talking about just nice and quick here.
+1:24:49 So I'll throw it in the chat. You can click the link and come into this exact tool. And you can check out this tool list.
+1:24:55 This is my entire professional stack in everything that I do. There's a few supplementary things like we're going to be talking about specific open AI stuff.
+1:25:04 And when we get into databases, there's some other database, enterprise level databases that I use. but this, you know, this is it.
+1:25:13 We don't have to fall into the tool trap. There's way too much. If you want to quickly build a system starting tomorrow, use AirTable, use Niden.
+1:25:25 Or, you know, we can interchange the automation tools AirTable. I think it's one of a kind, but for Niden, we can swap out make.com and maybe Zapier.
+1:25:37 Zapier can't do a lot of stuff, but it has a ton of integrations with major businesses. And so you can connect to major tools and businesses a lot easier, not that you can't do it in NADN, but you can do it in Zapier easier.
+1:25:51 So to cut out all the noise, I'll just keep emphasizing air table in NADN. Now, I'll show you an example of the marriage between these tools.
+1:26:04 I built this app very quickly in NADN. with a very simple vibe coded interface. Ultimately, you can build internal dashboards, customer dashboards, customer interfaces, employee interfaces inside of air table built in or in tomorrow's course in the Wednesday master class, we talk about vibe coding, you
+1:26:30 can vibe code a very simple front end, very simple dashboard interface, whatever, and just plug it in to your end-it-in workflows right away.
+1:26:39 So, I'll just show this example because it's fun. So, I built this app for my girlfriend. She is, she closed her business and she just wanted to get out of the business and have nothing to do with the business website.
+1:26:54 It's a franchise and she's like, I'm done and I don't want to talk to anyone in the business in the corporate, whatever, and that's unfortunate it because I still have to handle some of my customers, some of the orders that are still being fulfilled, I'm going to have to do that independently and I just
+1:27:10 don't want to do it through the business. So I was like, she said, can you build me an app? I was like, yeah.
+1:27:15 So here's the app, right? This is it. You just enter in your name and it tells you your order status.
+1:27:20 It's very simple front end. This is a single prompt in vibe coding. Make an app where I can put in my name and connect to Niden.
+1:27:30 And I'll show you how I connect to Niden and AirTable. So here is the quote-unquote back end of that app built in AirTable.
+1:27:45 And it's basically just customer names. And that's it. Okay, that's, you know, very simple. This is just a spreadsheet, and that's it, and it's connected to this right here.
+1:28:00 Now on top of that, the processing that's happening is, let's open up, this one. The entire processing of that, quote-unquote, app is this end-and-end workflow right here, or this automation.
+1:28:20 There's a few workflows in here. So, all this is doing is any time the air table base is updated. It's making sure everything is up to date.
+1:28:31 It's just kind of refreshing everything. This one right here is purging all of the backup information with the current information.
+1:28:43 And then this one right here. I don't even know what it's doing. It's probably not even connected. It's not labeled pretty good at labeling my stuff.
+1:28:49 So if it's not labeled, it's probably not even running. So let's just look at these right these right here It's triggering when when anything is happening.
+1:28:57 It's keeping things refreshed and it's deleting that this one's deleting the backup and refreshing with current And that's the entire app.
+1:29:03 So that's the marriage, right? We can build systems right away Build a build a front end with one prompt build a back end in any then that that does everything very simply, very quickly.
+1:29:20 For those of you following along also, we have a air table node, we have edit fields node. This is another database that I use.
+1:29:27 We'll talk about that in detail when we get into databaseing stuff, but it's basically a much harder to use air table.
+1:29:37 It's just storing the backup information and then when everything gets refreshed, it'll delete the backup information and load it back into air table so we can see all the fresh information.
+1:29:48 That's it, right? That is a tool. That is a system that I built in an hour or so. Quick question.
+1:29:57 I'm curious. Is there a, if there's a, if there's somebody in there, if there's the same name in there twice, is there some kind of?
+1:30:06 Great question. Yeah. Yeah. Great question. I think I, I think I have a simple, I think that's what this one is actually doing is a D-Doop, so it's just going to run every time there's an update and D-Doop.
+1:30:21 Oh, actually, this one's also sent in an email, so it's something like that. I haven't been in here in so long.
+1:30:27 It just runs. It just works. I don't have to maintain it. I don't have to look at it ever again.
+1:30:32 It's just running and working, and it's very, very easy to set up these systems. Okay, I think this is one way idea to develop another business to help people like myself to develop this ultimately comes in handy because yeah, it's like you said we're in my what hat am I looking at it?
+1:30:50 I'm definitely not going to be the one creating it and putting it together but it's gotcha. Yeah, I mean, that's your market.
+1:31:00 Yeah, that's always my advice too, you know, if you're if you're more operational role and you're going to be making big decisions, having the basic understanding of what to decide is going to be very helpful.
+1:31:11 So any day and air table, something you could jump on right away and just start making stuff for your business right away.
+1:31:19 So now that you know that being said when we get into vibe coding stuff, we can build much more complicated apps.
+1:31:28 I'll just I'll end this one with a quick quick I'll show you this app I'm building. Let's see, I don't even know where I put it.
+1:31:39 Actually, yeah, I hit it. I hit it from the screen share. I'll have to load all that up another time and show you my apps on building.
+1:31:46 But in the vibe coding course, you know, if you want to turn this into a much better app and package it up and sell it, you can simply, you know, we'll talk about these techniques, but you can simply package up this automation as a JSON file, load that JSON file into your coding software and say, Hey
+1:32:09 , can you recreate this? Help me recreate this? Let's work on a way to recreate this and turn it into a coded tool instead of a no code tool.
+1:32:23 But again, that's another skill set. That's a whole nother branch of learning if you want to implement quickly and it an air table that's your first stop.
+1:32:33 Awesome guys, any last questions? We're three minutes over, I'll take one more question and then we can call it for the day.
+1:32:42 Well this is more of a comment rather than a question high-trigger. I'm actually trying to see if I can adapt a table to you know to use it as a knowledge management system since the last time we spoke, we said that A table for integration works better than a notion AI.
+1:33:06 So I will feedback on that little experiment. I'm trying to see if I can adapt it. But there's just so much to to go through on the front end before even until you're getting it to work.
+1:33:17 That looks like it. So it's not, you know, here's the thing about using NADN and AirTable. I showed you everything you need, you know, basically everything, the building blocks you need in NADN.
+1:33:34 AirTable is going to be harder to learn because it's not as visual and it's not as easy to teach. So if you're looking at AirTable, like, oh my gosh, Where do I even start?
+1:33:46 That's normal because it's looking at it and learning it is actually harder, a lot harder than learning anything. Okay, so we're going to switch gears completely in the following weeks.
+1:33:59 I'm still not quite sure what the plan is based on feedback and based on what people want and what we're working on, what we can actually accomplish.
+1:34:09 I tailor my lessons every single time my teach. I do not have a curriculum. I'm teaching what needs what you guys need to know every single time.
+1:34:20 And so in the following weeks, I'll be switching gears into air table and focusing on teaching air table because that is harder to learn.
+1:34:31 Okay, all right. Thank you. You're welcome. Come on. Cool. Cool. Cool. Amazing session, guys. Again, information. Download week last night was rough.
+1:34:45 Tonight was a lot tomorrow. It's going to be a lot. But after this week, you're going to have a lot to go on.
+1:34:50 And then we can start getting into some fun stuff next week. Great session for today. Of course, jump into the office hours tomorrow morning.
+1:35:02 And if I don't see you there, I will see you in the vibe code masterclass session tomorrow night Appreciate you all really appreciate your time.
+1:35:13 Thank you guys for Carving the time out of your days and being here Danny. I see you guys Thank you.
+1:35:23 Thank you. Yeah, thanks for being here guys. I'll see you next time. Appreciate you

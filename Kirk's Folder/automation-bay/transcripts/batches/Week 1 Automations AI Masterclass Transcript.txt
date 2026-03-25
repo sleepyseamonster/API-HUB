@@ -1,0 +1,464 @@
+﻿0:00:11 I'm gonna ride, welcome. We gotta crew again. Welcome everybody day one of, uh, yeah, automation. Cool. So I think this entire week, we, some of you are in the call yesterday.
+0:00:33 I think everyone so far was in the call yesterday. So this week's going to be a little slower, just trying to figure out where we're at.
+0:00:39 What even is AI? What is automation, especially, and moving into things on the same plane? So what I want to do real quick is just open everything up, open everything up for questions again, just like we did yesterday, if anybody has any questions or concerns right off the bat, let's dive into that, 
+0:01:02 let's address that before we run through some of the material with all these burning questions. So if anybody wants to speak up, you can unmute your mic or type in the chat here.
+0:01:18 Any outstanding concerns? Are we fearful of AI? We're fearful of replacing everybody with automations. Do you have any specific topics you want to attack right away before we dive into the material?
+0:01:37 And just jump back into the community. So I want to emphasize this community space. This is going to be where I will be able to post things without having to go through messaging with the team and then putting out emails or anything like that.
+0:01:51 I will be able to just post up in the community so I want you if you've never used a community space, something like school or any sort of format where you're in this community with the feed and all of these things.
+0:02:06 Just get familiar with it because it is a tool that we're going to use in the course, learning all the stuff, collecting posts.
+0:02:13 I might post a new tool that comes out during our sessions, and so it'll be valuable for you to get in the habit of jumping in the community and seeing what we have going on.
+0:02:23 So, community space, what I want to direct you towards in the community is the learning page. This is the courses.
+0:02:32 Now, the Advanced AI course, I would hope everyone needs a solid foundation of what AI is in the sense that we're going to be talking to ChatGit PT or Gemini or GROC and using AI as an interface that way.
+0:02:48 We don't have to know that for advanced AI that is part of something we pick up, learning how to talk to the computer.
+0:02:55 For this course hour, automation, we need some kind of understanding of interfacing with some LLM. LLM is a large language model.
+0:03:07 These are the interfaces you're familiar with. If you've heard of AI, most likely you've heard of one of the big three LLMs.
+0:03:13 chat GPT, Google Gemini, Anthropic Cloud. You may have heard of GROC, but using GROC or perplexity or any of these other smaller LLMs.
+0:03:24 So the Clarity AI Foundations course is not quite a prerequisite, but I would definitely suggest as an automation student, you take at least this AI Foundations course because we're gonna be doing, we're gonna be blasting through stuff using AI that I want to assume that you know already, if there's 
+0:03:44 anything I need to slow down on, if I'm blasting through AI stuff as we're learning automation, but you know, put your hand up, put something in the chat and say, I have no idea what you're even doing there, then we can take a break, you know, pull a back and slow it down into the AI stuff as well.
+0:04:02 But definitely, if you have some time, go through the foundations course, this is the how to talk to AI portion of the automation cohort, okay so my internet is going real slow.
+0:04:19 So I'm going to jump into NADN, okay, don't worry about learning all these tools and what all this stuff is, we're going to go through it but I'm going to put in the chat one more time here.
+0:04:32 Let's put in In the chat, I'm going to put in the chat my Builder Hub tool that I built. Put a link to it.
+0:04:44 Guys can go to this tool. Eventually, I'm trying to get this up in the classroom as soon as possible, instead of having to go to all these websites and all these links and everything that I'm giving you.
+0:05:00 I was able to build this tool without the team even knowing because I was just you know what we need something like this Can we put it in the classroom and you know?
+0:05:09 We don't have time or whatever. I'm just able to produce and Made this website essentially this single source that we can take a look at with everything you need in terms of tools and The LLMs we're gonna look at so I talked about yesterday.
+0:05:23 I talked about using notebook LM First of all, do we have anyone? One that was not in yesterday's session. I think most of you that were invited have the opportunity to attend all three cohorts.
+0:05:37 We have anyone that was not in yesterday's session. You can just type in the chat, me, or something like that.
+0:05:47 I don't have my meeting host this evening, so I'm just talking about AI illiteracy. I am Zoom illiterate. So don't worry about that if that doesn't work.
+0:06:00 Oh, it's back so people can't type in the chat and I didn't know how to switch it over in Zoom but I think I got it.
+0:06:06 I think it's working. Yeah. So again, anybody that wasn't in last night's session just put me in the chat or something like that and we can, you know, we can breeze through all of that stuff that I don't need to bring up again since you've heard it last night.
+0:06:21 But basically here, Clarity AI tool hub, this is what I built just to give you some basic access to what we're going to be needing right away.
+0:06:31 So Chat GPT, notebook LM, notebook LM is going to be your research tool, your study guide. So definitely take a look at that.
+0:06:39 We'll dive into that in a later time for automation course. But what I want you to turn you guys to again is the AI intake form.
+0:06:48 This is just, if you fill out this AI intake form, essentially it's gonna spit out a basic automation that you can build in your free time.
+0:06:57 Okay, even if you don't understand the tools, it'll just get you started on thinking about, wow, this is something I can make right now, during this cohort.
+0:07:07 So filling out the AI intake form will spit out, it'll email you a buildout guide, and I will also get a copy of that buildout guide.
+0:07:16 So if you put your information in there, we get a build out guide, I might choose it to make an example of and we can build out your specific use case live.
+0:07:26 So fill that out, I put the link to clarity AI tool hub in the chat so you can do that if you want to.
+0:07:35 Not required, but definitely if you want to get some first hand on your real world problems, we can build the stuff out live.
+0:07:44 Cool. So essentially in the tools list, yesterday, we talked about notebook LM, whisper flow, and so I'm going to turn our attention to these automation tools right here, air table and an end.
+0:07:58 So these aren't required for the course. Again, I'm not going to make you subscribe to any tools just to complete the course, but ultimately, if you're ambitious enough to want to start learning and doing these things.
+0:08:11 These are the two tools we're going to need for the automation portion air table and it and you don't have to use these Particular two tools if you know what they do already we can substitute these two tools for other automation tools for example N8N we can use mic.com Zapier something like that air 
+0:08:28 table Can be I'll say this very tentatively air table can be replaced with something like Google sheets of just a simple spreadsheet just some way to organize data.
+0:08:42 When automations are flowing, we need a place to put certain elements of the automation, certain elements of the workflow. Okay, so today, don't think about the automation course as we're learning automation.
+0:08:58 That's already a step above. If you're just learning this stuff, don't worry about building automations. Okay, we're talking about workflows.
+0:09:07 And when workflows are being built, we're talking about very simple inputs, being processed to an output. Same thing happens when we're talking to chat GPT, we put in an input, it gets processed and we get an output.
+0:09:22 That's really all we need to concern ourselves when we're talking about automation as a whole. Don't concern yourself with that yet.
+0:09:30 Ultimately, when you think about automating, how can I build something that's going to make something work and do something do this.
+0:09:37 The creep gets very intense very quickly, meaning you're going to start overworking yourself in your builds. I told a story about my poor client yesterday.
+0:09:49 I contacted him today again. He's doing fine just to let you just an update. My client is doing fine, but essentially he had that same issue, shiny object syndrome, building way too much.
+0:10:02 He built. He showed me his automations that he was building and I was blown away. The stuff that he was putting in there was just, it was almost like he built a supercomputer in automation.
+0:10:12 It was way, way, way overkill. So I don't want that to happen to anybody. That is a real thing that will happen at some point.
+0:10:19 You will do too much. So today, what automation means is simple input, simple processing and simple output. Same thing you've been doing if you've been using chat GPT or anything else like that.
+0:10:33 All right. So I'm going to jump into Niden. The tool you choose doesn't have to be Niden, but I'm going to only work with Niden in this course because Niden is easy, it's effective, it's scalable, it's, you know, on a business level, this is the tool that's being used.
+0:10:52 You can use Zapier for integrations, you can use make.com for, you know, specific use cases, but in it in is the overall, you know, the catch all, it's got AI agents, it's got all that stuff, so that's why I use in it in.
+0:11:04 You don't have to, but all of the concepts, all of the techniques, we'll be talking about are crossover that, you know, they can be used in any of the automation tools, because essentially the techniques are the same input processing output.
+0:11:21 It's just the shape of the little tool, the little nodes we're using on screen might be different or something like that.
+0:11:26 So let's jump in. We're going to dive into automation right away and tackle that simple concept, input, process, output.
+0:11:42 All right. So this is the Canvas space in NADN just like any creative tool. This is what I love about automation is it ties into to other creative tools.
+0:11:56 If you've used Photoshop, if you've used Illustrator, if you've used paint, Microsoft Paint, you're gonna find some similar crossovers, meaning we have a canvas space that we can work in and we have a toolbar where we can gather our tools.
+0:12:11 That toolbar in NADN is just up here in the top right, clicking this button, we can get our tools out of here.
+0:12:17 Now, the tools in NADN are way more sophisticated than Microsoft Paint, as you can imagine. So anytime we build an NADN, we need input to begin anything.
+0:12:30 Now that input can come in multiple forms. We can have user input. We could have scheduled input. We could have manually triggered input.
+0:12:41 It doesn't even have to be data. It can just be a signal that says start and that is going to trigger something, right?
+0:12:48 So we need a trigger node. So what I'm going to do for this first session is just break down the anatomy of what an automation is.
+0:12:57 You know, again, don't think about automation. We're thinking about workflows. So I'm going to break down the anatomy of what a workflow is just so you can say, OK, we have a trigger, we have stuff, and then we have results.
+0:13:11 That is the base of every automation we could ever build. And I'll show you some complex ones, no matter what it is, is that same process, input, processing, and output.
+0:13:24 So the flow, the anatomy of a workflow is always going to begin with a trigger. If you click the plus up in Niden, whatever tool you're using, we say add a trigger.
+0:13:38 That's it. Add a trigger, whatever tool you're using. But from here on, I'm going to talk in Niden-specific language, you guys can adapt to your own tools.
+0:13:45 if you decide to. So we can add a trigger. Now these are all the triggers in Nidan. There's not very many, right?
+0:13:52 There are multiple tool triggers. Don't worry about that. There's a lot to dive into, but Nidan presents itself in a very manageable way to a beginner.
+0:14:02 And that's what I love about it. And that's why I like teaching it as a beginner automation tool that will be with you throughout your automation career and scale in your business.
+0:14:15 So step one, choose the very first thing that pops up. Okay, it's the first node. It is the execute workflow trigger button.
+0:14:25 Now this is the simplest input. I click this button that says execute workflow. That's my input. Start. And now we can do the processing, we have this green box, data is moving through, we have one bundle of data moving through.
+0:14:41 And now we can move on to step number two, processing. So I can add a new node here. And I'll add a very simple node.
+0:14:49 This is the edit fields node. Now this is a simple node because it's blank. There's nothing in it. We can do whatever we want with this node by adding in data fields, whatever we want, right?
+0:15:06 So I'm going to add a simple piece of data here. I'm going to say my name. Oops, I'm going to call it my name is Kirk.
+0:15:18 So we have the name of our value and the actual value. Okay, once you wrap your mind around automation, you're going to start to understand similarities.
+0:15:28 If you've done any coding at all, you don't have to know any coding. That's what this tool is marketed and sold as and the entire purpose of this tool is a no code solution, right?
+0:15:39 We don't have to know how to code. But if you are a coder, if you've learned any kind of logic or any kind of structure, we're going to notice some similarities between how things are structured, how logic boxes flow all of that stuff that comes later.
+0:15:54 So let's just say my name is Kirk. We can read this. And if I delete everything out, it'll give you the exact prompts on what you should put in here.
+0:16:05 The name of your thing and the value of your thing. Well, in this case, the name of my thing is name and the value of my thing is Kirk.
+0:16:16 All right. So my name is Kirk. The reason I like to structure in plain language like that is because if you can read the operations in your brain in plain language, it's obviously going to make that much more sense.
+0:16:32 If you're trying to say an object equals this value, it's going to be harder to read than saying the ball is blue or something like that.
+0:16:42 plain language. So just like the overall scope of what automation is, input, process, output, every single node in NADN is designed the same way.
+0:16:59 So let's break down the anatomy of this edit fields node. This is the name of the node. We have the input coming into this node, we have what this node is doing, the processing that this node is actually doing, and the output that this node is sending away.
+0:17:18 So every single node has that same three step flow, the entire workflow, input process output, and every single individual node has an input what it does, the processing, and its output that it's sending on to the next node.
+0:17:35 Okay, so the way that I'm navigating the space, you'll adapt to navigating the space very quickly. I'm going to be clicking around a lot.
+0:17:45 If you need me to slow down on what I'm clicking on point things out, definitely chime in. Let me know if you're confused on me just clicking around.
+0:17:53 You will get literate in, you know, very fluent in moving around a creative space, being able to adapt to that creative space.
+0:18:02 So if I move too fast, slow me down. So we have our input, we have our processing, we have our output.
+0:18:09 So if I click this button, we're going to have that input go into the input section of the edit fields node.
+0:18:17 So I'll just start this node over. Come down here, clear my operations, we'll just start over and watch what happens.
+0:18:24 I'll click execute. Now we got two green boxes. input, output, and now we have a new input coming in here.
+0:18:35 All that input is saying this started. There's nothing here. We're doing it. We're going. And now this node is processing.
+0:18:44 And this node is providing an output. Okay. Name equals Kirk. That's our output. That output is going to continue on.
+0:18:54 Name equals Kirk and we can do whatever we want with that information that we can continue processing that information. So to that effect, let's add some new information in here.
+0:19:06 Let's say this is first name. And we'll say this is last name. This is my real The last name, by the way, didn't realize the irony of being an artist and tells around 22 years old.
+0:19:31 Okay, so what I can do is not rerun the entire automation, but just rerun this step, meaning we're going to continue with this same input, reprocess that input and produce a new output.
+0:19:44 rerun the step, and now we have first name equals clerk, last name equals armin. So all I'm doing here is building a list of field names.
+0:19:55 Let's just imagine what I'm doing here for a project. And in this case, I could be building a list of field names.
+0:20:02 So let's say job description equals. And I'll go ahead and start using whisper flow. So if you guys missed my Whisper Flow speech last night, Whisper Flow is an amazing tool.
+0:20:21 So you can use it anywhere, just like I was saying, so I'm going to say Director of Education. Boom, pops it in there.
+0:20:30 So let's execute this step again, reprocess this information. And now we have three fields. First name equals Kirk, last name, Artman, Job, Description, Director of Education.
+0:20:39 You get the idea we can build out all of these field names if I'm trying to input into a system.
+0:20:45 Well, now I can put these items into my automation process the items ever I want in more detailed ways. We'll get into very complex things, but we can move on from the Edit Fields node, okay.
+0:21:01 Manual input into the Edit Fields node. Cool. So, and again, output of the Edit Fields node. If this is my entire automation, output of my edit fields node is now my output of my entire automation.
+0:21:20 My entire automation is click a button, process the information given, output is those three fields. That's it. So AI doesn't come into automation until much later on, and this is one of the biggest distinctions or points or messaging or ideas or concepts, whatever you want to think.
+0:21:49 We need to separate ourselves. This is AI automation, but we need to separate ourselves from what AI can do in automation and what AI is used for in automation and a workflow.
+0:22:01 That's why I want you to focus on, I keep using the word automation, but I want you to focus on what we're doing in this today and for maybe the next few days as workflows and not automation.
+0:22:12 Nothing is happening automatically or autonomously or you know everything is going to be triggered by you and it's going to move very methodically without anything happening on its own.
+0:22:25 Now that's a hard, hard line to cross or an easy line to cross I should say because taking a look at the next trigger node, the the next easiest trigger node whoops.
+0:22:39 Like I said once Once you get into the tools, there are infinite number of ways to do everything in this.
+0:22:44 It's very overwhelming. But the next easiest trigger node is a schedule trigger node. Okay, let's break this down. I'm going to duplicate my same edit fields node and pop it down here, plug it in, and boom, I have a new automation.
+0:22:59 This automation won't run when I trigger it, or it can run when I trigger it, but ultimately it'll also run when I schedule it.
+0:23:09 So if I come into this node, I can set a schedule, very basic, you know, what days do I want it to trigger?
+0:23:15 What time do I want it to trigger? And at that time, it will actually run and trigger the automation, just like I were to click the button with this one and run the automation.
+0:23:25 Okay. Trigger makes sense. You'll start to pick up this stuff very quickly. This is very easy concepts, but if anything is too hard, I'll slow down.
+0:23:36 essentially what I mean by easy concepts is yeah I know what a what scheduling something is that makes sense right so let's take a look at what the schedule trigger does when I execute this this step alone this is our trigger and it's giving us this output well here's all the metadata of that output 
+0:23:55 okay everything that we could technically type in and create the timestamp the readable day week year month all the stuff I showed you we can do that we can and type it in and get that output.
+0:24:07 Well, it's providing this schema for us automatically. The trigger node has this built into it and this is data we can pass along.
+0:24:16 So this is the schema view. We'll talk about the other views. Schema is just the structure. And when you're in the schema view, seeing the structure of your data like this, you can actually drag the little boxes right here to map them in.
+0:24:31 I'll show you that in a second. So our trigger node is now providing an output. This trigger node did not.
+0:24:38 It just said go. That was our output. This output is now moving down. We have one bundle of data moving down into our edit fields node.
+0:24:47 So now we can see that bundle of data in our input. And we can process that bundle of data in our edit fields node and send it on.
+0:24:58 Okay, simple processing, what we can do, like I said, in the schema view, as we can drag a, an item over here.
+0:25:07 In this case, it's a string, we'll get into data types, you know, all these little symbols mean something, we'll get into that stuff.
+0:25:13 But I'll grab this string, let's just say month and I can drag it and drop it right there. That's why this is no code automation.
+0:25:22 I just coded something by dragging and dropping it. So now we have the month automatically coming in here and we have a JSON expression, okay.
+0:25:37 The bulk of understanding NADN versus other tools is being able to utilize JSON. JSON is a type of data structure.
+0:25:48 I don't want to go too much into what JSON actually is. If you know what it is, amazing, if you don't, you're going to figure it out pretty quickly.
+0:25:55 it's just a form of data and manipulation we can do with JSON expressions here, right?
+0:26:07 So what we have is a JSON expression, and it's pulling in a dynamic field. Now our month is equal to this item, and this item is equal to January, meaning if we have a different month, this dynamic field will actually be displaying a different month.
+0:26:31 Don't worry if mapping in JSON doesn't make sense. This is the key element. This is the thing that you have to learn when learning NADN is this right here.
+0:26:41 Mapping in elements, understanding what those elements are, in this case, elements are schema, mapping in that schema and knowing what's going to pass on.
+0:26:50 Okay, so in this case, the dynamic value is equal to January. So if I execute this step, we'll get month is equal to January.
+0:27:01 Now, I could just type in here January, that's the same thing. But if time goes by and this schedule trigger node triggers on February, we'll now have February passing in here because it's dynamically mapped via the drag and drop schema, right?
+0:27:19 So same thing. Day of the month. I can map this in here. We now have the JSON for day of the month.
+0:27:26 It's automatically going to quote unquote code this for you. This is not code. This is, we'll talk about JSON in a second.
+0:27:33 This is not code. That's a distinction to make. But you can think about it in terms of coding. This is a dynamic variable.
+0:27:41 I'm going to be making connections like that using these terms like dynamic variable. Just to cross communicate everything together, AI automation coding, there's some terms that don't mean the same things, but we can bring everything together with something like this being dynamic dynamic variable.
+0:28:02 So it's dynamic because whatever the schedule trigger sends off the day of the month is going to equal that whatever it is.
+0:28:10 I've not manually hard coding something in here, I'm adding a dynamic variable that the schedule trigger is gonna give me.
+0:28:19 Okay, so if I execute this step, we're going to get day of the month is equal to six. Okay, so input processing output, cool.
+0:28:31 So JSON, let's just pause right here and do a speed check. Does everybody know what Jason is or are there some of you that are just like wow this is already over my head I don't know about this where are we at let's you can open up your mics and ask any questions at this point see how you feel And Wade
+0:28:56 , I don't know if the mics are on or not if you're there I don't know how to turn them on the mics are on each person can turn them right yeah I'm terrible zoomed I should have practiced that before go ahead Rick so I had tried a while ago I was using motion AI as my knowledge management and I was using
+0:29:32 , I was using notion in notion AI as knowledge management and I was using motion as like a task management system.
+0:29:51 I was and see if I could create some sort of automation between the two because I wanted chat GPT to be like the interface in between and I never got it to work.
+0:30:03 So it kind of feels familiar when you're talking about Jason and all this, I tried it with make, didn't work, then I tried the pipe dream I think it was and I tried, there was something else that I tried after that.
+0:30:19 And I never really got it to work. So it's interesting seeing you do it to this, kind of giving me a better understanding.
+0:30:30 Yeah, and so what you're talking about already, yeah, what you're talking about already, trying to connect to other tools, notion, motion, you know, the agent, all of these tools, we can connect into NADN and do advanced processing.
+0:30:45 But that's a whole nother layer. We're calling it to APIs. We're involving API keys, we're sending JSON payloads, we're, you know, trying to connect the JSON shape, the shape of everything to the shape of the expected shape in the tool.
+0:30:59 There's a lot going on there, right? So if you don't have that basic understanding of what's actually happening down the automation chain, you will always hit an error when you're sending that payload to the tool.
+0:31:11 is then it is n8n like an interface similar to like what make and pipe dream and stuff is is that what it is yeah so basically I started automation you know four years ago with make.com.
+0:31:33 All right. Can you guys still hear me? Yeah. I can still hear you. I just lost my, just lost my headphones.
+0:31:44 So let me, let me come back. I can still hear you. All right. There we go. You still hear me, all right?
+0:31:55 Yeah. Cool. Make.com was what I started on. Exactly the same thing. Zapier was sort of will say the first no code automation tool that really got popular.
+0:32:06 If you've heard of Zapier, you might have heard it in passing in some business sense. Zapier is still an amazing tool for integrations.
+0:32:15 They connect, Zapier connects to so many things. So Make.com came in and swept away Zapier because now we have all these modular nodes, we can move around and do different things with and split our routes.
+0:32:28 Wow, this is advanced. Well, NADN did the same thing to make.com. NADN came in and said, well, now we're more advanced, so that's all that happened right there.
+0:32:36 All these tools still do the same thing, but it comes down to preference and your use case. And ultimately, what I found with NADN is that it's easy to teach and it's a highly scalable tool to use inside your business.
+0:32:49 the other two, like Zapier is not easy to teach, but it's a highly scalable tool inside of your business. So things like that is why I made my choice here.
+0:33:01 So I wish to do anything and try it out. For sure, yeah. I would say anyone truly interested in learning automation and building these workflows, and it end is gonna be the tool right now.
+0:33:16 I'll leave it at that. We don't have to get into the weeds with that one. And we'll leave it at that for now.
+0:33:21 So Jason, let's talk about Jason. Does anybody else have, well, we're going to dive into Jason in a second, because that is a fundamental key here.
+0:33:29 But does anybody have any other bring-ups before we move on? We actually use, we have Jason, gateways. We connect to an Oracle database of work and build power BI's and Excel reports and stuff like that.
+0:33:44 But it's the gateway tool essentially. Right now, we're not using it in this capacity. Cool. Yeah. So, you're a little familiar with it.
+0:33:53 Just application, you know, particular use case for JSON, anybody else have any bring-ups any other questions, any like about the trigger nodes or anything like that, are we moving at the right pace here because I'm still getting to know you guys, you know, the more we interact, the more I'm going to
+0:34:11 be able to just take off with specific things or pull back on specific of the things we want to talk about.
+0:34:16 So feel free. I got a quick chime in, Kirk. Yeah, I got other stuff going on here. I am listening in the, is just for people that are on my team, Maria and Rick, for those of you that anyone's listening, an example of something that could be done with this, is something like that we do on Zapier.
+0:34:38 But I'm sure we could do it on this, probably better. But for instance, when someone signs up to our program, we collect a payment through PayPal or Stripe.
+0:34:50 And that is on the Kajabi platform, so that's its own platform. But we also run on Circle, which is a community platform.
+0:35:00 So in order to grant access to someone not only in Kajabi to view our courses, is we have to also send over that trigger to circle to grant the maxes in circle, you know, and there's a few other things in the background.
+0:35:19 So we use something like Zapier to tie that together, to take the trigger, and send it to another platform to do that automation when things aren't tied together.
+0:35:30 So I think NADN, this is obviously more advanced and does some different stuff than that, but this is kind of like, I think they'll call it middleware type tool where you can tie a lot of processes together in different things to make one thing.
+0:35:49 Whatever that event trigger is, do something else on some other platform or some other way or with AI in this case, you know, it's using those triggers for different workflows.
+0:36:00 So anyway, that's just an example of one thing in our business that uses something kind of like this, I should say.
+0:36:07 Yeah, perfect. And that's, you know, that's an interesting bring-up tip point out right here as well because to solidify what Wade's talking about is somebody signs up, they need to also appear somewhere else, well, to have somebody transfer that information every time somebody signs up, is going to 
+0:36:27 be some work, well, we can automate that very, very easily. And ultimately, the great thing to mention at this point is it's going to be these little automations, these little things, you know, two nodes.
+0:36:41 I build workflows that are hundreds of nodes going everywhere and doing all these things and people are always like, wow, that's what I want, this full system.
+0:36:48 But ultimately, just like learning AI, the most profound changes you're going to see in your business is when you have one step, automations like that everywhere, doing little things that can just take away the busy work.
+0:37:03 So Zapier saying, here's information, let's put it here too. Those are the automations that's going to revolutionize your business right away.
+0:37:12 Once you have that stuff in place, you'll have time to build huge things that can change the output that you're doing on a scalable level.
+0:37:22 So that's a good bring-up. It's the little things, again, the gaps we can fill first. So again, with these two that that I'm showing here, sometimes full scale automations are only two operations, just like this, and that's all you need to really make a difference.
+0:37:38 We don't have to add hundreds of steps to make a difference, right? So good bring up. All right, so let's dive into JSON a little bit.
+0:37:47 Like I said, those of you that are more, got more of a coding background is obvious stuff, But to those of you that have never heard of this, this is like, it's like learning how to code.
+0:38:00 It's just crazy to think about. We're going to be looking at this weird structure and understanding it. So let's break it down a little bit.
+0:38:07 Okay. Back in the edit fields node, we have this structured data here in a schema view. That's just a particular method of organizing this data.
+0:38:20 We also have the table view. This one makes a little bit more sense. looks like a spreadsheet, okay? First name equals character, last name equals artman, that's our table view.
+0:38:30 That makes sense. Well, we also have a JSON view, okay? Just speaking about the view itself, an understanding that we can look at the same data in a manageable way and in a confusing way.
+0:38:46 In this case, JSON, you're going to teach yourself what JSON actually is. So let's take a look at it. Okay.
+0:38:52 Well, this looks like code. We got brackets and symbols and I don't know what is actually happening here. Well, if you read it, you know, essentially, this is not code.
+0:39:02 Again, I want to emphasize that. This is just how another way we can structure data very, very efficiently as a package.
+0:39:10 Just like the scheme of view, this is our package we're sending off. This is our bundle of data. Same thing coming in from the trigger node.
+0:39:17 This is our package and our bundle of data we're sending over. Well, the JSON is sort of the standard structure on how we're going to organize this package.
+0:39:28 And so when we're sending bundles of data, we're actually sending JSON payloads. We're sending this over to the next thing.
+0:39:36 And that's what the next thing is going to read. And then show it to you in the format that you want, all right?
+0:39:43 So connecting to tools, Rick, to your point, connecting to tools like notion, motion, whatever, You're going to actually have to understand a JSON payload and the way that tool is expecting that payload right if you're sending something over to notion.
+0:39:59 It's going to need a header line and a description line and a value line. It's going to need these particular items just like here we have first name last name job description as an example.
+0:40:12 sending something over to Notion might need a text value and a date value or something like that, you're going to have to understand that structure of that particular tool.
+0:40:25 Now, unfortunately, this is where AI comes in right away. AI can write those JSON packages for us. You don't have to know how to type this out ever.
+0:40:35 AI is going to build JSON structure for you no matter what. I didn't learn how to read JSON until a year into automation.
+0:40:43 I was automating fluently before I really was like, all right, JSON makes sense now. So you're going to learn it, but just understanding that this is a method of organizing the data or the structure of the data as a package to send on.
+0:40:58 This is the structure that's actually being sent on. It's JSON. Okay, so JSON stands for JavaScript, object notation. And again, it's just a thing that was invented to make it easier to send these data packages and make the data packages readable by a human.
+0:41:19 Okay, this, again, this is not code. We can still read this JSON package. First name is Kirk. Last name is Artman.
+0:41:26 Job description is director of education. We can still read JSON. And that is one of the biggest benefits of, of, you know, no code automation and using JSON as a whole is it's readable by humans, okay?
+0:41:39 Very cool stuff. So don't worry about learning JSON right now. All you need to know is that this is what's actually being sent.
+0:41:49 You know, this, what even is this information? Well, this is what's being sent over to each node, right? Ultimately, if you export your entire workflow, just show you this example.
+0:42:02 So I'll download my entire workflow and I'll open up this, I'll open up this workflow download.
+0:42:14 It's a JSON file. Okay, so this is actually the JSON file for this entire workflow. And again, it looks like code, it feels like code, it's not quite code, it's just the structure of data for this entire, you know, how the nodes are arranged, it's got little, you know, notes in it in here on how the 
+0:42:40 nodes are arranged, what's connected, all of this stuff is how things communicate inside of NADN. So again, this is a no code platform, and while this may look like code to some of you, it's very, very easy to work with and very, very easy to read.
+0:42:56 So the way we can think about JSON ultimately is JSON is like a, I put an analogy in here. I came up with so many analogies and I settled on this one.
+0:43:07 JSON is like a shipping manifest. Okay. It's this manifest that's describing what's inside the box. It's independent of the box.
+0:43:17 It's not inside the box. It's not part of the box. It's not part of the goods, it's a manifest independent of the box describing what's inside the box, and this shipping manifest is going to be used at every station this box gets shipped to, right?
+0:43:34 It's the package information that's going to the next step. Cool. Does that clear up? I know it might still be confusing, but does that clear up anything for you, Maria, and Christian and Morby.
+0:43:51 The meantime, I was going to say Kirk is my, I would think about it as a universal communication language. It's sort of, yeah.
+0:43:59 My form is that, is that accurate as well? Yeah, sort of. I mean, there's, when we think about universal, it's a very convoluted concept on the internet.
+0:44:08 everything is just a mess going everywhere, and so things like JSON were meant to clean that up across systems. You know, the newest and latest venture, if you dove down this a little bit is called MCP.
+0:44:24 MCP is a protocol that just makes tools able to connect a lot easier across the mess of the internet. Okay, so similar to that.
+0:44:35 Go ahead. It's a standardization, or it's an attempt at standardization. Yeah, you know, simplification standardization. It just makes everything so much easier when it's a nice neat package instead of bits and bytes, right?
+0:44:49 Ultimately, that's what everything is on the computer is ones and zero. So if we can read those ones and zeros in human language, that is a win.
+0:45:00 Cool. So Jason is the shipping manifest. It's going to describe the package, all the elements of the package and everything that's going over to the next node.
+0:45:12 Great. So let's do something interesting here with this data. All we're doing is triggering it and we're watching it build.
+0:45:20 We're not actually we're processing the data. We're seeing the data being built out that Jason's structure of our information, but we're not really doing anything with it.
+0:45:28 It's just sitting here, right? So, I'm going to add in a new node. And this is our air table node.
+0:45:39 Okay, this, like I said, this can be replaced by Google Sheets, but I really don't want to tell you to do that.
+0:45:47 Google Sheets is the free alternative to air table. However, air table is 100% free until you start using the AI features of it.
+0:45:56 And that's the whole point of using air table over Google Sheets. Again, I'm not going to sell you on these tools.
+0:46:01 We can do this in Google Sheets. But as an automation tool, air table is going to beat Google Sheets 100 times over.
+0:46:09 It's got AI capabilities. It's an automation tool, not just a basic spreadsheet. However, when learning air table, we can think of it like a spreadsheet as we're learning.
+0:46:21 So I just opened up a new air table base before we got started. This is my air table base. And this is my single table right here.
+0:46:31 Just like a spreadsheet, this could be like a page on a spreadsheet, but we have, you know, in air table, we have tables.
+0:46:38 And this table has a grid view, just like a spreadsheet, I don't want to make these connections later on as you start learning air table because it's not a spreadsheet.
+0:46:48 It's a database. Don't worry about it. But as you're learning, just making the across over making those connections, air table can be thought of like spreadsheet.
+0:46:57 So we have these cells, we have rose columns, same thing. Okay, so I'm going to, in my air table base, add in just like I would in a spreadsheet, the same columns or the same fields we have right here.
+0:47:12 Now I'm just gonna make it simple and just stick with our three columns or three bits of information we have first name, last name, job description.
+0:47:21 I'll switch back to the schema view or even at the table view. This is exactly what I want to build in air table right here.
+0:47:28 First name, last name, job description. So I'll go ahead and put that in. Last name, job description. Cool. There we go.
+0:47:46 So we have some fields. So let's populate these fields via automation. And like I said, connecting to tools is a whole nother monster.
+0:47:57 So I went and made a connection beforehand. We'll talk about connections in great detail depending on what tools we end up using.
+0:48:06 So I made an air table connection. So all I need to do is drop in my air table node here.
+0:48:12 So let's create a new record and I'll choose that connection I made before, somewhere there it is. This is my air table base that I made, AI Automation Day 1.
+0:48:29 This is my base and I'll choose my table, table 1. It's already connecting. My table is already connecting to NADN and And now we have those three fields right in and it in.
+0:48:40 The same three fields that I created, even with the periods, to leave those in there as a distinction. Yeah, those are the same exact fields because this node is now connected to my air-table base.
+0:48:54 Again, connecting tools. That's a whole monster. Every tool is different. We'll get into that stuff. I pre-made this connection. So now we have our input coming from the edit fields node.
+0:49:06 So this is our input side of the air table node. We can process that information and we can output from air tables.
+0:49:13 So I'm going to drag in my schema and connect dynamically the first name, the last name, and job description.
+0:49:26 If I execute this node, we'll get everything into the output. Basically this is a success message saying, yeah, we got those things in air table.
+0:49:34 Let's go check it out. We have a new row with my information populated this this air table base via automation.
+0:49:44 Okay, so that is the basic understanding here input process output. If we can break down any complex automation into a simple workflow, it's going to make everything way easier.
+0:50:00 Okay, in this case connecting to a tool at the end of the automation here is the outcome, learning about how to connect tools and which tools to connect and why to connect them and what's the purpose.
+0:50:12 By the way, Rick, I can bring this point up right now. AirTable completely destroys notion as a database tool for automation.
+0:50:24 I use notion very heavily but not at all ever for automation. It's way to clunky. You're restoring stuff and notion, putting ideas into notion via automation way to clunky.
+0:50:39 So I'll just make that note right now. If you're trying to do that in notion, make the switch to air table.
+0:50:46 So a table is also a knowledge management platform and using it's better done for automation within it ends specifically for better than notion if you're using air table by itself and you're using notion by itself those are two separate use cases but if you're trying to automate knowledge into a storage
+0:51:13 system automated into air table. Okay, so I heavily use Notion. I'm actually using Notion right now. This is my Notion page for my class notes.
+0:51:29 Okay, we just, I wrote everything down in Notion. So I'm using Notion as an interface, not as an automation tool, right?
+0:51:42 Some people like it. I think it's a mess. Just off-handedly, some people like it over air table as a creative space, air table smashes everything in automation.
+0:51:57 And it's free. Okay, so essentially what we've done here technically on a technical scope is writing to a destination.
+0:52:11 Now, what that means is, when I input into air table, air table is already receiving the proper pattern, the proper shape of my data.
+0:52:25 I don't have to figure out that shape. I don't have to understand it and write the JSON into a specific shape.
+0:52:32 By the way, this is the specific shape that air table was intending or expecting. And this is the shape of my data coming in, right?
+0:52:43 So ultimately air table can automatically decide on the shape of that data and process it. Okay, so a lot of these tools you don't ever have to figure out the JSON structure.
+0:52:55 If you're plugging into a tool, most likely it's already built to accept your inputs. The reason we get into this is for a lot of custom work calling to, you know, weird system backends that need special custom instructions that, you know, all that stuff gets crazy and it's very, very doable and very
+0:53:15 , very easy once you understand JSON. But learning, you won't have to use it. We can stick to the scheme of view, the readable view here.
+0:53:22 But as you notice in the JSON view, air table is expecting the data in an array called the fields. We did not set up an array called fields.
+0:53:35 So technically that shape is not the same and this would fail. And I just want to bring this up now because this is a common pitfall.
+0:53:44 Why is my node failing? Why is my node failing? Everything's connected. Everything's green. For example, if I put something in here and break it, it.
+0:53:58 It's going to give you an error right there. It's going to say this is wrong. But sometimes everything in here will be green and it's still giving you an error and it's still not working.
+0:54:08 Well, what's going on? Well, most likely your JSON structure is not what that tool is expecting. Don't worry about that again.
+0:54:16 We'll get into how to plug stuff in and making connections and all stuff and ultimately I'm just bringing these up now because you're going to go home on your own and you're going to experiment, you're going to start plugging stuff in and you're going to get errors and you're going to get frustrated.
+0:54:31 So I want to point out immediately day one that errors are the, if you don't get an error and everything works, you're doing something wrong.
+0:54:43 It's never going to work the first try, especially when you're learning. So just expect that, You know, so many of my clients get frustrated, it is frustrating when something just isn't working the way you're intending and you don't know why.
+0:54:58 So automation building workflows is 90% 95% troubleshooting. And so that is probably I'll say easily the biggest barrier from learning automation or not is understanding how to troubleshoot.
+0:55:15 Again, why this is built on top of or after that the automation portion of our course is coming after AI will now that we have AI and now we can context engineer special prompts to specifically troubleshoot specific nodes.
+0:55:34 We're going to have a much easier time problem solving troubleshooting and solving the issues inside of any then again issues are the normality.
+0:55:43 If everything works, it's an accident or you're doing it wrong, you know, something that's going to be issues So I really want to force that into your mind.
+0:55:51 It's not going to work the first time That is the normal. Okay, that's the that's the what's going to happen All right So for some of you this You know, this is still probably confusing Over your heads is any are any of you like yeah, I'm above this level.
+0:56:11 I'm ready to move on to the next thing, or any of you at that level. I'm understanding a bit better.
+0:56:25 Cool. Yeah. I'm understanding a bit better. I'm actually quite intrigued. Very good. We'll try some of the stuff you're talking about.
+0:56:36 And I'm already looking at it, but I mean, Wade will tell you, you mentioned something new, already on to it.
+0:56:45 It's always a competition between who can go down the most rabbit holes or follow the most shiny object. But this is helpful.
+0:56:57 It gives me a better idea of what I was doing wrong because this Jason stuff was also in I I think it was pipe dream or make that I was trying to use.
+0:57:10 It was using the same sort of language. So it gives me a good idea. I'll try a few things out and then and see how hard that works out.
+0:57:20 Very good. Yeah, so Jason, that's going to be the crux. Again, you won't have to know it when you're building basic tools.
+0:57:29 It's all going to happen and come together automatically in very basic views. But pointing it out right now is going to save you so much time, so much energy when you're starting to do more innovative stuff coming up with your own workflows and using HTTP nodes and calling to APIs and all of these things
+0:57:47 . You're going to hit those errors and right away I want you to understand that it's probably the JSON payload and errors are normal.
+0:57:55 cool. Yeah, cool. Thank you. Cool. Anybody else feeling more nervous or more confident now? We got some comments coming in Kirk.
+0:58:20 I don't know if you see the chat. Oh, let's see. You're still processing it Maria. Yeah. That's normal too. You know, step by step going through this stuff.
+0:58:30 What's great about NADN is it's literally step-by-step. One node at a time and you never have to put more in there than you understand.
+0:58:39 For example, you know, just coming back to the simple one right here, putting in an edit fields node and playing around with it and seeing what comes out until you understand it.
+0:58:55 You know, you can drop this down and you can enter in these weird values and execute it and see what is coming out of it.
+0:59:02 But just to figure out what is actually happening, you never have to move on to the next step until you're ready.
+0:59:09 And that's what's great about NADN. It's very step by step. That being said, this is what makes NADN a scalable, highly profitable, manageable business tool is because when you build an automation that you're implementing into your business and you're running it for clients, and 100 people are using 
+0:59:32 it. 1,000 people are using this automation. You have some kind of tool that's letting your users process data in a specific way, and something goes wrong.
+0:59:42 There's an error in some place, right? Anytime you're building software, anytime you're creating systems in code, there's a lot of errors.
+0:59:51 There's a lot of things you have to troubleshoot and fix. No code is no different. The main difference is you're going to see exactly on your huge map of nodes, the one node that is turned red, and you'll be able to hone in on that exact spot and find the one problem that's breaking your entire system
+1:00:13 . Now, unless you're really good at coding, if you have an error like that in your code, in your software, that could be a nightmare to try and find that error.
+1:00:24 What is actually happening? Where is it coming from? How do we recreate it so we can prevent it from happening?
+1:00:29 That is why no code tools ended in Zapier. That is why they became popular in the first place because if you want to scale your systems, it is so easy to manage your systems.
+1:00:42 It's easy to log your errors. It's easy to troubleshoot the one piece of your system that's causing you problems and iterate.
+1:00:51 You can swap out nodes without breaking anything. This is another huge point. You know, don't have to know anything about coding.
+1:00:57 But if you're building software and you want to swap out a piece, well, now you have to change everything around that piece.
+1:01:04 If your code is all messy, it's you swap out that piece and everything around it is going to break in and it in.
+1:01:11 You swap out one piece with another. You plug it back in and everything still works. And that is why this is valuable as a business solution.
+1:01:19 Not just sorting your emails the way that you like, you know, that is why this is a valuable tool. Cool.
+1:01:29 So we got time to open up for specific questions. Does anybody have any specific implementations? Maria, if you have any more specific questions you want to bring up about anything, nodes, NADN, tools, any of this stuff, feel free.
+1:01:46 And if anyone has any specific implementations, Omar, I think you have some interesting use cases. I want to learn more about so we can dive into your things specifically.
+1:01:57 And Christian, I know you're working on my YouTube videos. If you've got some things you want to talk about, we can bring those up right now.
+1:02:12 So, I don't know if you're aware, Nico and I, Nico, it works for me. We're actually gotcha, yeah. We're in a company called Riverpoint Medical.
+1:02:21 We're a medical device manufacturing company. Cool. So, we are trying to get our whole business rolling. We've got a lot of people that are, you know, they're using chat TPP.
+1:02:34 We've got some co-pilot licenses. We've got a lot of things going on. and we're trying to figure out, we're developing the use cases right now.
+1:02:41 And so right now, this is about just trying to understand what we're capable of. We've got some requests, I'll give you like an example.
+1:02:53 We post a lot of jobs and we get 250 to 500 resumes. And we're trying to get like a match to, we want to look, one of our goals out of AI automation at some point is to get resumes, I guess maybe 500 come in.
+1:03:14 We want to see a top 10 or top 25 that match the job description instead of spending all our time sifting through resume after resume after resume.
+1:03:23 And they come in through our payroll company. So we've got docked 20 years of documentation sitting in PDFs sitting out on our file server.
+1:03:34 And I think it's a lot of it is prompt engineering, like trying to understand how to extract data, how to prompt the data like we talked about yesterday properly to set up prompts to extract data out of these documents.
+1:03:50 So we've got a few that we're trying to go after the team to understand what departments are looking for and we're kind of combining it with this course to see how to help our business.
+1:04:03 So we're, we'll probably be joining in the daytime as well with our what we can. But that's just an overall general view.
+1:04:12 So I don't know that I'm looking for anything specific yet. But what I can't say is I get a little lost on how everything gets connected.
+1:04:21 So I know you've got you've got this connection with that spreadsheet app, I forget what it was called. Right here, air table.
+1:04:34 Air table, thank you, yeah. So I imagine there's, I don't know if you're gonna get into, you know, some of that later, but that's the piece.
+1:04:44 Yeah, that's. And then, yeah, and then I think you use whisper flow to, you know, is that just installed on your machine and that got filled in automatically or is that linked?
+1:04:55 Yeah, so whisper flows just open on my computer right here's all the the previous transcriptions it keeps a list so that's just open and running that's available I just hit my hot key on my keyboard and I can start transcribing anywhere on my screen okay all right we've just got to invest in some of 
+1:05:16 these tools I think yeah I mean that's that's the kicker that is the that you know I I talk about pitfalls and all this stuff, but I think that's the number one.
+1:05:25 So, oh my gosh, how much? I didn't realize I'm gonna be spending this amount of money each month now just to start.
+1:05:31 That's not worth it. The value is really hard to understand if you're just learning, well, ultimately, that's a hurdle getting over that hump and getting results.
+1:05:42 That's really when things start to be like, wow, why did I wait so long? This is great. you know, you start to have those revelations pretty quickly.
+1:05:53 Yeah, I mean, fortunately, I control the IT budget, so I can make those decisions for us. We just, we just got to figure out what tools to get.
+1:06:01 That's all. Perfect. Yeah, I'll make that super easy. So yeah, talking about connections, I want to not get into it because ultimately, especially those of you in the, in the, you know, advanced AI course, we're going to develop methods of asking those questions specifically to get those kinds of results
+1:06:24 , right? So essentially you can teach yourself any connection in NADN just by prompting the right way and asking chat GPT.
+1:06:32 You copy and paste, you know, for example, just you copy and paste, you take a screenshot of this right here, you drop that screenshot and chat GPT and say, They tell me how to fill this out and it does, right?
+1:06:45 So very easy ways to pick this stuff up and everything compounds. Now that being said, there are connection issues and API connection stuff that is very advanced and those are specific things that we'll talk about like JSON payloads and what that means and HTTP nodes and calling to APIs that don't have
+1:07:07 a built-in service essentially The air table is a built-in node in NADN. Well, we can do stuff in NADN that doesn't have built-in stuff, and that's really when the connections get really hard, and the troubleshooting really breaks down, and people start to lose faith.
+1:07:22 But sometimes you have to do, or ultimately you must do that custom stuff to achieve your goals. Now, let's just talk about connecting air table.
+1:07:33 Okay, let's demystify it a little bit. I don't want to say, ooh, that's a goal we have to reach is learning how to connect things.
+1:07:41 Let's connect a new AirTable node. What I did in AirTable, so I created this quote unquote spreadsheet. I want to get away from the term spreadsheet, get away from Google's sheets once we get into AirTable.
+1:07:54 But I created this spreadsheet and AirTable in my profile, get out of here thing, I can't click on my profile because of the Zoom button.
+1:08:09 So let me just click on my profile and I'll come back up here. So let me just click on my profile settings and there's a setting to go into the Builder Hub.
+1:08:19 This is just an air table thing. So in the Builder Hub, I can set up API keys or access tokens.
+1:08:27 You can see these are all my access tokens. You know, I don't even have access to my access tokens, meaning I can't see the actual code.
+1:08:38 That's how that's how strict the security is. Your access token gets created once and you have to save that locally somewhere.
+1:08:48 It's never shown to you again and you don't have access to that ever again. So, you know, talking about security stuff, there are things in place like this for every connection from every tool to make sure there is a security layer on almost on a, you know, we'll call it a row level security for talking
+1:09:06 in database terms, but we'll call it node level security. Meaning every single tool is highly secure in itself, if that makes sense.
+1:09:16 So what I did inside of air table, I created my access token. I got access to that one time. and with that one time access, I'll create a new node here.
+1:09:29 Let's use AirTable and I'll do a new operation. Let's update a record. I came in here to create new credential.
+1:09:38 So the very top row, it's very step-by-step, very methodical, step one. Let's create our credential with AirTable. So I clicked on this and I paced it in my access token.
+1:09:49 It's the only time I ever see that. Now, I keep really good records and I keep really good track and I systemically organize all of my access tokens and API keys on a project level, keeping everything secure for my own benefit.
+1:10:05 So, I do always have access to my own keys. So, it's never lost, but security is on every node, like the major forefront factor here.
+1:10:16 So, I paced it in my access tokens, saved it, and now AirPtoTable is connected just like that. It's not mysterious, it's not hard, but every single tool is going to have a slightly different process.
+1:10:27 And that's why I don't want to say this is how you connect tools. You know what I mean? Thank you.
+1:10:37 That's pretty straightforward. Yeah, super, super easy. On any built-in node, it's going to have a process, but whatever that process is, it's very step-by-step.
+1:10:47 So that demystifies it a little bit. I hope. Thank you. You're welcome. Christian, what you got, man, I want to look to you.
+1:11:01 I really want to bounce ideas off your project. So if you're able to speak, what are you, what are you working on?
+1:11:10 maybe not greetings can you hear me well oh there you are yeah what's up okay yeah no I appreciate the slow easy pace into what's going down just my first time seeing the nodes in action and it's it's cool it's clicking you know good so thank you no real questions or anything right now I'll be here and
+1:11:35 stuff to keep on advancing. Got it, cool. Thank you. Anyone else, any specific bring-ups or clarifications needed? Do you wanna explore some new nodes?
+1:11:47 Well, we have a little more time in this session. We can, I can show you some other nodes, not to get too deep into all of the nodes available, but I can show you some basic things here, just to start giving you an idea of some potential.
+1:12:03 cool. Let's check out some nodes. So, ultimately, when you guys are able to start reading the steps, meaning just looking at nodes and understanding what they might do, by the way, understanding what they might do, you can rename any node to anything you want for your own clarity in the workflow.
+1:12:28 So I can just rename this. This is creating a new row in my database. So I can just say add row, whatever, name it, whatever we want.
+1:12:39 So you can organize your edit and flow in a very logical sense. And on top of that, we can add sticky notes.
+1:12:49 So you can And section off entire areas of your workflow with descriptions or you can add, you know, however you want to use your sticky notes, you can add a tag to individual nodes and put a much longer functionality note on what that node is actually doing.
+1:13:06 For example, if I come in here, change the color, style it out, get fancy with it. I can say this node is taking in hard-coded user input and some dynamic variables from the schedule trigger and passing on to your table.
+1:13:30 Something like that. And now I have a much more detailed explanation of what's going on in my workflow, which is also good practice if you're sharing workflows and you're co-building keeping good notes, just like I'm going to keep referring to coding.
+1:13:46 Just because you'll start to, if you have some kind of coding idea, what coding even is in the first place, you'll start to notice some parallels.
+1:13:55 So basically, I'm commenting my code here, letting the next person know what's going on without just blank and mess. Cool.
+1:14:05 So when you're able to read this stuff, You'll start to be able to read much more complicated things. I keep bringing this one up because I like showing this one off.
+1:14:18 This is my personal system. This is running my, a huge part of my YouTube channel and data processing for my understanding my competitors, understanding the niche.
+1:14:30 I have systems. I'll just show you a little bit right now. You guys already know what's happening right here. I've got a schedule trigger and two airtable nodes, okay, this one is getting a record, this one is searching for records.
+1:14:45 Already, you can read the first sentence of this complex workflow and start taking apart the same thing over here. We've got schedule trigger and two airtable nodes.
+1:14:59 So you're going to start to be able to read these things much faster than you realize. If we come in here, there's a lot of crazy stuff going on, but we have this node.
+1:15:10 This is an edit fields node, just like in our example, the little pencil right here. This is an edit fields node.
+1:15:16 So when we come in here, same thing we already did, I typed in the values that the names of the values that I want, and I mapped in from my input, dragged and dropped the schema in here that is passing on.
+1:15:32 So you'll be surprised. We'll start, we'll take it really slow, but eventually, you know, or very quickly, they'll say, wow, I know, I know what that is doing.
+1:15:42 So I like showing this one off because it is my personal system. This automation right here, or this, I keep saying the word automation.
+1:15:49 Let's clarify that one more time. This right here is an automation, the entire thing. This first step, we have my trigger, we have processing, and we have an output all the way into the end in AirTable.
+1:16:05 That is a workflow. So this one workflow is part of this automation, okay, just like we have a schedule trigger of processing and an output into AirTable, this workflow from here to here is essentially doing the same thing with more processing in the middle, input processing output.
+1:16:30 So what this one is actually doing is scraping all of my competitors on YouTube, for my YouTube channel, scraping all of my competitors that I have listed in my air table base.
+1:16:52 I'll my airtable base that I use daily. In fact, Rick, you were talking about motion. I also use motion daily.
+1:17:02 This is such an invaluable calendar tool. This is an AI calendar tool. Again, I won't try and sell you on any of these tools.
+1:17:08 But this is an AI calendar tool, meaning I can create a new task and it will automatically schedule itself onto my calendar within the timeframes that are achievable with my workload and my work habits.
+1:17:21 Incredible. So basically, this and you can see on my actual calendar, I have my task here is to run through my YouTube watch list.
+1:17:33 So my YouTube watch list is automatically getting built out with the highest performing videos from all of my competitors. So I'm saving my competitors in here.
+1:17:44 Again, don't need to worry about this understanding this or what's going on, I'm just showing off at this point so you can kind of see what's possible very, very quickly.
+1:17:54 I input all of these competitors in here. I just created this list and this first workflow from here to here is scraping all of those competitors YouTube channels and dumping their highest performing videos based on the VPH that's views per hour, We're dumping their highest-performing videos in this 
+1:18:17 watch list, and now I have a curated list of exactly the information I need to be modeling or understanding or taking advantage of and seeing what my competitors are doing.
+1:18:28 On top of that, you I can just, I have the YouTube link right here. I can go straight to the video and watch it.
+1:18:34 Just like that. By the way, this guy's killing it in the AI space. You might be seeing him a lot more if you get recommended search items.
+1:18:47 You'll see him a lot. So on top of that, this automation is taking all of the transcripts from all of those videos.
+1:18:58 Don't worry if it doesn't make sense, taking all of the transcripts from all of those videos and loading those transcripts, summarizing them, chunking them and loading them into a database.
+1:19:09 So now I have a self-learning database with all the YouTube knowledge in my niche from my competitors. And I can query that database.
+1:19:21 On top of that, I built a rag bot that I can chat with that database. And now I can just ask questions about my competitors and what they're doing and find out what's going on.
+1:19:33 So this right here, this is a workflow. From here, Here we have two branches. We'll get into that splitting off, I have an output right here into air table, input, output to air table, input and output to this tool right here.
+1:19:54 We'll get into that stuff later on, but that is my output right there. So again, input, lots of processing output, you get the idea.
+1:20:02 And this system is also scraping all of the comments on all of my competitors' videos to see what their audience is saying and what their audience is requesting so that I can take that on and provide that service.
+1:20:20 Do they ignore this? It's all good, man. YouTube is the Wild West, whatever's good. Wow, that is quite, that is a pretty cool tool.
+1:20:31 Yeah, so you guys, you know, you get the idea and it's all built. So this, this last for workflow down here, you already recognize most of the nodes.
+1:20:38 We have a schedule trigger, air table, edit fields, air table, edit fields and air table. The only two you don't know is this one and this one.
+1:20:49 This one right here is pretty self explanatory. It literally does nothing. It's just for controlling the visual of your path.
+1:20:56 It's not doing anything at all. So, the only two nodes you can't read in this workflow that's my professional stack here, everything else you can read in this particular workflow.
+1:21:08 So, again, that is just to emphasize, you're going to pick this up faster than you think, even if we start getting really complex, a switch will turn on with this stuff.
+1:21:18 How long does it take you to put this together? That's a million-dollar question, right? I mean, I'm sure it's about the knowledge that you have in the in the industry, but exactly yeah, I mean, I've been building the system over time.
+1:21:35 So if I were to sit down and build this now, I would build it differently. There's things I want to change, you know, so that's, again, the beauty of automation using no code tools like Niden, we can iterate very quickly, we can expand without breaking anything.
+1:21:48 I can just start plugging new stuff in there and applying new techniques immediately and it's still going to function. So yeah, I mean, I've been building a YouTube system for a long time.
+1:21:58 This particular workflow is maybe an hour or this particular automation. Everything in here is about an hour. That's impressive, yeah.
+1:22:18 Yeah, I like showing that one off. Now, that's, you know, Automations that are of that scale, whoops, that are of that scale and doing different things in my business.
+1:22:30 But again, that is the outcome of your AI automation education. The real profound change is when you're making automations like this.
+1:22:42 This is going to change your life, making automations like this that are going to do simple things, fill in the holes ultimately giving you more time, maybe some more money, to be able to pump your time into something like that that will become a tool for your business.
+1:22:59 Right now we're not building automations. Right now we're building workflows that are going to plug in the holes in your business.
+1:23:07 That's where I want you to sit and until you know, until you know exactly how to build something like I showed you, you shouldn't try it.
+1:23:16 You're going to waste your time. You're going to run into errors and just like I'm I'm going to, I'm going to, he gave me permission to keep talking about him, say that again.
+1:23:25 Pick on me, just like I did, it's okay. No, my guy, I keep bringing up, you know, he started building YouTube systems.
+1:23:34 He built his own YouTube system that was way more impressive than this one. And he put his time and effort into all these things and now he has all these systems that are working and doing all these things, but he wasn't able to run his business, right?
+1:23:51 So I don't want that to happen to anybody. I'm going to keep bringing him up because he were cool, you know, he's like, yeah, I failed.
+1:23:59 Use me as a case study, you know. So I got something to add or ask, I guess too. So I think a lot of people will see these complex automations with all these different nodes and steps and everything.
+1:24:20 But talking about, we're talking about, like, a trigger and an action is kind of the basis of this. Is it true?
+1:24:27 Would you say it's true to say that some of these ideas would be like, they'll start out as something like, hey, I want to send myself an email every time this happens with this data.
+1:24:39 It's something like just like a few steps, but then you do that and then all of a sudden you're like, well actually Then when I get that email, I notice I have to do this other thing.
+1:24:49 I wonder if I can add that too And then when you do that, you're like, oh well, if I'm gonna do that then I'm then here's my next step after you Let me see if I could automate that and so maybe like small little two step three step automations Once you get in there and you realize that you're doing more
+1:25:06 manual work around that thing that you're like it naturally you just start adding on little branches and extra stuff because you can't exactly yeah.
+1:25:16 Yeah, again, I want to I want to put this point to that to that point right there. I want to put this in your brains.
+1:25:23 Do not attempt an automation unless you already know how to build it, okay? That's a weird concept to wrap your mind around, but just like Wade is saying, that's going to happen.
+1:25:36 So if you say, all right, I'm automating my email and now I'm realizing that I have this time freed up to focus on the fact that I have this other busy work that needs to get automated.
+1:25:46 Cool, let's automate that. If you don't know how to build that automation right there at that point of time, Stop, take a break.
+1:25:54 We're going to creep up into that shiny object syndrome and trying to automate everything. Trust me, I've tried to automate everything to see if it can be done so I can tell people don't do it.
+1:26:07 Like you said, Wade, that is something very useful. I have done that. Everything, there's like, wow, I can save time here.
+1:26:13 I can save time here. It's all built on automations this size, not the size of that full system. So, yeah, if you know exactly how to put these two nodes together, automate it, do it right then and there.
+1:26:27 If it's going to save you time and you know how to build it, ultimately we can use AI again, building context and context engineering.
+1:26:35 There's a term I want to, you know, if you guys are going to be in the vibe coding course tomorrow night, vibe coding is not a real thing.
+1:26:46 I'll just say that right now. Okay, it's a term that's become meme and it's become synonymous with AI coding. AI coding is what we're actually doing.
+1:26:55 Vibe coding is a sort of method of just sketching, right? I can sit back and I can plan out a master painting or I can sketch and come up with ideas.
+1:27:05 And essentially that's what vibe coding is. We're vibe and out and we're typing some things into the computer. But suddenly now vibe coding is a term for AI coding.
+1:27:15 And essentially when you're AI coding, you don't really want to be vibe coding. You want to be very, very structured with the way that you're using AI to build code.
+1:27:27 And so that mentality, when I started vibe coding, I was like, well, I'm not vibing at all. I'm doing very specific things for very specific results.
+1:27:37 I peeled that all the way back into automation. I was vibe automating. I was building stuff, putting out nodes this here, this there, that can do this, this can do that.
+1:27:46 And I realized that when I took that back and said, I need to be building structured plans and outlines and full, you know, I need to know what is happening in every step before I touch NITN, that completely transitioned, you know, transformed my build times, my productivity.
+1:28:04 I wasn't hitting errors. I could just sit down, build an automation, start to finish and turn it on. So, we're going to be using, you know, like I said, everything connects, everything builds, everything, you know, blends together and compounds with one another, all three courses, AI, automation, and
+1:28:22 coding. So, learning to context engineer the AI to produce documents and outlines and build plans and structured data systems that you can then feed back into the AI and say, teach me how to build this automation step by step.
+1:28:44 Well, now it has that full build guy that you've created. And it's going to say step one, put in a trigger node, step two, put in an edit fields node, step three, put in an air table node, and you will never have to guess what comes next right so coming away from that I can build this because I can and
+1:29:06 I can build this because I should that's the switch I want to impress upon you wait as well just because you can automate something we have to calculate the time factor if you're spending 10 minutes not a lot of time to build something that's going to save you two minutes well now that's negative ROI
+1:29:27 don't build that automation. Cool. That's a great point to end on. I think we nailed it for this for this session.
+1:29:38 So if anybody has any last bring-ups we can call it right here because again, we're about leverage and taking back your time.
+1:29:45 So I want to respect each and every one of you and I appreciate you making it here this evening. So any last bring-ups I think that's it.
+1:29:57 I don't I don't know if we you might have mentioned it, but should we be having everyone get signed up with N8N so they can follow along in this course and mess around with this kind of off to the side as you're doing these classes.
+1:30:13 Yeah, I want to I want to emphasize that's great to emphasize again. I'm not going to make you use N8N.
+1:30:19 I'm not going to make you use make.com. In Omar, we kind of touched on this yesterday. The more you put into the course, if you want to follow along, you're going to have better results, so you should get NADN.
+1:30:32 But I'm not going to say get it, get NADN so that you can follow along, if that makes sense. I want to give all of you the autonomy to make those decisions.
+1:30:43 If you feel that you need NADN for this course, get it. If you're you're you're taking this course for your business, you're worried about the costs of the the creep of all these tools.
+1:30:54 That's real concern. You can keep following along, but are you going to be able to retain without practice? It's all up to your capability.
+1:31:02 So I'm going to give you all autonomy in that. I have the tool list in the builders in the in the AI tool hub, the clarity tool hub.
+1:31:12 All of those tools you should get right now and start using them, but they're not required for the course. Does that clarify that way?
+1:31:21 I know it's still a nebulous. What should we be using? But in terms of, it sounds like we definitely, you know, we want to be sensitive to everybody's monthly expenses and the stuff does add up.
+1:31:34 But pretty much, if you want to be awesome at using N8N, you should go get N8N. Go get N8N. You should get AirTable.
+1:31:41 You should get N8N tonight. Get your subscriptions and sign up tonight because, you know, ultimately, if you are the type of learner that needs to follow along and be building with me, ultimately you're going to run into scenarios live and we can solve them.
+1:31:54 So, yeah, definitely do that. I would encourage everyone, I think I said it yesterday too, but like pick some sort of project, figure out some thing and build it, you know, learn here, and then build, utilize our office hours, two days and Wednesdays to get help with that build, and leave this course
+1:32:14 with something to take away. Find something in your life that's worth automating or see if you could automate it. Those that we could also ask questions here, think about like this is something I gotta do every day, or maybe this is something that I would love to have happen, you know, to get, you know
+1:32:30 , think we got, I work with a lot of financial traders. There is data and different things that could be scraped from the web and you could send yourself an email with key highlights of things about the markets that you're interested in.
+1:32:46 That's your own personal newsletter from the sources that gives you the TLDR on here's what's important today. That's just one use case.
+1:32:56 But figure out what is important in your life that takes a lot of time, bring that to the group or bring it to office hours, and let's see if there's a way to solve that using NADN and get that hour back a week or two hours a week back to your life.
+1:33:13 That's what we want people to have real takeaways by the end of this. Yeah. And again, now that you have an understanding of automation just on the base level, what it means.
+1:33:23 Again, if you fill out this AI intake form, it's going to give you a very simple step-by-step build guide. You put in your information, it'll suggest something you can build right now, build it tomorrow if you want to, using Niden, AirTable, et cetera, tools from this list.
+1:33:42 So if you want to fill that out, save the link. I put it in the chat, save the link to the tool hub, just so you can refer back here, easily navigate to notebook LM, easily navigate to the 5-prong pattern, and any of the tools you want to check out again.
+1:33:57 I'm not going to force you to buy any of these tools, but it's up to your own capability. If you want to see that level success, success that you know you can handle or capable of following along, um, building this stuff out as we go.
+1:34:11 So cool. Well, thank you again, everyone. Really value your time being here this evening. I look forward to again office hours.
+1:34:24 We're going to do another orientation for the vibe coding session in the morning. If you can make that, we'll be answering questions there beforehand so we can dive right into the material.
+1:34:33 So if you can make the office hours please do so and I will see you all tomorrow evening if you're joining that cohort session.
+1:34:41 Cool. Peter. All right. I know. See you guys. Appreciate you.

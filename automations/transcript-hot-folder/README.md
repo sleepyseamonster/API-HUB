@@ -1,13 +1,14 @@
 # Transcript Hot Folder Workflow
 
-This folder contains the n8n workflow artifact for the local transcript hot-folder watcher.
+This folder contains the n8n workflow artifact for the transcript hot-folder ingestion path.
 
 ## Files
-- `v2026-03-17_r1.json`: importable workflow draft for transcript webhook intake.
+- `v2026-03-17_r2.json`: importable workflow draft for transcript webhook intake.
 
 ## Expected Runtime Shape
 - Entry node: webhook
 - One transcript file per execution
+- Bulk uploads are handled by the local watcher in `backend/tools/transcript_hot_folder_watcher.py`
 - Input field name for the uploaded file: `file`
 - Extra form fields:
   - `batch_id`
@@ -21,6 +22,7 @@ This folder contains the n8n workflow artifact for the local transcript hot-fold
 - Attach your OpenAI credential to `Transcript Chunker`.
 - Attach your Airtable credential to both Airtable nodes.
 - Set the webhook path or copy the production webhook URL into `N8N_TRANSCRIPT_WEBHOOK_URL`.
+- Configure `N8N_TRANSCRIPT_WEBHOOK_AUTH_HEADER` and `N8N_TRANSCRIPT_WEBHOOK_AUTH_TOKEN` if the webhook is protected.
 - Confirm the Airtable base and table IDs still point to `Transcript Knowledge`.
 
 ## Workflow Behavior
@@ -30,3 +32,4 @@ This folder contains the n8n workflow artifact for the local transcript hot-fold
 - Check Airtable for an existing chunk `id`.
 - Create only missing chunk records.
 - Return one JSON response summarizing generated versus inserted chunks.
+- Emit a workflow version so batch results can be traced back to the export revision.

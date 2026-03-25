@@ -207,6 +207,21 @@ Rejected:
 Rollback trigger:
 - The demo graduates to a gateway-backed route or the public launch requirements change.
 
+### 2026-03-24 - Active
+Decision: Transcript ingestion uses a local hot-folder watcher that posts one transcript file per n8n execution.
+
+Why it was chosen:
+- Bulk transcript uploads are easier to manage as a watched folder than as ad hoc manual form submissions.
+- The watcher can preserve local batch state, retries, and per-file results while n8n stays focused on transformation and Airtable writes.
+- The workflow contract stays simple: one file in, one normalized batch response out.
+
+Rejected:
+- Making the form trigger the canonical bulk-upload path.
+- Pushing batch orchestration into n8n instead of keeping it in the local watcher.
+
+Rollback trigger:
+- The ingestion path moves into a different orchestrator or the repository adopts a dedicated upload service with the same guarantees.
+
 ## Template
 
 ### YYYY-MM-DD - Proposed or Active

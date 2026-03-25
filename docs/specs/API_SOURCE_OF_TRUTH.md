@@ -2,7 +2,7 @@
 
 Status: Active
 Owner: API HUB runtime planning
-Last updated: 2026-03-17
+Last updated: 2026-03-24
 Depends on: `frontend/entities/endpoints/model/endpoint-registry.ts`, `frontend/shared/contracts/portal-data-provider.ts`, `docs/specs/API_SPECIFICATION.md`
 Source of truth: This file defines what is implemented now and where canonical runtime assumptions live.
 
@@ -14,7 +14,7 @@ This document is the single reference for understanding how the API system curre
 - Define where each API concept lives in code.
 - Prevent mock-mode portal behavior from being confused with live backend behavior.
 
-## State Snapshot (March 17, 2026)
+## State Snapshot (March 24, 2026)
 Current state:
 - A functional Next.js developer portal exists in `frontend/`.
 - Endpoint definitions and examples are implemented as typed frontend data.
@@ -23,7 +23,7 @@ Current state:
 Not implemented yet:
 - FastAPI gateway in `backend/`.
 - Supabase schema and migrations in `supabase/`.
-- n8n workflow exports in `automations/`.
+- Most live n8n workflow exports in `automations/`.
 - Production auth, billing, rate limit, and job orchestration.
 
 ## Status Matrix
@@ -35,6 +35,7 @@ Not implemented yet:
 | Demo public route | Implemented | `frontend/app/v1/tools/local-business-search/route.ts` |
 | Provider boundary | Implemented | `frontend/shared/contracts/portal-data-provider.ts` |
 | Dashboard usage, logs, billing, keys | Simulated | `frontend/shared/providers/mock-portal-data-provider.ts` |
+| Transcript hot-folder workflow export | Implemented | `automations/transcript-hot-folder/v2026-03-17_r2.json` |
 | Public API contract | Drafted | `docs/specs/API_SPECIFICATION.md` |
 | Gateway-to-n8n contract | Drafted only | `docs/specs/N8N_HANDSHAKE_SPEC.md` |
 | Live gateway | Not implemented | `docs/specs/ARCHITECTURE.md` |

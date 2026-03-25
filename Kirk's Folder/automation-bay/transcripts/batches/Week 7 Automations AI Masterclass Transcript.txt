@@ -1,0 +1,261 @@
+﻿0:00:05 Alright, cool. Now is everybody doing? Let's dive into it. Hmm. So we're gonna jump into our project here. Just this is the main sort of automation project that I have been building with all the nodes in it.
+0:00:23 And this is what we finished last week. Complete automation right here. This is connected to the air table base, the Agent Hub 2.0.
+0:00:42 And this automation can generate images using Google Nano Banana. Okay, so this will call that the air table base will trigger, based on the manual trigger right here, clicking this manual trigger will send it off this airtivel record to be processed by this agent.
+0:01:11 Pass it on down, generate in Nana Banana and put it back into airtivel. Okay, so very common workflow, the main thing that happens every single time, building with AirTable and Niden, this part right here, connecting to an agent, and then do an internet stuff.
+0:01:32 Okay, internet stuff, we're calling two different tools with an HTTP request. HTTP request nodes, this is our generic custom tool.
+0:01:45 Okay, every single thing that happens with a tool in NADN is some kind of HTTP request. However, NADN has built-in nodes like AirTable, like OpenAI, so we can just configure those nodes very quickly.
+0:02:02 But anything that doesn't have a built-in node, we can still call to an API with HTTP. Again, HTTP, this is just like entering in a URL, doing stuff on the internet.
+0:02:16 So that's why I call it internet stuff. That's the technical term. Okay, so internet stuff, if you can get this workflow down to generate from foul, like we did here, you'll be able to figure out how to use HTTP nodes to do other tasks.
+0:02:32 All right, this is kind of just like a fun way to learn HTTP. Doing generations, you get immediate feedback, you can see exactly if it's working, you have all the information in file on those generations, so you can get that feedback, you can troubleshoot, and you can learn HTTP notes.
+0:02:51 Okay, what we're gonna do is kind of branch off or continue what we were talking about yesterday with building out knowledge bases, knowledge databases using an agent, and do an agentic generation, retrieval augmented generation, in a database.
+0:03:11 So I'm going to use this same Agent Hub 2.0, technically, you know, you can build projects however you want. This is one of the hardest things to teach is that there are no rules.
+0:03:22 You can build this however you want. And so a lot of my previous students and a lot of my previous programs, I teach something very step by step.
+0:03:29 But the students follow it step by step and they complete it and they're successful, but they don't know how to make anything else, okay?
+0:03:37 You can innovate, you can do whatever you want, and that's the hardest thing to learn is that, yeah, there's infinite potential.
+0:03:44 Infinite potential is just overload, right? It's really hard to think of something and to execute it and to know that you're doing it right.
+0:03:53 So, if stuff is breaking, if you're having a troubleshoot, if you're getting errors that is totally normal. But what we're going to do is feed off of what we did yesterday and I'm going to use the same agent hub.
+0:04:06 Technically, I could run all of my agent operations or any of my automations from a single air table base. As a main command center, I could have all of these tables filled up with my different agents, utilizing my different API keys to all my different tools, have a bunch of different workflow tables
+0:04:26 , doing different tasks, I could definitely do something like that. But I always recommend creating new airtable bases for single automations, especially when you're learning, just because you can just organize everything a lot better and you don't kind of lose track of what you did weeks ago, trying
+0:04:43 to figure out what you did before and how did I even do this kind of thing. So that's what I recommend, but that being said, I'm going to use my same airtable base and we're going to turn this into a big command center type of thing.
+0:04:57 All right, so what we're talking about yesterday is using the, using ChatGBT to process data. Well, me and Rick had a session this morning is awesome, building something out with Rick.
+0:05:13 He's got this idea in mind. I don't think he's in the, in the call yet. But you always want, when you're automating, you know, you want to automate SOPs, you want to automate manual workflows.
+0:05:24 You don't want to invent anything with automation. Okay, that's really what vibe coding is excelling at is having that creative space.
+0:05:34 What automation is meant for, you know, I have and I can build really amazing systems that go out and do stuff.
+0:05:41 But what automation's real purposes is to streamline your manual boring, arduous tasks that are repetitive. That's perfect job for automation.
+0:05:54 If you have something that's repetitive, automate it. So for building a new creative thing or a new tool that isn't already a manual process, we have to develop a manual process first.
+0:06:07 We have to find out what works manually before we even attempt to try and automate it. So that's what I mean, Rick worked on this morning is thinking AI first coming up with a manual workflow and then you have the tools to build an automation.
+0:06:24 So what we did yesterday is that manual workflow. We took my transcripts, we processed the data, got the data into chunks with metadata tags and organized it all that way.
+0:06:41 That is the manual process, right? that's what we need to be doing. And so now we can think about automation.
+0:06:47 So let me go ahead and pull up. Let's see, I'll just, Okay, this is our chat for Mr. Day. Here are those chunks.
+0:07:16 Okay, so now when you're concepting and building, especially building rack systems or automations that aren't necessarily quite a manual process yet.
+0:07:27 We did the manual process. Now I come down in this same chat. Again, this is the chat from yesterday. All the chunks built out here using the transcript number one to build all this out.
+0:07:43 Well, now we have an output that we're looking for. We've got chunks. We've got metadata. This is great. So now the next step to start getting into the automation stuff is to create an agent that can do this, right?
+0:07:59 So I'm going to say read through this entire conversation, I need you to understand what we're doing here in this manual process.
+0:08:11 I need you to write a system instruction for an agent that can take in transcripts and process the data just like we've done here, chunking it and adding the metadata.
+0:08:28 Great. So now, going way back to what we talked about in the beginning of advanced AI, we're going to systematize a prompt or a workflow here, a conversational session.
+0:08:44 Now we're going to systematize it. So here's our system instruction. You are a knowledge structuring agent designed to transform raw teaching transcripts into knowledge chunks suitable for vector and air table.
+0:08:59 Great. Awesome. Awesome prompts right away. I could read through this. You can tune up the prompt again, conversational prompting, tune up the prompts, get it working exactly as you want it.
+0:09:13 If you don't know how it's supposed to be working, ask that. Like I can copy and paste this and I can just copy it, paste it down here and say, audit this.
+0:09:26 I'm not really sure is this professional way to do it. Something like that. Any section you're unsure of or the entire thing, you can say audit the entire thing is this professional.
+0:09:41 Continue the conversation, you can say look up the best practices, apply those best practices to building out this prompt, so on and so on, you know, building out your context engineering skills, that's just how it's going to, how you're going to evolve using AI.
+0:09:56 So I'm going to go ahead and copy this system message. let's come back into NADN and I'll just paste this in here just for reference.
+0:10:06 Remember we can add in sticky notes. I can hit Shift S on the keyboard or click the button right here at a sticky note right here and so sticky notes you can tag different nodes but I'm going to paste into the sticky note that entire system message just so I can have it here and see it and maybe I can
+0:10:29 tune it up and look at it here in the workflow or just save it. Just hold it here. Cool. So there's my system message.
+0:10:49 Done and done. I'm just going to make some space here. Same canvas, same big canvas space. this is what's great about NADN.
+0:10:56 It is such a playground. You can utilize. All right, so we're going to turn this system, turn this prompt or turn this chunking system into an automation.
+0:11:11 So now we have an agent that does all of this. We can feed this agent transcripts and it's going to do all that.
+0:11:20 So what do we do? How do we feed an agent transcripts? Well, So what do we need? We need an agent.
+0:11:28 I'll go ahead and drop in an agent here, open AI message, a model node. I'll choose my same credential, AI agent hub 2.0.
+0:11:40 We created this, I think we created it last time. Choose the model, the fastest and most powerful model out right now, or fastest and cheapest This model out right now is GPT-5 Nano, fastest and cheapest.
+0:12:01 You can go more brain power from there. We might need more brain power analyzing and chunking transcripts, so we can test it and see.
+0:12:14 So, what else do we do with this agent? Okay, this agent needs to have its brain in here, so we can add its brain in here.
+0:12:21 I'll add the role system. This is a system message. And now, of course, I can copy and paste the system instructions.
+0:12:38 Now, if you want to expand out any boxes in, any, then on any of the nodes, it's a weird little trick.
+0:12:44 You got to come over here, hover over this, click Expression. This will turn it into a different mode, but it'll also open up the little expand button right here.
+0:12:53 We can expand it and see the full prompt. Okay, so here's the full prompt is our brain in our agent ready to go.
+0:13:02 Now, how do we feed our agent these transcripts? Well, the agent has to take in a user message. Let's go ahead and add a user message.
+0:13:11 And we can drag and drop the schema coming into the input over here. Great. Well, how do we get that schema?
+0:13:23 How do we add something where we can put transcripts into it? Okay, I'm just thinking aloud. This is how I plan stuff out.
+0:13:29 I think about the problem. I kind of spiral out from there. What am I trying to do? What does this thing need in the front of it?
+0:13:37 For input, in the back of it, for output, and think out loud to myself in that way. So that's just my process.
+0:13:44 So I'll just ask NADN. I'll say, I need an input node where I can drop, transcript files that we'll then connect to my AI agent.
+0:14:01 Can you add in that node? And I'll just be super generic. Let's see what NADAN will add in here. Again, AI first leveraging AI.
+0:14:20 Just ask it. The worst that can happen is it you a wrong response and then you follow that wrong response, working for weeks, building something that doesn't work and you have to start over.
+0:14:34 No, just kidding, hopefully that doesn't work, that doesn't happen. Great, so one thing I all consistently forget is that the end-ed-end AI always automatically rearranges all your nodes.
+0:14:53 I'll have to go in here and rearrange all my nodes again. That's not what I wanted. I always forget. That's what this agent does.
+0:15:02 Great. So let's see where we're at. Here's our new agent. What's it say? We need to access the form. Cool.
+0:15:15 So it added in a form right here. This is the new workflow that it added in, form view, upload the transcripts and the AI agent that it added, made a total mess of my workflow.
+0:15:27 I always forget that it does that. But here's what it added in. Great. So now we have a form upload, we have an extractor for the transcript and then that loads it into the agent.
+0:15:42 Well, we already built our agent. Let's go ahead and swap that out. Boom. Plug it in. Check out this form trigger now.
+0:15:53 We haven't talked about this form trigger. It's pretty self-explanatory, if you know the other triggers. And unfortunately, my nice arranged arrangement over here got destroyed.
+0:16:06 So if we know these other triggers, these are the basic triggers. Manual trigger, schedule trigger, and when chat is received, we can kind of guess what the form triggers going to do.
+0:16:17 Once you click into it, open it up. You can see, okay, it's literally just a form and we can drop in a file into this form.
+0:16:31 If I execute this step, I'll go ahead and unplug the form just so you guys can see it by itself.
+0:16:39 If I execute this step. What's going to happen here is it's going to open up a form, a literal form that you can you know embed or send off.
+0:16:50 This is again a web hook. If we go into the form node itself, you can see it's a URL. So you can actually set up your URL here.
+0:17:04 If I copy this URL and I paste it into a new browser that actually opens up my NADN form. So you can use this link, this form link, and when your customer's clients, whatever, yourself enters into this form, it's going to trigger your automation.
+0:17:29 Okay, so setting up this form, the agent over here, the NINDI set up the the form for us already it's again working in each node you read it right to left top to bottom so we could read it like this step one setting all this step up cool authentication none form title we can name this whatever we want
+0:17:52 upload transcript files is fine the NINDI filled out the description for us here's the field name that it gave us the label what are we trying to upload is a file, you know, this can be anything.
+0:18:09 Here's a text area for just entering in text, right? So the AI did a great job setting up the forum, pretty basic, but it's a basic need.
+0:18:19 If all we need to do is drop in transcript files and those transcript files will get sent off to our workflow.
+0:18:27 Great, so it can handle multiple files and the file field is a required field. Let's plug it back in. Let's check out the Extract Transcript node here.
+0:18:45 All this is doing is taking the data from the form and extracting text. It's literally what it says on the tin extract from text file.
+0:18:56 This is a specific node we can find in the nodes over here. here. I'll just type it in so we can see it.
+0:19:05 Here it is extract from file and we can extract all these file types, right, extract from a PDF, extract from HTML, CSV, and so we're extracting our text file.
+0:19:22 Okay, this node, I think, we've briefly touched on what node actually is. I don't think it's in this list making it easy for you guys.
+0:19:38 The extraction nodes, this is a whole, it's a minor subject, but it's something to get into. I don't think we touched on it now that I'm thinking about it so we can definitely go back and touch on the extraction nodes.
+0:19:51 Basically, extraction nodes, I'll just type it in here again, extract from file and we have all these options and convert to file.
+0:20:05 So you can extract from files and you can convert back into those file types. So if you have a text file, you can convert it into, you know, JSON, XLS, whatever, right?
+0:20:17 So these two nodes are very, very basic, but you just have to know they exist. Getting text out of a PDF or putting text into a PDF, basic notes here.
+0:20:33 PDFs, by the way, very hard to work with. Definitely better to use third-party tools for PDFs. That's call to a third party, I think we have built in PDF, third party PDF nodes here, so lots of PDF stuff.
+0:20:51 I don't recommend using the built-in nodes, the end-it-in nodes for PDF stuff, try and use a third party for PDF stuff.
+0:21:00 That's just going to be better. I'll tell you that. Great, so we're extracting our text, moving on down, and sending that text into the agent and finally the agent can accept our text.
+0:21:15 I'm just going to grab this if I can. No, I can't. So I'll have to run it. Let's go ahead and run it.
+0:21:20 I'm going to grab my transcripts again. Cool. So I'll just test this workflow. I'll just hit execute, test it. It'll open up the form.
+0:21:43 I can, you can see how the form is built out now, the title, the description, the label for the field and then the field type itself, it accepts files, so I can click this button to say choose files.
+0:21:57 And I can load in my files here, let's see. I think I can drag and drop as better. By the way, these photos that keep popping up, this is one of my AI influencers that's going to start selling products for me on TikTok.
+0:22:14 I created this person, this AI girl. Let's see. So I'm going to grab week one transcript, drop it in here.
+0:22:29 Submit that form. And that will trigger the automation. There it goes. And it didn't go through all the way. Let's figure out why.
+0:22:46 Oh, because there's nothing in here. Let's add in our linkage here now. Cool. So this is a common thing. These extractors again, very touchy.
+0:23:03 That's why I don't really teach them the end the end and end built in extractors and converters. you have to know they exist and you can utilize them, but generally they don't always work, so I'm gonna have to troubleshoot this already.
+0:23:17 This is a real sort of troubleshooting thing popping up live that doesn't show an error, right? For the most part, any errors you get, the node will turn red or there be some kind of red message.
+0:23:28 This one just isn't passing through, and that's because because if we jump into the agent where you can see in the input, there's nothing there.
+0:23:39 So something is happening in the previous node that's just saying no fields, the node executed, but there's nothing there. Well, we can troubleshoot this a couple of ways.
+0:23:51 We can tweak this node, and we can figure out how to get this data through. There's no output coming out of this node.
+0:23:58 What is actually going on here? where you can see the data is coming through, just fine, and nothing is coming out.
+0:24:05 So I can try and do different conversion methods here, but one of the best ways is, again, looking at the views up here, we have different views to view the data, schema view, table view, JSON view, and now when we have files, we have a new view, the binary view.
+0:24:28 And this binary view allows you to actually see the file itself. Okay, that's just the end and end thing you can actually view the file.
+0:24:39 And so what I'm seeing here is that the text binary is already coming through as text. And so our conversion node isn't really doing anything because we already have text coming through.
+0:24:55 So we can process this, we can process this a different way, we can set trying to find a different converter here, but what I'm going to do is see if we can get this directly from the form into the agent.
+0:25:20 I'll come into the JSON view and And load the transcript file here straight into the user prompt and see if that gets us anything just by running and, no, right, oops, error pops up invalid.
+0:25:43 We got an array here, all kinds of data issues. This is just, this is just how automation goes, right, trying to troubleshoot this stuff.
+0:25:52 So ultimately, what's a better solution? I think me and Nico talk about this often is anytime you're working on something and you want to get a result out of, you're working on this project, you're hoping to get the result, you keep going, you keep going and then you hit a roadblock, ultimately the best
+0:26:11 solution is to actually start from scratch. It's really hard to wrap your mind around that as a professional and as a worker working on projects, you don't want to lose any progress that you had.
+0:26:22 So it's really hard to say, let's start over. How do we do this from the beginning? And with AI, we can do that very easily and iterate upon what is actually happening and what is not working.
+0:26:35 So what I'm going to do here is say, this is one of my go-to troubleshooting methods. I'm going to plug everything back in.
+0:26:43 Let's go ahead and just run it again. So we have our data going through. I'll load in my file, submit, nothing's coming through.
+0:26:55 We're not actually getting that text, so I will copy this entire workflow. Again, when you copy it, you're copying the JSON of that workflow.
+0:27:07 So, if I paste it into chatGPT, just a new chat in chatGPT, here's the entire workflow in JSON. Okay, I'll say this is my workflow.
+0:27:23 I'm trying to drop text files that are transcripts into the workflow and have them processed by my agent.
+0:27:35 What are your suggestions on how I can make this work. Think outside the box, start from scratch, suggest a new workflow if necessary.
+0:27:45 You are a master in and in workflow builder. Again, my expertise, I would go down so many different methods of troubleshooting and work on this.
+0:28:00 Again, most likely, the real issue is coming from my version here. I can't really update my workflows. I'm not ready to update my workflows.
+0:28:10 We talked about in it end as an automatically update because if you're running workflows, those updates could break your workflows.
+0:28:17 So I'm not quite ready to update, but most likely trying to build in some new stuff. I'm having some weird, some weird issues as you can tell.
+0:28:27 All right, so here's what's working. What you're actually building. The correct architecture file intake layer. Cool. We got the form trigger.
+0:28:39 Do not process inside the form. Okay. Remove weird encoding. This is how I read this stuff to you. I just kind of glance through it to see what it's talking about.
+0:28:52 I don't actually try and understand it because you're going to look, you're going to waste so much trying trying to understand what AI is trying to build for you unless that's your goal is to understand what AI is trying to build for you.
+0:29:03 If your goal is trying to make it work, then don't read through it if you don't know what it is.
+0:29:10 All right, so phase four, structuring layer, post-processing, merge layer, great. So I'll Let's say using the JSON, I've given you, can you write the JSON to build me the correct nodes up to the agent, write out that JSON in full?
+0:29:37 Okay, again, this is why I use ChatGPT over other tools. Cloud can do this. I'm pretty sure Jim and I can do this, but having a tool that is actually built, actually uses backend or lets you build backend systems like OpenAI, this is what's really great about it.
+0:29:57 So I'll just say, hey, I don't know what I'm doing. I need you to build me that JSON. And there it is.
+0:30:07 It's just going to build me my workflow. So same thing, you know, this technically the same thing that the NADN AI is doing over here, but the NADN AI isn't as good as JetGPT, so we'll see what we get out of this.
+0:30:26 Cool, I'll copy that, come back into NADN, and I'll just hit paste. Great. So we've got a new form, a new extractor, and then some placeholder nodes, and then our agent.
+0:30:45 Cool. So I'm just going to delete these. Let's see what we get over here. form, extractor, plug it in, let's see what we get, oops, same thing.
+0:31:12 Okay, so this is probably, honestly, this is probably my update. I'm just gonna update and see what happens. While this is updating, I was dreading this.
+0:31:27 I was trying not to do this, but I'm gonna go ahead and do it because we need to move forward.
+0:31:32 While this is updating, is anybody having any questions on my AI workflow? My AI first thinking on this stuff? It's dreading this update, but I think we're gonna have to do it.
+0:32:12 All right, so while that's updating, we can work on the agent side of things over here as well. So I'm going to come into the air table base, come into my agents here.
+0:32:26 This is where I want to manage all of my agents, right? So I can paste in my system prompt from my agent over here.
+0:33:07 Okay, grab my system prompt for my agent again, same system prompt. Come into air table, into my agent's table, in the agent hub, and paste that system prompt.
+0:33:26 Now, this is the text Chunker, something like that. Text Chunker for knowledge base. Cool. So I got that agent brain saved here in air table, and I got it saved in an end end.
+0:34:07 Oh, let's see the damage we did here on the update. Great. So while that is again, while that's updating, I'll come back to create a new table in air table.
+0:34:24 This is where we can start storing that information that we're going to be chunking out of there. So kind of where we left off showing you what I was doing here with this table.
+0:34:34 I want to create a table just like this so I can export this actual table. I'll just copy it, come into air table, delete out everything, just getting rid of the default fields.
+0:34:54 I'll create a new field here, let's just make it a long text field. And similar to Google Sheets or anything, you can paste in a ton of information, it's going to populate all the cells.
+0:35:10 Let's see if I hit the paste key here on the first cell. Do you want to expand this table? Continue.
+0:35:18 Great. That's not the correct format though. This is just a list. So I need this into a CSV file, see where we're at.
+0:35:59 Now hopefully all my other automations are still working. We'll find out. Cool. Since I didn't say this one, we're kind of back to where we were on organized or organized how we had it before.
+0:36:14 So I'll go ahead and quickly build out what we had before. in here, we had the form, oops. Form trigger, the extract and the agent.
+0:37:07 Come again to air table, I grabbed my system prompt again. And my agent brain right here, back into NADN, double check, we have that system prompt, awesome.
+0:37:28 Add the system, add the user message section. Great, that's about where we were. Alright, so let's jump back into air table.
+0:37:38 Let's get data moving through here. I want to get this default table again just trying to come up. the trying to come up with the manual process first, chunking the data, trying to go through all this stuff.
+0:37:53 These are always how the first steps go. Long before, I'm even trying to skip ahead a little bit to show the automation stuff, but you can see it's troubleshooting, always happens, hitting errors, always happens.
+0:38:06 Well, this is always the first phases. Automation is very tedious. I've said that before, but getting this manual process first, this is why it's easier and always recommended, you know, if you're if you have a process, a manual process that you hate doing, that is what you should automate.
+0:38:24 Automating innovation is just troubleshooting and always a nightmare, but this is how it goes, right? This is this is the job.
+0:38:30 So you're seeing it live again. I think that happens every week running into issues. So what I need here, building this out, I created this table.
+0:38:40 This looks good. Part of my manual process. I thought this was the actual table view, but it's actually just the list or the text view here.
+0:38:49 So I'm going to say, I copied this table. I'll say, can you write this into a table so I can export the CSV file?
+0:39:29 Can you export the CSV for me? Maybe. Struggling with this one? Great. Finally, got our CSV. I'll download that CSV file.
+0:40:29 I'll come back into AirTable and now I can import that CSV file correctly in here into this table. So let's say on the table, right click on the table name, we can import data and choose CSV file.
+0:40:53 Grab my CSV, upload it. Cool. Oh, and again, still not doing this right, struggling with the air table. We need to create a new table, new table from CSV file.
+0:41:20 Great new table. There we go. That's what I'm looking for. Okay, so just trying to import a CSV file, create a new table, import the CSV, and this is what I'm actually trying to get here.
+0:41:36 So basically, this was just a lazy way of getting the field names in here to organize all of our chunks that are coming through.
+0:41:47 So again, the page content, this is the actual text that was chunked out. These are all the metadata tags, everything added in based on our manual process there.
+0:42:03 So this is actually complete. This is week one of the transcript complete. But all I needed was to get the dummy data in here as a template because I didn't want to manually build out these fields.
+0:42:19 All of that round about CSV process was just because I didn't want to manually create these fields from scratch. Easily, you can definitely do that, create that from scratch, but just trying to get it in here because I'm lazy.
+0:42:34 So all of that just to get these field types. But now that we have these fields in here, we can automate to this table, my imported table.
+0:42:43 I'll go ahead and right click on it, rename it. Let's call this my, I don't know, transcript knowledge, transcript knowledge.
+0:43:06 Cool. Let's jump back into NADN. Let's see if our update made things better or worse. I'll rebuild the form node.
+0:43:20 Just kind of going down, step one, step two, form title, description, upload transcript files, form element. This is a file.
+0:43:34 File, good enough. So this option down here, I like to do this. If we click on add option, we can click on append NADN attribution and toggle that off.
+0:43:50 I'll just show you what that does real quick. We can get rid of the NADN branding. Now, something that's really cool with the NADN built in stuff is you can actually customize the chats, customize the forms.
+0:44:06 If you get into the docs and you read the docs, you can actually use HTML and actually customize the form if you needed to.
+0:44:14 It's very light, very simple form trigger that is automatically going to run your automations that you can use in your website or whatever.
+0:44:26 Side note. All right, let's give it a shot. Execute and drop in my file, boom, and no binary data field.
+0:44:55 Great, so this is a common error with the extractor. This is actually better, so the update did work. this is actually better.
+0:45:03 Getting an error here is actually better than getting nothing. We can troubleshoot errors. Getting nothing is worse because we don't know what's going on.
+0:45:12 So what this is actually saying is my input field. I named it this is a file. We need our input name name here to be this is a file.
+0:45:29 The input field is just simply named in the extractor here. So we just have to make sure that name is correct.
+0:45:37 Boom. There we go. Long round about way, but that's it. Troubleshooting. We got our text coming through. We've got our agent, we've got our system instructions in there.
+0:45:50 Now we can finally link up the data. Awesome. So again, this is the scheme of view. We can look at the table view.
+0:46:02 The table view is generally going to show you all of the data coming through in a grid. So this is the entire transcript, this is that whole thing, just like copying and pasting it into ChatGPT.
+0:46:19 Okay, we have our manual process loading in the files, processing that, understanding how to process it, and then actually processing it in ChatGPT to get our chunks then to systematize this entire conversation into system instructions so that we could load those system instructions into our agent and
+0:46:58 that agent can do that process for us. So let's run the agent and see what we get. Now, there's most likely one more little thing here that is common with using the agent nodes in NADN that we haven't yet talked about.
+0:47:15 So this is the big next step for using agents. So this is a lot of data. This is a big task.
+0:47:25 This is a very small, cheap, fast model. So let's see what it's actually going to put out here. Okay, I guess while that agent is running, we can continue building the workflow pipeline here.
+0:48:12 So the agent's going to process, oh, there we go. Done. Done and done. So great. We're getting our text response back from the agent.
+0:48:22 We look at the table view. We can see we've got the ID, the page content stuff, just kind of scanning through.
+0:48:30 we have the metadata. Awesome. Looks like each chunk, then another chunk ID. Well, this is great, but this is one long string.
+0:48:42 We can't really process this information any differently or any better than processing this long string. It's all broken up and organized, but it's still just one long piece of text.
+0:48:56 So, the next upgrade and understanding how to use your agents is the output types we can do here. Again, just trying to model our manual workflow.
+0:49:12 How do we get our output into structured JSON? This is what we're looking for from our manual process. us. Well, to do that in the n 8n nodes, we have to, they, with all the new updates, it's kind of a roundabout way, to be honest, it's a roundabout, more difficult way to do this, but essentially, we're
+0:49:33 going to click this add option button and we need to find the output format. And for type, choose JSON object.
+0:49:47 Okay, verbosity. I don't know, they made all these weird updates to the agent to try and make it more usable, but it just makes it more complex when it acts exactly the same.
+0:49:59 So trying to output in JSON, choose JSON object and just leave the verbosity. So I'll run this again, and you'll notice the difference here in the output.
+0:50:13 Okay, super complex, super technical. Again, automation. It's just about doing reps, just about practicing. It's my least favorite way of learning, doing repetitions, but that is how we have to do it in automation.
+0:50:31 goes against my teaching style to my teaching style is about finding different angles to teach the same subject, but it's, you know, a deterministic workflow here has to have deterministic learning.
+0:50:54 The main takeaways again, what I'm trying to reflect here is this automation can only be possible because I figured out how to do it manually.
+0:51:06 That's the key takeaway is any automation automated process has to have some kind of manual process first. Even if you're coming up with something new, have a full session or many sessions with chat GPT so that you can create your results manually with AI.
+0:51:26 And if you can create your results manually with AI, you can automate that process with AI. Great, so here is the switchback to schema view.
+0:51:39 Here's the difference in the output, okay? We're getting everything actually labeled and organized into chunks. The agent is going to know, let's output in JSON, let's output in objects, And so we have chunks, chunk one or labeled chunk zero.
+0:52:00 Here's the ID, page content, the metadata, gave us retrieval tags, that's great. Here's chunk two or labeled chunk number one, ID, page content, metadata, retrieval tags, chunk two, chunk three, et cetera.
+0:52:17 So now we have structured data coming from our agent, And exactly like we had coming from our agent in Chatchy PT is great.
+0:52:29 Now all we need to do is map this into a air table. But I'll just tell you this caveat right here, learning data types, we've been struggling all of our automation sessions, we've been running into issues, just weird quirks and troubleshooting with arrays.
+0:52:50 And yes, we have another array, again, just learning the data types, just recognizing these little icons, you'll start to understand what the data types are.
+0:53:01 If I close down this array right here, that's everything. That's all of our chunks. And so an array is basically a big container of items where all of our items are inside of the array, right?
+0:53:23 So we need to process this array, we need to get all of our items outside of the array so we can put all of our items into air table.
+0:53:32 Complex, again, working with arrays, it's just that's, you gotta practice, gotta do the reps, but in this particular case, we can use our node we've tried that didn't work, But now I've updated any then, so now it'll work, hopefully, is the split-out node.
+0:53:53 This is one of our nodes specifically for working with arrays. And I'm still organizing our labels over here.
+0:54:04 So nodes for handling array data. We have our split-out node. We're trying to get all of our items out of that array so that we can see them all.
+0:54:14 and put them into AirTable. Great, so I'm going to come into the SplitOut node, I'll switch the view back to SchemaView and find the chunks array, drop it into the fields to split out, and execute it.
+0:54:33 Great, now we can see we have eight items, eight chunks outside of that array, coming out of that array, we can drop into AirTable.
+0:54:47 Boom, let's add the AirTable node. Let's create a record. We're going to input data into our table so we can create a record.
+0:54:59 Use my same credential. Choose my base. Choose my table. What do we call it transcript knowledge? This is where we're going to dump of our transcript knowledge.
+0:55:14 Cool, so then we can just fill out the things here. Most likely, it's not going to match up quite right.
+0:55:22 What I mean by match up, you can see we have weak, we have the ID, we have the page content.
+0:55:30 What might not match up quite right, and I can just, we can double check as we go, but about essentially back in our manual process here, I created this table and then did that round about lazy way of getting all of these field names into air table.
+0:55:54 Okay, this is what we have in air table or these field names, which means in our air table node, those are our field names.
+0:56:04 Okay, double checking, air table, those are our field names. This is what we're trying to populate. We also, from our manual process, use this same exact conversational prompting session to build our system prompt.
+0:56:25 And so most likely our system prompt is going to understand that we need these field types.
+0:56:37 So we can come back into N&N and see what matches up, what doesn't, what might we have to change or tune up a little bit, but let's go ahead and go through it.
+0:56:46 So we have the ID, that's matching up correctly. We have the weak topic is coming through, just find subtopic is coming through concept type and drop that in there.
+0:57:01 It's got a little select right here. This is just in air table. These came through as drop-down fields. It's just the way the CSV kind of brought it in.
+0:57:14 I can go ahead and change this to this field type to a long text field or a single line text field.
+0:57:22 Things you'll get used to editing. It doesn't really matter in this case, but just little things like this just take practice.
+0:57:29 There's no real way to teach little nuance things as they happen. But in my case here, I'm just turning everything into a long text field type.
+0:57:39 We're just going to put text in there. Let's not get fancy. Everything is text and then the week is a number type.
+0:57:45 Cool. So that'll fix this little select thing right here. Let's go ahead and update the air table node. Now we've got all text fields.
+0:57:59 Complexity level is coming through content category, coming through retrieval tags. This might have a problem. This is another array here.
+0:58:09 Okay. If I drop in the array, That's not going to work because our air table field type is for text, not arrays, okay.
+0:58:20 All these little data matchups is just stuff you got to play with. So I'll leave that empty in this case.
+0:58:27 Just because I recognize this little symbol, I know that's an array, I know it's not going to work, bringing the retrieval tags in here just yet, and then page content that's coming through.
+0:58:39 Great. Execute the step. Now what's going to happen is this is going to execute eight times. Okay, we have eight items coming from our original array, passing into airtable.
+0:58:57 Airtable is going to do that processing eight times and so we have eight operations in airtable, meaning we have eight new records coming into our airtable base with all of our data nice and organized minus the retrieval tags we didn't add in here.
+0:59:16 Okay, so we have our week, we have our topic, subtopic, everything coming through, and of course the page content, this is the actual text from the transcript.
+0:59:31 That is a lot of information to take in guys, but that is a full end to end of a simple rag ingestion system.
+0:59:44 This is half of an agent chatbot system. The other half would be to actually make the chatbot so that I can chat with my new air table knowledge base to get that information back.
+1:00:01 This is why rag is so difficult, but knowing this stuff and practicing this stuff is going to let you innovate.
+1:00:09 It's learning a simple rag system like this. It's got to teach you how to do many, many more things. Using arrays, using the agent, updating your NADN at the appropriate time, using these tools, doing these technical things, getting that power in your pocket to build complex systems in the most straightforward
+1:00:35 way. It's a lot of technical stuff here, but you can watch the video back is going to give you so much confidence and ability to innovate because these systems are the highest level systems you can build.
+1:00:47 This is a simple one, but these are the highest level systems you can build in AI automation right now, or at all, knowledge retrieval, rag systems, CAG systems, we'll talk about CAG systems if you want.
+1:01:00 It's not really something to get into. I'll just, that's a side note. CAG systems, rag is retrieval augmented generation. CAG is cached, augmented generation.
+1:01:14 Don't worry about that, but if you hear the the term CAG along with rag that's, it's just another method. don't need to worry about it.
+1:01:23 But yeah, these systems are the cutting edge of automation and we built one. It's a simple one going into air, into air table.
+1:01:32 But if you can do something like this, you'll be able to innovate, you'll be able to have this in your pocket to expand your knowledge in very, very professional systems.
+1:01:43 So yeah, watch the videos back if that's a lot. I'll go ahead and and open it up to questions. We can talk about the structure of the database.
+1:01:52 This is just something going into air table. We can talk about the structure of the database. We can talk about the automation part.
+1:01:59 We can talk about the manual process part, whatever questions you guys have. Cool, yeah, so it'll all come together tomorrow.
+1:02:21 We can build out the other half of the system, or tomorrow, next week, we can build out the other half of the system where we can actually chat with the knowledge base.
+1:02:33 Okay, that's really when it starts to make sense, like, okay, all this knowledge and gestion, I could just copy and paste everything into air table.
+1:02:41 What good is this, right? When you start to see both pieces or all the pieces kind of fit together with how this system can be implemented and scaled.
+1:02:51 That's when the reality of knowledge bases and AI retrieval really starts to compound or sink in.
+1:03:10 Cool. Yeah. So side note here too, as we're building out the agent hub for all my agentic work. What is really cool?
+1:03:19 This is a side note, just food for thought. We've got this canvas. We've got all the automations going in here.
+1:03:26 Essentially, this knowledge system with all of my transcripts going into it. I'm building this out live, but effectively, if I run this automation, load all the transcripts from these sessions.
+1:03:42 This is going to build an actual chatbot. I'll be building this with you guys. This will build an actual chatbot that you can chat with in the community and have, it'll have access to all of the transcript knowledge.
+1:03:54 You can just start asking questions about these, these sessions, you know, rather than going back and watching the videos. You just chat with the agent that we're building live together, which is, which is crazy.
+1:04:06 So that's kind of the, the outcome of this, of the next couple weeks. Awesome awesome. I'll wait a couple more seconds if you guys think of anything.
+1:04:15 Otherwise, we can call it short again tonight. Appreciate you again. As always, seeing you guys here in the life calls makes me so happy.
+1:04:24 My job is so fun. So appreciate you. Look forward to more sessions and vibe coding. We'll see you guys tomorrow night.
+1:04:35 Take it easy.
