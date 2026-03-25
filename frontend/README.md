@@ -51,6 +51,31 @@ GOOGLE_PLACES_API_KEY=your_google_places_api_key
 LOCAL_BUSINESS_SEARCH_PREVIEW_ENABLED=true
 ```
 
+## Vercel Deployment
+This repo is a monorepo. The deployable Next.js app lives in `frontend/`.
+
+Set the Vercel project up like this:
+- Framework Preset: `Next.js`
+- Root Directory: `frontend`
+- Install Command: leave default
+- Build Command: leave default (`next build`)
+
+Add these Environment Variables in the Vercel project settings:
+- `AIRTABLE_PAT`
+- `AIRTABLE_BASE_ID`
+- `AIRTABLE_WORKFLOW_TABLE_ID`
+- `AIRTABLE_REFINER_AGENT_RECORD_ID`
+- `N8N_GENERATE_WEBHOOK_URL`
+
+Optional preview-only environment variables:
+- `GOOGLE_PLACES_API_KEY`
+- `LOCAL_BUSINESS_SEARCH_PREVIEW_ENABLED`
+
+Notes:
+- If `Root Directory` is left at the repository root, Vercel will not detect the actual app correctly because the Next.js project is under `frontend/`.
+- `Dashboard Studio` server routes will fail at request time if the Airtable or n8n environment variables are missing.
+- `Local Business Search` preview stays disabled unless `LOCAL_BUSINESS_SEARCH_PREVIEW_ENABLED=true`.
+
 ## Notes
 - Most of the portal is still mock-backed through the provider boundary.
 - `Dashboard Studio` is the first live server-integrated path and depends on the env vars above.
