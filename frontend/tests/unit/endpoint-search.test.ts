@@ -17,6 +17,15 @@ describe("endpoint search helpers", () => {
     expect(results.every((item) => item.category === "automation")).toBe(true);
   });
 
+  it("finds the local business search endpoint by local-search terms", () => {
+    const results = filterEndpoints(endpointRegistry, {
+      query: "local business",
+      category: "automation",
+    });
+
+    expect(results.some((item) => item.slug === "local-business-search")).toBe(true);
+  });
+
   it("returns all endpoints when no filters are set", () => {
     expect(filterEndpoints(endpointRegistry)).toHaveLength(endpointRegistry.length);
   });

@@ -18,7 +18,7 @@ This document is the single reference for understanding how the API system curre
 Current state:
 - A functional Next.js developer portal exists in `frontend/`.
 - Endpoint definitions and examples are implemented as typed frontend data.
-- API runs in the UI are simulated through a mock provider.
+- API runs in the UI are simulated through a mock provider, except for the internal preview-backed `local-business-search` playground path and the live demo route at `/v1/tools/local-business-search`.
 
 Not implemented yet:
 - FastAPI gateway in `backend/`.
@@ -31,7 +31,8 @@ Not implemented yet:
 | Subsystem | Current status | Canonical source |
 | --- | --- | --- |
 | Endpoint catalog | Implemented in frontend | `frontend/entities/endpoints/model/endpoint-registry.ts` |
-| Playground execution | Simulated | `frontend/shared/providers/mock-portal-data-provider.ts` |
+| Playground execution | Mock + one internal preview-backed endpoint | `frontend/shared/providers/portal-data-provider.ts` |
+| Demo public route | Implemented | `frontend/app/v1/tools/local-business-search/route.ts` |
 | Provider boundary | Implemented | `frontend/shared/contracts/portal-data-provider.ts` |
 | Dashboard usage, logs, billing, keys | Simulated | `frontend/shared/providers/mock-portal-data-provider.ts` |
 | Public API contract | Drafted | `docs/specs/API_SPECIFICATION.md` |
@@ -63,7 +64,7 @@ Not implemented yet:
 
 ### Active Runtime Provider
 - Source: `frontend/shared/providers/portal-data-provider.ts`
-- Current binding: mock provider only.
+- Current binding: composed provider that is mostly mock-backed, with an internal preview route for `local-business-search`.
 
 ### Mock Behavior
 - Source: `frontend/shared/providers/mock-portal-data-provider.ts`
@@ -80,10 +81,11 @@ Not implemented yet:
 ## How API Behavior Works Today
 1. UI asks the provider for endpoint data.
 2. Provider returns catalog entries from the in-repo registry.
-3. Playground runs call the mock provider.
-4. Dashboard stats, logs, keys, and billing are mock records.
+3. Playground runs call the mock provider unless the endpoint has an internal preview path.
+4. External callers can hit the live `/v1/tools/local-business-search` demo route directly.
+5. Dashboard stats, logs, keys, and billing are mock records.
 
-This means the portal demonstrates product experience and contract shape, but not live infrastructure yet.
+This means the portal still demonstrates product experience first. Public gateway infrastructure is not live yet, but one endpoint can exercise a gated internal preview path for development.
 
 ## Target Runtime
 Target architecture is documented in `docs/specs/ARCHITECTURE.md`:

@@ -19,10 +19,13 @@ This file tracks which system owns execution for each endpoint and how workflow 
 | `scrape-website` | `/v1/tools/scrape-website` | Gateway + n8n | `tool__scrape_website` | Planned | Sync |
 | `analyze-doc` | `/v1/tools/analyze-doc` | Gateway + n8n | `tool__analyze_doc` | Planned | Sync |
 | `lead-enrichment` | `/v1/tools/lead-enrichment` | Gateway + n8n | `tool__lead_enrichment` | Planned | Sync |
+| `local-business-search` | `/v1/tools/local-business-search` | Next.js demo route + Google Places | None | Live (demo) | Sync |
 
 ## Runtime Ownership Rules
 - Resource endpoints are not n8n workflows by default.
 - Automation endpoints are n8n-owned once the live backend exists.
+- Some automation endpoints may call external providers directly from the gateway when no n8n workflow is needed.
+- Temporary demo routes may live in Next.js while a gateway-backed version is still pending.
 - Gateway owns auth, credits, rate limits, request logging, and public response shaping.
 - n8n owns workflow execution, provider orchestration, and normalized workflow output.
 

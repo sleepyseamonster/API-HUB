@@ -16,7 +16,8 @@ If this document and the registry drift, treat the registry as ground truth and 
 - `deprecated`: still callable but scheduled for removal.
 
 Current repo state:
-- All catalog endpoints are `simulated`.
+- All catalog endpoints are `simulated` except `local-business-search`, which is live as a temporary Next.js demo route at `/v1/tools/local-business-search`.
+- `local-business-search` also has an internal portal preview path in `frontend/app/api/playground`, but it is not yet a public live gateway route.
 
 ## Public Response Envelope
 All live endpoint responses should follow:
@@ -241,6 +242,58 @@ Success response example:
     "linkedin_url": "https://linkedin.com/in/saraquinn"
   },
   "message": "Lead enriched"
+}
+```
+
+### 7) Local Business Search
+- Status: `live`
+- Method: `POST`
+- Path: `/v1/tools/local-business-search`
+- Mode: `sync`
+- Credits per call: `4`
+- Job: Searches for local businesses by keyword and simple text location, with optional contact enrichment.
+- Required inputs: `query`, `location`
+- Optional inputs: `limit`, `include_contact_fields`
+- Demo note: this route is temporarily open and does not enforce API keys or credits.
+
+Request example:
+
+```json
+{
+  "query": "med spa",
+  "location": "Scottsdale, AZ",
+  "limit": 10,
+  "include_contact_fields": false
+}
+```
+
+Success response example:
+
+```json
+{
+  "status": "success",
+  "data": {
+    "query": "med spa",
+    "location": "Scottsdale, AZ",
+    "results": [
+      {
+        "place_id": "ChIJ_example",
+        "name": "Example Med Spa",
+        "primary_type": "medical_spa",
+        "address": "123 Main St, Scottsdale, AZ 85251",
+        "latitude": 33.4942,
+        "longitude": -111.9261,
+        "rating": 4.8,
+        "review_count": 214,
+        "business_status": "OPERATIONAL",
+        "google_maps_uri": "https://maps.google.com/?cid=example",
+        "phone": null,
+        "website": null,
+        "opening_hours": null
+      }
+    ]
+  },
+  "message": "Search complete"
 }
 ```
 

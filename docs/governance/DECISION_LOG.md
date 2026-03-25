@@ -2,7 +2,7 @@
 
 Status: Active
 Owner: API HUB architecture
-Last updated: 2026-03-17
+Last updated: 2026-03-23
 Depends on: `docs/governance/OPERATING_MODEL.md`
 Source of truth: This file is the durable record of architecture and contract decisions.
 
@@ -86,6 +86,126 @@ Rejected:
 
 Rollback trigger:
 - The provider boundary is switched to a real backend and source-of-truth docs are updated in the same change.
+
+### 2026-03-23 - Active
+Decision: Canonical Codex instructions use root and scoped `AGENTS.md` files, while `Research/` remains advisory only.
+
+Why it was chosen:
+- Makes the instruction baseline discoverable by standard Codex instruction loading without relying on custom fallback filenames.
+- Keeps repo authority separate from exploratory research and legacy custom-agent notes.
+- Allows scoped rules to live near the code and docs they govern.
+
+Rejected:
+- Keeping `.agent/agents.md` and `.agent/roles/*` as the primary executable instruction layer.
+- Treating research notes as repo truth.
+
+Rollback trigger:
+- The team adopts a different supported instruction-discovery mechanism and migrates all canonical instructions in one deliberate change.
+
+### 2026-03-23 - Active
+Decision: Legacy assistant support material stays under `.agent/`, while canonical Codex instructions may live in root and scoped `AGENTS.md` files.
+
+Why it was chosen:
+- Preserves `.agent/` as the home for reusable skills and legacy operator notes.
+- Uses Codex's supported instruction discovery model for executable guidance.
+- Allows scoped rules to live near the code and docs they govern without making `.agent/` the only executable layer.
+
+Rejected:
+- Keeping all assistant material exclusively under `.agent/` even when Codex cannot discover it automatically.
+- Spreading non-canonical support material across application folders.
+
+Rollback trigger:
+- The repo adopts a different supported instruction model and migrates all canonical and support material in one deliberate change.
+
+### 2026-03-23 - Active
+Decision: The canonical implementation plan lives in `docs/governance/IMPLEMENTATION_PLAN.md`.
+
+Why it was chosen:
+- The repo already expects implementation decisions to be documented before features are described as agreed.
+- A repo-native implementation plan is easier to audit and maintain than chat-only planning.
+- This gives one place to translate research and specs into a build sequence.
+
+Rejected:
+- Treating `ROADMAP.md` as the only execution plan.
+- Leaving implementation sequencing implicit in scattered specs and chat context.
+
+Rollback trigger:
+- The project adopts a different canonical planning structure under `docs/`.
+
+### 2026-03-23 - Active
+Decision: The first real public control plane remains a FastAPI gateway under `backend/`; Next.js Route Handlers stay as portal-side preview adapters until migrated.
+
+Why it was chosen:
+- Existing architecture docs and agent responsibilities already point to FastAPI as the policy and integration boundary.
+- A dedicated gateway is a cleaner home for auth, billing, observability, and n8n orchestration.
+- This avoids coupling the public API contract to the frontend deployment layer.
+
+Rejected:
+- Making Next.js Route Handlers the long-term public gateway by default.
+- Treating current preview routes as proof of final backend architecture.
+
+Rollback trigger:
+- The repo intentionally adopts a Next-only backend architecture and updates the architecture docs in the same change.
+
+### 2026-03-23 - Active
+Decision: Execution mode is mixed by endpoint family; n8n-backed automation endpoints are async-first.
+
+Why it was chosen:
+- Workflow-backed operations have higher retry, latency, and replay complexity than resource or direct-provider reads.
+- Studio already proves that async execution is a natural fit for workflow-backed behavior.
+- Async-first reduces pressure to fake sync semantics for operations that need durable execution state.
+
+Rejected:
+- Sync-first for every V1 automation endpoint.
+- Deferring execution-mode policy until after gateway implementation starts.
+
+Rollback trigger:
+- Live operational evidence shows a workflow-backed endpoint family is predictably bounded and simpler as sync.
+
+### 2026-03-23 - Active
+Decision: The first live endpoint slice is `local-business-search` through the FastAPI gateway with shadow metering before customer billing.
+
+Why it was chosen:
+- The repo already has a working preview-backed implementation to borrow from.
+- It validates the gateway spine without introducing n8n orchestration as the first runtime dependency.
+- Shadow metering is safer than live billing while the ledger and idempotency model are still being built.
+
+Rejected:
+- Starting paid billing on the first live slice.
+- Making the first live slice an n8n-backed workflow endpoint.
+
+Rollback trigger:
+- Provider economics, policy constraints, or product direction make another endpoint a better first gateway validation slice.
+
+### 2026-03-23 - Active
+Decision: Supabase is the durable system of record for platform state; Airtable remains a temporary Studio-side integration only.
+
+Why it was chosen:
+- Platform-critical state needs one durable queryable home for auth, billing, executions, and audits.
+- Airtable is useful for operator workflows but is not the right long-term owner for customer-facing execution state.
+- This keeps Studio from redefining the platform architecture accidentally.
+
+Rejected:
+- Making Airtable the long-term execution-state store.
+- Treating n8n execution history as canonical billing or audit truth.
+
+Rollback trigger:
+- The platform is intentionally redesigned around a different durable state layer and the schema docs are updated accordingly.
+
+### 2026-03-24 - Active
+Decision: `local-business-search` is temporarily exposed as an open Next.js demo route without auth or credits.
+
+Why it was chosen:
+- It is the fastest way to demo an externally callable Google Places endpoint.
+- The Google API key stays server-side, so the demo avoids exposing provider credentials to the client.
+- It keeps the implementation scope small while the gateway and billing layers remain out of scope.
+
+Rejected:
+- Blocking the demo on the FastAPI gateway or API key issuance system.
+- Reintroducing credits or billing into this demonstration slice.
+
+Rollback trigger:
+- The demo graduates to a gateway-backed route or the public launch requirements change.
 
 ## Template
 

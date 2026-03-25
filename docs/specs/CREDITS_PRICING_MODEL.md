@@ -25,11 +25,14 @@ This file defines the credit policy required to build billing and usage accounti
 | `scrape-website` | `3` |
 | `analyze-doc` | `4` |
 | `lead-enrichment` | `5` |
+| `local-business-search` | `4` |
 
 ## Cost-Control Rules
 - Credits per endpoint must be documented in the endpoint registry and API specification together.
 - The gateway is the charging authority, not n8n.
 - n8n may return `credits_estimate` for observability, but gateway-side records are canonical.
+- The current `local-business-search` credit value is a placeholder until real provider cost and usage data are reviewed.
+- The temporary `local-business-search` demo route does not enforce credits or billing.
 
 ## Public Pricing Posture
 - Public pack pricing is not finalized in this doc.

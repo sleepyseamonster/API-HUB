@@ -169,6 +169,53 @@ export const endpointRegistry: EndpointSpec[] = [
       message: "Lead enriched",
     },
   },
+  {
+    slug: "local-business-search",
+    title: "Local Business Search",
+    path: "/v1/tools/local-business-search",
+    method: "POST",
+    category: "automation",
+    summary: "Find local businesses by keyword and location.",
+    description:
+      "Searches for local businesses using a keyword and a simple text location, with optional contact enrichment.",
+    creditsPerCall: 4,
+    tags: ["automation", "local-search", "places", "lead-gen"],
+    requestExample: {
+      name: "Find Scottsdale med spas",
+      summary: "Search by business keyword and city/state.",
+      payload: {
+        query: "med spa",
+        location: "Scottsdale, AZ",
+        limit: 10,
+        include_contact_fields: false,
+      },
+    },
+    responseExample: {
+      status: "success",
+      data: {
+        query: "med spa",
+        location: "Scottsdale, AZ",
+        results: [
+          {
+            place_id: "ChIJ_example",
+            name: "Example Med Spa",
+            primary_type: "medical_spa",
+            address: "123 Main St, Scottsdale, AZ 85251",
+            latitude: 33.4942,
+            longitude: -111.9261,
+            rating: 4.8,
+            review_count: 214,
+            business_status: "OPERATIONAL",
+            google_maps_uri: "https://maps.google.com/?cid=example",
+            phone: null,
+            website: null,
+            opening_hours: null,
+          },
+        ],
+      },
+      message: "Search complete",
+    },
+  },
 ];
 
 export const apiProducts: ApiProduct[] = [
@@ -188,7 +235,12 @@ export const apiProducts: ApiProduct[] = [
     name: "Automation Engine",
     summary: "Workflow endpoints that trigger scraping and AI processes.",
     category: "automation",
-    endpointSlugs: ["scrape-website", "analyze-doc", "lead-enrichment"],
+    endpointSlugs: [
+      "scrape-website",
+      "analyze-doc",
+      "lead-enrichment",
+      "local-business-search",
+    ],
   },
 ];
 

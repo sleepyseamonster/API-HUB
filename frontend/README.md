@@ -44,8 +44,15 @@ Notes:
 - The app appends `recordId` and `action=Generate` to `N8N_GENERATE_WEBHOOK_URL`; do not include those query params in the env var.
 - Restart the Next dev server after creating or changing `.env.local`.
 - The Studio route creates a new Airtable `Workflow` record, links the refiner agent, then triggers the existing n8n workflow unchanged.
+- Local Business Search preview is optional and uses:
+
+```bash
+GOOGLE_PLACES_API_KEY=your_google_places_api_key
+LOCAL_BUSINESS_SEARCH_PREVIEW_ENABLED=true
+```
 
 ## Notes
 - Most of the portal is still mock-backed through the provider boundary.
 - `Dashboard Studio` is the first live server-integrated path and depends on the env vars above.
+- `Local Business Search` can run through a gated internal preview route when the Google env vars are set.
 - Theme is locked to the four-color palette in `shared/lib/theme.ts`.

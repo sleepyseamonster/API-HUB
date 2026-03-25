@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { generateCodeSnippets } from "@/shared/lib/snippets";
+import { isPreviewBackedEndpoint } from "@/shared/lib/endpoint-runtime";
 import { portalDataProvider } from "@/shared/providers/portal-data-provider";
 import { Button } from "@/shared/ui/button";
 import { CodeBlock } from "@/shared/ui/code-block";
@@ -32,6 +33,7 @@ function parsePayload(raw: string): Record<string, unknown> {
 }
 
 export function PlaygroundConsole({ endpoint }: PlaygroundConsoleProps) {
+  const isPreviewBacked = isPreviewBackedEndpoint(endpoint.slug);
   const [payloadText, setPayloadText] = useState(
     JSON.stringify(endpoint.requestExample.payload, null, 2),
   );
@@ -52,7 +54,7 @@ export function PlaygroundConsole({ endpoint }: PlaygroundConsoleProps) {
 
   const selectedSnippet = snippets.find((item) => item.language === snippetLanguage) ?? snippets[0];
 
-  async function runSimulation() {
+  async function runRequest() {
     setErrorText(null);
     setState("running");
 
@@ -61,7 +63,7 @@ export function PlaygroundConsole({ endpoint }: PlaygroundConsoleProps) {
       const simulation = await portalDataProvider.runPlayground({
         slug: endpoint.slug,
         payload,
-        mode,
+        mode: isPreviewBacked ? undefined : mode,
       });
       setResult(simulation);
       setState(simulation.status === "success" ? "success" : "error");
@@ -80,21 +82,27 @@ export function PlaygroundConsole({ endpoint }: PlaygroundConsoleProps) {
           <StatusBadge status={state} />
         </div>
 
-        <div className="space-y-2">
-          <label htmlFor="sim-mode" className="block text-sm text-app-muted">
-            Simulation mode
-          </label>
-          <select
-            id="sim-mode"
-            value={mode}
-            onChange={(event) => setMode(event.target.value as PlaygroundMode)}
-            className="h-10 w-full rounded-md border border-app-border bg-panel px-3 text-sm outline-none focus-visible:border-accent"
-          >
-            <option value="success">Force success</option>
-            <option value="error">Force error</option>
-            <option value="random">Randomized</option>
-          </select>
-        </div>
+        {isPreviewBacked ? (
+          <p className="text-sm text-app-muted">
+            Preview-backed in portal. Public authenticated gateway access is still planned.
+          </p>
+        ) : (
+          <div className="space-y-2">
+            <label htmlFor="sim-mode" className="block text-sm text-app-muted">
+              Simulation mode
+            </label>
+            <select
+              id="sim-mode"
+              value={mode}
+              onChange={(event) => setMode(event.target.value as PlaygroundMode)}
+              className="h-10 w-full rounded-md border border-app-border bg-panel px-3 text-sm outline-none focus-visible:border-accent"
+            >
+              <option value="success">Force success</option>
+              <option value="error">Force error</option>
+              <option value="random">Randomized</option>
+            </select>
+          </div>
+        )}
 
         <div className="space-y-2">
           <label htmlFor="request-payload" className="block text-sm text-app-muted">
@@ -107,7 +115,7 @@ export function PlaygroundConsole({ endpoint }: PlaygroundConsoleProps) {
             onKeyDown={(event) => {
               if ((event.metaKey || event.ctrlKey) && event.key === "Enter") {
                 event.preventDefault();
-                void runSimulation();
+                void runRequest();
               }
             }}
             className="h-72 w-full rounded-md border border-app-border bg-app-bg p-3 font-mono text-xs text-app-text outline-none focus-visible:border-accent"
@@ -117,8 +125,8 @@ export function PlaygroundConsole({ endpoint }: PlaygroundConsoleProps) {
 
         {errorText ? <p className="text-sm text-red-300">{errorText}</p> : null}
 
-        <Button onClick={runSimulation} className="w-full sm:w-auto" data-testid="run-playground">
-          Run Test (Cmd + Enter)
+        <Button onClick={runRequest} className="w-full sm:w-auto" data-testid="run-playground">
+          {isPreviewBacked ? "Run Preview (Cmd + Enter)" : "Run Test (Cmd + Enter)"}
         </Button>
       </Panel>
 
@@ -138,7 +146,9 @@ export function PlaygroundConsole({ endpoint }: PlaygroundConsoleProps) {
             code={
               result
                 ? JSON.stringify(result.body, null, 2)
-                : "Run the playground to view a simulated response."
+                : isPreviewBacked
+                  ? "Run the preview to view a live response."
+                  : "Run the playground to view a simulated response."
             }
           />
         </Panel>

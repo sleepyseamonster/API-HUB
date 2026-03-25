@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
+import { LocalBusinessSearchConsole } from "@/features/local-business-search/ui/local-business-search-console";
 import { PlaygroundConsole } from "@/features/playground/ui/playground-console";
+import { isPreviewBackedEndpoint } from "@/shared/lib/endpoint-runtime";
 import { CodeBlock } from "@/shared/ui/code-block";
 import { portalDataProvider } from "@/shared/providers/portal-data-provider";
 import { Panel } from "@/shared/ui/panel";
@@ -20,6 +22,14 @@ export default async function EndpointDetailPage({ params }: EndpointDetailPageP
   return (
     <div id="main-content" className="space-y-5">
       <SectionHeader title={endpoint.title} subtitle={endpoint.summary} />
+
+      {isPreviewBackedEndpoint(endpoint.slug) ? (
+        <Panel className="border-accent/40 bg-accent/5">
+          <p className="text-sm text-app-muted">
+            This endpoint has an internal portal preview path. A temporary public demo route is live at `/v1/tools/local-business-search` without auth or credits.
+          </p>
+        </Panel>
+      ) : null}
 
       <Panel className="grid gap-4 md:grid-cols-3">
         <div>
@@ -47,7 +57,11 @@ export default async function EndpointDetailPage({ params }: EndpointDetailPageP
         </Panel>
       </div>
 
-      <PlaygroundConsole endpoint={endpoint} />
+      {endpoint.slug === "local-business-search" ? (
+        <LocalBusinessSearchConsole endpoint={endpoint} />
+      ) : (
+        <PlaygroundConsole endpoint={endpoint} />
+      )}
     </div>
   );
 }
