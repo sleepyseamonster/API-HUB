@@ -4,20 +4,18 @@ import { endpointRegistry } from "@/entities/endpoints/model/endpoint-registry";
 import { CatalogExplorer } from "@/features/catalog/ui/catalog-explorer";
 
 describe("CatalogExplorer", () => {
-  it("renders development pills for flagged endpoints only", () => {
+  it("renders development and live pills for flagged endpoints", () => {
     render(<CatalogExplorer endpoints={endpointRegistry} />);
 
-    expect(
-      screen.getAllByText(
-        "In development: these API endpoints are currently in development.",
-      ),
-    ).toHaveLength(5);
+    expect(screen.getAllByText("In development")).toHaveLength(5);
+    expect(screen.getAllByText("Live")).toHaveLength(2);
     expect(screen.getByText("Get Curriculum Week")).toBeInTheDocument();
     expect(screen.getByText("Knowledge Base Search")).toBeInTheDocument();
     expect(screen.getByText("Scrape Website")).toBeInTheDocument();
     expect(screen.getByText("Analyze Document")).toBeInTheDocument();
     expect(screen.getByText("Lead Enrichment")).toBeInTheDocument();
     expect(screen.queryByText("Get Transcript")).toBeInTheDocument();
+    expect(screen.queryByText("Transcript Ingest")).toBeInTheDocument();
     expect(screen.queryByText("Local Business Search")).toBeInTheDocument();
   });
 });

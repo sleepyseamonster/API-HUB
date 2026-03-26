@@ -34,7 +34,7 @@ export interface EndpointSpec {
   creditsPerCall: number;
   tags: string[];
   catalogBadge?: {
-    tone: "warning";
+    tone: "warning" | "success";
     label: string;
   };
   requestExample: PlaygroundExample;

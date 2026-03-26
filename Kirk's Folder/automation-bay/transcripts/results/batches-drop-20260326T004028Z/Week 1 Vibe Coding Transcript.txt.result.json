@@ -1,0 +1,15 @@
+{
+  "batch_id": "batches-drop-20260326T004028Z",
+  "chunks_generated": 1,
+  "chunks_inserted": 1,
+  "duplicate_reason": null,
+  "final_path": "/Users/worldbuilder/Desktop/API HUB/Kirk's Folder/automation-bay/transcripts/done/batches-drop-20260326T004028Z/Week 1 Vibe Coding Transcript.txt",
+  "fingerprint": "a80f07a15bee4e3f92f80c91434d3f1ea9e2b3fb6e516afec53a15b5678b50f4",
+  "finished_at": "2026-03-26T00:41:57.647215Z",
+  "message": "Transcript processed successfully.",
+  "source_filename": "Week 1 Vibe Coding Transcript.txt",
+  "source_relative_path": "Week 1 Vibe Coding Transcript.txt",
+  "started_at": "2026-03-26T00:41:38.708507Z",
+  "status": "success",
+  "workflow_version": "v2026-03-17_r2"
+}

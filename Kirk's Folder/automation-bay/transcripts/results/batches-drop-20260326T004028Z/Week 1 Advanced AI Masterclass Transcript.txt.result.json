@@ -1,0 +1,15 @@
+{
+  "batch_id": "batches-drop-20260326T004028Z",
+  "chunks_generated": 1,
+  "chunks_inserted": 1,
+  "duplicate_reason": null,
+  "final_path": "/Users/worldbuilder/Desktop/API HUB/Kirk's Folder/automation-bay/transcripts/done/batches-drop-20260326T004028Z/Week 1 Advanced AI Masterclass Transcript.txt",
+  "fingerprint": "ecd6a05038d0f1ada6ce9e023a3cc06a7a7dc321408b3e6c31d75252bf938753",
+  "finished_at": "2026-03-26T00:41:07.409394Z",
+  "message": "Transcript processed successfully.",
+  "source_filename": "Week 1 Advanced AI Masterclass Transcript.txt",
+  "source_relative_path": "Week 1 Advanced AI Masterclass Transcript.txt",
+  "started_at": "2026-03-26T00:40:28.068754Z",
+  "status": "success",
+  "workflow_version": "v2026-03-17_r2"
+}

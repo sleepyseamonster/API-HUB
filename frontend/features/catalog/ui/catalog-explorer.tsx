@@ -19,6 +19,11 @@ const categories: Array<{ value: EndpointCategory | "all"; label: string }> = [
   { value: "automation", label: "Automations" },
 ];
 
+const badgeToneClasses = {
+  warning: "border-amber-500/40 bg-amber-500/12 text-amber-200",
+  success: "border-emerald-500/40 bg-emerald-500/12 text-emerald-200",
+} as const;
+
 export function CatalogExplorer({ endpoints, initialQuery = "" }: CatalogExplorerProps) {
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState<EndpointCategory | "all">("all");
@@ -74,7 +79,12 @@ export function CatalogExplorer({ endpoints, initialQuery = "" }: CatalogExplore
             <div className="flex items-start justify-between gap-3">
               <p className="font-mono text-xs text-accent">{endpoint.method}</p>
               {endpoint.catalogBadge ? (
-                <span className="rounded-full border border-amber-500/40 bg-amber-500/12 px-2.5 py-1 text-xs text-amber-200">
+                <span
+                  className={cn(
+                    "rounded-full border px-2.5 py-1 text-xs",
+                    badgeToneClasses[endpoint.catalogBadge.tone],
+                  )}
+                >
                   {endpoint.catalogBadge.label}
                 </span>
               ) : null}

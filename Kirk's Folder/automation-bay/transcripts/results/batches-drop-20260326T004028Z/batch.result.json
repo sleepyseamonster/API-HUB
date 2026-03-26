@@ -1,0 +1,28 @@
+{
+  "batch_id": "batches-drop-20260326T004028Z",
+  "failed_files": 0,
+  "finished_at": "2026-03-26T00:41:57.648356Z",
+  "processed_files": 3,
+  "results": [
+    {
+      "message": "Transcript processed successfully.",
+      "source_relative_path": "Week 1 Advanced AI Masterclass Transcript.txt",
+      "status": "success"
+    },
+    {
+      "message": "Transcript processed successfully.",
+      "source_relative_path": "Week 1 Automations AI Masterclass Transcript.txt",
+      "status": "success"
+    },
+    {
+      "message": "Transcript processed successfully.",
+      "source_relative_path": "Week 1 Vibe Coding Transcript.txt",
+      "status": "success"
+    }
+  ],
+  "source_batch_folder": "batches",
+  "started_at": "2026-03-26T00:40:28.068487Z",
+  "successful_files": 3,
+  "unsupported_files": [],
+  "workflow_version": "v2026-03-17_r2"
+}

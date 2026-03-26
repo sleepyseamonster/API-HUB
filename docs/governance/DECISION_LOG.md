@@ -237,6 +237,21 @@ Rejected:
 Rollback trigger:
 - The local watcher is replaced by a different orchestrator with equivalent always-on behavior and explicit configuration loading.
 
+### 2026-03-25 - Active
+Decision: `transcript-ingest` is temporarily exposed as an open Next.js demo route that proxies one uploaded transcript file to the transcript n8n intake webhook.
+
+Why it was chosen:
+- It makes the transcript ingestion workflow demoable from the API catalog today without waiting for the FastAPI gateway and auth layers.
+- The route reuses the existing n8n transcript intake workflow instead of creating a second demo-only ingestion path.
+- Single-file upload keeps the public demo route small while the local watcher remains the bulk-drop tool.
+
+Rejected:
+- Blocking the demo on the future gateway-backed public API surface.
+- Trying to expose the local hot-folder watcher itself as the public API contract.
+
+Rollback trigger:
+- The transcript ingestion flow graduates to a gateway-backed endpoint with auth, credits, and the final public contract.
+
 ## Template
 
 ### YYYY-MM-DD - Proposed or Active

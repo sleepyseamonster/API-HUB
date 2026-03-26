@@ -14,6 +14,7 @@ from backend.tools.transcript_hot_folder_watcher import (
     ensure_directories,
     doctor,
     load_env_file,
+    scan_once,
     process_batch_once,
 )
 
@@ -182,6 +183,49 @@ class TranscriptHotFolderWatcherTests(TestCase):
                 server.server_close()
                 _WebhookHandler.response_code_sequence = []
                 _WebhookHandler.request_count = 0
+
+    def test_scan_once_groups_loose_files_into_one_batch(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            server, thread, base_url = self._start_server()
+            try:
+                root = Path(tmp_dir) / "transcripts"
+                config = Config(
+                    root=root,
+                    webhook_url=f"{base_url}/webhook/transcript-hot-folder-intake",
+                    auth_header=None,
+                    auth_token=None,
+                    scan_interval=0.01,
+                    stable_seconds=0,
+                    request_timeout=5,
+                )
+                ensure_directories(config)
+                loose_file_a = config.batches_dir / "lesson-a.txt"
+                loose_file_b = config.batches_dir / "lesson-b.md"
+                unsupported = config.batches_dir / "ignore.pdf"
+                loose_file_a.write_text("Hello world\n", encoding="utf-8")
+                loose_file_b.write_text("# Hello world\n", encoding="utf-8")
+                unsupported.write_bytes(b"%PDF-1.4")
+
+                summaries = scan_once(config)
+
+                self.assertEqual(len(summaries), 1)
+                self.assertEqual(summaries[0]["processed_files"], 2)
+                self.assertEqual(summaries[0]["successful_files"], 2)
+                self.assertEqual(summaries[0]["unsupported_files"], ["ignore.pdf"])
+                self.assertFalse(loose_file_a.exists())
+                self.assertFalse(loose_file_b.exists())
+                self.assertFalse(unsupported.exists())
+                done_batch = next(path for path in config.done_dir.iterdir() if path.is_dir())
+                self.assertTrue((done_batch / "lesson-a.txt").exists())
+                self.assertTrue((done_batch / "lesson-b.md").exists())
+                failed_batch = next(path for path in config.failed_dir.iterdir() if path.is_dir())
+                self.assertTrue((failed_batch / "ignore.pdf").exists())
+                result_batch = next(path for path in config.results_dir.iterdir() if path.is_dir())
+                self.assertTrue((result_batch / "batch.result.json").exists())
+            finally:
+                server.shutdown()
+                thread.join()
+                server.server_close()
 
     def test_doctor_reports_sanitized_config(self) -> None:
         with TemporaryDirectory() as tmp_dir:

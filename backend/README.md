@@ -13,6 +13,7 @@ The watcher posts one transcript file per execution to the n8n webhook and keeps
 
 ### Runtime Contract
 - Input files must be `.txt` or `.md`.
+- Files may be placed directly under `batches/` and the current loose files there will be processed as one shared batch, or they may be placed inside nested batch folders.
 - Each file is sent as multipart form data with the binary field name `file`.
 - Extra fields are `batch_id`, `source_filename`, `source_relative_path`, `fingerprint`, `dropped_at`, and `content_type`.
 - The watcher expects the n8n webhook to return JSON with `status`, `message`, `chunks_generated`, and `chunks_inserted`.

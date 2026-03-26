@@ -333,6 +333,10 @@ def discover_batch_dirs(batches_dir: Path) -> list[Path]:
     return sorted(path for path in batches_dir.iterdir() if path.is_dir())
 
 
+def discover_loose_batch_files(batches_dir: Path) -> list[Path]:
+    return sorted(path for path in batches_dir.iterdir() if path.is_file())
+
+
 def move_file_preserving_relative_path(
     *,
     file_path: Path,
@@ -483,6 +487,116 @@ def process_unsupported_file(
 def build_batch_id(batch_dir: Path) -> str:
     timestamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     return f"{slugify(batch_dir.name)}-{timestamp}"
+
+
+def build_loose_batch_id(batches_dir: Path) -> str:
+    timestamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+    return f"{slugify(batches_dir.name)}-drop-{timestamp}"
+
+
+def wait_for_stable_loose_files(
+    batches_dir: Path,
+    stable_seconds: float,
+    poll_interval: float,
+) -> list[Path]:
+    if stable_seconds <= 0:
+        return discover_loose_batch_files(batches_dir)
+    previous = {
+        path.name: (path.stat().st_size, int(path.stat().st_mtime_ns))
+        for path in discover_loose_batch_files(batches_dir)
+        if not path.name.startswith(".")
+    }
+    stable_since = time.monotonic()
+    while True:
+        time.sleep(max(0.1, min(poll_interval, stable_seconds)))
+        current = {
+            path.name: (path.stat().st_size, int(path.stat().st_mtime_ns))
+            for path in discover_loose_batch_files(batches_dir)
+            if not path.name.startswith(".")
+        }
+        if current != previous:
+            previous = current
+            stable_since = time.monotonic()
+            continue
+        if time.monotonic() - stable_since >= stable_seconds:
+            return [
+                batches_dir / name
+                for name in sorted(current)
+                if (batches_dir / name).exists()
+            ]
+
+
+def process_loose_files_once(config: Config, source_files: list[Path]) -> dict[str, Any]:
+    ensure_directories(config)
+    batch_id = build_loose_batch_id(config.batches_dir)
+    processing_root = config.processing_dir / batch_id
+    done_root = config.done_dir / batch_id
+    failed_root = config.failed_dir / batch_id
+    results_root = config.results_dir / batch_id
+    for path in (processing_root, done_root, failed_root, results_root):
+        path.mkdir(parents=True, exist_ok=True)
+
+    results: list[dict[str, Any]] = []
+    started_at = utc_now_iso()
+    for source_file in source_files:
+        if not source_file.exists():
+            continue
+        suffix = source_file.suffix.lower()
+        if suffix not in SUPPORTED_EXTENSIONS:
+            results.append(
+                process_unsupported_file(
+                    batch_dir=config.batches_dir,
+                    batch_id=batch_id,
+                    source_file=source_file,
+                    failed_root=failed_root,
+                    results_root=results_root,
+                )
+            )
+            continue
+        results.append(
+            process_supported_file(
+                config,
+                batch_dir=config.batches_dir,
+                batch_id=batch_id,
+                source_file=source_file,
+                processing_root=processing_root,
+                done_root=done_root,
+                failed_root=failed_root,
+                results_root=results_root,
+            )
+        )
+
+    summary = {
+        "batch_id": batch_id,
+        "source_batch_folder": config.batches_dir.name,
+        "started_at": started_at,
+        "finished_at": utc_now_iso(),
+        "workflow_version": next(
+            (item.get("workflow_version") for item in results if item.get("workflow_version")),
+            None,
+        ),
+        "processed_files": len([item for item in results if item["status"] != "unsupported_file"]),
+        "successful_files": len(
+            [item for item in results if item["status"] in {"success", "skipped_duplicate"}]
+        ),
+        "failed_files": len([item for item in results if item["status"] == "error"]),
+        "unsupported_files": [
+            item["source_relative_path"]
+            for item in results
+            if item["status"] == "unsupported_file"
+        ],
+        "results": [
+            {
+                "source_relative_path": item["source_relative_path"],
+                "status": item["status"],
+                "message": item["message"],
+            }
+            for item in results
+        ],
+    }
+    write_json(results_root / "batch.result.json", summary)
+    cleanup_empty_directories(processing_root)
+    return summary
 
 
 def process_batch_once(config: Config, batch_dir: Path) -> dict[str, Any]:
@@ -866,6 +980,23 @@ def scan_once(config: Config) -> list[dict[str, Any]]:
     for batch_dir in discover_batch_dirs(config.batches_dir):
         print(f"[transcript-hot-folder] processing batch {batch_dir.name}", file=sys.stderr)
         summaries.append(process_batch_once(config, batch_dir))
+    loose_files = [
+        path
+        for path in discover_loose_batch_files(config.batches_dir)
+        if not path.name.startswith(".")
+    ]
+    if loose_files:
+        loose_files = wait_for_stable_loose_files(
+            config.batches_dir,
+            config.stable_seconds,
+            config.scan_interval,
+        )
+        print(
+            f"[transcript-hot-folder] processing loose batch with {len(loose_files)} files",
+            file=sys.stderr,
+        )
+        if loose_files:
+            summaries.append(process_loose_files_once(config, loose_files))
     if not summaries:
         print("[transcript-hot-folder] no batches found", file=sys.stderr)
     return summaries

@@ -40,7 +40,7 @@ export const endpointRegistry: EndpointSpec[] = [
     tags: ["curriculum", "cohort"],
     catalogBadge: {
       tone: "warning",
-      label: "In development: these API endpoints are currently in development.",
+      label: "In development",
     },
     requestExample: {
       name: "Week 2",
@@ -70,7 +70,7 @@ export const endpointRegistry: EndpointSpec[] = [
     tags: ["search", "rag", "knowledge"],
     catalogBadge: {
       tone: "warning",
-      label: "In development: these API endpoints are currently in development.",
+      label: "In development",
     },
     requestExample: {
       name: "Find outreach strategy",
@@ -104,7 +104,7 @@ export const endpointRegistry: EndpointSpec[] = [
     tags: ["automation", "scraping"],
     catalogBadge: {
       tone: "warning",
-      label: "In development: these API endpoints are currently in development.",
+      label: "In development",
     },
     requestExample: {
       name: "Scrape single URL",
@@ -137,7 +137,7 @@ export const endpointRegistry: EndpointSpec[] = [
     tags: ["automation", "ocr", "llm"],
     catalogBadge: {
       tone: "warning",
-      label: "In development: these API endpoints are currently in development.",
+      label: "In development",
     },
     requestExample: {
       name: "Invoice extraction",
@@ -170,7 +170,7 @@ export const endpointRegistry: EndpointSpec[] = [
     tags: ["automation", "sales", "enrichment"],
     catalogBadge: {
       tone: "warning",
-      label: "In development: these API endpoints are currently in development.",
+      label: "In development",
     },
     requestExample: {
       name: "Enrich by email",
@@ -190,6 +190,43 @@ export const endpointRegistry: EndpointSpec[] = [
     },
   },
   {
+    slug: "transcript-ingest",
+    title: "Transcript Ingest",
+    path: "/v1/tools/transcript-ingest",
+    method: "POST",
+    category: "automation",
+    summary: "Upload a transcript file into the live n8n ingestion workflow.",
+    description:
+      "Accepts one `.txt` or `.md` transcript file and forwards it into the transcript intake workflow for chunking and Airtable insertion.",
+    creditsPerCall: 3,
+    tags: ["automation", "transcripts", "rag", "ingest"],
+    catalogBadge: {
+      tone: "success",
+      label: "Live",
+    },
+    requestExample: {
+      name: "Upload transcript file",
+      summary: "Send one transcript file as multipart form data.",
+      payload: {
+        file: "@/absolute/path/to/masterclass-transcript.txt",
+      },
+    },
+    responseExample: {
+      status: "success",
+      data: {
+        batch_id: "demo-1711410000000",
+        source_filename: "Week 4 Advanced AI Masterclass Transcript.txt",
+        source_relative_path: "Week 4 Advanced AI Masterclass Transcript.txt",
+        fingerprint: "25d38854d0e06d05c348a4aab17b1dcb5ac32e9c36ba7e7f68f0a7726eea1f28",
+        upstream: {
+          status: "success",
+          message: "Processing completed.",
+        },
+      },
+      message: "Processing completed.",
+    },
+  },
+  {
     slug: "local-business-search",
     title: "Local Business Search",
     path: "/v1/tools/local-business-search",
@@ -200,6 +237,10 @@ export const endpointRegistry: EndpointSpec[] = [
       "Searches for local businesses using a keyword and a simple text location, with optional contact enrichment.",
     creditsPerCall: 4,
     tags: ["automation", "local-search", "places", "lead-gen"],
+    catalogBadge: {
+      tone: "success",
+      label: "Live",
+    },
     requestExample: {
       name: "Find Scottsdale med spas",
       summary: "Search by business keyword and city/state.",
@@ -259,6 +300,7 @@ export const apiProducts: ApiProduct[] = [
       "scrape-website",
       "analyze-doc",
       "lead-enrichment",
+      "transcript-ingest",
       "local-business-search",
     ],
   },

@@ -16,7 +16,7 @@ If this document and the registry drift, treat the registry as ground truth and 
 - `deprecated`: still callable but scheduled for removal.
 
 Current repo state:
-- All catalog endpoints are `simulated` except `local-business-search`, which is live as a temporary Next.js demo route at `/v1/tools/local-business-search`.
+- All catalog endpoints are `simulated` except `local-business-search` and `transcript-ingest`, which are live as temporary Next.js demo routes at `/v1/tools/local-business-search` and `/v1/tools/transcript-ingest`.
 - `local-business-search` also has an internal portal preview path in `frontend/app/api/playground`, but it is not yet a public live gateway route.
 
 ## Public Response Envelope
@@ -228,6 +228,42 @@ Request example:
 ```json
 {
   "email": "sara@exampleco.com"
+}
+```
+
+### 7) Transcript Ingest
+- Status: `live`
+- Method: `POST`
+- Path: `/v1/tools/transcript-ingest`
+- Mode: `sync`
+- Credits per call: `3`
+- Job: Accepts one `.txt` or `.md` transcript file and forwards it into the transcript n8n intake workflow.
+- Required inputs: multipart `file`
+- Optional inputs: none in the public demo route
+
+Request example:
+
+```bash
+curl -X POST http://localhost:3000/v1/tools/transcript-ingest \
+  -F "file=@/absolute/path/to/transcript.txt"
+```
+
+Success response example:
+
+```json
+{
+  "status": "success",
+  "data": {
+    "batch_id": "demo-1711410000000",
+    "source_filename": "Week 4 Advanced AI Masterclass Transcript.txt",
+    "source_relative_path": "Week 4 Advanced AI Masterclass Transcript.txt",
+    "fingerprint": "25d38854d0e06d05c348a4aab17b1dcb5ac32e9c36ba7e7f68f0a7726eea1f28",
+    "upstream": {
+      "status": "success",
+      "message": "Processing completed."
+    }
+  },
+  "message": "Processing completed."
 }
 ```
 

@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { LocalBusinessSearchConsole } from "@/features/local-business-search/ui/local-business-search-console";
 import { PlaygroundConsole } from "@/features/playground/ui/playground-console";
+import { TranscriptIngestConsole } from "@/features/transcript-ingest/ui/transcript-ingest-console";
 import { isPreviewBackedEndpoint } from "@/shared/lib/endpoint-runtime";
 import { CodeBlock } from "@/shared/ui/code-block";
 import { portalDataProvider } from "@/shared/providers/portal-data-provider";
@@ -27,6 +28,12 @@ export default async function EndpointDetailPage({ params }: EndpointDetailPageP
         <Panel className="border-accent/40 bg-accent/5">
           <p className="text-sm text-app-muted">
             This endpoint has an internal portal preview path. A temporary public demo route is live at `/v1/tools/local-business-search` without auth or credits.
+          </p>
+        </Panel>
+      ) : endpoint.slug === "transcript-ingest" ? (
+        <Panel className="border-accent/40 bg-accent/5">
+          <p className="text-sm text-app-muted">
+            This endpoint is a temporary public demo route at `/v1/tools/transcript-ingest`. It accepts one uploaded `.txt` or `.md` file and forwards it to the live transcript intake workflow without auth or credits.
           </p>
         </Panel>
       ) : null}
@@ -59,6 +66,8 @@ export default async function EndpointDetailPage({ params }: EndpointDetailPageP
 
       {endpoint.slug === "local-business-search" ? (
         <LocalBusinessSearchConsole endpoint={endpoint} />
+      ) : endpoint.slug === "transcript-ingest" ? (
+        <TranscriptIngestConsole endpoint={endpoint} />
       ) : (
         <PlaygroundConsole endpoint={endpoint} />
       )}

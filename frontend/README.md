@@ -38,6 +38,7 @@ AIRTABLE_BASE_ID=appyBbduX3VSjsWGF
 AIRTABLE_WORKFLOW_TABLE_ID=tbl2kgaQXi9G16ijU
 AIRTABLE_REFINER_AGENT_RECORD_ID=rec5dYNZMCRfEgUAO
 N8N_GENERATE_WEBHOOK_URL=https://sleepyseamonster.app.n8n.cloud/webhook/2ca77f7d-033f-4e3e-b253-6a28b0996473
+N8N_TRANSCRIPT_WEBHOOK_URL=https://sleepyseamonster.app.n8n.cloud/webhook/transcript-hot-folder-intake
 ```
 
 Notes:
@@ -66,6 +67,7 @@ Add these Environment Variables in the Vercel project settings:
 - `AIRTABLE_WORKFLOW_TABLE_ID`
 - `AIRTABLE_REFINER_AGENT_RECORD_ID`
 - `N8N_GENERATE_WEBHOOK_URL`
+- `N8N_TRANSCRIPT_WEBHOOK_URL`
 
 Optional preview-only environment variables:
 - `GOOGLE_PLACES_API_KEY`
@@ -79,5 +81,6 @@ Notes:
 ## Notes
 - Most of the portal is still mock-backed through the provider boundary.
 - `Dashboard Studio` is the first live server-integrated path and depends on the env vars above.
+- `Transcript Ingest` is a temporary live demo route that proxies one uploaded `.txt` / `.md` file to the transcript n8n webhook.
 - `Local Business Search` can run through a gated internal preview route when the Google env vars are set.
 - Theme is locked to the four-color palette in `shared/lib/theme.ts`.

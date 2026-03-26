@@ -18,7 +18,7 @@ This document is the single reference for understanding how the API system curre
 Current state:
 - A functional Next.js developer portal exists in `frontend/`.
 - Endpoint definitions and examples are implemented as typed frontend data.
-- API runs in the UI are simulated through a mock provider, except for the internal preview-backed `local-business-search` playground path and the live demo route at `/v1/tools/local-business-search`.
+- API runs in the UI are simulated through a mock provider, except for the internal preview-backed `local-business-search` playground path and the live demo routes at `/v1/tools/local-business-search` and `/v1/tools/transcript-ingest`.
 - The transcript hot-folder watcher in `backend/tools/transcript_hot_folder_watcher.py` supports env-file configuration, watcher status reporting, and macOS launch-agent management for the local ingestion path.
 
 Not implemented yet:
@@ -33,7 +33,7 @@ Not implemented yet:
 | --- | --- | --- |
 | Endpoint catalog | Implemented in frontend | `frontend/entities/endpoints/model/endpoint-registry.ts` |
 | Playground execution | Mock + one internal preview-backed endpoint | `frontend/shared/providers/portal-data-provider.ts` |
-| Demo public route | Implemented | `frontend/app/v1/tools/local-business-search/route.ts` |
+| Demo public routes | Implemented | `frontend/app/v1/tools/local-business-search/route.ts`, `frontend/app/v1/tools/transcript-ingest/route.ts` |
 | Provider boundary | Implemented | `frontend/shared/contracts/portal-data-provider.ts` |
 | Dashboard usage, logs, billing, keys | Simulated | `frontend/shared/providers/mock-portal-data-provider.ts` |
 | Transcript hot-folder workflow export | Implemented | `automations/transcript-hot-folder/v2026-03-17_r2.json` |

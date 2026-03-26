@@ -21,6 +21,7 @@ automation-bay/
 
 Operating model:
 - Drop one batch folder into `transcripts/batches/`.
+- Or drop one or more `.txt` / `.md` transcripts directly into `transcripts/batches/` and the watcher will treat the current loose files there as one batch.
 - Supported files in v1: `.txt`, `.md`.
 - Nested folders inside a batch are supported and preserved in `processing/`, `done/`, `failed/`, and `results/`.
 - One transcript file becomes one webhook request and one n8n execution.
