@@ -21,7 +21,7 @@ const categories: Array<{ value: EndpointCategory | "all"; label: string }> = [
 
 const badgeToneClasses = {
   warning: "border-amber-500/40 bg-amber-500/12 text-amber-200",
-  success: "border-emerald-500/40 bg-emerald-500/12 text-emerald-200",
+  success: "border-sky-500/40 bg-sky-500/12 text-sky-200",
 } as const;
 
 export function CatalogExplorer({ endpoints, initialQuery = "" }: CatalogExplorerProps) {

@@ -2,7 +2,7 @@
 
 Status: Active
 Owner: API HUB runtime planning
-Last updated: 2026-03-24
+Last updated: 2026-03-25
 Depends on: `frontend/entities/endpoints/model/endpoint-registry.ts`, `frontend/shared/contracts/portal-data-provider.ts`, `docs/specs/API_SPECIFICATION.md`
 Source of truth: This file defines what is implemented now and where canonical runtime assumptions live.
 
@@ -14,11 +14,11 @@ This document is the single reference for understanding how the API system curre
 - Define where each API concept lives in code.
 - Prevent mock-mode portal behavior from being confused with live backend behavior.
 
-## State Snapshot (March 24, 2026)
+## State Snapshot (March 25, 2026)
 Current state:
 - A functional Next.js developer portal exists in `frontend/`.
 - Endpoint definitions and examples are implemented as typed frontend data.
-- API runs in the UI are simulated through a mock provider, except for the internal preview-backed `local-business-search` playground path and the live demo routes at `/v1/tools/local-business-search` and `/v1/tools/transcript-ingest`.
+- API runs in the UI are simulated through a mock provider, except for the internal preview-backed `local-business-search` playground path, the live Studio-backed `google-nano-banana-gen` console flow, and the live demo routes at `/v1/tools/local-business-search`, `/v1/tools/transcript-ingest`, and `/v1/tools/google-nano-banana-gen`.
 - The transcript hot-folder watcher in `backend/tools/transcript_hot_folder_watcher.py` supports env-file configuration, watcher status reporting, and macOS launch-agent management for the local ingestion path.
 
 Not implemented yet:
@@ -33,7 +33,7 @@ Not implemented yet:
 | --- | --- | --- |
 | Endpoint catalog | Implemented in frontend | `frontend/entities/endpoints/model/endpoint-registry.ts` |
 | Playground execution | Mock + one internal preview-backed endpoint | `frontend/shared/providers/portal-data-provider.ts` |
-| Demo public routes | Implemented | `frontend/app/v1/tools/local-business-search/route.ts`, `frontend/app/v1/tools/transcript-ingest/route.ts` |
+| Demo public routes | Implemented | `frontend/app/v1/tools/local-business-search/route.ts`, `frontend/app/v1/tools/transcript-ingest/route.ts`, `frontend/app/v1/tools/google-nano-banana-gen/route.ts` |
 | Provider boundary | Implemented | `frontend/shared/contracts/portal-data-provider.ts` |
 | Dashboard usage, logs, billing, keys | Simulated | `frontend/shared/providers/mock-portal-data-provider.ts` |
 | Transcript hot-folder workflow export | Implemented | `automations/transcript-hot-folder/v2026-03-17_r2.json` |
@@ -66,7 +66,7 @@ Not implemented yet:
 
 ### Active Runtime Provider
 - Source: `frontend/shared/providers/portal-data-provider.ts`
-- Current binding: composed provider that is mostly mock-backed, with an internal preview route for `local-business-search`.
+- Current binding: composed provider that is mostly mock-backed, while Studio generation uses live server routes and `local-business-search` keeps an internal preview route.
 
 ### Mock Behavior
 - Source: `frontend/shared/providers/mock-portal-data-provider.ts`
@@ -84,10 +84,10 @@ Not implemented yet:
 1. UI asks the provider for endpoint data.
 2. Provider returns catalog entries from the in-repo registry.
 3. Playground runs call the mock provider unless the endpoint has an internal preview path.
-4. External callers can hit the live `/v1/tools/local-business-search` demo route directly.
+4. External callers can hit the live `/v1/tools/local-business-search`, `/v1/tools/transcript-ingest`, and `/v1/tools/google-nano-banana-gen` demo routes directly.
 5. Dashboard stats, logs, keys, and billing are mock records.
 
-This means the portal still demonstrates product experience first. Public gateway infrastructure is not live yet, but one endpoint can exercise a gated internal preview path for development.
+This means the portal still demonstrates product experience first. Public gateway infrastructure is not live yet, but selected endpoints can exercise live demo routes or gated preview paths for development.
 
 ## Target Runtime
 Target architecture is documented in `docs/specs/ARCHITECTURE.md`:

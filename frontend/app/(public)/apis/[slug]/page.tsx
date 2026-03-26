@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { LocalBusinessSearchConsole } from "@/features/local-business-search/ui/local-business-search-console";
 import { PlaygroundConsole } from "@/features/playground/ui/playground-console";
+import { StudioGenerationConsole } from "@/features/studio/ui/studio-generation-console";
 import { TranscriptIngestConsole } from "@/features/transcript-ingest/ui/transcript-ingest-console";
 import { isPreviewBackedEndpoint } from "@/shared/lib/endpoint-runtime";
 import { CodeBlock } from "@/shared/ui/code-block";
@@ -36,6 +37,12 @@ export default async function EndpointDetailPage({ params }: EndpointDetailPageP
             This endpoint is a temporary public demo route at `/v1/tools/transcript-ingest`. It accepts one uploaded `.txt` or `.md` file and forwards it to the live transcript intake workflow without auth or credits.
           </p>
         </Panel>
+      ) : endpoint.slug === "google-nano-banana-gen" ? (
+        <Panel className="border-accent/40 bg-accent/5">
+          <p className="text-sm text-app-muted">
+            This endpoint is a temporary public demo route at `/v1/tools/google-nano-banana-gen`. It accepts one raw prompt, creates an Airtable workflow record, and triggers the live generation webhook without auth or credits.
+          </p>
+        </Panel>
       ) : null}
 
       <Panel className="grid gap-4 md:grid-cols-3">
@@ -66,6 +73,8 @@ export default async function EndpointDetailPage({ params }: EndpointDetailPageP
 
       {endpoint.slug === "local-business-search" ? (
         <LocalBusinessSearchConsole endpoint={endpoint} />
+      ) : endpoint.slug === "google-nano-banana-gen" ? (
+        <StudioGenerationConsole />
       ) : endpoint.slug === "transcript-ingest" ? (
         <TranscriptIngestConsole endpoint={endpoint} />
       ) : (

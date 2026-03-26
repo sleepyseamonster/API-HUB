@@ -2,7 +2,7 @@
 
 Status: Draft
 Owner: API contract
-Last updated: 2026-03-17
+Last updated: 2026-03-25
 Depends on: `frontend/entities/endpoints/model/endpoint-registry.ts`, `docs/specs/ERROR_MODEL.md`, `docs/specs/CREDITS_PRICING_MODEL.md`
 Source of truth: The endpoint registry is current code truth. This file is the readable contract mirror.
 
@@ -16,7 +16,7 @@ If this document and the registry drift, treat the registry as ground truth and 
 - `deprecated`: still callable but scheduled for removal.
 
 Current repo state:
-- All catalog endpoints are `simulated` except `local-business-search` and `transcript-ingest`, which are live as temporary Next.js demo routes at `/v1/tools/local-business-search` and `/v1/tools/transcript-ingest`.
+- All catalog endpoints are `simulated` except `local-business-search`, `transcript-ingest`, and `google-nano-banana-gen`, which are live as temporary Next.js demo routes at `/v1/tools/local-business-search`, `/v1/tools/transcript-ingest`, and `/v1/tools/google-nano-banana-gen`.
 - `local-business-search` also has an internal portal preview path in `frontend/app/api/playground`, but it is not yet a public live gateway route.
 
 ## Public Response Envelope
@@ -264,6 +264,37 @@ Success response example:
     }
   },
   "message": "Processing completed."
+}
+```
+
+### 8) Google Nano Banana Gen
+- Status: `live`
+- Method: `POST`
+- Path: `/v1/tools/google-nano-banana-gen`
+- Mode: `sync`
+- Credits per call: `8`
+- Job: Accepts one raw prompt, creates an Airtable workflow record, links the refiner agent, and triggers the live generation webhook used by Studio.
+- Required inputs: `prompt`
+- Optional inputs: none
+
+Request example:
+
+```json
+{
+  "prompt": "A banana-shaped nano drone hovering above a brutalist desert observatory at sunrise, cinematic lighting"
+}
+```
+
+Success response example:
+
+```json
+{
+  "status": "success",
+  "data": {
+    "record_id": "recNanoBanana123",
+    "status": "queued"
+  },
+  "message": "Generation queued."
 }
 ```
 

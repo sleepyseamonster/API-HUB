@@ -2,32 +2,6 @@ import type { ApiProduct, EndpointSpec } from "@/shared/types/portal";
 
 export const endpointRegistry: EndpointSpec[] = [
   {
-    slug: "transcripts-by-id",
-    title: "Get Transcript",
-    path: "/v1/transcripts/{id}",
-    method: "GET",
-    category: "resource",
-    summary: "Retrieve transcript markdown/JSON for a masterclass session.",
-    description:
-      "Returns transcript data for a session id in a normalized JSON shape for downstream assistant workflows.",
-    creditsPerCall: 1,
-    tags: ["transcripts", "curriculum", "search"],
-    requestExample: {
-      name: "Fetch masterclass 01",
-      summary: "Use a session id to fetch markdown and metadata.",
-      payload: { id: "masterclass-01", format: "json" },
-    },
-    responseExample: {
-      status: "success",
-      data: {
-        id: "masterclass-01",
-        title: "Masterclass: Offer Architecture",
-        markdown: "# Session Notes\\n- Positioning\\n- Offer stack",
-      },
-      message: "Transcript fetched",
-    },
-  },
-  {
     slug: "curriculum-week",
     title: "Get Curriculum Week",
     path: "/v1/curriculum/week-{id}",
@@ -202,7 +176,7 @@ export const endpointRegistry: EndpointSpec[] = [
     tags: ["automation", "transcripts", "rag", "ingest"],
     catalogBadge: {
       tone: "success",
-      label: "Live",
+      label: "Demo",
     },
     requestExample: {
       name: "Upload transcript file",
@@ -227,6 +201,38 @@ export const endpointRegistry: EndpointSpec[] = [
     },
   },
   {
+    slug: "google-nano-banana-gen",
+    title: "Google Nano Banana Gen",
+    path: "/v1/tools/google-nano-banana-gen",
+    method: "POST",
+    category: "automation",
+    summary: "Queue a Google Nano Banana image generation run from a raw prompt.",
+    description:
+      "Creates an Airtable workflow record, links the refiner agent, and triggers the existing n8n-backed generation flow used by Studio.",
+    creditsPerCall: 8,
+    tags: ["automation", "image-generation", "google", "studio"],
+    catalogBadge: {
+      tone: "success",
+      label: "Demo",
+    },
+    requestExample: {
+      name: "Generate scene",
+      summary: "Submit one raw prompt and queue a generation run.",
+      payload: {
+        prompt:
+          "A banana-shaped nano drone hovering above a brutalist desert observatory at sunrise, cinematic lighting",
+      },
+    },
+    responseExample: {
+      status: "success",
+      data: {
+        record_id: "recNanoBanana123",
+        status: "queued",
+      },
+      message: "Generation queued.",
+    },
+  },
+  {
     slug: "local-business-search",
     title: "Local Business Search",
     path: "/v1/tools/local-business-search",
@@ -239,7 +245,7 @@ export const endpointRegistry: EndpointSpec[] = [
     tags: ["automation", "local-search", "places", "lead-gen"],
     catalogBadge: {
       tone: "success",
-      label: "Live",
+      label: "Demo",
     },
     requestExample: {
       name: "Find Scottsdale med spas",
@@ -285,11 +291,7 @@ export const apiProducts: ApiProduct[] = [
     name: "Resource Library",
     summary: "Programmatic access to curriculum and knowledge assets.",
     category: "resource",
-    endpointSlugs: [
-      "transcripts-by-id",
-      "curriculum-week",
-      "knowledge-base-search",
-    ],
+    endpointSlugs: ["curriculum-week", "knowledge-base-search"],
   },
   {
     id: "automation-engine",
@@ -301,6 +303,7 @@ export const apiProducts: ApiProduct[] = [
       "analyze-doc",
       "lead-enrichment",
       "transcript-ingest",
+      "google-nano-banana-gen",
       "local-business-search",
     ],
   },
