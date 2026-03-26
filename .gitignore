@@ -7,3 +7,5 @@ frontend/test-results/
 frontend/playwright-report/
 frontend/tsconfig.tsbuildinfo
 frontend/.env.local
+Kirk's Folder/automation-bay/transcripts/.watcher.state.json
+Kirk's Folder/automation-bay/transcripts/logs/
