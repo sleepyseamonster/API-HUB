@@ -38,6 +38,10 @@ export const endpointRegistry: EndpointSpec[] = [
       "Provides structured curriculum details for one week, including lessons, exercises, and linked assets.",
     creditsPerCall: 1,
     tags: ["curriculum", "cohort"],
+    catalogBadge: {
+      tone: "warning",
+      label: "In development: these API endpoints are currently in development.",
+    },
     requestExample: {
       name: "Week 2",
       summary: "Load week-specific syllabus details.",
@@ -64,6 +68,10 @@ export const endpointRegistry: EndpointSpec[] = [
       "Runs semantic retrieval on indexed curriculum and operations docs and returns scored passages.",
     creditsPerCall: 2,
     tags: ["search", "rag", "knowledge"],
+    catalogBadge: {
+      tone: "warning",
+      label: "In development: these API endpoints are currently in development.",
+    },
     requestExample: {
       name: "Find outreach strategy",
       summary: "Search with a semantic query.",
@@ -94,6 +102,10 @@ export const endpointRegistry: EndpointSpec[] = [
       "Triggers scraping and content normalization workflow for one or more URLs.",
     creditsPerCall: 3,
     tags: ["automation", "scraping"],
+    catalogBadge: {
+      tone: "warning",
+      label: "In development: these API endpoints are currently in development.",
+    },
     requestExample: {
       name: "Scrape single URL",
       summary: "Collect markdown output from a product page.",
@@ -123,6 +135,10 @@ export const endpointRegistry: EndpointSpec[] = [
       "Runs OCR + LLM extraction pipeline and returns normalized entities.",
     creditsPerCall: 4,
     tags: ["automation", "ocr", "llm"],
+    catalogBadge: {
+      tone: "warning",
+      label: "In development: these API endpoints are currently in development.",
+    },
     requestExample: {
       name: "Invoice extraction",
       summary: "Pull key invoice fields from uploaded document.",
@@ -152,6 +168,10 @@ export const endpointRegistry: EndpointSpec[] = [
       "Runs enrichment sequence to map contact data into account intelligence.",
     creditsPerCall: 5,
     tags: ["automation", "sales", "enrichment"],
+    catalogBadge: {
+      tone: "warning",
+      label: "In development: these API endpoints are currently in development.",
+    },
     requestExample: {
       name: "Enrich by email",
       summary: "Provide email and return profile/company metadata.",

@@ -24,6 +24,7 @@ This folder contains the n8n workflow artifact for the transcript hot-folder ing
 - Set the webhook path or copy the production webhook URL into `N8N_TRANSCRIPT_WEBHOOK_URL`.
 - Configure `N8N_TRANSCRIPT_WEBHOOK_AUTH_HEADER` and `N8N_TRANSCRIPT_WEBHOOK_AUTH_TOKEN` if the webhook is protected.
 - Confirm the Airtable base and table IDs still point to `Transcript Knowledge`.
+- Store watcher config in `backend/tools/transcript_hot_folder_watcher.env` or `Kirk's Folder/automation-bay/transcripts/.watcher.env` for durable local startup.
 
 ## Workflow Behavior
 - Extract `.txt` and `.md` transcript text from the incoming binary file.

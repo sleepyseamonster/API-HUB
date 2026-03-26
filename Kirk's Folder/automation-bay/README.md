@@ -33,21 +33,40 @@ Run the local watcher from the repo root:
 python3 backend/tools/transcript_hot_folder_watcher.py watch
 ```
 
-Required environment:
+Recommended config file:
 
 ```bash
-export N8N_TRANSCRIPT_WEBHOOK_URL="https://<your-n8n-host>/webhook/transcript-hot-folder-intake"
+cp backend/tools/transcript_hot_folder_watcher.env.example backend/tools/transcript_hot_folder_watcher.env
 ```
 
-Optional environment:
+Required values inside that env file:
 
 ```bash
-export N8N_TRANSCRIPT_WEBHOOK_AUTH_HEADER="X-Hotfolder-Secret"
-export N8N_TRANSCRIPT_WEBHOOK_AUTH_TOKEN="<secret>"
-export TRANSCRIPT_HOT_FOLDER_ROOT="/absolute/path/to/Kirk's Folder/automation-bay/transcripts"
-export TRANSCRIPT_HOT_FOLDER_SCAN_INTERVAL="5"
-export TRANSCRIPT_HOT_FOLDER_STABLE_SECONDS="4"
-export TRANSCRIPT_HOT_FOLDER_REQUEST_TIMEOUT="120"
+N8N_TRANSCRIPT_WEBHOOK_URL="https://<your-n8n-host>/webhook/transcript-hot-folder-intake"
+```
+
+Optional values inside that env file:
+
+```bash
+N8N_TRANSCRIPT_WEBHOOK_AUTH_HEADER="X-Hotfolder-Secret"
+N8N_TRANSCRIPT_WEBHOOK_AUTH_TOKEN="<secret>"
+TRANSCRIPT_HOT_FOLDER_ROOT="/absolute/path/to/Kirk's Folder/automation-bay/transcripts"
+TRANSCRIPT_HOT_FOLDER_SCAN_INTERVAL="5"
+TRANSCRIPT_HOT_FOLDER_STABLE_SECONDS="4"
+TRANSCRIPT_HOT_FOLDER_REQUEST_TIMEOUT="120"
+```
+
+Recommended run mode on macOS:
+
+```bash
+python3 backend/tools/transcript_hot_folder_watcher.py start-launch-agent
+```
+
+Useful checks:
+
+```bash
+python3 backend/tools/transcript_hot_folder_watcher.py doctor
+python3 backend/tools/transcript_hot_folder_watcher.py status
 ```
 
 For a one-time batch sweep instead of a long-running watcher:
@@ -56,8 +75,17 @@ For a one-time batch sweep instead of a long-running watcher:
 python3 backend/tools/transcript_hot_folder_watcher.py scan-once
 ```
 
+Useful lifecycle commands:
+
+```bash
+python3 backend/tools/transcript_hot_folder_watcher.py stop-launch-agent
+python3 backend/tools/transcript_hot_folder_watcher.py uninstall-launch-agent
+```
+
 ## Result Files
 - Each processed transcript writes `<filename>.result.json` under `transcripts/results/<batch_id>/`.
 - Each batch also writes `batch.result.json` with processed counts and unsupported files.
 - Successful and skipped-duplicate files end in `done/`.
 - Failures and unsupported files end in `failed/`.
+- The watcher writes runtime logs to `transcripts/logs/`.
+- The watcher writes health state to `transcripts/.watcher.state.json`.

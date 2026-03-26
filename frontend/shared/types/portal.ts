@@ -33,6 +33,10 @@ export interface EndpointSpec {
   description: string;
   creditsPerCall: number;
   tags: string[];
+  catalogBadge?: {
+    tone: "warning";
+    label: string;
+  };
   requestExample: PlaygroundExample;
   responseExample: Record<string, unknown>;
 }

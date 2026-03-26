@@ -28,5 +28,28 @@ python3 backend/tools/transcript_hot_folder_watcher.py doctor
 ```
 Use this after exporting the watcher environment to confirm the local folder layout and webhook settings before processing a batch.
 
+### Runtime Status
+```bash
+python3 backend/tools/transcript_hot_folder_watcher.py status
+```
+This reports whether a macOS launch agent is installed, whether a watcher lock is active, and the latest watcher state file if one exists.
+
+### Recommended macOS Run Mode
+Store the watcher config in `backend/tools/transcript_hot_folder_watcher.env` or `Kirk's Folder/automation-bay/transcripts/.watcher.env`, then run:
+
+```bash
+python3 backend/tools/transcript_hot_folder_watcher.py start-launch-agent
+```
+
+Useful lifecycle commands:
+
+```bash
+python3 backend/tools/transcript_hot_folder_watcher.py stop-launch-agent
+python3 backend/tools/transcript_hot_folder_watcher.py uninstall-launch-agent
+```
+
+The launch agent writes logs to `Kirk's Folder/automation-bay/transcripts/logs/`.
+
 ### Environment
-Copy `backend/tools/transcript_hot_folder_watcher.env.example` to a local shell profile or export the variables directly before starting the watcher.
+Copy `backend/tools/transcript_hot_folder_watcher.env.example` to `backend/tools/transcript_hot_folder_watcher.env` or `Kirk's Folder/automation-bay/transcripts/.watcher.env`.
+Shell exports still work, but env-file startup is the durable path because it also works for the launch agent.

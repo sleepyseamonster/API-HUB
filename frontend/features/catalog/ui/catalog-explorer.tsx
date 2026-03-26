@@ -6,7 +6,6 @@ import { filterEndpoints } from "@/entities/endpoints/model/search";
 import { cn } from "@/shared/lib/cn";
 import { Input } from "@/shared/ui/input";
 import { Panel } from "@/shared/ui/panel";
-import { StatusBadge } from "@/shared/ui/status-badge";
 import type { EndpointCategory, EndpointSpec } from "@/shared/types/portal";
 
 interface CatalogExplorerProps {
@@ -72,9 +71,13 @@ export function CatalogExplorer({ endpoints, initialQuery = "" }: CatalogExplore
       <div className="grid gap-3 md:grid-cols-2">
         {filtered.map((endpoint) => (
           <Panel key={endpoint.slug} className="space-y-3">
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex items-start justify-between gap-3">
               <p className="font-mono text-xs text-accent">{endpoint.method}</p>
-              <StatusBadge status={endpoint.category === "automation" ? "running" : "idle"} />
+              {endpoint.catalogBadge ? (
+                <span className="rounded-full border border-amber-500/40 bg-amber-500/12 px-2.5 py-1 text-xs text-amber-200">
+                  {endpoint.catalogBadge.label}
+                </span>
+              ) : null}
             </div>
             <h3 className="text-lg font-semibold text-app-text">{endpoint.title}</h3>
             <p className="text-sm text-app-muted">{endpoint.summary}</p>

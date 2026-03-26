@@ -9,9 +9,11 @@ from unittest import TestCase
 
 from backend.tools.transcript_hot_folder_watcher import (
     Config,
+    build_launch_agent_plist,
     compute_fingerprint,
     ensure_directories,
     doctor,
+    load_env_file,
     process_batch_once,
 )
 
@@ -202,6 +204,54 @@ class TranscriptHotFolderWatcherTests(TestCase):
             self.assertTrue(root.exists())
             self.assertTrue((root / "batches").exists())
             self.assertTrue((root / "results").exists())
+
+    def test_load_env_file_parses_comments_and_quotes(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            env_path = Path(tmp_dir) / ".watcher.env"
+            env_path.write_text(
+                "\n".join(
+                    [
+                        "# comment",
+                        'N8N_TRANSCRIPT_WEBHOOK_URL="https://example.com/webhook"',
+                        "TRANSCRIPT_HOT_FOLDER_SCAN_INTERVAL=3",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            values = load_env_file(env_path)
+
+            self.assertEqual(
+                values["N8N_TRANSCRIPT_WEBHOOK_URL"],
+                "https://example.com/webhook",
+            )
+            self.assertEqual(values["TRANSCRIPT_HOT_FOLDER_SCAN_INTERVAL"], "3")
+
+    def test_build_launch_agent_plist_uses_env_file_and_logs(self) -> None:
+        with TemporaryDirectory() as tmp_dir:
+            root = Path(tmp_dir) / "transcripts"
+            env_path = Path(tmp_dir) / ".watcher.env"
+            env_path.write_text(
+                "N8N_TRANSCRIPT_WEBHOOK_URL=https://example.com/webhook\n",
+                encoding="utf-8",
+            )
+            config = Config(
+                root=root,
+                webhook_url="https://example.com/webhook/transcript-hot-folder-intake",
+                auth_header=None,
+                auth_token=None,
+                scan_interval=5,
+                stable_seconds=4,
+                request_timeout=120,
+                env_file=env_path,
+            )
+
+            payload = build_launch_agent_plist(config, "/usr/bin/python3")
+
+            self.assertIn(b"com.apihub.transcript-hot-folder-watcher", payload)
+            self.assertIn(str(env_path).encode("utf-8"), payload)
+            self.assertIn(str(root / "logs").encode("utf-8"), payload)
 
     def _start_server(self) -> tuple[HTTPServer, threading.Thread, str]:
         server = HTTPServer(("127.0.0.1", 0), _WebhookHandler)

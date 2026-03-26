@@ -8,8 +8,10 @@ import hashlib
 import json
 import mimetypes
 import os
+import plistlib
 import re
 import shutil
+import subprocess
 import sys
 import time
 import urllib.error
@@ -24,6 +26,8 @@ SUPPORTED_EXTENSIONS = {
     ".txt": "text/plain",
     ".md": "text/markdown",
 }
+
+LAUNCH_AGENT_LABEL = "com.apihub.transcript-hot-folder-watcher"
 
 
 def utc_now_iso() -> str:
@@ -44,6 +48,14 @@ def default_root() -> Path:
     )
 
 
+def default_env_file_candidates() -> list[Path]:
+    repo_root = Path(__file__).resolve().parents[2]
+    return [
+        repo_root / "backend" / "tools" / "transcript_hot_folder_watcher.env",
+        repo_root / "Kirk's Folder" / "automation-bay" / "transcripts" / ".watcher.env",
+    ]
+
+
 @dataclass(slots=True)
 class Config:
     root: Path
@@ -55,6 +67,7 @@ class Config:
     request_timeout: float
     retry_attempts: int = 2
     retry_delay_seconds: float = 2.0
+    env_file: Path | None = None
 
     @property
     def batches_dir(self) -> Path:
@@ -76,6 +89,22 @@ class Config:
     def results_dir(self) -> Path:
         return self.root / "results"
 
+    @property
+    def logs_dir(self) -> Path:
+        return self.root / "logs"
+
+    @property
+    def lock_path(self) -> Path:
+        return self.root / ".watcher.lock.json"
+
+    @property
+    def state_path(self) -> Path:
+        return self.root / ".watcher.state.json"
+
+    @property
+    def launch_agent_path(self) -> Path:
+        return Path.home() / "Library" / "LaunchAgents" / f"{LAUNCH_AGENT_LABEL}.plist"
+
 
 def ensure_directories(config: Config) -> None:
     for path in (
@@ -84,6 +113,7 @@ def ensure_directories(config: Config) -> None:
         config.done_dir,
         config.failed_dir,
         config.results_dir,
+        config.logs_dir,
     ):
         path.mkdir(parents=True, exist_ok=True)
 
@@ -131,9 +161,64 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def load_env_file(path: Path) -> dict[str, str]:
+    values: dict[str, str] = {}
+    if not path.exists():
+        raise FileNotFoundError(f"Env file not found: {path}")
+    for index, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        if "=" not in stripped:
+            raise ValueError(f"Invalid env line {index} in {path}: expected KEY=VALUE")
+        key, value = stripped.split("=", 1)
+        key = key.strip()
+        value = value.strip()
+        if not key:
+            raise ValueError(f"Invalid env line {index} in {path}: missing key")
+        if (
+            len(value) >= 2
+            and value[0] == value[-1]
+            and value[0] in {'"', "'"}
+        ):
+            value = value[1:-1]
+        values[key] = value
+    return values
+
+
+def resolve_env_file(cli_path: str | None) -> Path | None:
+    if cli_path:
+        return Path(cli_path).expanduser()
+    for candidate in default_env_file_candidates():
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def prime_environment(env_file: Path | None) -> Path | None:
+    if env_file is None:
+        return None
+    loaded = load_env_file(env_file)
+    for key, value in loaded.items():
+        os.environ.setdefault(key, value)
+    return env_file.resolve()
+
+
 def sanitize_url(value: str) -> str:
     parts = urlsplit(value)
     return urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
+
+
+def pid_is_running(pid: int) -> bool:
+    if pid <= 0:
+        return False
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
 
 
 def guess_content_type(path: Path) -> str:
@@ -478,7 +563,8 @@ def process_batch_once(config: Config, batch_dir: Path) -> dict[str, Any]:
 
 def build_config(args: argparse.Namespace) -> Config:
     webhook_url = args.webhook_url or os.environ.get("N8N_TRANSCRIPT_WEBHOOK_URL")
-    if not webhook_url:
+    requires_webhook = args.command not in {"status", "stop-launch-agent", "uninstall-launch-agent"}
+    if requires_webhook and not webhook_url:
         raise SystemExit("Missing webhook URL. Set N8N_TRANSCRIPT_WEBHOOK_URL.")
 
     root = Path(
@@ -488,7 +574,7 @@ def build_config(args: argparse.Namespace) -> Config:
     ).expanduser()
     return Config(
         root=root,
-        webhook_url=webhook_url,
+        webhook_url=webhook_url or "https://example.invalid/webhook/transcript-hot-folder-intake",
         auth_header=args.auth_header or os.environ.get("N8N_TRANSCRIPT_WEBHOOK_AUTH_HEADER"),
         auth_token=args.auth_token or os.environ.get("N8N_TRANSCRIPT_WEBHOOK_AUTH_TOKEN"),
         scan_interval=float(
@@ -516,11 +602,187 @@ def build_config(args: argparse.Namespace) -> Config:
             if args.retry_delay_seconds is not None
             else os.environ.get("TRANSCRIPT_HOT_FOLDER_RETRY_DELAY_SECONDS", "2")
         ),
+        env_file=resolve_env_file(args.env_file),
     )
+
+
+class WatchLock:
+    def __init__(self, config: Config) -> None:
+        self.config = config
+        self.pid = os.getpid()
+        self.acquired = False
+
+    def acquire(self) -> None:
+        ensure_directories(self.config)
+        if self.config.lock_path.exists():
+            existing = json.loads(self.config.lock_path.read_text(encoding="utf-8"))
+            existing_pid = int(existing.get("pid", 0) or 0)
+            if pid_is_running(existing_pid):
+                raise RuntimeError(
+                    f"Watcher already running with pid {existing_pid}. "
+                    f"See {self.config.state_path} for runtime state."
+                )
+            self.config.lock_path.unlink(missing_ok=True)
+        payload = {
+            "pid": self.pid,
+            "started_at": utc_now_iso(),
+            "root": str(self.config.root),
+            "env_file": str(self.config.env_file) if self.config.env_file else None,
+        }
+        temp_path = self.config.lock_path.with_suffix(".tmp")
+        write_json(temp_path, payload)
+        temp_path.replace(self.config.lock_path)
+        self.acquired = True
+
+    def release(self) -> None:
+        if not self.acquired:
+            return
+        if self.config.lock_path.exists():
+            try:
+                existing = json.loads(self.config.lock_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                existing = {}
+            if int(existing.get("pid", 0) or 0) == self.pid:
+                self.config.lock_path.unlink(missing_ok=True)
+        self.acquired = False
+
+
+class WatchState:
+    def __init__(self, config: Config) -> None:
+        self.config = config
+        self.started_at = utc_now_iso()
+
+    def write(self, status: str, **extra: Any) -> dict[str, Any]:
+        payload = {
+            "status": status,
+            "pid": os.getpid(),
+            "root": str(self.config.root),
+            "batches_dir": str(self.config.batches_dir),
+            "webhook_url": sanitize_url(self.config.webhook_url),
+            "env_file": str(self.config.env_file) if self.config.env_file else None,
+            "updated_at": utc_now_iso(),
+            "started_at": self.started_at,
+        }
+        payload.update(extra)
+        write_json(self.config.state_path, payload)
+        return payload
+
+
+def launchctl_domain() -> str:
+    if sys.platform != "darwin":
+        raise RuntimeError("Launch agent management is only supported on macOS.")
+    return f"gui/{os.getuid()}"
+
+
+def launchctl_service_target() -> str:
+    return f"{launchctl_domain()}/{LAUNCH_AGENT_LABEL}"
+
+
+def run_launchctl(*args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["launchctl", *args],
+        capture_output=True,
+        text=True,
+        check=check,
+    )
+
+
+def build_launch_agent_plist(config: Config, python_executable: str) -> bytes:
+    ensure_directories(config)
+    env_file = config.env_file or resolve_env_file(None)
+    program_arguments = [
+        python_executable,
+        str(Path(__file__).resolve()),
+        "watch",
+    ]
+    if env_file is not None:
+        program_arguments.extend(["--env-file", str(env_file)])
+    plist_payload = {
+        "Label": LAUNCH_AGENT_LABEL,
+        "ProgramArguments": program_arguments,
+        "WorkingDirectory": str(Path(__file__).resolve().parents[2]),
+        "RunAtLoad": True,
+        "KeepAlive": True,
+        "StandardOutPath": str(config.logs_dir / "watcher.stdout.log"),
+        "StandardErrorPath": str(config.logs_dir / "watcher.stderr.log"),
+        "ProcessType": "Background",
+    }
+    return plistlib.dumps(plist_payload, sort_keys=True)
+
+
+def install_launch_agent(config: Config, python_executable: str) -> dict[str, Any]:
+    config.launch_agent_path.parent.mkdir(parents=True, exist_ok=True)
+    config.launch_agent_path.write_bytes(build_launch_agent_plist(config, python_executable))
+    return {
+        "status": "installed",
+        "label": LAUNCH_AGENT_LABEL,
+        "launch_agent_path": str(config.launch_agent_path),
+        "logs_dir": str(config.logs_dir),
+        "env_file": str(config.env_file) if config.env_file else None,
+    }
+
+
+def start_launch_agent(config: Config) -> dict[str, Any]:
+    install_launch_agent(config, sys.executable)
+    run_launchctl("bootout", launchctl_service_target(), check=False)
+    run_launchctl("bootstrap", launchctl_domain(), str(config.launch_agent_path))
+    run_launchctl("enable", launchctl_service_target(), check=False)
+    run_launchctl("kickstart", "-k", launchctl_service_target())
+    return {"status": "started", "label": LAUNCH_AGENT_LABEL}
+
+
+def stop_launch_agent(config: Config) -> dict[str, Any]:
+    result = run_launchctl("bootout", launchctl_service_target(), check=False)
+    return {
+        "status": "stopped" if result.returncode == 0 else "not_loaded",
+        "label": LAUNCH_AGENT_LABEL,
+        "stderr": result.stderr.strip(),
+    }
+
+
+def uninstall_launch_agent(config: Config) -> dict[str, Any]:
+    stop_launch_agent(config)
+    config.launch_agent_path.unlink(missing_ok=True)
+    return {
+        "status": "uninstalled",
+        "label": LAUNCH_AGENT_LABEL,
+        "launch_agent_path": str(config.launch_agent_path),
+    }
+
+
+def launch_agent_status(config: Config) -> dict[str, Any]:
+    result = run_launchctl("print", launchctl_service_target(), check=False)
+    report = {
+        "label": LAUNCH_AGENT_LABEL,
+        "launch_agent_path": str(config.launch_agent_path),
+        "plist_exists": config.launch_agent_path.exists(),
+        "loaded": result.returncode == 0,
+        "state_file_exists": config.state_path.exists(),
+        "lock_file_exists": config.lock_path.exists(),
+    }
+    if config.state_path.exists():
+        report["runtime_state"] = json.loads(config.state_path.read_text(encoding="utf-8"))
+    if config.lock_path.exists():
+        lock_payload = json.loads(config.lock_path.read_text(encoding="utf-8"))
+        pid = int(lock_payload.get("pid", 0) or 0)
+        lock_payload["pid_running"] = pid_is_running(pid)
+        report["lock"] = lock_payload
+    if result.stdout.strip():
+        report["launchctl"] = result.stdout.strip()
+    if result.stderr.strip():
+        report["launchctl_stderr"] = result.stderr.strip()
+    return report
 
 
 def doctor(config: Config) -> dict[str, Any]:
     ensure_directories(config)
+    lock_payload = None
+    if config.lock_path.exists():
+        try:
+            lock_payload = json.loads(config.lock_path.read_text(encoding="utf-8"))
+            lock_payload["pid_running"] = pid_is_running(int(lock_payload.get("pid", 0) or 0))
+        except json.JSONDecodeError:
+            lock_payload = {"status": "invalid"}
     report = {
         "root": str(config.root),
         "batches_dir": str(config.batches_dir),
@@ -528,15 +790,20 @@ def doctor(config: Config) -> dict[str, Any]:
         "done_dir": str(config.done_dir),
         "failed_dir": str(config.failed_dir),
         "results_dir": str(config.results_dir),
+        "logs_dir": str(config.logs_dir),
         "webhook_url": sanitize_url(config.webhook_url),
         "auth_header_set": bool(config.auth_header),
         "auth_token_set": bool(config.auth_token),
+        "env_file": str(config.env_file) if config.env_file else None,
         "scan_interval_seconds": config.scan_interval,
         "stable_seconds": config.stable_seconds,
         "request_timeout_seconds": config.request_timeout,
         "retry_attempts": config.retry_attempts,
         "retry_delay_seconds": config.retry_delay_seconds,
         "supported_extensions": sorted(SUPPORTED_EXTENSIONS),
+        "lock": lock_payload,
+        "launch_agent_path": str(config.launch_agent_path),
+        "launch_agent_installed": config.launch_agent_path.exists(),
         "status": "ok",
     }
     print(json.dumps(report, indent=2, sort_keys=True))
@@ -547,13 +814,28 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "command",
-        choices=("watch", "scan-once", "doctor"),
+        choices=(
+            "watch",
+            "scan-once",
+            "doctor",
+            "status",
+            "install-launch-agent",
+            "start-launch-agent",
+            "stop-launch-agent",
+            "uninstall-launch-agent",
+        ),
         help="Run continuously or process the current batch folders once.",
     )
+    parser.add_argument("--env-file", help="Optional watcher env file to load before config.")
     parser.add_argument("--root", help="Override the transcript hot-folder root.")
     parser.add_argument("--webhook-url", help="n8n Cloud webhook URL.")
     parser.add_argument("--auth-header", help="Optional webhook auth header name.")
     parser.add_argument("--auth-token", help="Optional webhook auth token.")
+    parser.add_argument(
+        "--python-executable",
+        default=sys.executable,
+        help="Python executable to embed in the launch agent.",
+    )
     parser.add_argument("--scan-interval", type=float, help="Polling interval in seconds.")
     parser.add_argument(
         "--stable-seconds",
@@ -591,20 +873,59 @@ def scan_once(config: Config) -> list[dict[str, Any]]:
 
 def watch(config: Config) -> int:
     ensure_directories(config)
+    lock = WatchLock(config)
+    state = WatchState(config)
+    lock.acquire()
+    state.write("starting")
     print(
         f"[transcript-hot-folder] watching {config.batches_dir}",
         file=sys.stderr,
     )
-    while True:
-        scan_once(config)
-        time.sleep(max(1.0, config.scan_interval))
+    try:
+        state.write("watching", last_scan_at=None)
+        while True:
+            state.write("watching", last_scan_at=utc_now_iso())
+            scan_once(config)
+            time.sleep(max(1.0, config.scan_interval))
+    except KeyboardInterrupt:
+        state.write("stopped", reason="keyboard_interrupt")
+        return 0
+    except Exception as exc:
+        state.write("error", error={"message": str(exc)})
+        raise
+    finally:
+        lock.release()
 
 
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
+    env_file = prime_environment(resolve_env_file(args.env_file))
+    if env_file is not None:
+        args.env_file = str(env_file)
     config = build_config(args)
     if args.command == "doctor":
         doctor(config)
+        return 0
+    if args.command == "status":
+        print(json.dumps(launch_agent_status(config), indent=2, sort_keys=True))
+        return 0
+    if args.command == "install-launch-agent":
+        print(
+            json.dumps(
+                install_launch_agent(config, args.python_executable),
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0
+    if args.command == "start-launch-agent":
+        print(json.dumps(start_launch_agent(config), indent=2, sort_keys=True))
+        return 0
+    if args.command == "stop-launch-agent":
+        print(json.dumps(stop_launch_agent(config), indent=2, sort_keys=True))
+        return 0
+    if args.command == "uninstall-launch-agent":
+        print(json.dumps(uninstall_launch_agent(config), indent=2, sort_keys=True))
         return 0
     if args.command == "scan-once":
         scan_once(config)

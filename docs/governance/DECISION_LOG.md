@@ -222,6 +222,21 @@ Rejected:
 Rollback trigger:
 - The ingestion path moves into a different orchestrator or the repository adopts a dedicated upload service with the same guarantees.
 
+### 2026-03-25 - Active
+Decision: The transcript hot-folder watcher should be operated from an env file and a macOS launch agent by default, not an ad hoc terminal session.
+
+Why it was chosen:
+- The ingestion path was failing operationally when the foreground watcher process was not running, even though the folder and n8n workflow existed.
+- A launch agent gives Finder-driven automation a durable local runtime with restart behavior, logs, and status visibility.
+- A dedicated env file removes shell-session drift and makes preflight checks reproducible.
+
+Rejected:
+- Continuing to rely on manual `python3 ... watch` terminal sessions as the primary operating mode.
+- Moving batch orchestration into n8n just to avoid local runtime management.
+
+Rollback trigger:
+- The local watcher is replaced by a different orchestrator with equivalent always-on behavior and explicit configuration loading.
+
 ## Template
 
 ### YYYY-MM-DD - Proposed or Active

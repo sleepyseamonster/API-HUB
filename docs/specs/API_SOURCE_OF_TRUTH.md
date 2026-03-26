@@ -19,6 +19,7 @@ Current state:
 - A functional Next.js developer portal exists in `frontend/`.
 - Endpoint definitions and examples are implemented as typed frontend data.
 - API runs in the UI are simulated through a mock provider, except for the internal preview-backed `local-business-search` playground path and the live demo route at `/v1/tools/local-business-search`.
+- The transcript hot-folder watcher in `backend/tools/transcript_hot_folder_watcher.py` supports env-file configuration, watcher status reporting, and macOS launch-agent management for the local ingestion path.
 
 Not implemented yet:
 - FastAPI gateway in `backend/`.
